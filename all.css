@@ -1,5 +1,66 @@
-// Home Page Style
+/* style.css */
 
+/* // Home Page Style */
 
+/* Стил за хедъра */
+header {
+    /* background-color: #333; */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-// About us Style
+/* Стил за логото */
+.logo {
+    height: 200px;
+}
+
+/* Стил за навигационния блок (<nav>) вътре в хедъра */
+header nav {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+    /* ТАЗИ ЛИНИЯ ТРЯБВА ДА Е АКТИВНА */
+}
+
+/* ПРЕМАХНЕТЕ ТОВА ПРАВИЛО ИЗЦЯЛО: */
+/*
+header nav::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background-color: white;
+}
+*/
+
+/* Стил за навигационните линкове (бутони) */
+header nav a {
+    display: inline-block;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    background-color: #777;
+}
+
+/* Стил за фона на цялата страница (ако е homepage) */
+body.homepage-background {
+    background-image: url('image/background.png');
+    /* Уверете се, че пътят е правилен */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #cccccc;
+    /* Резервен цвят */
+}
+
+/* // About us Style */
