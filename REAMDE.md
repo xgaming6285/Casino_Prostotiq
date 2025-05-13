@@ -1,4 +1,3 @@
-Daniel      ||   Ivo   ||   Niki   || 
-Page 4        Page 1      Page 2   
-Page 8        Page 3      Page 5
-              Page 7      Page 6
+Daniel- 4, 8;
+Ivo - 1, 3, 7;
+Niki - 2, 5, 6;
