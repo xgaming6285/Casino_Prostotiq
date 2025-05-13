@@ -174,7 +174,7 @@ header nav a:hover {
 }
 
 .craftsmanship-product-image {
-    max-width: 450px; /* Adjust as needed */
+    max-width: 90%; /* Increased from 450px, adjust as needed */
     height: auto;
     display: block;
     margin: 0 auto; /* Center the image if its container is wider */
@@ -185,25 +185,25 @@ header nav a:hover {
     display: inline-flex; /* Use inline-flex to make the background fit content */
     align-items: center;
     background-color: rgba(40, 40, 40, 0.85); /* Darker, more solid background */
-    padding: 6px 12px 6px 8px; /* Fine-tuned padding */
-    border-radius: 25px; /* More pronounced pill shape */
+    padding: 10px 18px 10px 12px; /* Increased padding */
+    border-radius: 30px; /* Adjusted border-radius for new size */
     color: white;
-    font-size: 0.8em; /* Slightly smaller text for a cleaner look */
+    font-size: 0.95em; /* Increased font size */
     z-index: 10; /* Ensure callouts are above lines if they overlap */
 }
 
 .feature-callout .plus-icon {
-    width: 18px; /* Slightly smaller icon */
-    height: 18px;
+    width: 24px; /* Increased icon size */
+    height: 24px;
     background-color: white;
     border-radius: 50%;
-    margin-right: 8px; /* Adjusted spacing */
+    margin-right: 10px; /* Adjusted spacing */
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 14px; /* Control plus sign size explicitly */
+    font-size: 18px; /* Increased plus sign size */
     line-height: 1;
     flex-shrink: 0; /* Prevent icon from shrinking */
 }
@@ -218,52 +218,51 @@ header nav a:hover {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.7); /* White, slightly transparent line */
     z-index: 5; /* Behind the callout box but above background */
-    /* Default line thickness */
-    height: 1px;
+    height: 2px; /* Increased line thickness */
 }
 
 /* Positioning for each callout - THESE VALUES WILL LIKELY NEED ADJUSTMENT */
 .high-res-display {
     top: 10%;
-    left: -180px; /* Further left to allow space for the line */
+    left: -220px; /* Adjusted for larger elements, will need tuning */
 }
 .high-res-display::after {
-    width: 60px; /* Length of the line */
+    width: 80px; /* Increased length, will need tuning */
     top: 50%;
-    right: -60px; /* Starts from the right edge of the callout, extending rightwards */
-    transform: translateY(-50%); /* Center line vertically */
+    right: -80px;
+    transform: translateY(-50%);
 }
 
 .forged-in-metal {
     top: 30%;
-    left: -190px;
+    left: -230px;  /* Adjusted for larger elements, will need tuning */
 }
 .forged-in-metal::after {
-    width: 70px;
+    width: 90px; /* Increased length, will need tuning */
     top: 50%;
-    right: -70px;
+    right: -90px;
     transform: translateY(-50%);
 }
 
 .thirty-providers {
     top: 50%;
-    left: -220px;
+    left: -270px; /* Adjusted for larger elements, will need tuning */
 }
 .thirty-providers::after {
-    width: 100px;
+    width: 130px; /* Increased length, will need tuning */
     top: 50%;
-    right: -100px;
+    right: -130px;
     transform: translateY(-50%);
 }
 
 .premium-buttons {
     bottom: 12%;
-    right: -200px; /* Further right for line */
+    right: -250px; /* Adjusted for larger elements, will need tuning */
 }
 .premium-buttons::after {
-    width: 80px;
+    width: 110px; /* Increased length, will need tuning */
     top: 50%;
-    left: -80px; /* Starts from the left edge of the callout, extending leftwards */
+    left: -110px;
     transform: translateY(-50%);
 }
 
