@@ -119,4 +119,179 @@ header nav a:hover {
     /* border-radius: 10px; */ /* Removed, target image seems to have sharp corners for product */
 }
 
+/* Page Section Styles (for SPA content) */
+.page-section {
+    padding: 60px 5%;
+    min-height: 100vh; /* Each section takes at least full viewport height */
+    box-sizing: border-box;
+    display: flex; /* Using flex for content centering, can be adjusted */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-section h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.craftsmanship-background {
+    background-image: url('image/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Or scroll, depending on desired effect */
+    color: white; /* Ensure text is visible on this background */
+    /* Override general page-section flex alignment for this specific section if needed */
+    display: block; /* Change from flex to block to allow more custom positioning within */
+    position: relative; /* For positioning CTA button absolutely if needed */
+}
+
+.craftsmanship-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center product area and CTA */
+    justify-content: center; /* Vertically center content a bit */
+    padding-top: 50px; /* Add some padding at the top */
+    padding-bottom: 100px; /* Space for CTA button */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.product-display-area {
+    position: relative; /* Context for absolute positioning of callouts */
+    margin-bottom: 40px; /* Space between image area and CTA button */
+    width: auto; /* Or a specific max-width for the image and its callouts */
+    display: inline-block; /* To wrap around the image size */
+}
+
+.craftsmanship-product-image {
+    max-width: 450px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image if its container is wider */
+}
+
+.feature-callout {
+    position: absolute;
+    display: inline-flex; /* Use inline-flex to make the background fit content */
+    align-items: center;
+    background-color: rgba(40, 40, 40, 0.85); /* Darker, more solid background */
+    padding: 6px 12px 6px 8px; /* Fine-tuned padding */
+    border-radius: 25px; /* More pronounced pill shape */
+    color: white;
+    font-size: 0.8em; /* Slightly smaller text for a cleaner look */
+    z-index: 10; /* Ensure callouts are above lines if they overlap */
+}
+
+.feature-callout .plus-icon {
+    width: 18px; /* Slightly smaller icon */
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 8px; /* Adjusted spacing */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px; /* Control plus sign size explicitly */
+    line-height: 1;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.feature-callout .plus-icon::before {
+    content: '+';
+}
+
+/* Connector Lines Styling */
+.feature-callout::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7); /* White, slightly transparent line */
+    z-index: 5; /* Behind the callout box but above background */
+    /* Default line thickness */
+    height: 1px;
+}
+
+/* Positioning for each callout - THESE VALUES WILL LIKELY NEED ADJUSTMENT */
+.high-res-display {
+    top: 10%;
+    left: -180px; /* Further left to allow space for the line */
+}
+.high-res-display::after {
+    width: 60px; /* Length of the line */
+    top: 50%;
+    right: -60px; /* Starts from the right edge of the callout, extending rightwards */
+    transform: translateY(-50%); /* Center line vertically */
+}
+
+.forged-in-metal {
+    top: 30%;
+    left: -190px;
+}
+.forged-in-metal::after {
+    width: 70px;
+    top: 50%;
+    right: -70px;
+    transform: translateY(-50%);
+}
+
+.thirty-providers {
+    top: 50%;
+    left: -220px;
+}
+.thirty-providers::after {
+    width: 100px;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+}
+
+.premium-buttons {
+    bottom: 12%;
+    right: -200px; /* Further right for line */
+}
+.premium-buttons::after {
+    width: 80px;
+    top: 50%;
+    left: -80px; /* Starts from the left edge of the callout, extending leftwards */
+    transform: translateY(-50%);
+}
+
+.experience-cta-button {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: normal; /* Text is not bold in the image */
+    border-radius: 20px; /* More rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: 0.9em;
+    text-transform: none; /* Text is not uppercase in the image */
+    position: absolute; /* Position relative to .craftsmanship-background or .craftsmanship-content */
+    bottom: 40px;
+    right: 5%;
+}
+
+.experience-cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Example styling for other sections if they also have specific backgrounds */
+/*
+#experience {
+    background-color: #111;
+}
+
+#pre-order {
+    background-color: #222;
+}
+*/
+
 /* // About us Style (Keep this for potential future use or remove if not needed) */
