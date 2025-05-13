@@ -197,90 +197,151 @@ header nav a.active::after {
 }
 
 .feature-callout {
-    position: absolute;
-    display: inline-flex; /* Use inline-flex to make the background fit content */
-    align-items: center;
-    background-color: rgba(40, 40, 40, 0.85); /* Darker, more solid background */
-    padding: 10px 18px 10px 12px; /* Increased padding */
-    border-radius: 30px; /* Adjusted border-radius for new size */
-    color: white;
-    font-size: 0.95em; /* Increased font size */
-    z-index: 10; /* Ensure callouts are above lines if they overlap */
+    position: absolute; /* The main container for a callout, positioned absolutely */
+    /* Dimensions will be determined by its content (dot, line, info-box) */
+    /* Remove previous styling like background, padding, etc., as it's now a container */
+    z-index: 10;
 }
 
-.feature-callout .plus-icon {
-    width: 24px; /* Increased icon size */
-    height: 24px;
+.callout-pointer-dot {
+    width: 10px; /* Size of the dot on the product */
+    height: 10px;
     background-color: white;
     border-radius: 50%;
-    margin-right: 10px; /* Adjusted spacing */
-    color: black;
+    position: absolute;
+    /* top/left for this dot will be set per specific callout to place it on the product image */
+    z-index: 12; /* Above the line */
+}
+
+.callout-info-box {
+    display: inline-flex; /* To wrap background around content */
+    align-items: center;
+    background-color: rgba(25, 25, 30, 0.85); /* Dark, slightly transparent background for the box */
+    padding: 8px 15px 8px 10px; /* Adjusted padding */
+    border-radius: 20px; /* Pill shape */
+    color: white;
+    font-size: 0.9em;
+    position: absolute;
+    /* top/left for this box will be set per specific callout, offset from the dot */
+    z-index: 11; /* Above the line, but below the dot if they were to overlap */
+}
+
+.plus-icon-wrapper {
+    width: 22px;
+    height: 22px;
+    background-color: rgba(10, 10, 10, 0.9); /* Dark circle background for plus */
+    border-radius: 50%;
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+}
+
+.plus-symbol {
+    color: white;
     font-weight: bold;
-    font-size: 18px; /* Increased plus sign size */
-    line-height: 1;
-    flex-shrink: 0; /* Prevent icon from shrinking */
+    font-size: 16px;
+    line-height: 1; /* Ensure tight fit */
 }
 
-.feature-callout .plus-icon::before {
-    content: '+';
-}
-
-/* Connector Lines Styling */
+/* Connector Lines Styling - using ::after on the .feature-callout container */
 .feature-callout::after {
     content: '';
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.7); /* White, slightly transparent line */
-    z-index: 5; /* Behind the callout box but above background */
-    height: 2px; /* Increased line thickness */
+    background-color: rgba(255, 255, 255, 0.6); /* Line color */
+    height: 1px; /* Line thickness */
+    /* width (length), top, left, and transform (for angle) will be set per specific callout */
+    transform-origin: left center; /* Makes rotation easier if lines start from left */
+    z-index: 9; /* Behind dot and info-box */
 }
 
-/* Positioning for each callout - THESE VALUES WILL LIKELY NEED ADJUSTMENT */
+/* --- Positioning for each callout and its parts --- */
+/* IMPORTANT: These are ROUGH ESTIMATES and WILL require manual adjustment */
+
+/* HIGH-RES DISPLAY Callout */
 .high-res-display {
-    top: 10%;
-    left: -220px; /* Adjusted for larger elements, will need tuning */
+    top: 15%; /* Position of the entire callout container */
+    left: 30%;
 }
-.high-res-display::after {
-    width: 80px; /* Increased length, will need tuning */
-    top: 50%;
-    right: -80px;
-    transform: translateY(-50%);
+.high-res-display .callout-pointer-dot {
+    top: 0; /* Relative to .high-res-display container */
+    left: 0;
+}
+.high-res-display .callout-info-box {
+    top: -15px; /* Offset info-box from the dot */
+    left: -200px; /* Move info-box to the left of the dot */
+}
+.high-res-display::after { /* Connector Line */
+    width: 180px; /* Approx. length of line needed */
+    top: 5px;  /* Align with dot's center */
+    left: 10px; /* Start line just after the dot */
+    /* transform: rotate(0deg); */ /* Example: no rotation for a horizontal line */
 }
 
+/* FORGED IN METAL Callout */
 .forged-in-metal {
-    top: 30%;
-    left: -230px;  /* Adjusted for larger elements, will need tuning */
+    top: 35%;
+    left: 32%;
+}
+.forged-in-metal .callout-pointer-dot {
+    top: 0;
+    left: 0;
+}
+.forged-in-metal .callout-info-box {
+    top: -15px;
+    left: -190px;
 }
 .forged-in-metal::after {
-    width: 90px; /* Increased length, will need tuning */
-    top: 50%;
-    right: -90px;
-    transform: translateY(-50%);
+    width: 170px;
+    top: 5px;
+    left: 10px;
 }
 
+/* 30 DIFFERENT PROVIDERS Callout */
 .thirty-providers {
-    top: 50%;
-    left: -270px; /* Adjusted for larger elements, will need tuning */
+    top: 55%;
+    left: 28%;
+}
+.thirty-providers .callout-pointer-dot {
+    top: 0;
+    left: 0;
+}
+.thirty-providers .callout-info-box {
+    top: -15px;
+    left: -230px;
 }
 .thirty-providers::after {
-    width: 130px; /* Increased length, will need tuning */
-    top: 50%;
-    right: -130px;
-    transform: translateY(-50%);
+    width: 210px;
+    top: 5px;
+    left: 10px;
 }
 
+/* PREMIUM BUTTONS Callout */
 .premium-buttons {
-    bottom: 12%;
-    right: -250px; /* Adjusted for larger elements, will need tuning */
+    top: 75%;  /* Note: Using top now for consistency, adjust to bottom if easier */
+    left: 65%;
 }
-.premium-buttons::after {
-    width: 110px; /* Increased length, will need tuning */
-    top: 50%;
-    left: -110px;
-    transform: translateY(-50%);
+.premium-buttons .callout-pointer-dot {
+    top: 0;
+    left: 0;
 }
+.premium-buttons .callout-info-box {
+    top: -15px;
+    left: 30px; /* Move info-box to the right of the dot */
+}
+.premium-buttons::after { /* Line for right-side callout */
+    width: 15px; /* Short line from dot to info-box */
+    top: 5px;
+    left: 10px; /* Starts after the dot */
+    /* This line might need different logic if it points from info-box back to dot */
+    /* Or, for right-side, often easier to position info-box first, then line points from it */
+}
+
+/* Clean up old .plus-icon and direct ::after on .feature-callout if they exist */
+.feature-callout .plus-icon { display: none; } /* Hide old plus icon if any remnants */
+/* Remove this if the ::after on .feature-callout is repurposed above, otherwise: */
+/* .feature-callout > ::after { display: none; } */
 
 .experience-cta-button {
     display: inline-block;
