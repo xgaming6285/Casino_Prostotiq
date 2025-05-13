@@ -23,7 +23,7 @@ body.homepage-background {
 header {
     padding: 20px 5%; /* Use percentage for responsive padding */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* This will push logo to left, nav to right if nav is not centered */
     align-items: center;
     position: relative; /* For the nav underline */
     background-color: transparent; /* Header is transparent over the background */
@@ -33,22 +33,26 @@ header {
     font-size: 1.8em; /* Larger logo text */
     font-weight: 700; /* Bold logo text */
     color: white;
+    flex-shrink: 0; /* Prevent logo from shrinking if nav is too wide */
 }
 
 header nav {
     display: flex;
+    justify-content: center; /* Center the nav links */
+    flex-grow: 1; /* Allow nav to take available space to center correctly */
     align-items: center;
     padding-bottom: 10px; /* Space for the underline */
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Underline for the nav group */
+    margin: 0 20px; /* Add some margin around the nav if logo/other elements are present */
 }
 
 header nav a {
     color: #ccc; /* Slightly dimmer color for non-active links */
-    padding: 5px 15px; /* Adjusted padding */
-    margin: 0 10px;
+    padding: 5px 18px; /* Adjusted padding */
+    margin: 0 8px; /* Adjusted margin */
     text-decoration: none;
     font-weight: 400; /* Regular weight for nav links */
-    font-size: 0.9em;
+    font-size: 1em; /* Increased font size for nav links */
     transition: color 0.3s ease;
     text-transform: uppercase; /* As per image */
 }
@@ -102,12 +106,15 @@ header nav a:hover {
 }
 
 .hero-image {
-    flex-basis: 40%;
+    flex-basis: 35%; /* Reduced size of the image container */
     text-align: right; /* Align image to the right of its container */
+    display: flex; /* For alignment if needed */
+    justify-content: flex-end; /* Ensure image is pushed to the very right */
+    align-items: center;
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 80%; /* Make the image itself smaller within its container */
     height: auto;
     /* border-radius: 10px; */ /* Removed, target image seems to have sharp corners for product */
 }
