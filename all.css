@@ -1,66 +1,115 @@
 /* style.css */
 
+/* General Body Styles */
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fallback color */
+}
+
 /* // Home Page Style */
 
-/* Стил за хедъра */
-header {
-    /* background-color: #333; */
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Стил за логото */
-.logo {
-    height: 200px;
-}
-
-/* Стил за навигационния блок (<nav>) вътре в хедъра */
-header nav {
-    display: inline-block;
-    padding-bottom: 8px;
-    border-bottom: 1px solid white;
-    /* ТАЗИ ЛИНИЯ ТРЯБВА ДА Е АКТИВНА */
-}
-
-/* ПРЕМАХНЕТЕ ТОВА ПРАВИЛО ИЗЦЯЛО: */
-/*
-header nav::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 80%;
-    height: 1px;
-    background-color: white;
-}
-*/
-
-/* Стил за навигационните линкове (бутони) */
-header nav a {
-    display: inline-block;
-    color: white;
-    padding: 10px 15px;
-    margin: 0 5px;
-    text-decoration: none;
-}
-
-header nav a:hover {
-    background-color: #777;
-}
-
-/* Стил за фона на цялата страница (ако е homepage) */
 body.homepage-background {
     background-image: url('image/background.png');
-    /* Уверете се, че пътят е правилен */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    background-color: #cccccc;
-    /* Резервен цвят */
 }
 
-/* // About us Style */
+/* Header Styles */
+header {
+    padding: 20px 5%; /* Use percentage for responsive padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* For the nav underline */
+    background-color: transparent; /* Header is transparent over the background */
+}
+
+.logo-text {
+    font-size: 1.8em; /* Larger logo text */
+    font-weight: 700; /* Bold logo text */
+    color: white;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px; /* Space for the underline */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Underline for the nav group */
+}
+
+header nav a {
+    color: #ccc; /* Slightly dimmer color for non-active links */
+    padding: 5px 15px; /* Adjusted padding */
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 400; /* Regular weight for nav links */
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+    text-transform: uppercase; /* As per image */
+}
+
+header nav a.active,
+header nav a:hover {
+    color: white; /* Bright white for active/hover link */
+}
+
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    justify-content: space-between; /* Pushes text to left, image to right */
+    align-items: center;
+    padding: 60px 5%; /* Use percentage for responsive padding */
+    min-height: calc(100vh - 120px); /* Adjust based on approximated header/footer height */
+    box-sizing: border-box;
+}
+
+.hero-text {
+    flex-basis: 55%; /* Give more space to text */
+    padding-right: 40px;
+}
+
+.hero-text h1 {
+    font-size: 3.8em; /* Adjusted for impact */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark, slightly transparent button */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px; /* More rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-image {
+    flex-basis: 40%;
+    text-align: right; /* Align image to the right of its container */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 10px; */ /* Removed, target image seems to have sharp corners for product */
+}
+
+/* // About us Style (Keep this for potential future use or remove if not needed) */
