@@ -26,43 +26,59 @@ body.homepage-background {
 header {
     padding: 20px 5%; /* Use percentage for responsive padding */
     display: flex;
-    justify-content: space-between; /* This will push logo to left, nav to right if nav is not centered */
+    justify-content: space-between; /* Push logo to left, nav to right */
     align-items: center;
-    position: relative; /* For the nav underline */
-    background-color: transparent; /* Header is transparent over the background */
+    position: relative;
+    background-color: #0a0a0a; /* Dark background for header */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle line at bottom */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo-text {
-    font-size: 1.8em; /* Larger logo text */
-    font-weight: 700; /* Bold logo text */
+    font-size: 1.8em;
+    font-weight: 700;
     color: white;
-    flex-shrink: 0; /* Prevent logo from shrinking if nav is too wide */
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+.logo-image {
+    width: 180px; /* Adjusted size for the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
 header nav {
     display: flex;
-    justify-content: center; /* Center the nav links */
-    flex-grow: 1; /* Allow nav to take available space to center correctly */
+    justify-content: flex-end; /* Align nav links to the right */
     align-items: center;
-    padding-bottom: 10px; /* Space for the underline */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Underline for the nav group */
-    margin: 0 20px; /* Add some margin around the nav if logo/other elements are present */
 }
 
 header nav a {
     color: #ccc; /* Slightly dimmer color for non-active links */
-    padding: 5px 18px; /* Adjusted padding */
-    margin: 0 8px; /* Adjusted margin */
+    padding: 5px 15px; /* Adjusted padding */
+    margin: 0 10px; /* Space between links */
     text-decoration: none;
     font-weight: 400; /* Regular weight for nav links */
-    font-size: 1em; /* Increased font size for nav links */
+    font-size: 1em;
     transition: color 0.3s ease;
-    text-transform: uppercase; /* As per image */
+    text-transform: uppercase;
+    position: relative; /* For potential underline effect */
 }
 
 header nav a.active,
 header nav a:hover {
     color: white; /* Bright white for active/hover link */
+}
+
+/* Add underline effect for active link */
+header nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -28px; /* Position below the link */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
 }
 
 /* Hero Section Styles */
