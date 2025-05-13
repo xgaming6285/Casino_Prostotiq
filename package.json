@@ -1,0 +1,15 @@
+{
+  "name": "casino_prostotiq",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "vite": "^6.3.5"
+  }
+}
