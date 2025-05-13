@@ -6,17 +6,20 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    background-color: #000; /* Fallback color */
+    /* background-color: #000; */ /* Fallback color, can be overridden by more specific rules
+                                     or removed if all relevant body instances have specific backgrounds.
+                                     The new gradient includes its own darker fallback. */
 }
 
 /* // Home Page Style */
 
 body.homepage-background {
-    background-image: url('image/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    /* ---- New Radial Gradient Background ---- */
+    background-color: #050608; /* Fallback color & darkest shade of gradient */
+    background-image: radial-gradient(ellipse at center, #181824 0%, #050608 75%);
+    background-attachment: fixed; /* Makes the gradient fixed during scroll */
+    min-height: 100vh; /* Ensures full viewport height coverage */
+    /* ---- End of New Radial Gradient Background ---- */
 }
 
 /* Header Styles */
@@ -138,15 +141,18 @@ header nav a:hover {
 }
 
 .craftsmanship-background {
-    background-image: url('image/background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed; /* Or scroll, depending on desired effect */
+    /* ---- New Radial Gradient Background ---- */
+    background-color: #050608; /* Fallback color & darkest shade of gradient */
+    background-image: radial-gradient(ellipse at center, #181824 0%, #050608 75%);
+    background-attachment: fixed; /* Or 'scroll', makes the gradient fixed during scroll */
+    /* ---- End of New Radial Gradient Background ---- */
+
     color: white; /* Ensure text is visible on this background */
-    /* Override general page-section flex alignment for this specific section if needed */
     display: block; /* Change from flex to block to allow more custom positioning within */
     position: relative; /* For positioning CTA button absolutely if needed */
+    /* min-height: 100vh; */ /* Already handled by .page-section if this class is also applied,
+                                or add if .craftsmanship-background is used standalone and needs full height.
+                                The .craftsmanship-content below has its own min-height. */
 }
 
 .craftsmanship-content {
