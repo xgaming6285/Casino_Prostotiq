@@ -95,11 +95,13 @@ header nav a.active::after {
 
 /* Header line - ADDED from cookie-policy.css */
 .header-line {
+    position: absolute; /* MODIFIED: Take out of flex flow, position relative to header */
+    bottom: 0;          /* MODIFIED: Place at the bottom of the header */
+    left: 0;            /* MODIFIED: Align to the left edge of the header */
+    right: 0;           /* MODIFIED: Align to the right edge of the header */
     height: 1px;
     background-color: white;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* width, max-width, and margin:auto are no longer needed here due to absolute positioning with left/right */
 }
 
 /* Hero Section Styles */
