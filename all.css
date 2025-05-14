@@ -24,70 +24,79 @@ body.homepage-background {
 
 /* Header Styles */
 header {
-    padding: 20px 5%; /* Use percentage for responsive padding */
+    /* MODIFIED: Styles from cookie-policy.css */
     display: flex;
-    justify-content: space-between; /* Push logo to left, nav to right */
+    justify-content: space-between;
     align-items: center;
-    position: sticky; /* MODIFIED: Makes the header sticky */
-    top: 0; /* MODIFIED: Sticks to the top of the viewport */
-    z-index: 1000; /* MODIFIED: Ensures header stays on top of other content */
-    background-color: #0a0a0a; /* Dark background for header */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* MODIFIED: This is the main underline for the entire header */
+    padding: 20px 5%;
+    max-width: 1200px; /* ADDED */
+    margin: 0 auto; /* ADDED */
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    background-color: #0a0a0a; /* Kept from original all.css, or choose one */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); REMOVED, using header-line now */
     width: 100%;
     box-sizing: border-box;
 }
 
-.navbar-container { /* MODIFIED: Simplified to just be a container */
-    position: relative; /* Keep if any future positioning needs it, but not strictly for current setup */
-    /* Removed border-bottom, width, display:flex, justify-content:flex-end */
+/* REMOVED .navbar-container specific styles if any that conflict, keeping it simple */
+.navbar-container nav {
+    display: flex;
+    gap: 30px;
 }
 
 .logo-text {
-    font-size: 1.8em;
-    font-weight: 700;
+    /* MODIFIED: Styles from cookie-policy.css */
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
     color: white;
-    flex-shrink: 0; /* Prevent logo from shrinking */
+    font-weight: 600;
+    flex-shrink: 0; 
 }
 
-.logo-image {
-    width: 180px; /* Adjusted size for the logo */
-    height: auto; /* Maintain aspect ratio */
-}
+/* .logo-image { REMOVED - No longer using image logo globally
+    width: 180px; 
+    height: auto; 
+} */
 
-header nav {
-    display: flex;
-    justify-content: flex-end; /* Align nav links to the right */
-    align-items: center;
-}
-
-header nav a {
-    color: #ccc; /* Slightly dimmer color for non-active links */
-    padding: 5px 15px; /* Adjusted padding */
-    margin: 0 10px; /* Space between links */
+header nav a { /* MERGED from cookie-policy.css and all.css */
+    color: white; /* From cookie-policy.css */
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif; /* MODIFIED: Changed font to Montserrat */
-    font-weight: 400; /* Regular weight for nav links */
-    font-size: 1em;
+    font-size: 1rem; /* From cookie-policy.css */
+    letter-spacing: 1px; /* From cookie-policy.css */
+    padding: 5px 15px; 
+    margin: 0 10px; /* Kept for spacing, adjust if gap is enough */
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400; 
     transition: color 0.3s ease;
     text-transform: uppercase;
-    position: relative; /* For potential underline effect */
+    position: relative; 
 }
 
 header nav a.active,
 header nav a:hover {
-    color: white; /* Bright white for active/hover link */
+    color: white; 
 }
 
-/* Add underline effect for active link */
-header nav a.active::after {
-    content: '';
+header nav a.active::after { /* MODIFIED to match cookie-policy.css */
+    content: "";
     position: absolute;
-    bottom: -21px; /* Adjusted to sit on top of the header's border-bottom */
+    bottom: -5px; /* From cookie-policy.css */
     left: 0;
     width: 100%;
     height: 2px;
     background-color: white;
-    z-index: 1; /* Ensure it stacks on top of the header's border */
+    /* z-index: 1; REMOVED as header border is gone, not strictly needed now */
+}
+
+/* Header line - ADDED from cookie-policy.css */
+.header-line {
+    height: 1px;
+    background-color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Hero Section Styles */
