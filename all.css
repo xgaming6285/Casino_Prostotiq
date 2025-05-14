@@ -816,29 +816,30 @@ header nav a.active::after {
 
 .view-360 {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   /* Space from bottom */
-  right: 40px;
-  /* Space from right */
+  right: -40px;
+  /* Move it more to the right by using a negative value */
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 8px;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
+  background-color: transparent;
+  /* Remove background */
+  box-shadow: none;
+  /* Remove shadow */
 }
 
 .view-360:hover {
   transform: scale(1.1);
-  background-color: white;
 }
 
 .view-icon {
-  width: 40px;
-  height: 40px;
+  width: 75px;
+  height: 65px;
   cursor: pointer;
-  filter: brightness(0);
+  /* Remove the filter since the original icon is white */
 }
 
 .order-action {
