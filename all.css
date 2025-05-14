@@ -274,7 +274,6 @@ body.homepage-background {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
     color: #e0e0e0;
-    /* MODIFIED */
     font-weight: 600;
     flex-shrink: 0;
 }
@@ -713,6 +712,7 @@ body.homepage-background {
     margin-bottom: 10px;
     font-weight: 700;
     text-transform: none;
+    line-height: 1.1;
 }
 
 .pre-order-header h3 {
@@ -723,7 +723,10 @@ body.homepage-background {
 
 .script-logo {
     font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
     font-weight: 600;
+    margin-left: 10px;
+    margin-right: 10px; /* Added spacing after the text */
 }
 
 .product-features {
@@ -732,12 +735,26 @@ body.homepage-background {
 
 .feature-tagline {
     font-size: 1.5rem;
-    margin: 5px 0;
+    margin: 2px 0;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.1;
+    font-weight: 200;
 }
 
 .no-constraints {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Add spacing between the text elements */
+.no-constraints span {
+    margin-right: 10px; /* Add space between each text element */
+    display: inline-block; /* Ensures the margin is respected */
+}
+
+/* Remove margin from the last element */
+.no-constraints span:last-child {
+    margin-right: 0;
 }
 
 .view-options {
@@ -747,18 +764,14 @@ body.homepage-background {
 .view-360 {
     position: absolute;
     bottom: 20px;
-    /* Space from bottom */
-    right: -40px;
-    /* Move it more to the right by using a negative value */
+    right: -60px;
     z-index: 100;
     padding: 8px;
     border-radius: 50%;
     transition: all 0.3s ease;
     cursor: pointer;
     background-color: transparent;
-    /* Remove background */
     box-shadow: none;
-    /* Remove shadow */
 }
 
 .view-360:hover {
@@ -766,10 +779,9 @@ body.homepage-background {
 }
 
 .view-icon {
-    width: 75px;
-    height: 65px;
+    width: 45px;
+    height: 35px;
     cursor: pointer;
-    /* Remove the filter since the original icon is white */
 }
 
 .order-action {
@@ -778,16 +790,17 @@ body.homepage-background {
 
 .order-now-btn {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 5px 15px;
     background-color: transparent;
     color: white;
     text-decoration: none;
-    border: 2px solid white;
-    border-radius: 30px;
-    font-size: 1.2rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    font-weight: 300;
 }
 
 .order-now-btn:hover {
