@@ -18,6 +18,245 @@ body {
                                      The new gradient includes its own darker fallback. */
 }
 
+/* Base Styles */
+:root {
+  --header-height: 80px;
+  --black: #000;
+  --white: #fff;
+  --gray-100: #f7f7f7;
+  --gray-200: #e9e9e9;
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-800: #262626;
+  --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--black);
+  color: var(--white);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative; /* Added for absolute positioning of header-line */
+}
+
+/* Header Line */
+.header-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 8%; /* Leave some space on the right side */
+  height: 1px;
+  background-color: white;
+  z-index: 10;
+}
+
+/* Navigation */
+.nav {
+  position: relative;
+  width: 100%;
+  left: 7em;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 22px;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 0 1.5rem;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.4rem 0;
+  color: var(--gray-400);
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--gray-300);
+}
+
+.nav-link.active {
+  color: var(--white);
+}
+
+/* Glowing Indicator */
+.nav-indicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background-color: var(--white);
+  opacity: 0;
+  box-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.5);
+  transition: 
+    transform 0.4s var(--transition-timing),
+    width 0.4s var(--transition-timing),
+    opacity 0.4s var(--transition-timing);
+  will-change: transform, width, opacity;
+  pointer-events: none;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: var(--white);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+  top: -6px;
+}
+
+.hamburger::after {
+  bottom: -6px;
+}
+
+.mobile-menu-toggle.active .hamburger {
+  background-color: transparent;
+}
+
+.mobile-menu-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.mobile-menu-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsive Styles for Header */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+    position: absolute;
+    left: 1rem;
+  }
+
+  .nav {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.active {
+    max-height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .nav-item {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  .nav-indicator {
+    display: none;
+  }
+}
+
+/* Optimize animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* // Home Page Style */
 
 body.homepage-background {
@@ -35,13 +274,13 @@ body.homepage-background {
     /* Kept: Makes the gradient/image fixed during scroll */
 }
 
-/* Header Styles */
-header {
-    /* MODIFIED: Styles from cookie-policy.css */
+/* OLD HEADER STYLES - REMOVED AND REPLACED WITH NEW ONES ABOVE */
+/* header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
+<<<<<<< Updated upstream
     max-width: 1200px;
     margin: 0 auto;
     position: sticky;
@@ -49,19 +288,31 @@ header {
     z-index: 1000;
     background-color: transparent;
     /* MODIFIED */
+=======
+    max-width: 1200px; 
+    margin: 0 auto; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    background-color: transparent;
+>>>>>>> Stashed changes
     width: 100%;
     box-sizing: border-box;
 }
 
 .navbar-container {
     background-color: transparent;
+<<<<<<< Updated upstream
     /* ADDED */
+=======
+>>>>>>> Stashed changes
 }
 
 .navbar-container nav {
     display: flex;
     gap: 30px;
     background-color: transparent;
+<<<<<<< Updated upstream
     /* ADDED */
 }
 
@@ -95,6 +346,21 @@ header nav a {
     /* ADDED */
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+=======
+}
+
+header nav a { 
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1rem; 
+    letter-spacing: 1px; 
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400; 
+>>>>>>> Stashed changes
     transition: color 0.3s ease;
     text-transform: uppercase;
     position: relative;
@@ -112,13 +378,16 @@ header nav a.active::after {
     left: 0;
     width: 100%;
     height: 1px;
+<<<<<<< Updated upstream
     /* MODIFIED */
+=======
+>>>>>>> Stashed changes
     background-color: white;
 }
 
-/* Header line - ADDED from cookie-policy.css */
 .header-line {
     position: absolute;
+<<<<<<< Updated upstream
     /* MODIFIED: Take out of flex flow, position relative to header */
     bottom: 0;
     /* MODIFIED: Place at the bottom of the header */
@@ -126,10 +395,27 @@ header nav a.active::after {
     /* MODIFIED: Align to the left edge of the header */
     right: 0;
     /* MODIFIED: Align to the right edge of the header */
+=======
+    bottom: 0;
+    left: 0;
+    right: 0;
+>>>>>>> Stashed changes
     height: 1px;
     background-color: white;
-    /* width, max-width, and margin:auto are no longer needed here due to absolute positioning with left/right */
+} */
+
+.logo-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #e0e0e0; /* MODIFIED */
+    font-weight: 600;
+    flex-shrink: 0; 
 }
+
+/* .logo-image { REMOVED - No longer using image logo globally
+    width: 180px; 
+    height: auto; 
+} */
 
 /* Hero Section Styles */
 .hero-section {
@@ -142,6 +428,7 @@ header nav a.active::after {
     min-height: calc(100vh - 120px);
     /* Adjust based on approximated header/footer height */
     box-sizing: border-box;
+    margin-top: var(--header-height); /* Add top margin to account for fixed header */
 }
 
 .hero-text {
@@ -222,8 +509,6 @@ header nav a.active::after {
     margin-bottom: 30px;
     text-transform: uppercase;
 }
-
-
 
 .craftsmanship-content {
     display: flex;
