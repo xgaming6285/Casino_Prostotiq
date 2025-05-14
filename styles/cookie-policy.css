@@ -1,0 +1,102 @@
+/* styles/cookie-policy.css */
+
+body {
+    background-color: #2c303a; /* Dark blue-grey from image */
+    color: #ccc; /* Light grey text, adjust as needed */
+    font-family: 'Montserrat', sans-serif; /* Matching main site font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7; /* REVERTED: Back to previous value */
+}
+
+/* Re-apply sticky header if needed, assuming all.css might not be loaded or has conflicting body styles */
+/* header is already styled in all.css, this page links to it. */
+
+.cookie-policy-content {
+    display: flex; /* ADDED: For side-by-side layout of coins and text */
+    align-items: flex-start; /* Align items to the top */
+    padding: 40px 5%; /* Add some padding */
+    max-width: 1500px; /* Kept from previous change */
+    margin: 20px auto; /* Center the content */
+    gap: 30px; /* ADDED: Space between coins image and text block */
+    /* position: relative; No longer needed here if coins are direct child */
+}
+
+.coins-image {
+    /* position: absolute; REMOVED: Will be part of flex flow */
+    /* left: 5%; REMOVED */
+    /* top: 80px; REMOVED */
+    width: 25%; /* MODIFIED: Adjust width as a percentage of the flex container */
+    max-width: 300px; /* ADDED: Max width for the coins image */
+    height: auto;
+    /* z-index: 1; REMOVED */
+    /* opacity: 0.7; REMOVED */
+    align-self: center; /* MODIFIED: Vertically center coins a bit if text is long */
+}
+
+.content-container { /* This now primarily holds the text-block */
+    flex: 1; /* Allow text container to take remaining space */
+    position: relative; /* ADDED: For positioning the H1 */
+}
+
+.content-container h1 { /* Selector changed from .text-block h1 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Orbitron', sans-serif; /* Title font */
+    color: white;
+    font-size: 2.0em; 
+    margin: 0; /* Reset margin for absolute positioning */
+    text-align: right;
+    z-index: 2; /* Ensure title is above columns/line */
+}
+
+.text-columns {
+    display: flex;
+    gap: 40px; /* Space between columns, includes space for the line */
+    position: relative; /* For the pseudo-element line */
+    margin-top: 70px; /* Space for the H1 title above */
+}
+
+.text-columns::before { /* The vertical white line */
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px); /* Position in the middle of the gap */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: white;
+}
+
+.column {
+    flex: 1; /* Each column takes equal width */
+    /* padding: 0 20px; /* Padding for text within columns, adjust as needed */
+}
+
+.column:first-child {
+    padding-right: 20px; /* Space before the line */
+}
+
+.column:last-child {
+    padding-left: 20px; /* Space after the line */
+}
+
+.column p { /* MODIFIED: Selector changed from .text-block p */
+    margin-bottom: 20px;
+    font-size: 0.95em; 
+    text-align: justify;
+    letter-spacing: 0.07em; /* Kept for stretched feel */
+}
+
+/* Ensure header links from all.css are styled correctly if they are too light on this background */
+header nav a {
+    color: #ccc; /* Ensure nav links are visible, matching body text */
+}
+
+header nav a.active,
+header nav a:hover {
+    color: white;
+}
+
+/* If the underline for active nav items needs adjustment due to path changes: */
+/* header nav a.active::after - check positioning if index.html# is different */ 
