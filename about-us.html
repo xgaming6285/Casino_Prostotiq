@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MyMiniSlot</title>
+    <link rel="stylesheet" href="all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(30, 37, 47, 255) !important;
+            background-image: none !important;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            width: 100%;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+            flex: 1;
+            box-sizing: border-box;
+            align-items: flex-start;
+        }
+
+        .about-content {
+            flex: 1;
+            padding-right: 20px;
+            max-width: 50%;
+            box-sizing: border-box;
+            margin-top: 80px;  /* Add margin to push content down */
+        }
+
+        .about-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+
+        .about-text {
+            font-size: 0.8em;
+            line-height: 1.6;
+            margin-bottom: 5px;
+            opacity: 0.9;
+        }
+
+        .device-showcase {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 50%;
+            box-sizing: border-box;
+            margin-top: 120px;  /* Increased from 80px to 120px */
+        }
+
+        .device-showcase img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                margin-top: 60px;
+            }
+
+            .about-content, .device-showcase {
+                padding-right: 0;
+                margin-bottom: 40px;
+                max-width: 100%;
+            }
+        }
+
+        /* Override header background to match the page */
+        .header {
+            background-color: rgba(30, 37, 47, 255) !important;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="logo-text">MyMiniSlot</div>
+            <nav class="nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="index.html#craftsmanship" class="nav-link">CRAFTSMANSHIP</a></li>
+                    <li class="nav-item"><a href="index.html#experience" class="nav-link">EXPERIENCE</a></li>
+                    <li class="nav-item"><a href="index.html#pre-order" class="nav-link">PRE-ORDER</a></li>
+                </ul>
+            </nav>
+            <div class="header-line"></div>
+        </div>
+    </header>
+
+    <main class="about-container">
+        <div class="about-content">
+            <h1 class="about-title">About Us</h1>
+            <div class="about-text">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <br>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <br>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </div>
+        <div class="device-showcase">
+            <img src="image/backgroundExperience.png" alt="MyMiniSlot Device" />
+        </div>
+    </main>
+</body>
+</html> 

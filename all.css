@@ -859,7 +859,7 @@ img.experience-main-product-image {
     /* КОРИГИРАНО: Изображението да е адаптивно до max-width, без да прелива. */
     height: auto;
     display: block;
-    /* z-index: 1; - Може да е нужно, ако логата трябва да са зад него, но обикновено са около. */
+
 }
 
 /* Общ стил за всички лога на доставчици */
@@ -988,4 +988,80 @@ section#experience .experience-cta-button:hover {
 
 section#experience p:empty {
     display: none;
+}
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px; /* Increased from 1200px */
+    margin: 80px auto 0;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.about-content {
+    flex: 0.65; /* Increased from 0.55 to give more width to the text content */
+    padding-right: 70px; /* Increased from 50px */
+}
+
+.about-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.about-text {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 800px; /* Added to ensure text has enough width */
+}
+
+.about-text p {
+    margin-bottom: -2px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    width: 120%; /* Added to extend the lines beyond the text */
+}
+
+.about-text p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.device-showcase {
+    flex: 0.35; /* Decreased from 0.45 to give more space to text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.device-showcase img {
+    max-width: 100%;
+    height: auto;
+    transform: scale(1.2) translateX(20%); /* Combined scale and translate */
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .about-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+        flex: 1;
+    }
+
+    .device-showcase {
+        flex: 1;
+    }
+
+    .device-showcase img {
+        transform: scale(1);
+    }
 }
