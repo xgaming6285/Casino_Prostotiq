@@ -14,15 +14,47 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.transform = 'scale(1)';
       });
       
-      // Make labels clickable to show more information
-      label.addEventListener('click', function() {
+      // Make labels clickable to show/hide dropdowns
+      label.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent event bubbling
+        
         const labelText = this.querySelector('.label-text').textContent;
-        showFeatureInfo(labelText);
+        const labelIndex = Array.from(featureLabels).indexOf(this);
+        
+        // Check if this label has an open dropdown
+        const hasOpenDropdown = this.dataset.hasDropdown === 'true';
+        
+        // Close all existing dropdowns
+        document.querySelectorAll('.feature-dropdown').forEach(dropdown => {
+          dropdown.remove();
+        });
+        
+        // Clear all hasDropdown flags
+        featureLabels.forEach(l => {
+          l.dataset.hasDropdown = 'false';
+        });
+        
+        // If this label didn't have an open dropdown, create one
+        if (!hasOpenDropdown) {
+          createFeatureDropdown(this, labelText);
+        }
       });
     });
     
-    // Function to show feature information
-    function showFeatureInfo(feature) {
+    // Close dropdowns when clicking anywhere else
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.feature-dropdown').forEach(dropdown => {
+        dropdown.remove();
+      });
+      
+      // Clear all hasDropdown flags
+      featureLabels.forEach(l => {
+        l.dataset.hasDropdown = 'false';
+      });
+    });
+    
+    // Function to create and append feature dropdown
+    function createFeatureDropdown(labelElement, feature) {
       let info = '';
       
       switch(feature) {
@@ -42,7 +74,38 @@ document.addEventListener('DOMContentLoaded', function() {
           info = 'Feature information not available.';
       }
       
-      alert(info);
+      // Create dropdown element
+      const dropdown = document.createElement('div');
+      dropdown.className = 'feature-dropdown show-dropdown';
+      dropdown.textContent = info;
+      dropdown.style.zIndex = '9999'; // Extremely high z-index
+      
+      // Instead of appending directly to the label element, append to body for absolute positioning
+      document.body.appendChild(dropdown);
+      
+      // Calculate position relative to the label
+      const rect = labelElement.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      
+      if (labelElement.classList.contains('right-label')) {
+        dropdown.style.position = 'absolute';
+        dropdown.style.top = (rect.bottom + scrollTop - 1) + 'px';
+        dropdown.style.right = (document.body.clientWidth - rect.right + scrollLeft - 20) + 'px';
+      } else {
+        dropdown.style.position = 'absolute';
+        dropdown.style.top = (rect.bottom + scrollTop - 1) + 'px';
+        dropdown.style.left = (rect.left + scrollLeft) + 'px';
+      }
+      
+      // Store reference to the dropdown to identify which label it belongs to
+      labelElement.dataset.hasDropdown = 'true';
+      dropdown.dataset.forLabel = Array.from(document.querySelectorAll('.feature-label')).indexOf(labelElement);
+      
+      // Animate in
+      setTimeout(() => {
+        dropdown.classList.add('show-dropdown');
+      }, 10);
     }
     
     // Add the animation keyframes to the document
@@ -52,6 +115,39 @@ document.addEventListener('DOMContentLoaded', function() {
         to {
           stroke-dashoffset: 0;
         }
+      }
+      
+      .feature-dropdown {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 12px;
+        color: white;
+        font-size: 14px;
+        max-width: 250px;
+        z-index: 9999;
+        opacity: 0;
+        transform: translateY(-5px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+        text-align: center;
+      }
+      
+      .feature-dropdown.show-dropdown {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .left-label .feature-dropdown {
+        left: 25px;
+        top: 100%;
+      }
+      
+      .right-label .feature-dropdown {
+        right: 0;
+        top: 100%;
       }
     `;
     document.head.appendChild(style);
