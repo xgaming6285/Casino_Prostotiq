@@ -6,7 +6,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 /* Add styles for logo underline specific to cookie policy page */
@@ -102,7 +102,7 @@ body {
 .column p {
     margin-bottom: 20px;
     font-size: 0.9rem;
-    line-height: 1.8;
+    line-height: 1.5;
     color: #c0c0c0;
     font-weight: 600;
 }
