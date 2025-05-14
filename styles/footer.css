@@ -1,0 +1,151 @@
+/* Footer Styles */
+
+body {
+    background-image: url('image/backgroundMainPage.jpg'); /* Dark navy/black background */
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+.site-footer {
+    background-color: #1a1d24;
+    color: #e0e0e0;
+    padding: 40px 0 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    min-width: 150px;
+}
+
+.footer-column a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.language-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.language-selector {
+    margin-bottom: 15px;
+}
+
+.language-link {
+    display: flex;
+    align-items: center;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.flag-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover img {
+    opacity: 0.8;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.crypto-logos {
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.crypto-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 10px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo .logo-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-column {
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    
+    .language-social {
+        align-items: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}

@@ -11,18 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <!-- Logo with script font -->
-        <div class="logo-text">MyMiniSlot</div>
-        <div class="navbar-container">
-            <nav>
-                <a href="index.html#" class="active">HOME</a>
-                <a href="index.html#craftsmanship">CRAFTSMANSHIP</a>
-                <a href="index.html#experience">EXPERIENCE</a>
-                <a href="index.html#pre-order">PRE-ORDER</a>
+    <header class="header" id="main-header">
+        <div class="container">
+            <!-- Logo with script font -->
+            <div class="logo-text">MyMiniSlot</div>
+            <nav class="nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html#home" class="nav-link active" data-section="home">HOME</a></li>
+                    <li class="nav-item"><a href="index.html#craftsmanship" class="nav-link" data-section="craftsmanship">CRAFTSMANSHIP</a></li>
+                    <li class="nav-item"><a href="index.html#experience" class="nav-link" data-section="experience">EXPERIENCE</a></li>
+                    <li class="nav-item"><a href="index.html#pre-order" class="nav-link" data-section="pre-order">PRE-ORDER</a></li>
+                </ul>
+                <div class="nav-indicator" id="indicator"></div>
             </nav>
+            <!-- Mobile menu toggle might be needed if you want responsive nav here too -->
+            <!-- <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span class="hamburger"></span>
+            </button> -->
+            <div class="header-line"></div> <!-- This line is styled by all.css -->
         </div>
-        <div class="header-line"></div>
     </header>
 
     <main class="cookie-policy-content">
