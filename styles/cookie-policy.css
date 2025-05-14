@@ -80,9 +80,9 @@ body {
     content: "";
     position: absolute;
     left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
+    top: 15px;
+    bottom: 15px;
+    width: 4px;
     background-color: white;
 }
 
