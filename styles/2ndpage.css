@@ -50,7 +50,7 @@ body {
 /* Feature labels */
 .feature-label {
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   display: flex;
   align-items: flex-end;
 }
@@ -72,7 +72,7 @@ body {
   border-radius: 50%;
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0.8);
-  top: 1.2em;
+  top: 1.25em;
   position: relative;
   left: 2.3em;
 }
@@ -196,6 +196,61 @@ body {
 .arrow-icon {
   width: 20px;
   height: 20px;
+}
+
+/* Feature Dropdowns */
+.feature-dropdown {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font-size: 14px;
+  max-width: 250px;
+  z-index: 9999; /* Extremely high z-index to be above everything */
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.feature-dropdown.show-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.left-label .feature-dropdown {
+  left: 25px;
+  top: 100%;
+}
+
+.right-label .feature-dropdown {
+  right: 0;
+  top: 100%;
+}
+
+/* Ensure labels stay above other elements when dropdown is open */
+.feature-label {
+  position: absolute;
+  z-index: 111;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.plus-circle, .plus-circle-right {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 120; /* Higher than feature-label */
+}
+
+.feature-label:hover .plus-circle, 
+.feature-label:hover .plus-circle-right {
+  transform: scale(1.1);
 }
 
 /* Responsive adjustments */
