@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const indicator = document.getElementById('indicator');
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const logoText = document.querySelector('.logo-text');
     const sections = {};
     
     // State variables
@@ -15,16 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let ticking = false;
     let sectionPositions = {};
     
+    // Check if we're on the main page
+    const isMainPage = window.location.pathname === '/' || 
+                        window.location.pathname === '/index.html' ||
+                        window.location.pathname.endsWith('/index.html');
+    
     // Initialize the header component
     function init() {
       // Calculate section positions
       calculateSectionPositions();
       
       // Set initial active section
-      setActiveSection('home');
-      
-      // Update indicator position immediately
-      updateIndicatorPosition('home', true);
+      if (isMainPage) {
+        setActiveSection('home');
+        // Update indicator position immediately
+        updateIndicatorPosition('home', true);
+      } else {
+        // On other pages, snap to logo
+        snapIndicatorToLogo(true);
+      }
       
       // Set initialized flag
       isInitialized = true;
@@ -32,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Calculate and store section positions
     function calculateSectionPositions() {
+      if (!isMainPage) return; // Only calculate on main page
+      
       // Get all sections
       document.querySelectorAll('section[id], .hero-section[id]').forEach(section => {
         const id = section.id;
@@ -51,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Determine active section based on scroll position
     function determineActiveSection() {
+      if (!isMainPage) return null; // Only determine active section on main page
+      
       // Use viewport center point for better UX
       const viewportMiddle = window.scrollY + window.innerHeight / 2;
       
@@ -112,13 +126,53 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Update indicator position
       if (!isMobile) {
-        updateIndicatorPosition(sectionId);
+        if (isMainPage) {
+          updateIndicatorPosition(sectionId);
+        } else {
+          snapIndicatorToLogo();
+        }
+      }
+    }
+
+    // Snap indicator to the logo
+    function snapIndicatorToLogo(immediate = false) {
+      if (isMobile) return;
+      
+      // Get positions
+      const navRect = nav.getBoundingClientRect();
+      const logoRect = logoText.getBoundingClientRect();
+      
+      // Calculate position relative to nav
+      const leftPosition = logoRect.left - navRect.left;
+      
+      // Apply styles with appropriate transition
+      if (immediate) {
+        indicator.style.transition = 'none';
+      } else {
+        indicator.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)';
+      }
+      
+      // Set indicator position and size to match the logo
+      indicator.style.width = `${logoRect.width}px`;
+      indicator.style.transform = `translateX(${leftPosition}px)`;
+      indicator.style.opacity = '1';
+      
+      // Force reflow to ensure transition applies if immediate
+      if (immediate) {
+        indicator.offsetWidth;
+        indicator.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)';
       }
     }
     
     // Update indicator position with smooth animation
     function updateIndicatorPosition(sectionId, immediate = false) {
       if (isMobile) return;
+      
+      // If not on main page, snap to logo instead
+      if (!isMainPage) {
+        snapIndicatorToLogo(immediate);
+        return;
+      }
       
       // Find the active nav link
       const activeLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
@@ -152,6 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Handle scroll events
     function handleScroll() {
+      // Only track scroll on main page
+      if (!isMainPage) return;
+      
       // Store current scroll position
       const currentScrollY = window.scrollY;
       
@@ -197,7 +254,11 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Update indicator position immediately without animation
       if (!isMobile) {
-        updateIndicatorPosition(activeSection, true);
+        if (isMainPage) {
+          updateIndicatorPosition(activeSection, true);
+        } else {
+          snapIndicatorToLogo(true);
+        }
       }
     }
     
@@ -209,6 +270,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Smooth scroll to section
     function scrollToSection(sectionId) {
+      if (!isMainPage) return; // Only scroll on main page
+      
       const section = sections[sectionId];
       if (!section) return;
       
@@ -247,7 +310,13 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const sectionId = link.getAttribute('data-section');
-        scrollToSection(sectionId);
+        
+        if (isMainPage) {
+          scrollToSection(sectionId);
+        } else {
+          // On other pages, navigate to main page with hash
+          window.location.href = `/index.html#${sectionId}`;
+        }
       });
     });
     
@@ -260,6 +329,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update on load to ensure correct positioning
     window.addEventListener('load', () => {
       calculateSectionPositions();
-      updateIndicatorPosition(activeSection, true);
+      if (isMainPage) {
+        updateIndicatorPosition(activeSection, true);
+      } else {
+        snapIndicatorToLogo(true);
+      }
     });
   });

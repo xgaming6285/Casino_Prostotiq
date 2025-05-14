@@ -51,10 +51,10 @@ html {
   left: 0;
   right: 0;
   height: var(--header-height);
-  background-color: var(--black);
+  background-color: transparent;
   color: var(--white);
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 .header .container {
