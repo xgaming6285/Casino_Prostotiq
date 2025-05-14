@@ -736,12 +736,16 @@ header nav a.active::after {
   position: relative;
   flex: 1;
   max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pre-order-product-image {
   width: 100%;
   height: auto;
   display: block;
+  position: relative;
 }
 
 .product-buttons {
@@ -812,14 +816,17 @@ header nav a.active::after {
 
 .view-360 {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 40px;
+  /* Space from bottom */
+  right: 40px;
+  /* Space from right */
   z-index: 100;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 8px;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .view-360:hover {
