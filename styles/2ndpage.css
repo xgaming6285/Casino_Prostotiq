@@ -1,0 +1,232 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Container styles */
+.showcase-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-container {
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 1600px;
+}
+
+.product-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Product image */
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 19em;
+  width: 62%;
+  height: 62%;
+  object-fit: contain;
+}
+
+/* Feature labels */
+.feature-label {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+}
+
+.left-label {
+  flex-direction: row;
+}
+
+.right-label {
+  flex-direction: row-reverse;
+}
+
+.plus-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 1.2em;
+  position: relative;
+  left: 2.3em;
+}
+
+.plus-circle-right {
+    position: absolute;
+    top: 2.1em;
+    right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+.plus-icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.label-text {
+  background-color: rgba(0, 0, 0, 1);
+  border-color: white;
+  border-radius: 9999px;
+  border-style: solid;
+  border-width: thin;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+
+.left-label .plus-circle {
+  margin-right: 8px;
+}
+
+.right-label .plus-circle {
+  margin-left: 8px;
+}
+
+/* Connecting lines */
+.connecting-line {
+  position: absolute;
+  z-index: 0;
+  overflow: visible;
+}
+
+.connecting-line line {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide circles until animation starts */
+.connecting-line circle {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transition-delay: 1s;
+}
+
+/* Specific positioning */
+.high-res {
+  left: 285px;
+  top: 5.5em;
+}
+
+.high-res-line {
+  left: 320px;
+  top: 104px;
+}
+
+.forged-metal {
+  left: 210px;
+  top: 12em;
+}
+
+.forged-metal-line {
+  left: 320px;
+  top: 210px;
+}
+
+.providers {
+  left: 125px;
+  top: 18.5em;
+}
+
+.providers-line {
+  left: 208px;
+  top: 312px;
+}
+
+.buttons {
+  right: 165px;
+  top: 374px;
+}
+
+.buttons-line {
+  right: 260px;
+  top: 391px;
+}
+
+/* Call to action */
+.cta {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.cta-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .high-res, .forged-metal, .providers {
+    left: 50px;
+  }
+  
+  .high-res-line, .forged-metal-line, .providers-line {
+    left: 95px;
+  }
+  
+  .buttons {
+    right: 50px;
+  }
+  
+  .buttons-line {
+    right: 95px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-label {
+    font-size: 12px;
+  }
+  
+  .label-text {
+    padding: 6px 16px;
+  }
+  
+  .plus-circle {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .cta-text {
+    font-size: 16px;
+  }
+}

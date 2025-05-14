@@ -6,9 +6,11 @@
     <title>Casino Prostotiq Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="styles/2ndpage.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="homepage-background">
@@ -37,32 +39,80 @@
     </main>
 
     <section id="craftsmanship" class="page-section craftsmanship-background">
-        <div class="craftsmanship-content">
-            <div class="product-display-area">
-                <img src="image/machine.png.png" alt="MyMiniSlot Device" class="craftsmanship-product-image">
+        <div class="showcase-container">
+            <div class="main-container">
+                <div class="product-container">
+                    <!-- The main product image -->
+                    <img src="image/machine.png.png" alt="Gaming device" class="product-image">
 
-                <div class="feature-callout high-res-display">
-                    <div class="callout-text-bubble">HIGH-RES DISPLAY</div>
-                    <div class="callout-plus-bubble"><span class="plus-symbol">+</span></div>
-                    <div class="callout-pointer-dot"></div>
-                </div>
-                <div class="feature-callout forged-in-metal">
-                    <div class="callout-text-bubble">FORGED IN METAL</div>
-                    <div class="callout-plus-bubble"><span class="plus-symbol">+</span></div>
-                    <div class="callout-pointer-dot"></div>
-                </div>
-                <div class="feature-callout thirty-providers">
-                    <div class="callout-text-bubble">30 DIFFERENT PROVIDERS</div>
-                    <div class="callout-plus-bubble"><span class="plus-symbol">+</span></div>
-                    <div class="callout-pointer-dot"></div>
-                </div>
-                <div class="feature-callout premium-buttons">
-                    <div class="callout-text-bubble">PREMIUM BUTTONS</div>
-                    <div class="callout-plus-bubble"><span class="plus-symbol">+</span></div>
-                    <div class="callout-pointer-dot"></div>
+                    <!-- Feature Labels - Left Side -->
+                    <div class="feature-label left-label high-res">
+                        <div class="plus-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="plus-icon">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="label-text">HIGH-RES DISPLAY</div>
+                    </div>
+                    <svg class="connecting-line high-res-line">
+                        <line x1="0" y1="0" x2="450" y2="0" stroke="white" stroke-width="1"></line>
+                        <circle cx="450" cy="0" r="4" fill="white"></circle>
+                    </svg>
+
+                    <div class="feature-label left-label forged-metal">
+                        <div class="plus-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="plus-icon">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="label-text">FORGED IN METAL</div>
+                    </div>
+                    <svg class="connecting-line forged-metal-line">
+                        <line x1="0" y1="0" x2="330" y2="0" stroke="white" stroke-width="1"></line>
+                        <circle cx="330" cy="0" r="4" fill="white"></circle>
+                    </svg>
+
+                    <div class="feature-label left-label providers">
+                        <div class="plus-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="plus-icon">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="label-text">30 DIFFERENT PROVIDERS</div>
+                    </div>
+                    <svg class="connecting-line providers-line">
+                        <line x1="0" y1="0" x2="392" y2="0" stroke="white" stroke-width="1"></line>
+                        <circle cx="392" cy="0" r="4" fill="white"></circle>
+                    </svg>
+
+                    <!-- Feature Label - Right Side -->
+                    <div class="feature-label right-label buttons">
+                        <div class="label-text">PREMIUM BUTTONS</div>
+                        <div class="plus-circle-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="plus-icon">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <svg class="connecting-line buttons-line">
+                        <line x1="210" y1="0" x2="0" y2="0" stroke="white" stroke-width="1"></line>
+                        <circle cx="0" cy="0" r="4" fill="white"></circle>
+                    </svg>
+
+                    <!-- Call to action -->
+                    <div class="cta">
+                        <span class="cta-text">Feel the experience</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
                 </div>
             </div>
-            <a href="#experience" class="experience-cta-button">Feel the experience &rarr;</a>
         </div>
     </section>
 
@@ -170,6 +220,7 @@
             }
         });
     </script>
+    <script src="js/2ndpage.js"></script>
 </body>
 
 </html>
