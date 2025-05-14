@@ -65,6 +65,7 @@ header nav a {
     padding: 5px 15px; /* Adjusted padding */
     margin: 0 10px; /* Space between links */
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif; /* MODIFIED: Changed font to Montserrat */
     font-weight: 400; /* Regular weight for nav links */
     font-size: 1em;
     transition: color 0.3s ease;
@@ -106,6 +107,7 @@ header nav a.active::after {
 
 .hero-text h1 {
     font-size: 3.8em; /* Adjusted for impact */
+    font-family: 'Montserrat', sans-serif; /* MODIFIED: Changed font to Montserrat */
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 35px;
@@ -193,163 +195,173 @@ header nav a.active::after {
 .product-display-area {
     position: relative; /* Context for absolute positioning of callouts */
     margin-bottom: 40px; /* Space between image area and CTA button */
-    width: auto; /* Or a specific max-width for the image and its callouts */
-    display: inline-block; /* To wrap around the image size */
+    width: 70%; /* MODIFIED: Give display area a more defined width */
+    max-width: 800px; /* MODIFIED: Add a max-width to prevent it becoming too large on wide screens */
+    margin-left: auto; /* Center the display area if craftsmanship-content is wider */
+    margin-right: auto; /* Center the display area */
+    display: block; /* MODIFIED: Change from inline-block for better centering control */
 }
 
 .craftsmanship-product-image {
-    max-width: 90%; /* Increased from 450px, adjust as needed */
+    max-width: 100%; /* MODIFIED: Make image fill the .product-display-area */
     height: auto;
     display: block;
     margin: 0 auto; /* Center the image if its container is wider */
 }
 
-.feature-callout {
-    position: absolute; /* The main container for a callout, positioned absolutely */
-    /* Dimensions will be determined by its content (dot, line, info-box) */
-    /* Remove previous styling like background, padding, etc., as it's now a container */
+/* REMOVING OLD/REDUNDANT STYLES FOR CALLOUTS */
+/* .callout-info-box, .feature-button, .plus-icon-wrapper specific styles from previous approach are effectively replaced below */
+
+.feature-callout { /* Main container for each callout entity */
+    position: absolute;
     z-index: 10;
-}
-
-.callout-pointer-dot {
-    width: 10px; /* Size of the dot on the product */
-    height: 10px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    /* top/left for this dot will be set per specific callout to place it on the product image */
-    z-index: 12; /* Above the line */
-}
-
-.callout-info-box {
-    display: inline-flex; /* To wrap background around content */
+    display: flex;
     align-items: center;
-    background-color: rgba(25, 25, 30, 0.85); /* Dark, slightly transparent background for the box */
-    padding: 8px 15px 8px 10px; /* Adjusted padding */
-    border-radius: 20px; /* Pill shape */
-    color: white;
-    font-size: 0.9em;
-    position: absolute;
-    /* top/left for this box will be set per specific callout, offset from the dot */
-    z-index: 11; /* Above the line, but below the dot if they were to overlap */
+    /* top & left to be set by specific classes like .high-res-display */
 }
 
-.plus-icon-wrapper {
-    width: 22px;
-    height: 22px;
-    background-color: rgba(10, 10, 10, 0.9); /* Dark circle background for plus */
-    border-radius: 50%;
-    margin-right: 10px;
+.callout-text-bubble,
+.callout-plus-bubble {
+    background-color: rgba(30, 30, 35, 0.85); /* Slightly darker than before */
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.callout-text-bubble {
+    font-size: 0.85em; /* Slightly smaller text */
+    padding: 6px 12px;
+    border-radius: 15px; /* Pill shape */
+    margin-right: 8px; /* Space between text and plus bubble for left-aligned callouts */
+}
+
+.callout-plus-bubble {
+    width: 28px;  /* Fixed size for circle */
+    height: 28px;
+    border-radius: 50%; /* Circle */
 }
 
 .plus-symbol {
     color: white;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 1; /* Ensure tight fit */
+    font-size: 18px; /* Larger plus */
+    line-height: 1;
 }
 
-/* Connector Lines Styling - using ::after on the .feature-callout container */
+.callout-pointer-dot { /* Dot on the product */
+    width: 8px; 
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute; /* Positioned relative to .feature-callout */
+    z-index: 12; 
+    /* top & left to be set by specific classes like .high-res-display .callout-pointer-dot */
+}
+
+/* Connector Lines Styling - NEW LOGIC REQUIRED */
 .feature-callout::after {
     content: '';
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.6); /* Line color */
-    height: 1px; /* Line thickness */
-    /* width (length), top, left, and transform (for angle) will be set per specific callout */
-    transform-origin: left center; /* Makes rotation easier if lines start from left */
-    z-index: 9; /* Behind dot and info-box */
+    background-color: rgba(255, 255, 255, 0.7); 
+    height: 1px; 
+    z-index: 9; 
+    /* width, top, left, transform will be VERY specific to each callout */
+    /* Example: originating from the center of the plus bubble */
 }
 
-/* --- Positioning for each callout and its parts --- */
-/* IMPORTANT: These are ROUGH ESTIMATES and WILL require manual adjustment */
+/* --- Positioning for each callout and its parts (NEW APPROXIMATE VALUES) --- */
+/* These will need significant manual adjustment */
+
+/* For callouts on the LEFT of the image */
+.high-res-display, .forged-in-metal, .thirty-providers {
+    /* .callout-text-bubble is first, then .callout-plus-bubble */
+}
+
+/* For callouts on the RIGHT of the image */
+.premium-buttons {
+    flex-direction: row-reverse; /* Plus bubble first, then text bubble */
+}
+.premium-buttons .callout-text-bubble {
+    margin-right: 0;
+    margin-left: 8px; /* Space now on the left of text bubble */
+}
+
 
 /* HIGH-RES DISPLAY Callout */
 .high-res-display {
-    top: 15%; /* Position of the entire callout container */
-    left: 30%;
+    top: 20%; 
+    left: 5%; 
 }
 .high-res-display .callout-pointer-dot {
-    top: 0; /* Relative to .high-res-display container */
-    left: 0;
+    top: 25px; /* Relative to .high-res-display -> Approx center of display */
+    left: 230px; /* Approx distance from callout anchor to screen center */
 }
-.high-res-display .callout-info-box {
-    top: -15px; /* Offset info-box from the dot */
-    left: -200px; /* Move info-box to the left of the dot */
-}
-.high-res-display::after { /* Connector Line */
-    width: 180px; /* Approx. length of line needed */
-    top: 5px;  /* Align with dot's center */
-    left: 10px; /* Start line just after the dot */
-    /* transform: rotate(0deg); */ /* Example: no rotation for a horizontal line */
+.high-res-display::after { /* Line from plus bubble to dot */
+    width: 120px; /* Placeholder */
+    top: 14px; /* Vertically align with center of plus bubble */
+    left: 135px; /* Start after plus bubble + margin (approx text_width + plus_width + space) */
 }
 
 /* FORGED IN METAL Callout */
 .forged-in-metal {
-    top: 35%;
-    left: 32%;
+    top: 38%; 
+    left: 3%; 
 }
 .forged-in-metal .callout-pointer-dot {
-    top: 0;
-    left: 0;
-}
-.forged-in-metal .callout-info-box {
-    top: -15px;
-    left: -190px;
+    top: 25px; 
+    left: 210px; 
 }
 .forged-in-metal::after {
-    width: 170px;
-    top: 5px;
-    left: 10px;
+    width: 100px; 
+    top: 14px; 
+    left: 120px; 
 }
 
 /* 30 DIFFERENT PROVIDERS Callout */
 .thirty-providers {
-    top: 55%;
-    left: 28%;
+    top: 58%; 
+    left: 1%; 
 }
 .thirty-providers .callout-pointer-dot {
-    top: 0;
-    left: 0;
-}
-.thirty-providers .callout-info-box {
-    top: -15px;
-    left: -230px;
+    top: 25px; 
+    left: 200px; 
 }
 .thirty-providers::after {
-    width: 210px;
-    top: 5px;
-    left: 10px;
+    width: 80px; 
+    top: 14px; 
+    left: 150px; /* Text is longer here */
 }
 
 /* PREMIUM BUTTONS Callout */
 .premium-buttons {
-    top: 75%;  /* Note: Using top now for consistency, adjust to bottom if easier */
-    left: 65%;
+    top: 75%; 
+    left: 60%; /* Positioned further to the right to start */
 }
 .premium-buttons .callout-pointer-dot {
-    top: 0;
-    left: 0;
+    top: 25px; /* Approx vertical center of the physical buttons */
+    left: -120px; /* Negative, because line goes from right to left */
 }
-.premium-buttons .callout-info-box {
-    top: -15px;
-    left: 30px; /* Move info-box to the right of the dot */
-}
-.premium-buttons::after { /* Line for right-side callout */
-    width: 15px; /* Short line from dot to info-box */
-    top: 5px;
-    left: 10px; /* Starts after the dot */
-    /* This line might need different logic if it points from info-box back to dot */
-    /* Or, for right-side, often easier to position info-box first, then line points from it */
+.premium-buttons::after { /* Line from plus bubble (now on left) to dot */
+    width: 110px; 
+    top: 14px; 
+    right: 135px; /* Distance from right edge of callout to dot (plus_width + text_width + space) */
+    left: auto; /* Override */
+    transform-origin: right center;
+    /* transform: rotate(180deg); No longer needed if using right property */
 }
 
-/* Clean up old .plus-icon and direct ::after on .feature-callout if they exist */
-.feature-callout .plus-icon { display: none; } /* Hide old plus icon if any remnants */
-/* Remove this if the ::after on .feature-callout is repurposed above, otherwise: */
-/* .feature-callout > ::after { display: none; } */
+
+/* Remove old specific positioning if they exist and conflict */
+.high-res-display .callout-info-box, 
+.forged-in-metal .callout-info-box, 
+.thirty-providers .callout-info-box, 
+.premium-buttons .callout-info-box {
+    position: static; /* Revert absolute positioning from previous attempts if any */
+    top: auto; left: auto; right: auto; bottom: auto;
+}
 
 .experience-cta-button {
     display: inline-block;
