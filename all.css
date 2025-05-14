@@ -2,270 +2,270 @@
 
 /* General Body Styles */
 body {
-  font-family: 'Orbitron', sans-serif;
-  color: white;
-  margin: 0;
-  padding: 0;
-  /* Fallback color */
-  background-image: url('image/backgroundMainPage.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    /* Fallback color */
+    background-image: url('image/backgroundMainPage.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 /* Base Styles */
 :root {
-  --header-height: 80px;
-  --black: #000;
-  --white: #fff;
-  --gray-100: #f7f7f7;
-  --gray-200: #e9e9e9;
-  --gray-300: #d4d4d4;
-  --gray-400: #a3a3a3;
-  --gray-500: #737373;
-  --gray-800: #262626;
-  --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --header-height: 80px;
+    --black: #000;
+    --white: #fff;
+    --gray-100: #f7f7f7;
+    --gray-200: #e9e9e9;
+    --gray-300: #d4d4d4;
+    --gray-400: #a3a3a3;
+    --gray-500: #737373;
+    --gray-800: #262626;
+    --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height);
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
 }
 
 /* Container */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 /* Header Styles */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--header-height);
-  background-color: transparent;
-  color: var(--white);
-  z-index: 1000;
-  box-shadow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background-color: transparent;
+    color: var(--white);
+    z-index: 1000;
+    box-shadow: none;
 }
 
 .header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  position: relative;
-  /* Added for absolute positioning of header-line */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    /* Added for absolute positioning of header-line */
 }
 
 /* Header Line */
 .header-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 8%;
-  /* Leave some space on the right side */
-  height: 1px;
-  background-color: white;
-  z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 8%;
+    /* Leave some space on the right side */
+    height: 1px;
+    background-color: white;
+    z-index: 10;
 }
 
 /* Navigation */
 .nav {
-  position: relative;
-  width: 100%;
-  left: 7em;
+    position: relative;
+    width: 100%;
+    left: 7em;
 }
 
 .nav-list {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 18px;
-  margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 18px;
+    margin: 0;
 }
 
 .nav-item {
-  margin: 0 1.5rem;
+    margin: 0 1.5rem;
 }
 
 .nav-link {
-  display: inline-block;
-  padding: 0.4rem 0;
-  color: var(--gray-400);
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  transition: color 0.3s ease;
-  text-transform: uppercase;
+    display: inline-block;
+    padding: 0.4rem 0;
+    color: var(--gray-400);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
 }
 
 .nav-link:hover {
-  color: var(--gray-300);
+    color: var(--gray-300);
 }
 
 .nav-link.active {
-  color: var(--white);
+    color: var(--white);
 }
 
 /* Glowing Indicator */
 .nav-indicator {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 2px;
-  background-color: var(--white);
-  opacity: 0;
-  box-shadow:
-    0 0 5px rgba(255, 255, 255, 0.7),
-    0 0 10px rgba(255, 255, 255, 0.5);
-  transition:
-    transform 0.4s var(--transition-timing),
-    width 0.4s var(--transition-timing),
-    opacity 0.4s var(--transition-timing);
-  will-change: transform, width, opacity;
-  pointer-events: none;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    background-color: var(--white);
+    opacity: 0;
+    box-shadow:
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 10px rgba(255, 255, 255, 0.5);
+    transition:
+        transform 0.4s var(--transition-timing),
+        width 0.4s var(--transition-timing),
+        opacity 0.4s var(--transition-timing);
+    will-change: transform, width, opacity;
+    pointer-events: none;
 }
 
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--white);
-  cursor: pointer;
-  padding: 0.5rem;
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 .hamburger {
-  display: block;
-  position: relative;
-  width: 24px;
-  height: 2px;
-  background-color: var(--white);
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: var(--white);
 }
 
 .hamburger::before,
 .hamburger::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background-color: var(--white);
-  transition: transform 0.3s ease;
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--white);
+    transition: transform 0.3s ease;
 }
 
 .hamburger::before {
-  top: -6px;
+    top: -6px;
 }
 
 .hamburger::after {
-  bottom: -6px;
+    bottom: -6px;
 }
 
 .mobile-menu-toggle.active .hamburger {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .mobile-menu-toggle.active .hamburger::before {
-  transform: rotate(45deg);
-  top: 0;
+    transform: rotate(45deg);
+    top: 0;
 }
 
 .mobile-menu-toggle.active .hamburger::after {
-  transform: rotate(-45deg);
-  bottom: 0;
+    transform: rotate(-45deg);
+    bottom: 0;
 }
 
 /* Accessibility */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 /* Responsive Styles for Header */
 @media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: block;
-    position: absolute;
-    left: 1rem;
-  }
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        left: 1rem;
+    }
 
-  .nav {
-    position: absolute;
-    top: var(--header-height);
-    left: 0;
-    right: 0;
-    background-color: var(--black);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
+    .nav {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background-color: var(--black);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
 
-  .nav.active {
-    max-height: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+    .nav.active {
+        max-height: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-  .nav-list {
-    flex-direction: column;
-    padding: 1rem 0;
-  }
+    .nav-list {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
 
-  .nav-item {
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
+    .nav-item {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
 
-  .nav-link {
-    display: block;
-    padding: 0.75rem 0;
-  }
+    .nav-link {
+        display: block;
+        padding: 0.75rem 0;
+    }
 
-  .nav-indicator {
-    display: none;
-  }
+    .nav-indicator {
+        display: none;
+    }
 }
 
 /* Optimize animations for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* // Home Page Style */
 
 body.homepage-background {
-  /* Fallback color */
-  background-image: url('image/backgroundMainPage.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
+    /* Fallback color */
+    background-image: url('image/backgroundMainPage.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 /* OLD HEADER STYLES - REMOVED AND REPLACED WITH NEW ONES ABOVE */
@@ -335,12 +335,12 @@ header nav a.active::after {
 } */
 
 .logo-text {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.5rem;
-  color: #e0e0e0;
-  /* MODIFIED */
-  font-weight: 600;
-  flex-shrink: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    /* MODIFIED */
+    font-weight: 600;
+    flex-shrink: 0;
 }
 
 /* .logo-image { REMOVED - No longer using image logo globally
@@ -350,210 +350,210 @@ header nav a.active::after {
 
 /* Hero Section Styles */
 .hero-section {
-  display: flex;
-  justify-content: space-between;
-  /* Pushes text to left, image to right */
-  align-items: center;
-  padding: 60px 5%;
-  /* Use percentage for responsive padding */
-  min-height: calc(100vh - 120px);
-  /* Adjust based on approximated header/footer height */
-  box-sizing: border-box;
-  margin-top: var(--header-height);
-  /* Add top margin to account for fixed header */
+    display: flex;
+    justify-content: space-between;
+    /* Pushes text to left, image to right */
+    align-items: center;
+    padding: 60px 5%;
+    /* Use percentage for responsive padding */
+    min-height: calc(100vh - 120px);
+    /* Adjust based on approximated header/footer height */
+    box-sizing: border-box;
+    margin-top: var(--header-height);
+    /* Add top margin to account for fixed header */
 }
 
 .hero-text {
-  flex-basis: 55%;
-  /* Give more space to text */
-  padding-right: 40px;
+    flex-basis: 55%;
+    /* Give more space to text */
+    padding-right: 40px;
 }
 
 .hero-text h1 {
-  font-size: 3.8em;
-  /* Adjusted for impact */
-  font-family: 'Montserrat', sans-serif;
-  /* MODIFIED: Changed font to Montserrat */
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 35px;
-  text-transform: uppercase;
-  color: white;
+    font-size: 3.8em;
+    /* Adjusted for impact */
+    font-family: 'Montserrat', sans-serif;
+    /* MODIFIED: Changed font to Montserrat */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    color: white;
 }
 
 .cta-button {
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Dark, slightly transparent button */
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  /* More rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  /* Subtle border */
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  font-size: 1em;
-  text-transform: uppercase;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Dark, slightly transparent button */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    /* More rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Subtle border */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: 1em;
+    text-transform: uppercase;
 }
 
 .cta-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .hero-image {
-  flex-basis: 35%;
-  /* Reduced size of the image container */
-  text-align: right;
-  /* Align image to the right of its container */
-  display: flex;
-  /* For alignment if needed */
-  justify-content: flex-end;
-  /* Ensure image is pushed to the very right */
-  align-items: center;
+    flex-basis: 35%;
+    /* Reduced size of the image container */
+    text-align: right;
+    /* Align image to the right of its container */
+    display: flex;
+    /* For alignment if needed */
+    justify-content: flex-end;
+    /* Ensure image is pushed to the very right */
+    align-items: center;
 }
 
 .hero-image img {
-  max-width: 80%;
-  /* Make the image itself smaller within its container */
-  height: auto;
-  /* border-radius: 10px; */
-  /* Removed, target image seems to have sharp corners for product */
+    max-width: 80%;
+    /* Make the image itself smaller within its container */
+    height: auto;
+    /* border-radius: 10px; */
+    /* Removed, target image seems to have sharp corners for product */
 }
 
 /* Page Section Styles (for SPA content) */
 .page-section {
-  padding: 60px 5%;
-  min-height: 100vh;
-  /* Each section takes at least full viewport height */
-  box-sizing: border-box;
-  display: flex;
-  /* Using flex for content centering, can be adjusted */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    padding: 60px 5%;
+    min-height: 100vh;
+    /* Each section takes at least full viewport height */
+    box-sizing: border-box;
+    display: flex;
+    /* Using flex for content centering, can be adjusted */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .page-section h2 {
-  font-size: 3em;
-  margin-bottom: 30px;
-  text-transform: uppercase;
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .craftsmanship-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Center product area and CTA */
-  justify-content: center;
-  /* Vertically center content a bit */
-  padding-top: 50px;
-  /* Add some padding at the top */
-  padding-bottom: 100px;
-  /* Space for CTA button */
-  min-height: 100vh;
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center product area and CTA */
+    justify-content: center;
+    /* Vertically center content a bit */
+    padding-top: 50px;
+    /* Add some padding at the top */
+    padding-bottom: 100px;
+    /* Space for CTA button */
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .product-display-area {
-  position: relative;
-  /* Context for absolute positioning of callouts */
-  margin-bottom: 40px;
-  /* Space between image area and CTA button */
-  width: 70%;
-  /* MODIFIED: Give display area a more defined width */
-  max-width: 800px;
-  /* MODIFIED: Add a max-width to prevent it becoming too large on wide screens */
-  margin-left: auto;
-  /* Center the display area if craftsmanship-content is wider */
-  margin-right: auto;
-  /* Center the display area */
-  display: block;
-  /* MODIFIED: Change from inline-block for better centering control */
+    position: relative;
+    /* Context for absolute positioning of callouts */
+    margin-bottom: 40px;
+    /* Space between image area and CTA button */
+    width: 70%;
+    /* MODIFIED: Give display area a more defined width */
+    max-width: 800px;
+    /* MODIFIED: Add a max-width to prevent it becoming too large on wide screens */
+    margin-left: auto;
+    /* Center the display area if craftsmanship-content is wider */
+    margin-right: auto;
+    /* Center the display area */
+    display: block;
+    /* MODIFIED: Change from inline-block for better centering control */
 }
 
 .craftsmanship-product-image {
-  max-width: 100%;
-  /* MODIFIED: Make image fill the .product-display-area */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  /* Center the image if its container is wider */
+    max-width: 100%;
+    /* MODIFIED: Make image fill the .product-display-area */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Center the image if its container is wider */
 }
 
 /* REMOVING OLD/REDUNDANT STYLES FOR CALLOUTS */
 /* .callout-info-box, .feature-button, .plus-icon-wrapper specific styles from previous approach are effectively replaced below */
 
 .feature-callout {
-  /* Main container for each callout entity */
-  position: absolute;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  /* top & left to be set by specific classes like .high-res-display */
+    /* Main container for each callout entity */
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    /* top & left to be set by specific classes like .high-res-display */
 }
 
 .callout-text-bubble,
 .callout-plus-bubble {
-  /* Slightly darker than before */
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Slightly darker than before */
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .callout-text-bubble {
-  font-size: 0.85em;
-  /* Slightly smaller text */
-  padding: 6px 12px;
-  border-radius: 15px;
-  /* Pill shape */
-  margin-right: 8px;
-  /* Space between text and plus bubble for left-aligned callouts */
+    font-size: 0.85em;
+    /* Slightly smaller text */
+    padding: 6px 12px;
+    border-radius: 15px;
+    /* Pill shape */
+    margin-right: 8px;
+    /* Space between text and plus bubble for left-aligned callouts */
 }
 
 .callout-plus-bubble {
-  width: 28px;
-  /* Fixed size for circle */
-  height: 28px;
-  border-radius: 50%;
-  /* Circle */
+    width: 28px;
+    /* Fixed size for circle */
+    height: 28px;
+    border-radius: 50%;
+    /* Circle */
 }
 
 .plus-symbol {
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  /* Larger plus */
-  line-height: 1;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    /* Larger plus */
+    line-height: 1;
 }
 
 .callout-pointer-dot {
-  /* Dot on the product */
-  width: 8px;
-  height: 8px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  /* Positioned relative to .feature-callout */
-  z-index: 12;
-  /* top & left to be set by specific classes like .high-res-display .callout-pointer-dot */
+    /* Dot on the product */
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    /* Positioned relative to .feature-callout */
+    z-index: 12;
+    /* top & left to be set by specific classes like .high-res-display .callout-pointer-dot */
 }
 
 /* Connector Lines Styling - NEW LOGIC REQUIRED */
 .feature-callout::after {
-  content: '';
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
-  height: 1px;
-  z-index: 9;
-  /* width, top, left, transform will be VERY specific to each callout */
-  /* Example: originating from the center of the plus bubble */
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 1px;
+    z-index: 9;
+    /* width, top, left, transform will be VERY specific to each callout */
+    /* Example: originating from the center of the plus bubble */
 }
 
 /* --- Positioning for each callout and its parts (NEW APPROXIMATE VALUES) --- */
@@ -563,104 +563,104 @@ header nav a.active::after {
 .high-res-display,
 .forged-in-metal,
 .thirty-providers {
-  /* .callout-text-bubble is first, then .callout-plus-bubble */
+    /* .callout-text-bubble is first, then .callout-plus-bubble */
 }
 
 /* For callouts on the RIGHT of the image */
 .premium-buttons {
-  flex-direction: row-reverse;
-  /* Plus bubble first, then text bubble */
+    flex-direction: row-reverse;
+    /* Plus bubble first, then text bubble */
 }
 
 .premium-buttons .callout-text-bubble {
-  margin-right: 0;
-  margin-left: 8px;
-  /* Space now on the left of text bubble */
+    margin-right: 0;
+    margin-left: 8px;
+    /* Space now on the left of text bubble */
 }
 
 
 /* HIGH-RES DISPLAY Callout */
 .high-res-display {
-  top: 20%;
-  left: 5%;
+    top: 20%;
+    left: 5%;
 }
 
 .high-res-display .callout-pointer-dot {
-  top: 25px;
-  /* Relative to .high-res-display -> Approx center of display */
-  left: 230px;
-  /* Approx distance from callout anchor to screen center */
+    top: 25px;
+    /* Relative to .high-res-display -> Approx center of display */
+    left: 230px;
+    /* Approx distance from callout anchor to screen center */
 }
 
 .high-res-display::after {
-  /* Line from plus bubble to dot */
-  width: 120px;
-  /* Placeholder */
-  top: 14px;
-  /* Vertically align with center of plus bubble */
-  left: 135px;
-  /* Start after plus bubble + margin (approx text_width + plus_width + space) */
+    /* Line from plus bubble to dot */
+    width: 120px;
+    /* Placeholder */
+    top: 14px;
+    /* Vertically align with center of plus bubble */
+    left: 135px;
+    /* Start after plus bubble + margin (approx text_width + plus_width + space) */
 }
 
 /* FORGED IN METAL Callout */
 .forged-in-metal {
-  top: 38%;
-  left: 3%;
+    top: 38%;
+    left: 3%;
 }
 
 .forged-in-metal .callout-pointer-dot {
-  top: 25px;
-  left: 210px;
+    top: 25px;
+    left: 210px;
 }
 
 .forged-in-metal::after {
-  width: 100px;
-  top: 14px;
-  left: 120px;
+    width: 100px;
+    top: 14px;
+    left: 120px;
 }
 
 /* 30 DIFFERENT PROVIDERS Callout */
 .thirty-providers {
-  top: 58%;
-  left: 1%;
+    top: 58%;
+    left: 1%;
 }
 
 .thirty-providers .callout-pointer-dot {
-  top: 25px;
-  left: 200px;
+    top: 25px;
+    left: 200px;
 }
 
 .thirty-providers::after {
-  width: 80px;
-  top: 14px;
-  left: 150px;
-  /* Text is longer here */
+    width: 80px;
+    top: 14px;
+    left: 150px;
+    /* Text is longer here */
 }
 
 /* PREMIUM BUTTONS Callout */
 .premium-buttons {
-  top: 75%;
-  left: 60%;
-  /* Positioned further to the right to start */
+    top: 75%;
+    left: 60%;
+    /* Positioned further to the right to start */
 }
 
 .premium-buttons .callout-pointer-dot {
-  top: 25px;
-  /* Approx vertical center of the physical buttons */
-  left: -120px;
-  /* Negative, because line goes from right to left */
+    top: 25px;
+    /* Approx vertical center of the physical buttons */
+    left: -120px;
+    /* Negative, because line goes from right to left */
 }
 
 .premium-buttons::after {
-  /* Line from plus bubble (now on left) to dot */
-  width: 110px;
-  top: 14px;
-  right: 135px;
-  /* Distance from right edge of callout to dot (plus_width + text_width + space) */
-  left: auto;
-  /* Override */
-  transform-origin: right center;
-  /* transform: rotate(180deg); No longer needed if using right property */
+    /* Line from plus bubble (now on left) to dot */
+    width: 110px;
+    top: 14px;
+    right: 135px;
+    /* Distance from right edge of callout to dot (plus_width + text_width + space) */
+    left: auto;
+    /* Override */
+    transform-origin: right center;
+    /* transform: rotate(180deg); No longer needed if using right property */
 }
 
 
@@ -669,37 +669,37 @@ header nav a.active::after {
 .forged-in-metal .callout-info-box,
 .thirty-providers .callout-info-box,
 .premium-buttons .callout-info-box {
-  position: static;
-  /* Revert absolute positioning from previous attempts if any */
-  top: auto;
-  left: auto;
-  right: auto;
-  bottom: auto;
+    position: static;
+    /* Revert absolute positioning from previous attempts if any */
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
 }
 
 .experience-cta-button {
-  display: inline-block;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  font-weight: normal;
-  /* Text is not bold in the image */
-  border-radius: 20px;
-  /* More rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  font-size: 0.9em;
-  text-transform: none;
-  /* Text is not uppercase in the image */
-  position: absolute;
-  /* Position relative to .craftsmanship-background or .craftsmanship-content */
-  bottom: 40px;
-  right: 5%;
+    display: inline-block;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: normal;
+    /* Text is not bold in the image */
+    border-radius: 20px;
+    /* More rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: 0.9em;
+    text-transform: none;
+    /* Text is not uppercase in the image */
+    position: absolute;
+    /* Position relative to .craftsmanship-background or .craftsmanship-content */
+    bottom: 40px;
+    right: 5%;
 }
 
 .experience-cta-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Example styling for other sections if they also have specific backgrounds */
@@ -717,166 +717,335 @@ header nav a.active::after {
 
 /* Pre-Order Section Styles */
 .pre-order-background {
-  /* Dark background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 5%;
+    /* Dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5%;
 }
 
 .pre-order-container {
-  display: flex;
-  max-width: 1200px;
-  width: 100%;
-  align-items: center;
-  gap: 40px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
 }
 
 .product-display {
-  position: relative;
-  flex: 1;
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pre-order-product-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
 }
 
 .product-buttons {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
 }
 
 .slot-btn {
-  background-color: #0d0d0d;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  border: none;
-  color: white;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 12px;
-  cursor: pointer;
+    background-color: #0d0d0d;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .pre-order-content {
-  flex: 1;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 20px;
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
 }
 
 .pre-order-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  font-weight: 700;
-  text-transform: none;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: none;
 }
 
 .pre-order-header h3 {
-  font-size: 2rem;
-  margin-top: 0;
-  font-weight: normal;
+    font-size: 2rem;
+    margin-top: 0;
+    font-weight: normal;
 }
 
 .script-logo {
-  font-family: 'Dancing Script', cursive;
-  font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
 }
 
 .product-features {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .feature-tagline {
-  font-size: 1.5rem;
-  margin: 5px 0;
-  font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin: 5px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .no-constraints {
-  font-size: 1.8rem;
+    font-size: 1.8rem;
 }
 
 .view-options {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .view-360 {
-  position: absolute;
-  bottom: 20px;
-  /* Space from bottom */
-  right: -40px;
-  /* Move it more to the right by using a negative value */
-  z-index: 100;
-  padding: 8px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  background-color: transparent;
-  /* Remove background */
-  box-shadow: none;
-  /* Remove shadow */
+    position: absolute;
+    bottom: 20px;
+    /* Space from bottom */
+    right: -40px;
+    /* Move it more to the right by using a negative value */
+    z-index: 100;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+    /* Remove background */
+    box-shadow: none;
+    /* Remove shadow */
 }
 
 .view-360:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .view-icon {
-  width: 75px;
-  height: 65px;
-  cursor: pointer;
-  /* Remove the filter since the original icon is white */
+    width: 75px;
+    height: 65px;
+    cursor: pointer;
+    /* Remove the filter since the original icon is white */
 }
 
 .order-action {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .order-now-btn {
-  display: inline-block;
-  padding: 15px 40px;
-  background-color: transparent;
-  color: white;
-  text-decoration: none;
-  border: 2px solid white;
-  border-radius: 30px;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
 .order-now-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Media queries for responsive design */
 @media (max-width: 992px) {
-  .pre-order-container {
-    flex-direction: column;
-  }
+    .pre-order-container {
+        flex-direction: column;
+    }
 
-  .product-display,
-  .pre-order-content {
-    max-width: 100%;
-    text-align: center;
-  }
+    .product-display,
+    .pre-order-content {
+        max-width: 100%;
+        text-align: center;
+    }
 
-  .pre-order-content {
+    .pre-order-content {
+        align-items: center;
+    }
+}
+
+
+/* --- СТИЛОВЕ ЗА СЕКЦИЯ "EXPERIENCE" (id="experience") --- */
+
+section#experience {
+    background-color: #050608;
+    background-image: radial-gradient(ellipse at center, #181824 0%, #050608 75%);
+    background-attachment: fixed;
+    color: white;
+    /* Този section има и клас .page-section от вашия HTML. Уверете се, че .page-section
+       в общия ви CSS има display: flex; flex-direction: column; align-items: center;
+       justify-content: center; и подходящ padding (напр. padding: 80px 5%;) */
+}
+
+.experience-visual-hub {
+    position: relative;
+    /* КЛЮЧОВО: за абсолютно позициониране на логата вътре */
+    width: 85%;
+    /* Примерна ширина, за да има място за логата отстрани */
+    max-width: 750px;
+    /* Максимална ширина. Регулирайте според нуждите. */
+    margin: 20px auto 40px auto;
+    /* Центриране и отстояние отдолу преди текста */
+    display: flex;
+    justify-content: center;
     align-items: center;
-  }
+    min-height: 450px;
+    /* ЗАДАЙТЕ МИНИМАЛНА ВИСОЧИНА, за да има място за позициониране на логата. Регулирайте! */
+}
+
+img.experience-main-product-image {
+    /* Класът от вашия HTML беше "experience-background", но "experience-main-product-image" е по-описателен */
+    max-width: 800px;
+    /* КОРИГИРАНО: Максимална ширина на основното изображение. Регулирайте според дизайна! */
+    width: 200%;
+    /* КОРИГИРАНО: Изображението да е адаптивно до max-width, без да прелива. */
+    height: auto;
+    display: block;
+    /* z-index: 1; - Може да е нужно, ако логата трябва да са зад него, но обикновено са около. */
+}
+
+/* Общ стил за всички лога на доставчици */
+.provider-logo {
+    position: absolute;
+    height: 45px;
+    /* Текуща височина, която сте задали. Регулирайте, ако е нужно. */
+    width: auto;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+
+/* --- ИНДИВИДУАЛНО ПОЗИЦИОНИРАНЕ НА ВСЯКО ЛОГО --- */
+/* ВНИМАНИЕ: Стойностите за top, left, right са ПРИМЕРНИ!
+   Ще трябва да ги настроите ръчно, като гледате модела image_148807.jpg
+   и използвате инструментите за разработчици на браузъра.
+   Уверете се, че имената на класовете тук съвпадат ТОЧНО с тези във вашия HTML! */
+
+/* Горни лога (спрямо .experience-visual-hub) */
+.logo-lb-blue {
+    top: 5%;
+    left: 10%;
+}
+
+/* Проверете дали класът в HTML е "logo-lb-blue" или друг */
+.logo-amusnet {
+    top: 0%;
+    left: 30%;
+}
+
+.logo-igt {
+    top: 0%;
+    right: 30%;
+}
+
+.logo-playtech {
+    top: 5%;
+    right: 10%;
+}
+
+/* Проверете дали класът в HTML е "logo-playtech" или друг */
+
+/* Леви лога */
+.logo-hacksaw {
+    top: 25%;
+    left: 0%;
+}
+
+.logo-helio {
+    top: 40%;
+    left: 5%;
+}
+
+.logo-pragmatic {
+    top: 55%;
+    left: 2%;
+}
+
+/* В HTML-а може да е logo-pragmaticplay. Уеднаквете! */
+.logo-e {
+    top: 70%;
+    left: 5%;
+}
+
+/* В HTML-а може да е logo-e-orange. Уеднаквете! */
+
+/* Десни лога */
+.logo-netent {
+    top: 25%;
+    right: 0%;
+}
+
+.logo-evolution {
+    top: 40%;
+    right: 5%;
+}
+
+.logo-everymatrix {
+    top: 55%;
+    right: 2%;
+}
+
+.logo-nolimit {
+    top: 70%;
+    right: 5%;
+}
+
+
+/* Обвивка за текста и бутона под визуалния хъб */
+.experience-text-and-cta {
+    text-align: center;
+    margin-top: 20px;
+    /* Може да се увеличи, ако .experience-visual-hub няма голям margin-bottom */
+}
+
+section#experience h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #e0e0e0;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+section#experience .experience-cta-button {
+    display: inline-block;
+    background-color: rgba(30, 30, 35, 0.75);
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: normal;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    text-transform: none;
+    font-family: 'Orbitron', sans-serif;
+    /* Уверете се, че НЯМА position: absolute, ако искате да е в нормалния поток */
+}
+
+section#experience .experience-cta-button:hover {
+    background-color: rgba(50, 50, 55, 0.85);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+section#experience p:empty {
+    display: none;
 }
