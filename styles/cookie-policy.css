@@ -25,8 +25,8 @@ body {
     right: 0;
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 700;
     margin: 0;
 }
 
@@ -42,8 +42,9 @@ body {
 }
 
 .coin {
-    width: 300px; /* Much larger size */
-    height: auto;
+    margin-top: 65px;
+    width: 1100px; /* Much larger size */
+    height: 650px;
     position: relative;
     top: -100px; /* Move up slightly to center in the container */
     filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.3)); /* ADDED: drop-shadow for a more realistic under-object shadow */
@@ -88,6 +89,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.8;
     color: #c0c0c0;
+    font-weight: 600;
 }
 
 /* Responsive adjustments */
@@ -113,6 +115,7 @@ body {
         top: 0;
         right: auto;
         margin-bottom: 30px;
+        font-size: 19.9px;
     }
     
     .text-columns {
