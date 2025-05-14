@@ -28,11 +28,18 @@ header {
     display: flex;
     justify-content: space-between; /* Push logo to left, nav to right */
     align-items: center;
-    position: relative;
+    position: sticky; /* MODIFIED: Makes the header sticky */
+    top: 0; /* MODIFIED: Sticks to the top of the viewport */
+    z-index: 1000; /* MODIFIED: Ensures header stays on top of other content */
     background-color: #0a0a0a; /* Dark background for header */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle line at bottom */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* MODIFIED: This is the main underline for the entire header */
     width: 100%;
     box-sizing: border-box;
+}
+
+.navbar-container { /* MODIFIED: Simplified to just be a container */
+    position: relative; /* Keep if any future positioning needs it, but not strictly for current setup */
+    /* Removed border-bottom, width, display:flex, justify-content:flex-end */
 }
 
 .logo-text {
@@ -74,11 +81,12 @@ header nav a:hover {
 header nav a.active::after {
     content: '';
     position: absolute;
-    bottom: -28px; /* Position below the link */
+    bottom: -21px; /* Adjusted to sit on top of the header's border-bottom */
     left: 0;
     width: 100%;
     height: 2px;
     background-color: white;
+    z-index: 1; /* Ensure it stacks on top of the header's border */
 }
 
 /* Hero Section Styles */

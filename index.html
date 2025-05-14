@@ -13,12 +13,14 @@
     <header>
         <!-- Logo added -->
         <div class="logo-text"><img src="image/lofo3.png" alt="MyMiniSlot Logo" class="logo-image"></div>
-        <nav>
-            <a href="#">HOME</a>
-            <a href="#craftsmanship" class="active">CRAFTSMANSHIP</a>
-            <a href="#experience">EXPERIENCE</a>
-            <a href="#pre-order">PRE-ORDER</a>
-        </nav>
+        <div class="navbar-container">
+            <nav>
+                <a href="#">HOME</a>
+                <a href="#craftsmanship">CRAFTSMANSHIP</a>
+                <a href="#experience">EXPERIENCE</a>
+                <a href="#pre-order">PRE-ORDER</a>
+            </nav>
+        </div>
     </header>
 
     <main class="hero-section" id="home">
@@ -81,6 +83,98 @@
         <!-- Placeholder for Pre-Order Section -->
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('header nav a');
+            const sections = document.querySelectorAll('.page-section, .hero-section'); // Include hero-section if it has an ID nav links point to
+
+            // Function to remove active class from all links and add to the current one
+            function updateActiveLink(currentLink) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                if (currentLink) {
+                    currentLink.classList.add('active');
+                }
+            }
+
+            // Smooth scroll and update active link on click
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // For the "HOME" link specifically, as its href is just "#"
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+                        updateActiveLink(this);
+                        return; // Exit early for the home link
+                    }
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId && targetId.startsWith('#') && targetId.length > 1) {
+                        const targetSection = document.querySelector(targetId);
+                        if (targetSection) {
+                            e.preventDefault(); // Prevent default jump
+                            targetSection.scrollIntoView({ behavior: 'smooth' });
+                            updateActiveLink(this);
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer to update active link on scroll
+            const observerOptions = {
+                root: null, // relative to document viewport
+                rootMargin: '0px',
+                threshold: 0.6 // 60% of the section needs to be visible
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // For sections with ID, find the corresponding nav link
+                        const sectionId = entry.target.id;
+                        let correspondingLink = null;
+
+                        if (sectionId === 'home') { // Special case for home which might be href="#"
+                            correspondingLink = document.querySelector('header nav a[href="#"]');
+                        } else if (sectionId) {
+                            correspondingLink = document.querySelector(`header nav a[href="#${sectionId}"]`);
+                        }
+                        
+                        if (correspondingLink) {
+                            updateActiveLink(correspondingLink);
+                        }
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            sections.forEach(section => {
+                // Ensure section has an ID to be observed, otherwise IntersectionObserver might not link it back correctly
+                if (section.id) { 
+                    observer.observe(section);
+                }
+            });
+
+            // Set initial active link based on URL hash or default to Home
+            const currentHash = window.location.hash;
+            let initialLink = document.querySelector('header nav a[href="#"]'); // Default to Home
+            if (currentHash && currentHash !== '#') {
+                const linkForHash = document.querySelector(`header nav a[href="${currentHash}"]`);
+                if (linkForHash) {
+                    initialLink = linkForHash;
+                }
+            }
+            if (initialLink) { // Ensure initialLink is found
+                updateActiveLink(initialLink);
+                // If there's a hash, also scroll to it smoothly on page load (optional)
+                if (currentHash && currentHash !== '#' && document.querySelector(currentHash)) {
+                    // Check if the target element exists before scrolling
+                     // document.querySelector(currentHash).scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
