@@ -9,7 +9,7 @@ body {
     line-height: 1.8;
 }
 .site-footer {
-    background-color: #1a1d24;
+    background-color: rgba(30,37,47,255);
     color: #e0e0e0;
     padding: 40px 0 20px;
     font-family: 'Montserrat', sans-serif;
@@ -87,17 +87,16 @@ body {
 }
 
 .footer-divider {
-    height: 1px;
+    height: 1.5px;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 20px auto;
+    margin: 1px auto;
     max-width: 1200px;
 }
 
 .crypto-logos {
-    max-width: 1200px;
-    margin: 30px auto;
+    max-width: 100%;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .crypto-image {
