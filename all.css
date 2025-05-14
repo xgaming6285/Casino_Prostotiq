@@ -14,11 +14,13 @@ body {
 /* // Home Page Style */
 
 body.homepage-background {
-    /* ---- New Radial Gradient Background ---- */
-    background-color: #050608; /* Fallback color & darkest shade of gradient */
-    background-image: radial-gradient(ellipse at center, #181824 0%, #050608 75%);
-    background-attachment: fixed; /* Makes the gradient fixed during scroll */
-    min-height: 100vh; /* Ensures full viewport height coverage */
+    background-color: #050608; /* Fallback color */
+    background-image: url('../image/backgroundMainPage.jpg'); /* MODIFIED: New background image */
+    background-size: cover; /* ADDED: Ensure image covers the area */
+    background-position: center center; /* ADDED: Center the image */
+    background-repeat: no-repeat; /* ADDED: Prevent tiling */
+    background-attachment: fixed; /* Kept: Makes the gradient/image fixed during scroll */
+    min-height: 100vh; 
     /* ---- End of New Radial Gradient Background ---- */
 }
 
@@ -180,20 +182,7 @@ header nav a.active::after {
     text-transform: uppercase;
 }
 
-.craftsmanship-background {
-    /* ---- New Radial Gradient Background ---- */
-    background-color: #050608; /* Fallback color & darkest shade of gradient */
-    background-image: radial-gradient(ellipse at center, #181824 0%, #050608 75%);
-    background-attachment: fixed; /* Or 'scroll', makes the gradient fixed during scroll */
-    /* ---- End of New Radial Gradient Background ---- */
 
-    color: white; /* Ensure text is visible on this background */
-    display: block; /* Change from flex to block to allow more custom positioning within */
-    position: relative; /* For positioning CTA button absolutely if needed */
-    /* min-height: 100vh; */ /* Already handled by .page-section if this class is also applied,
-                                or add if .craftsmanship-background is used standalone and needs full height.
-                                The .craftsmanship-content below has its own min-height. */
-}
 
 .craftsmanship-content {
     display: flex;
