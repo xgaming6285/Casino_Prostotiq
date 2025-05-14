@@ -48,7 +48,9 @@
                     <!-- Feature Labels - Left Side -->
                     <div class="feature-label left-label high-res">
                         <div class="plus-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="plus-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="plus-icon">
                                 <line x1="12" y1="5" x2="12" y2="19"></line>
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
@@ -62,7 +64,9 @@
 
                     <div class="feature-label left-label forged-metal">
                         <div class="plus-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="plus-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="plus-icon">
                                 <line x1="12" y1="5" x2="12" y2="19"></line>
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
@@ -76,7 +80,9 @@
 
                     <div class="feature-label left-label providers">
                         <div class="plus-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="plus-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="plus-icon">
                                 <line x1="12" y1="5" x2="12" y2="19"></line>
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
@@ -92,7 +98,9 @@
                     <div class="feature-label right-label buttons">
                         <div class="label-text">PREMIUM BUTTONS</div>
                         <div class="plus-circle-right">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="plus-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="plus-icon">
                                 <line x1="12" y1="5" x2="12" y2="19"></line>
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
@@ -106,7 +114,9 @@
                     <!-- Call to action -->
                     <div class="cta">
                         <span class="cta-text">Feel the experience</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="arrow-icon">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
@@ -122,10 +132,33 @@
         <!-- Placeholder for Experience Section -->
     </section>
 
-    <section id="pre-order" class="page-section">
-        <h2>Pre-Order</h2>
-        <p>Pre-order information will go here.</p>
-        <!-- Placeholder for Pre-Order Section -->
+    <section id="pre-order" class="page-section pre-order-background">
+        <div class="pre-order-container">
+            <div class="product-display">
+                <img src="image/machine.png.png" alt="MyMiniSlot Machine" class="pre-order-product-image">
+                <div class="product-buttons">
+                </div>
+            </div>
+            <div class="pre-order-content">
+                <div class="pre-order-header">
+                    <h2>Buy <span class="script-logo">MyMiniSlot</span> for €1000</h2>
+                    <h3>and receive it as a deposit.</h3>
+                </div>
+                <div class="product-features">
+                    <p class="feature-tagline">A real slot machine just for you.</p>
+                    <p class="feature-tagline">Play anywhere.</p>
+                    <p class="feature-tagline no-constraints">No casino. No crowds. No waiting.</p>
+                </div>
+                <div class="view-options">
+                    <div class="view-360">
+                        <img src="image/360.png" alt="360 View" class="view-icon">
+                    </div>
+                </div>
+                <div class="order-action">
+                    <a href="#" class="order-now-btn">ORDER NOW</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script>
@@ -145,7 +178,7 @@
 
             // Smooth scroll and update active link on click
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     // For the "HOME" link specifically, as its href is just "#"
                     if (this.getAttribute('href') === '#') {
                         e.preventDefault();
@@ -185,7 +218,7 @@
                         } else if (sectionId) {
                             correspondingLink = document.querySelector(`header nav a[href="#${sectionId}"]`);
                         }
-                        
+
                         if (correspondingLink) {
                             updateActiveLink(correspondingLink);
                         }
@@ -196,7 +229,7 @@
             const observer = new IntersectionObserver(observerCallback, observerOptions);
             sections.forEach(section => {
                 // Ensure section has an ID to be observed, otherwise IntersectionObserver might not link it back correctly
-                if (section.id) { 
+                if (section.id) {
                     observer.observe(section);
                 }
             });
@@ -215,7 +248,7 @@
                 // If there's a hash, also scroll to it smoothly on page load (optional)
                 if (currentHash && currentHash !== '#' && document.querySelector(currentHash)) {
                     // Check if the target element exists before scrolling
-                     // document.querySelector(currentHash).scrollIntoView({ behavior: 'smooth' });
+                    // document.querySelector(currentHash).scrollIntoView({ behavior: 'smooth' });
                 }
             }
         });

@@ -6,7 +6,14 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    /* background-color: #000; */ /* Fallback color, can be overridden by more specific rules
+    /* Fallback color */
+    background-image: url('image/backgroundMainPage.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    /* Fallback color, can be overridden by more specific rules
                                      or removed if all relevant body instances have specific backgrounds.
                                      The new gradient includes its own darker fallback. */
 }
@@ -14,14 +21,18 @@ body {
 /* // Home Page Style */
 
 body.homepage-background {
-    background-color: #050608; /* Fallback color */
-    background-image: url('../image/backgroundMainPage.jpg'); /* MODIFIED: New background image */
-    background-size: cover; /* ADDED: Ensure image covers the area */
-    background-position: center center; /* ADDED: Center the image */
-    background-repeat: no-repeat; /* ADDED: Prevent tiling */
-    background-attachment: fixed; /* Kept: Makes the gradient/image fixed during scroll */
-    min-height: 100vh; 
-    /* ---- End of New Radial Gradient Background ---- */
+    /* Fallback color */
+    background-image: url('image/backgroundMainPage.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    /* MODIFIED: New background image */
+    /* ADDED: Ensure image covers the area */
+    /* ADDED: Center the image */
+    /* ADDED: Prevent tiling */
+    /* Kept: Makes the gradient/image fixed during scroll */
 }
 
 /* Header Styles */
@@ -31,32 +42,36 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    max-width: 1200px; 
-    margin: 0 auto; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    background-color: transparent; /* MODIFIED */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    /* MODIFIED */
     width: 100%;
     box-sizing: border-box;
 }
 
 .navbar-container {
-    background-color: transparent; /* ADDED */
+    background-color: transparent;
+    /* ADDED */
 }
 
 .navbar-container nav {
     display: flex;
     gap: 30px;
-    background-color: transparent; /* ADDED */
+    background-color: transparent;
+    /* ADDED */
 }
 
 .logo-text {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
-    color: #e0e0e0; /* MODIFIED */
+    color: #e0e0e0;
+    /* MODIFIED */
     font-weight: 600;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 /* .logo-image { REMOVED - No longer using image logo globally
@@ -64,43 +79,53 @@ header {
     height: auto; 
 } */
 
-header nav a { 
-    color: #e0e0e0; /* MODIFIED */
+header nav a {
+    color: #e0e0e0;
+    /* MODIFIED */
     text-decoration: none;
-    font-size: 1rem; 
-    letter-spacing: 1px; 
-    padding: 0; /* MODIFIED */
-    margin: 0; /* MODIFIED */
-    border: none; /* ADDED */
-    background-color: transparent; /* ADDED */
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 400; 
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 0;
+    /* MODIFIED */
+    margin: 0;
+    /* MODIFIED */
+    border: none;
+    /* ADDED */
+    background-color: transparent;
+    /* ADDED */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     transition: color 0.3s ease;
     text-transform: uppercase;
-    position: relative; 
+    position: relative;
 }
 
 header nav a.active,
 header nav a:hover {
-    color: white; 
+    color: white;
 }
 
-header nav a.active::after { 
+header nav a.active::after {
     content: "";
     position: absolute;
-    bottom: -5px; 
+    bottom: -5px;
     left: 0;
     width: 100%;
-    height: 1px; /* MODIFIED */
+    height: 1px;
+    /* MODIFIED */
     background-color: white;
 }
 
 /* Header line - ADDED from cookie-policy.css */
 .header-line {
-    position: absolute; /* MODIFIED: Take out of flex flow, position relative to header */
-    bottom: 0;          /* MODIFIED: Place at the bottom of the header */
-    left: 0;            /* MODIFIED: Align to the left edge of the header */
-    right: 0;           /* MODIFIED: Align to the right edge of the header */
+    position: absolute;
+    /* MODIFIED: Take out of flex flow, position relative to header */
+    bottom: 0;
+    /* MODIFIED: Place at the bottom of the header */
+    left: 0;
+    /* MODIFIED: Align to the left edge of the header */
+    right: 0;
+    /* MODIFIED: Align to the right edge of the header */
     height: 1px;
     background-color: white;
     /* width, max-width, and margin:auto are no longer needed here due to absolute positioning with left/right */
@@ -109,21 +134,27 @@ header nav a.active::after {
 /* Hero Section Styles */
 .hero-section {
     display: flex;
-    justify-content: space-between; /* Pushes text to left, image to right */
+    justify-content: space-between;
+    /* Pushes text to left, image to right */
     align-items: center;
-    padding: 60px 5%; /* Use percentage for responsive padding */
-    min-height: calc(100vh - 120px); /* Adjust based on approximated header/footer height */
+    padding: 60px 5%;
+    /* Use percentage for responsive padding */
+    min-height: calc(100vh - 120px);
+    /* Adjust based on approximated header/footer height */
     box-sizing: border-box;
 }
 
 .hero-text {
-    flex-basis: 55%; /* Give more space to text */
+    flex-basis: 55%;
+    /* Give more space to text */
     padding-right: 40px;
 }
 
 .hero-text h1 {
-    font-size: 3.8em; /* Adjusted for impact */
-    font-family: 'Montserrat', sans-serif; /* MODIFIED: Changed font to Montserrat */
+    font-size: 3.8em;
+    /* Adjusted for impact */
+    font-family: 'Montserrat', sans-serif;
+    /* MODIFIED: Changed font to Montserrat */
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 35px;
@@ -133,13 +164,15 @@ header nav a.active::after {
 
 .cta-button {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark, slightly transparent button */
+    /* Dark, slightly transparent button */
     color: white;
     padding: 12px 25px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 8px; /* More rounded corners */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 8px;
+    /* More rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Subtle border */
     transition: background-color 0.3s ease, border-color 0.3s ease;
     font-size: 1em;
     text-transform: uppercase;
@@ -151,25 +184,33 @@ header nav a.active::after {
 }
 
 .hero-image {
-    flex-basis: 35%; /* Reduced size of the image container */
-    text-align: right; /* Align image to the right of its container */
-    display: flex; /* For alignment if needed */
-    justify-content: flex-end; /* Ensure image is pushed to the very right */
+    flex-basis: 35%;
+    /* Reduced size of the image container */
+    text-align: right;
+    /* Align image to the right of its container */
+    display: flex;
+    /* For alignment if needed */
+    justify-content: flex-end;
+    /* Ensure image is pushed to the very right */
     align-items: center;
 }
 
 .hero-image img {
-    max-width: 80%; /* Make the image itself smaller within its container */
+    max-width: 80%;
+    /* Make the image itself smaller within its container */
     height: auto;
-    /* border-radius: 10px; */ /* Removed, target image seems to have sharp corners for product */
+    /* border-radius: 10px; */
+    /* Removed, target image seems to have sharp corners for product */
 }
 
 /* Page Section Styles (for SPA content) */
 .page-section {
     padding: 60px 5%;
-    min-height: 100vh; /* Each section takes at least full viewport height */
+    min-height: 100vh;
+    /* Each section takes at least full viewport height */
     box-sizing: border-box;
-    display: flex; /* Using flex for content centering, can be adjusted */
+    display: flex;
+    /* Using flex for content centering, can be adjusted */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -187,35 +228,49 @@ header nav a.active::after {
 .craftsmanship-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center product area and CTA */
-    justify-content: center; /* Vertically center content a bit */
-    padding-top: 50px; /* Add some padding at the top */
-    padding-bottom: 100px; /* Space for CTA button */
+    align-items: center;
+    /* Center product area and CTA */
+    justify-content: center;
+    /* Vertically center content a bit */
+    padding-top: 50px;
+    /* Add some padding at the top */
+    padding-bottom: 100px;
+    /* Space for CTA button */
     min-height: 100vh;
     box-sizing: border-box;
 }
 
 .product-display-area {
-    position: relative; /* Context for absolute positioning of callouts */
-    margin-bottom: 40px; /* Space between image area and CTA button */
-    width: 70%; /* MODIFIED: Give display area a more defined width */
-    max-width: 800px; /* MODIFIED: Add a max-width to prevent it becoming too large on wide screens */
-    margin-left: auto; /* Center the display area if craftsmanship-content is wider */
-    margin-right: auto; /* Center the display area */
-    display: block; /* MODIFIED: Change from inline-block for better centering control */
+    position: relative;
+    /* Context for absolute positioning of callouts */
+    margin-bottom: 40px;
+    /* Space between image area and CTA button */
+    width: 70%;
+    /* MODIFIED: Give display area a more defined width */
+    max-width: 800px;
+    /* MODIFIED: Add a max-width to prevent it becoming too large on wide screens */
+    margin-left: auto;
+    /* Center the display area if craftsmanship-content is wider */
+    margin-right: auto;
+    /* Center the display area */
+    display: block;
+    /* MODIFIED: Change from inline-block for better centering control */
 }
 
 .craftsmanship-product-image {
-    max-width: 100%; /* MODIFIED: Make image fill the .product-display-area */
+    max-width: 100%;
+    /* MODIFIED: Make image fill the .product-display-area */
     height: auto;
     display: block;
-    margin: 0 auto; /* Center the image if its container is wider */
+    margin: 0 auto;
+    /* Center the image if its container is wider */
 }
 
 /* REMOVING OLD/REDUNDANT STYLES FOR CALLOUTS */
 /* .callout-info-box, .feature-button, .plus-icon-wrapper specific styles from previous approach are effectively replaced below */
 
-.feature-callout { /* Main container for each callout entity */
+.feature-callout {
+    /* Main container for each callout entity */
     position: absolute;
     z-index: 10;
     display: flex;
@@ -225,42 +280,51 @@ header nav a.active::after {
 
 .callout-text-bubble,
 .callout-plus-bubble {
-    background-color: rgba(30, 30, 35, 0.85); /* Slightly darker than before */
+
+    /* Slightly darker than before */
     border: 1px solid rgba(255, 255, 255, 0.7);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
 }
 
 .callout-text-bubble {
-    font-size: 0.85em; /* Slightly smaller text */
+    font-size: 0.85em;
+    /* Slightly smaller text */
     padding: 6px 12px;
-    border-radius: 15px; /* Pill shape */
-    margin-right: 8px; /* Space between text and plus bubble for left-aligned callouts */
+    border-radius: 15px;
+    /* Pill shape */
+    margin-right: 8px;
+    /* Space between text and plus bubble for left-aligned callouts */
 }
 
 .callout-plus-bubble {
-    width: 28px;  /* Fixed size for circle */
+    width: 28px;
+    /* Fixed size for circle */
     height: 28px;
-    border-radius: 50%; /* Circle */
+    border-radius: 50%;
+    /* Circle */
 }
 
 .plus-symbol {
     color: white;
     font-weight: bold;
-    font-size: 18px; /* Larger plus */
+    font-size: 18px;
+    /* Larger plus */
     line-height: 1;
 }
 
-.callout-pointer-dot { /* Dot on the product */
-    width: 8px; 
+.callout-pointer-dot {
+    /* Dot on the product */
+    width: 8px;
     height: 8px;
     background-color: white;
     border-radius: 50%;
-    position: absolute; /* Positioned relative to .feature-callout */
-    z-index: 12; 
+    position: absolute;
+    /* Positioned relative to .feature-callout */
+    z-index: 12;
     /* top & left to be set by specific classes like .high-res-display .callout-pointer-dot */
 }
 
@@ -268,9 +332,9 @@ header nav a.active::after {
 .feature-callout::after {
     content: '';
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.7); 
-    height: 1px; 
-    z-index: 9; 
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 1px;
+    z-index: 9;
     /* width, top, left, transform will be VERY specific to each callout */
     /* Example: originating from the center of the plus bubble */
 }
@@ -279,106 +343,140 @@ header nav a.active::after {
 /* These will need significant manual adjustment */
 
 /* For callouts on the LEFT of the image */
-.high-res-display, .forged-in-metal, .thirty-providers {
+.high-res-display,
+.forged-in-metal,
+.thirty-providers {
     /* .callout-text-bubble is first, then .callout-plus-bubble */
 }
 
 /* For callouts on the RIGHT of the image */
 .premium-buttons {
-    flex-direction: row-reverse; /* Plus bubble first, then text bubble */
+    flex-direction: row-reverse;
+    /* Plus bubble first, then text bubble */
 }
+
 .premium-buttons .callout-text-bubble {
     margin-right: 0;
-    margin-left: 8px; /* Space now on the left of text bubble */
+    margin-left: 8px;
+    /* Space now on the left of text bubble */
 }
 
 
 /* HIGH-RES DISPLAY Callout */
 .high-res-display {
-    top: 20%; 
-    left: 5%; 
+    top: 20%;
+    left: 5%;
 }
+
 .high-res-display .callout-pointer-dot {
-    top: 25px; /* Relative to .high-res-display -> Approx center of display */
-    left: 230px; /* Approx distance from callout anchor to screen center */
+    top: 25px;
+    /* Relative to .high-res-display -> Approx center of display */
+    left: 230px;
+    /* Approx distance from callout anchor to screen center */
 }
-.high-res-display::after { /* Line from plus bubble to dot */
-    width: 120px; /* Placeholder */
-    top: 14px; /* Vertically align with center of plus bubble */
-    left: 135px; /* Start after plus bubble + margin (approx text_width + plus_width + space) */
+
+.high-res-display::after {
+    /* Line from plus bubble to dot */
+    width: 120px;
+    /* Placeholder */
+    top: 14px;
+    /* Vertically align with center of plus bubble */
+    left: 135px;
+    /* Start after plus bubble + margin (approx text_width + plus_width + space) */
 }
 
 /* FORGED IN METAL Callout */
 .forged-in-metal {
-    top: 38%; 
-    left: 3%; 
+    top: 38%;
+    left: 3%;
 }
+
 .forged-in-metal .callout-pointer-dot {
-    top: 25px; 
-    left: 210px; 
+    top: 25px;
+    left: 210px;
 }
+
 .forged-in-metal::after {
-    width: 100px; 
-    top: 14px; 
-    left: 120px; 
+    width: 100px;
+    top: 14px;
+    left: 120px;
 }
 
 /* 30 DIFFERENT PROVIDERS Callout */
 .thirty-providers {
-    top: 58%; 
-    left: 1%; 
+    top: 58%;
+    left: 1%;
 }
+
 .thirty-providers .callout-pointer-dot {
-    top: 25px; 
-    left: 200px; 
+    top: 25px;
+    left: 200px;
 }
+
 .thirty-providers::after {
-    width: 80px; 
-    top: 14px; 
-    left: 150px; /* Text is longer here */
+    width: 80px;
+    top: 14px;
+    left: 150px;
+    /* Text is longer here */
 }
 
 /* PREMIUM BUTTONS Callout */
 .premium-buttons {
-    top: 75%; 
-    left: 60%; /* Positioned further to the right to start */
+    top: 75%;
+    left: 60%;
+    /* Positioned further to the right to start */
 }
+
 .premium-buttons .callout-pointer-dot {
-    top: 25px; /* Approx vertical center of the physical buttons */
-    left: -120px; /* Negative, because line goes from right to left */
+    top: 25px;
+    /* Approx vertical center of the physical buttons */
+    left: -120px;
+    /* Negative, because line goes from right to left */
 }
-.premium-buttons::after { /* Line from plus bubble (now on left) to dot */
-    width: 110px; 
-    top: 14px; 
-    right: 135px; /* Distance from right edge of callout to dot (plus_width + text_width + space) */
-    left: auto; /* Override */
+
+.premium-buttons::after {
+    /* Line from plus bubble (now on left) to dot */
+    width: 110px;
+    top: 14px;
+    right: 135px;
+    /* Distance from right edge of callout to dot (plus_width + text_width + space) */
+    left: auto;
+    /* Override */
     transform-origin: right center;
     /* transform: rotate(180deg); No longer needed if using right property */
 }
 
 
 /* Remove old specific positioning if they exist and conflict */
-.high-res-display .callout-info-box, 
-.forged-in-metal .callout-info-box, 
-.thirty-providers .callout-info-box, 
+.high-res-display .callout-info-box,
+.forged-in-metal .callout-info-box,
+.thirty-providers .callout-info-box,
 .premium-buttons .callout-info-box {
-    position: static; /* Revert absolute positioning from previous attempts if any */
-    top: auto; left: auto; right: auto; bottom: auto;
+    position: static;
+    /* Revert absolute positioning from previous attempts if any */
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
 }
 
 .experience-cta-button {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.4);
+
     color: white;
     padding: 12px 25px;
     text-decoration: none;
-    font-weight: normal; /* Text is not bold in the image */
-    border-radius: 20px; /* More rounded corners */
+    font-weight: normal;
+    /* Text is not bold in the image */
+    border-radius: 20px;
+    /* More rounded corners */
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: background-color 0.3s ease, border-color 0.3s ease;
     font-size: 0.9em;
-    text-transform: none; /* Text is not uppercase in the image */
-    position: absolute; /* Position relative to .craftsmanship-background or .craftsmanship-content */
+    text-transform: none;
+    /* Text is not uppercase in the image */
+    position: absolute;
+    /* Position relative to .craftsmanship-background or .craftsmanship-content */
     bottom: 40px;
     right: 5%;
 }
@@ -400,3 +498,146 @@ header nav a.active::after {
 */
 
 /* // About us Style (Keep this for potential future use or remove if not needed) */
+
+/* Pre-Order Section Styles */
+.pre-order-background {
+
+    /* Dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5%;
+}
+
+.pre-order-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+}
+
+.product-display {
+    position: relative;
+    flex: 1;
+    max-width: 50%;
+}
+
+.pre-order-product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-buttons {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.slot-btn {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.pre-order-content {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.pre-order-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.pre-order-header h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.script-logo {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+.product-features {
+    margin: 20px 0;
+}
+
+.feature-tagline {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.no-constraints {
+    font-size: 1.8rem;
+}
+
+.view-options {
+    margin: 20px 0;
+}
+
+.view-360 {
+    display: inline-block;
+}
+
+.view-icon {
+    width: 50px;
+    height: auto;
+}
+
+.order-action {
+    margin-top: 20px;
+}
+
+.order-now-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.order-now-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+    .pre-order-container {
+        flex-direction: column;
+    }
+
+    .product-display,
+    .pre-order-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .pre-order-content {
+        align-items: center;
+    }
+}
