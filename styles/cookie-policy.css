@@ -9,26 +9,28 @@ body {
     line-height: 1.8;
 }
 
-/* Add styles for logo underline specific to cookie policy page */
-.logo-text {
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
+/* Header styling for cookie policy page */
+.header {
+    background-color: transparent;
 }
 
-.logo-text::after {
-    content: '';
+/* Override the indicator to stay on logo for this page */
+.cookie-policy .nav-indicator {
     position: absolute;
-    bottom: -21px; /* Adjust for desired spacing below logo text */
-    left: 0;
-    width: 100%;
-    height: 3px; /* MODIFIED from 2px for a bolder line */
+    bottom: -1px;
+    height: 2px;
     background-color: white;
+    opacity: 1;
+    box-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* Main content */
 .cookie-policy-content {
     display: flex;
     max-width: 1200px;
-    margin: 60px auto 0;
+    margin: 120px auto 0; /* Increased top margin to account for fixed header */
     padding: 0 5%;
     position: relative;
 }
@@ -111,6 +113,7 @@ body {
 @media (max-width: 768px) {
     .cookie-policy-content {
         flex-direction: column;
+        margin-top: 100px; /* Adjusted for mobile header */
     }
     
     .coins-container {
