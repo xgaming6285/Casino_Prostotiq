@@ -30,7 +30,7 @@ body {
 .cookie-policy-content {
     display: flex;
     max-width: 1200px;
-    margin: 120px auto 0; /* Increased top margin to account for fixed header */
+    margin: 120px auto 0px; /* MODIFIED top margin from 120px to 150px */
     padding: 0 5%;
     position: relative;
 }
@@ -38,7 +38,7 @@ body {
 /* Cookie Policy title */
 .content-container h1 {
     position: absolute;
-    top: -40px;
+    top: -20px; /* MODIFIED from -40px to move it down */
     right: 0;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -76,6 +76,7 @@ body {
 .text-columns {
     display: flex;
     position: relative;
+    margin-top: 30px; /* ADDED: To move text columns down */
 }
 
 .text-columns::before {
