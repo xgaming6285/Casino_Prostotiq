@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .coin {
@@ -45,6 +46,7 @@ body {
     height: auto;
     position: relative;
     top: -100px; /* Move up slightly to center in the container */
+    filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.3)); /* ADDED: drop-shadow for a more realistic under-object shadow */
 }
 
 /* Content columns */
