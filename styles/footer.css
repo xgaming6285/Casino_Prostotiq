@@ -1,15 +1,17 @@
 /* Footer Styles */
 
 body {
-    background-image: url('image/backgroundMainPage.jpg'); /* Dark navy/black background */
+    background-image: url('image/backgroundMainPage.jpg');
+    /* Dark navy/black background */
     color: #e0e0e0;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.8;
 }
+
 .site-footer {
-    background-color: rgba(30,37,47,255);
+    background-color: rgba(30, 37, 47, 255);
     color: #e0e0e0;
     padding: 40px 0 20px;
     font-family: 'Montserrat', sans-serif;
@@ -113,6 +115,8 @@ body {
 
 .footer-logo {
     margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
 }
 
 .footer-logo .logo-text {
@@ -120,11 +124,18 @@ body {
     font-size: 2rem;
     color: #e0e0e0;
     font-weight: 600;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    display: block !important;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .copyright {
     font-size: 0.8rem;
     color: #a0a0a0;
+    text-align: center;
 }
 
 /* Responsive adjustments */
@@ -134,16 +145,16 @@ body {
         align-items: center;
         text-align: center;
     }
-    
+
     .footer-column {
         margin-bottom: 30px;
         align-items: center;
     }
-    
+
     .language-social {
         align-items: center;
     }
-    
+
     .social-icons {
         justify-content: center;
     }

@@ -44,7 +44,7 @@
         .about-content {
             flex: 1;
             padding-right: 60px;
-            max-width: 60%;
+            max-width: 55%;
             box-sizing: border-box;
             margin-top: 120px;
             display: flex;
@@ -94,17 +94,25 @@
             justify-content: center;
             align-items: center;
             /* Changed from flex-start to center */
-            max-width: 40%;
+            max-width: 45%;
+            /* Increased from 40% to 45% */
             box-sizing: border-box;
             margin-top: 150px;
             align-self: stretch;
             /* Make it take full height of parent */
+            margin-left: 20px;
+            /* Added margin to move right */
+            justify-content: flex-end;
+            /* Align to end of container */
         }
 
         .device-showcase img {
-            max-width: 100%;
+            max-width: 180%;
             height: auto;
             object-fit: contain;
+            transform: scale(1.5) translateX(15px);
+            transition: transform 0.3s ease;
+            margin-right: -100px;
         }
 
         /* Media queries for different screen sizes */
@@ -137,10 +145,17 @@
         }
 
         @media (max-width: 992px) {
+            .about-content {
+                max-width: 35%;
+            }
 
-            .about-content,
             .device-showcase {
-                max-width: 50%;
+                max-width: 65%;
+            }
+
+            .device-showcase img {
+                max-width: 185%;
+                transform: scale(1.4) translateX(15px);
             }
 
             .about-title {
@@ -246,7 +261,7 @@
             </div>
         </div>
         <div class="device-showcase">
-            <img src="image/backgroundExperience.png" alt="MyMiniSlot Device" />
+            <img src="image/ExperienceImage.png" alt="MyMiniSlot Device" />
         </div>
     </main>
 
