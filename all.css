@@ -300,15 +300,10 @@ body.homepage-background {
 .hero-section {
     display: flex;
     justify-content: space-between;
-    /* Pushes text to left, image to right */
     align-items: center;
-    padding: 60px 5%;
-    /* Use percentage for responsive padding */
+    padding: 80px 5%;
     min-height: calc(100vh - 120px);
-    /* Adjust based on approximated header/footer height */
     box-sizing: border-box;
-    margin-top: calc(var(--header-height) - 180px);
-    /* Reduced margin-top by 20px to move content higher */
 }
 
 .hero-text {
@@ -377,7 +372,7 @@ body.homepage-background {
 
 /* Page Section Styles (for SPA content) */
 .page-section {
-    padding: 60px 5%;
+    padding: 80px 5%;
     min-height: 100vh;
     /* Each section takes at least full viewport height */
     box-sizing: border-box;
