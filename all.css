@@ -1,5 +1,13 @@
 /* style.css */
 
+/* Prevent horizontal scrolling */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 /* General Body Styles */
 body {
     font-family: 'Month', sans-serif;
@@ -655,19 +663,23 @@ body.homepage-background {
 
 /* Pre-Order Section Styles */
 .pre-order-background {
-    /* Dark background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 5%;
+    padding: 40px 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 .pre-order-container {
-    display: flex;
     max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
+    /* Ensure it doesn't exceed viewport width */
+    padding: 0 20px;
+    /* Add padding to prevent content from touching edges */
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
 }
 
 .product-display {
@@ -677,13 +689,102 @@ body.homepage-background {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    overflow: visible;
 }
 
 .pre-order-product-image {
     width: 100%;
+    max-width: 100%;
     height: auto;
+    object-fit: contain;
     display: block;
     position: relative;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+    .pre-order-product-image {
+        transform: scale(1.15);
+    }
+}
+
+@media (min-width: 1400px) {
+    .pre-order-product-image {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 992px) {
+    .pre-order-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .product-display,
+    .pre-order-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .product-display {
+        max-width: 80%;
+        order: 1;
+    }
+
+    .pre-order-product-image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .pre-order-content {
+        align-items: center;
+        order: 2;
+    }
+
+    .view-360 {
+        right: 0;
+        bottom: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pre-order-product-image {
+        max-width: 100%;
+    }
+
+    .product-display {
+        max-width: 85%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .product-display {
+        max-width: 90%;
+    }
+
+    .pre-order-product-image {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .product-display {
+        max-width: 95%;
+    }
+
+    .pre-order-product-image {
+        max-width: 100%;
+        transform: scale(1.05);
+    }
+
+    .pre-order-header h2 {
+        font-size: 2rem;
+    }
 }
 
 .product-buttons {
