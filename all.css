@@ -104,7 +104,7 @@ html {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    padding: 18px;
+    padding: 17px;
     margin: 0;
 }
 
@@ -150,6 +150,7 @@ html {
         opacity 0.4s var(--transition-timing);
     will-change: transform, width, opacity;
     pointer-events: none;
+    z-index: 1000;
 }
 
 /* Mobile Menu Toggle */
