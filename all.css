@@ -1006,8 +1006,7 @@ section#experience p:empty {
     .device-showcase img {
         transform: scale(1);
     }
-<<<<<<< Updated upstream
-=======
+
 }
 
 #productt-image-homepage {
@@ -1128,5 +1127,4 @@ section#experience .logo-pragmatic {
     top: 350px;
     left: -210px;
     transform: translate(-50%, -50%);
->>>>>>> Stashed changes
 }
