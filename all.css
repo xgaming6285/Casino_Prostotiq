@@ -2,7 +2,7 @@
 
 /* General Body Styles */
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Month', sans-serif;
     color: white;
     margin: 0;
     padding: 0;
@@ -13,6 +13,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    font-weight: 200;
+    /* Make body font more thin */
 }
 
 /* Base Styles */
@@ -625,10 +627,11 @@ body.homepage-background {
     font-size: 0.9em;
     text-transform: none;
     /* Text is not uppercase in the image */
-    position: absolute;
+    position: relative;
     /* Position relative to .craftsmanship-background or .craftsmanship-content */
     bottom: 40px;
     right: 5%;
+    margin-left: 165px;
 }
 
 .experience-cta-button:hover {
@@ -880,83 +883,6 @@ img.experience-main-product-image {
     transition: opacity 0.3s ease;
 }
 
-
-/* --- ИНДИВИДУАЛНО ПОЗИЦИОНИРАНЕ НА ВСЯКО ЛОГО --- */
-/* ВНИМАНИЕ: Стойностите за top, left, right са ПРИМЕРНИ!
-   Ще трябва да ги настроите ръчно, като гледате модела image_148807.jpg
-   и използвате инструментите за разработчици на браузъра.
-   Уверете се, че имената на класовете тук съвпадат ТОЧНО с тези във вашия HTML! */
-
-/* Горни лога (спрямо .experience-visual-hub) */
-.logo-lb-blue {
-    top: 5%;
-    left: 10%;
-}
-
-/* Проверете дали класът в HTML е "logo-lb-blue" или друг */
-.logo-amusnet {
-    top: 0%;
-    left: 30%;
-}
-
-.logo-igt {
-    top: 0%;
-    right: 30%;
-}
-
-.logo-playtech {
-    top: 5%;
-    right: 10%;
-}
-
-/* Проверете дали класът в HTML е "logo-playtech" или друг */
-
-/* Леви лога */
-.logo-hacksaw {
-    top: 25%;
-    left: 0%;
-}
-
-.logo-helio {
-    top: 40%;
-    left: 5%;
-}
-
-.logo-pragmatic {
-    top: 55%;
-    left: 2%;
-}
-
-/* В HTML-а може да е logo-pragmaticplay. Уеднаквете! */
-.logo-e {
-    top: 70%;
-    left: 5%;
-}
-
-/* В HTML-а може да е logo-e-orange. Уеднаквете! */
-
-/* Десни лога */
-.logo-netent {
-    top: 25%;
-    right: 0%;
-}
-
-.logo-evolution {
-    top: 40%;
-    right: 5%;
-}
-
-.logo-everymatrix {
-    top: 55%;
-    right: 2%;
-}
-
-.logo-nolimit {
-    top: 70%;
-    right: 5%;
-}
-
-
 /* Обвивка за текста и бутона под визуалния хъб */
 .experience-text-and-cta {
     text-align: center;
@@ -1080,4 +1006,125 @@ section#experience p:empty {
     .device-showcase img {
         transform: scale(1);
     }
+
+}
+
+#productt-image-homepage {
+    margin-left: 500px;
+    margin-top: 220px;
+    /* width: 50%; */
+}
+
+/* css for logo - experience page */
+
+section#experience .experience-visual-hub {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+}
+
+
+section#experience .provider-logo {
+    position: absolute;
+    height: auto;
+    opacity: 1;
+    z-index: 5;
+}
+
+section#experience .logo-lightingBox {
+    width: 600px;
+    top: 120px;
+    left: -80px;
+    transform: translate(-50%, -50%);
+}
+
+section#experience .logo-hacksaw {
+    width: 110px;
+    top: 250px;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+section#experience .logo-helio {
+    width: 600px;
+    top: 185px;
+    left: 13%;
+    transform: translate(-50%, -50%);
+}
+
+section#experience .logo-amusnet {
+    width: 500px;
+    top: 30px;
+    left: 100px;
+    transform: translate(-50%, -50%);
+}
+
+section#experience .logo-unde {
+    width: 500px;
+    top: 340px;
+    left: 68px;
+    transform: translate(-50%, -50%);
+}
+
+
+section#experience .logo-playtech {
+    width: 600px;
+    top: 100px;
+    left: 700px;
+    transform: translate(-50%, -50%);
+}
+
+section#experience .logo-netent {
+    width: 600px;
+    top: 220px;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+section#experience .logo-everyMatrix {
+    width: 400px;
+    top: 350px;
+    left: 92%;
+    transform: translate(-50%, -50%);
+}
+
+section#experience .logo-evolution {
+    width: 500px;
+    top: 200px;
+    left: 900px;
+    transform: translate(-50%, -50%);
+}
+
+section#experience .logo-nolimit {
+    width: 600px;
+    top: 340px;
+    left: 930px;
+    transform: translate(-50%, -50%);
+}
+
+
+
+section#experience .logo-igt {
+    width: 600px;
+    top: -141px;
+    margin-right: -350px;
+}
+
+
+section#experience .logo-hacksaw {
+    width: 600px;
+    bottom: 100px;
+    margin-left: -210px;
+}
+
+section#experience .logo-pragmatic {
+    width: 600px;
+    top: 350px;
+    left: -210px;
+    transform: translate(-50%, -50%);
 }
