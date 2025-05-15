@@ -1,9 +1,9 @@
-/* --- Общи стилове за тялото, ако вече ги нямате или искате да ги потвърдите --- */
+
 body {
     font-family: 'Orbitron', sans-serif;
-    /* Този шрифт е от главната страница */
+    
     color: white;
-    /* Основен цвят на текста */
+    
     margin: 0;
     padding: 0;
 }
@@ -13,11 +13,11 @@ body.homepage-background {
     background-image: radial-gradient(ellipse at center, #181824 0%, #050608 75%);
     background-attachment: fixed;
     min-height: 100vh;
-    /* Горните стилове за тялото ще се приложат и тук, ако body.homepage-background няма свои дефиниции за font-family и color */
+    
 }
 
-/* --- Вече съществуващи стилове за хедъра (от вашия all.css) --- */
-/* Уверете се, че тези стилове са във вашия all.css и са коректни */
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -84,20 +84,20 @@ header nav a.active::after {
     right: 0;
     height: 1px;
     background-color: white;
-    /* Може да искате по-мек цвят rgba(255, 255, 255, 0.3) */
+    
 }
 
 
-/* --- Privacy Policy Page Specific Styles --- */
-/* Тези стилове са специфични за privacy-policy.html и трябва да се добавят в all.css */
 
-/* Променяме основния шрифт за съдържанието на тази страница, ако е нужно */
+
+
+
 body.homepage-background .privacy-policy-container {
-    /* По-специфичен селектор, ако искаме да променим шрифта само тук */
+    
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
     font-size: 16px;
-    /* Може да се наследи от body, ако е същото */
+    
 }
 
 .privacy-policy-container {
@@ -105,18 +105,13 @@ body.homepage-background .privacy-policy-container {
     margin: 0 auto;
     padding: 40px 20px 60px 20px;
     color: #E0E0E0;
-    /* Основен цвят на текста за тази секция */
-    /* Ако искате текстът да е върху по-плътен фон, различен от градиента на body: */
-    /* background-color: rgba(14, 14, 27, 0.9); */
-    /* border-radius: 8px; */
+    
+    
+    
+    
 }
 
-/* .privacy-policy-header {
-    margin-bottom: 40px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding-bottom: 25px;
-} */
+
 
 .privacy-policy-header h1 {
     font-family: 'Orbitron', sans-serif;
@@ -141,7 +136,7 @@ body.homepage-background .privacy-policy-container {
 }
 
 .text-columns::before {
-    /* Вертикалната линия */
+    
     content: "";
     position: absolute;
     top: 0;
@@ -150,7 +145,7 @@ body.homepage-background .privacy-policy-container {
     transform: translateX(-0.5px);
     width: 3px;
     background-color: rgb(255, 255, 255);
-    /* <<< ТУК Е ЦВЕТЪТ И ПРОЗРАЧНОСТТА */
+    
 }
 
 .text-column {
@@ -160,12 +155,12 @@ body.homepage-background .privacy-policy-container {
 
 .text-columns .text-column:first-child {
     padding-right: 22px;
-    /* Отстояние от текста до централната линия (половината от gap + малко) */
+    
 }
 
 .text-columns .text-column:last-child {
     padding-left: 22px;
-    /* Отстояние от централната линия до текста */
+    
 }
 
 .text-column p,
@@ -173,7 +168,7 @@ body.homepage-background .privacy-policy-container {
 .text-column ol {
     font-size: 0.9rem;
     color: #B5B8C8;
-    /* Цвят на параграфния текст */
+    
     margin-bottom: 1.2em;
     text-align: left;
 }
@@ -217,7 +212,7 @@ body.homepage-background .privacy-policy-container {
     opacity: 0.4;
 }
 
-/* Адаптивност за Privacy Policy съдържанието */
+
 @media (max-width: 960px) {
     .privacy-content {
         flex-direction: column-reverse;
@@ -242,7 +237,7 @@ body.homepage-background .privacy-policy-container {
     }
 
     .text-columns::before {
-        /* Скриваме линията */
+        
         display: none;
     }
 
@@ -281,7 +276,7 @@ body.homepage-background .privacy-policy-container {
     }
 }
 
-/* Футър - Общи стилове (ако вече ги нямате в all.css) */
+
 footer[role="contentinfo"] {
     text-align: center;
     padding: 30px 5%;
@@ -312,4 +307,3 @@ footer[role="contentinfo"] nav a:hover {
     color: white;
 }
 
-/* --- Край на стиловете за Privacy Policy Page --- */

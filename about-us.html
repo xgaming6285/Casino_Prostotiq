@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - MyMiniSlot</title>
-    <link rel="stylesheet" href="all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/footer.css">
-    <style>
-        body {
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+   About Us - MyMiniSlot
+  </title>
+  <link href="all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&amp;display=swap" rel="stylesheet">
+  <link href="styles/footer.css" rel="stylesheet">
+  <style>
+   body {
             background-color: rgba(30, 37, 47, 255) !important;
             background-image: none !important;
             margin: 0;
@@ -22,7 +23,7 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-            /* Prevent horizontal scrolling */
+            
             width: 100%;
         }
 
@@ -36,9 +37,9 @@
             flex: 1;
             box-sizing: border-box;
             align-items: stretch;
-            /* Changed from flex-start to stretch */
+            
             min-height: calc(100vh - var(--header-height));
-            /* Set minimum height to fill viewport */
+            
         }
 
         .about-content {
@@ -50,7 +51,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            /* Distribute content vertically */
+            
         }
 
         .about-title {
@@ -65,15 +66,15 @@
         .about-text {
             font-size: 1.1em;
             line-height: 1.6;
-            /* Increased line height for better readability */
+            
             margin-bottom: 15px;
             opacity: 0.9;
             display: flex;
             flex-direction: column;
             height: 100%;
-            /* Make text container take full height */
+            
             justify-content: space-between;
-            /* Spread paragraphs evenly */
+            
         }
 
         .about-text p {
@@ -85,7 +86,7 @@
         .about-text p:last-child {
             border-bottom: none;
             margin-bottom: 50px;
-            /* Add more space at the bottom */
+            
         }
 
         .device-showcase {
@@ -93,17 +94,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Changed from flex-start to center */
+            
             max-width: 45%;
-            /* Increased from 40% to 45% */
+            
             box-sizing: border-box;
             margin-top: 150px;
             align-self: stretch;
-            /* Make it take full height of parent */
+            
             margin-left: 20px;
-            /* Added margin to move right */
+            
             justify-content: flex-end;
-            /* Align to end of container */
+            
         }
 
         .device-showcase img {
@@ -115,7 +116,7 @@
             margin-right: -100px;
         }
 
-        /* Media queries for different screen sizes */
+        
         @media (min-width: 1600px) {
             .about-container {
                 max-width: 1600px;
@@ -173,7 +174,7 @@
                 margin-top: 30px;
                 padding: 0 20px;
                 min-height: auto;
-                /* Reset min-height for mobile */
+                
             }
 
             .about-content,
@@ -190,7 +191,7 @@
             .device-showcase {
                 margin-top: 20px;
                 margin-bottom: 60px;
-                /* Extra space at bottom on mobile */
+                
             }
 
             .about-title {
@@ -199,7 +200,7 @@
             }
         }
 
-        /* Override header background to match the page */
+        
         .header {
             background-color: rgba(30, 37, 47, 255) !important;
             width: 100%;
@@ -213,59 +214,83 @@
             padding: 0 40px;
             box-sizing: border-box;
         }
-    </style>
-</head>
-
-<body>
-    <header class="header" id="main-header">
-        <div class="container">
-            <div class="logo-text">MyMiniSlot</div>
-            <nav class="nav" id="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="index.html#craftsmanship" class="nav-link">CRAFTSMANSHIP</a></li>
-                    <li class="nav-item"><a href="index.html#experience" class="nav-link">EXPERIENCE</a></li>
-                    <li class="nav-item"><a href="index.html#pre-order" class="nav-link">PRE-ORDER</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span class="hamburger"></span>
-            </button>
-            <div class="header-line"></div>
-        </div>
-    </header>
-
-    <main class="about-container">
-        <div class="about-content">
-            <h1 class="about-title">About Us</h1>
-            <div class="about-text">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+  </style>
+ </head>
+ <body>
+  <header class="header" id="main-header">
+   <div class="container">
+    <div class="logo-text">
+     MyMiniSlot
+    </div>
+    <nav class="nav" id="main-nav">
+     <ul class="nav-list">
+      <li class="nav-item">
+       <a class="nav-link" href="index.html">
+        HOME
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="index.html#craftsmanship">
+        CRAFTSMANSHIP
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="index.html#experience">
+        EXPERIENCE
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="index.html#pre-order">
+        PRE-ORDER
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <button aria-label="Toggle mobile menu" class="mobile-menu-toggle" id="mobile-menu-toggle">
+     <span class="hamburger">
+     </span>
+    </button>
+    <div class="header-line">
+    </div>
+   </div>
+  </header>
+  <main class="about-container">
+   <div class="about-content">
+    <h1 class="about-title">
+     About Us
+    </h1>
+    <div class="about-text">
+     <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged.</p>
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    leap into electronic typesetting, remaining essentially unchanged.
+     </p>
+     <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged.</p>
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    leap into electronic typesetting, remaining essentially unchanged.
+     </p>
+     <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged.</p>
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    leap into electronic typesetting, remaining essentially unchanged.
+     </p>
+     <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged.</p>
-            </div>
-        </div>
-        <div class="device-showcase">
-            <img src="image/ExperienceImage.png" alt="MyMiniSlot Device" />
-        </div>
-    </main>
-
-    <script src="js/header.js"></script>
-</body>
-
+                    leap into electronic typesetting, remaining essentially unchanged.
+     </p>
+    </div>
+   </div>
+   <div class="device-showcase">
+    <img alt="MyMiniSlot Device" src="image/ExperienceImage.png">
+   </div>
+  </main>
+  <script src="js/header.js">
+  </script>
+ </body>
 </html>

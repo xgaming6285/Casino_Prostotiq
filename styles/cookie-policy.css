@@ -1,4 +1,4 @@
-/* styles/cookie-policy.css */
+
 
 body {
     background-color: rgba(30, 37, 47, 255) !important;
@@ -9,15 +9,15 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
 }
 
-/* Header styling for cookie policy page */
+
 .header {
     background-color: transparent;
 }
 
-/* Override the indicator to stay on logo for this page */
+
 .cookie-policy .nav-indicator {
     position: absolute;
     bottom: -1px;
@@ -29,20 +29,20 @@ body {
         0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Main content */
+
 .cookie-policy-content {
     display: flex;
     max-width: 1200px;
-    margin: 80px auto 0px; /* Reduced top margin to match image */
+    margin: 80px auto 0px; 
     padding: 0 5%;
     position: relative;
     margin-top: 120px;
 }
 
-/* Cookie Policy title */
+
 .content-container h1 {
     position: absolute;
-    top: 0; /* Adjusted to prevent overlap with header */
+    top: 0; 
     right: -50px;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -51,29 +51,29 @@ body {
     margin-top: -25px;
 }
 
-/* Coin styling - Positioned absolutely now */
+
 .coin {
     position: absolute;
-    top: -20px; /* Adjust as needed */
-    left: -700px; /* Adjust to pull it left, potentially off-screen */
-    width: 1200px; /* Significantly larger width */
+    top: -20px; 
+    left: -700px; 
+    width: 1200px; 
     height: auto;
     object-fit: contain;
-    z-index: 0; /* Ensure it's behind text if text container has no z-index or higher */
+    z-index: 0; 
 }
 
-/* Content columns - UNCHANGED */
+
 .content-container {
     flex: 1;
     position: relative;
-    padding-top: 30px; /* Add space at top */
+    padding-top: 30px; 
 }
 
 .text-columns {
     display: flex;
     position: relative;
-    margin-top: 0; /* Remove top margin */
-    gap: 0; /* Remove any gap between columns */
+    margin-top: 0; 
+    gap: 0; 
     left: 70px;
 }
 
@@ -83,9 +83,9 @@ body {
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 2px; /* Thin line to match image */
+    width: 2px; 
     background-color: white;
-    transform: translateX(-50%); /* Center the line exactly */
+    transform: translateX(-50%); 
 }
 
 .column {
@@ -95,35 +95,35 @@ body {
 
 .left-column {
     text-align: right;
-    padding-right: 30px; /* Space from divider */
+    padding-right: 30px; 
 }
 
 .right-column {
     text-align: left;
-    padding-left: 30px; /* Space from divider */
+    padding-left: 30px; 
 }
 
 .column p {
-    margin-bottom: 30px; /* Increased space between paragraphs */
-    font-size: 1rem; /* Increased from 0.9rem */
+    margin-bottom: 30px; 
+    font-size: 1rem; 
     line-height: 1.6;
     color: #c0c0c0;
-    font-weight: 400; /* Lighter weight to match image */
+    font-weight: 400; 
 }
 
-/* Last paragraph in each column should not have bottom margin */
+
 .column p:last-child {
     margin-bottom: 0;
 }
 
-/* Ensure text wrapping works properly */
+
 .column p {
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .cookie-policy-content {
         flex-direction: column;
@@ -131,7 +131,7 @@ body {
     }
 
     .coin {
-        width: 300px; /* Larger on mobile too */
+        width: 300px; 
         max-width: 100%;
         top: 0;
         margin-left: 0;
@@ -162,10 +162,10 @@ body {
 
     .left-column, .right-column {
         text-align: left;
-        padding: 0 15px; /* Reduced padding on mobile */
+        padding: 0 15px; 
     }
 
     .left-column {
-        margin-bottom: 30px; /* Space between columns on mobile */
+        margin-bottom: 30px; 
     }
 }
