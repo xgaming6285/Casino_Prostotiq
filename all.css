@@ -63,20 +63,30 @@ html {
 
 .header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
     position: relative;
     /* Added for absolute positioning of header-line */
 }
 
+/* Logo Text */
+.logo-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #e0e0e0;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-right: 7%;
+}
+
 /* Header Line */
 .header-line {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0%;
-    /* DON'T Leave some space on the right side */
+    left: -5%;
+    right: -5%;
+    /* Extended further to both sides */
     height: 1.7px;
     background-color: grey;
     z-index: 10;
@@ -86,28 +96,27 @@ html {
 .nav {
     position: relative;
     width: 100%;
-    left: 7em;
 }
 
 .nav-list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     list-style: none;
     padding: 18px;
     margin: 0;
 }
 
 .nav-item {
-    margin: 0 1.5rem;
+    margin: 0 1.3rem;
 }
 
 .nav-link {
     display: inline-block;
-    padding: 0.4rem 0;
+    padding: 0rem 0;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
+    font-size: 1.5rem;
+    letter-spacing: 0.080em;
     transition: color 0.3s ease;
     text-transform: uppercase;
     font-weight: 100;
@@ -149,6 +158,7 @@ html {
     color: var(--white);
     cursor: pointer;
     padding: 0.5rem;
+    margin-left: auto;
 }
 
 .hamburger {
@@ -208,8 +218,8 @@ html {
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: block;
-        position: absolute;
-        left: 1rem;
+        position: relative;
+        right: 0;
     }
 
     .nav {
@@ -270,14 +280,6 @@ body.homepage-background {
     min-height: 100vh;
 }
 
-.logo-text {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
-    color: #e0e0e0;
-    font-weight: 600;
-    flex-shrink: 0;
-}
-
 /* .logo-image { REMOVED - No longer using image logo globally
     width: 180px; 
     height: auto; 
@@ -294,7 +296,7 @@ body.homepage-background {
     min-height: calc(100vh - 120px);
     /* Adjust based on approximated header/footer height */
     box-sizing: border-box;
-    margin-top: calc(var(--header-height) - 60px);
+    margin-top: calc(var(--header-height) - 180px);
     /* Reduced margin-top by 20px to move content higher */
 }
 
@@ -305,7 +307,7 @@ body.homepage-background {
 }
 
 .hero-text h1 {
-    font-size: 3.3em;
+    font-size: 4em;
     /* Adjusted for impact */
     font-family: 'Figtree Light', sans-serif;
     /* MODIFIED: Changed font to Montserrat */
@@ -316,7 +318,8 @@ body.homepage-background {
     margin-bottom: 35px;
     text-transform: uppercase;
     color: white;
-    letter-spacing: 0.175em;
+    letter-spacing: 0.1em;
+    margin-left: 22%;
     /* Increased letter spacing from 0.1em to 0.2em for more space between symbols */
 }
 
@@ -332,6 +335,7 @@ body.homepage-background {
     font-size: 1.5em;
     font-family: 'Figtree Light';
     letter-spacing: 0.075em;
+    margin-left: 22%;
 }
 
 .cta-button:hover {
