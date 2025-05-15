@@ -78,6 +78,9 @@ html {
     height: 100%;
     position: relative;
     /* Added for absolute positioning of header-line */
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Logo Text */
@@ -88,15 +91,15 @@ html {
     font-weight: 600;
     flex-shrink: 0;
     margin-right: 5%;
+    padding-left: 5rem;
 }
 
 /* Header Line */
 .header-line {
     position: absolute;
     bottom: 0;
-    left: -5%;
-    right: -5%;
-    /* Extended further to both sides */
+    left: 2.1rem;
+    right: 3rem;
     height: 1.7px;
     background-color: grey;
     z-index: 1;
@@ -108,6 +111,7 @@ html {
     height: 100%; /* Fill the header height */
     display: flex;
     align-items: center;
+    padding-right: 2rem;
 }
 
 .nav-list {
@@ -372,6 +376,7 @@ body.homepage-background {
     flex-basis: 55%;
     /* Give more space to text */
     padding-right: 40px;
+    margin-top: -8%; /* Added negative margin to move text higher */
 }
 
 .hero-text h1 {
@@ -387,7 +392,7 @@ body.homepage-background {
     text-transform: uppercase;
     color: white;
     letter-spacing: 0.1em;
-    margin-left: 22%;
+    margin-top: 0; /* Reset top margin to ensure negative margin on parent works properly */
     /* Increased letter spacing from 0.1em to 0.2em for more space between symbols */
 }
 
@@ -403,7 +408,6 @@ body.homepage-background {
     font-size: 1.5em;
     font-family: 'Figtree Light';
     letter-spacing: 0.075em;
-    margin-left: 22%;
 }
 
 .cta-button:hover {
@@ -434,7 +438,7 @@ body.homepage-background {
 
 /* Page Section Styles (for SPA content) */
 .page-section {
-    padding: 80px 5%;
+  margin-top: 15%;
     min-height: 100vh;
     /* Each section takes at least full viewport height */
     box-sizing: border-box;
@@ -1022,14 +1026,10 @@ section#experience {
 }
 
 img.experience-main-product-image {
-    /* Класът от вашия HTML беше "experience-background", но "experience-main-product-image" е по-описателен */
     max-width: 800px;
-    /* КОРИГИРАНО: Максимална ширина на основното изображение. Регулирайте според дизайна! */
-    width: 200%;
-    /* КОРИГИРАНО: Изображението да е адаптивно до max-width, без да прелива. */
+    width: 100%;
     height: auto;
     display: block;
-
 }
 
 /* Общ стил за всички лога на доставчици */
