@@ -1,12 +1,15 @@
 /* styles/cookie-policy.css */
 
 body {
-    background-color: #1a1d24; /* Dark navy/black background */
+    background-color: rgba(30, 37, 47, 255) !important;
+    background-image: none !important;
+    background-attachment: fixed;
     color: #e0e0e0;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.8;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header styling for cookie policy page */
@@ -21,7 +24,7 @@ body {
     height: 2px;
     background-color: white;
     opacity: 1;
-    box-shadow: 
+    box-shadow:
         0 0 5px rgba(255, 255, 255, 0.7),
         0 0 10px rgba(255, 255, 255, 0.5);
 }
@@ -30,104 +33,112 @@ body {
 .cookie-policy-content {
     display: flex;
     max-width: 1200px;
-    margin: 120px auto 0px; /* MODIFIED top margin from 120px to 150px */
+    margin: 80px auto 0px; /* Reduced top margin to match image */
     padding: 0 5%;
     position: relative;
+    margin-top: 120px;
 }
 
 /* Cookie Policy title */
 .content-container h1 {
     position: absolute;
-    top: -20px; /* MODIFIED from -40px to move it down */
-    right: 0;
+    top: 0; /* Adjusted to prevent overlap with header */
+    right: -50px;
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 1.6rem;
-    font-weight: 700;
-    margin: 0;
+    font-weight: 500;
+    margin-top: -25px;
 }
 
-/* Coins styling */
-.coins-container {
-    width: 30%;
-    position: relative;
-    height: 600px; /* Fixed height to match content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-
+/* Coin styling - Positioned absolutely now */
 .coin {
-    margin-top: 65px;
-    width: 1100px; /* Much larger size */
-    height: 650px;
-    position: relative;
-    top: -100px; /* Move up slightly to center in the container */
-    filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.3)); /* ADDED: drop-shadow for a more realistic under-object shadow */
+    position: absolute;
+    top: -20px; /* Adjust as needed */
+    left: -700px; /* Adjust to pull it left, potentially off-screen */
+    width: 1200px; /* Significantly larger width */
+    height: auto;
+    object-fit: contain;
+    z-index: 0; /* Ensure it's behind text if text container has no z-index or higher */
 }
 
-/* Content columns */
+/* Content columns - UNCHANGED */
 .content-container {
     flex: 1;
     position: relative;
+    padding-top: 30px; /* Add space at top */
 }
 
 .text-columns {
     display: flex;
     position: relative;
-    margin-top: 30px; /* ADDED: To move text columns down */
+    margin-top: 0; /* Remove top margin */
+    gap: 0; /* Remove any gap between columns */
+    left: 70px;
 }
 
 .text-columns::before {
     content: "";
     position: absolute;
     left: 50%;
-    top: 15px;
-    bottom: 15px;
-    width: 4px;
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Thin line to match image */
     background-color: white;
+    transform: translateX(-50%); /* Center the line exactly */
 }
 
 .column {
     flex: 1;
-    padding: 0 30px;
+    padding: 0;
 }
 
 .left-column {
     text-align: right;
+    padding-right: 30px; /* Space from divider */
 }
 
 .right-column {
     text-align: left;
+    padding-left: 30px; /* Space from divider */
 }
 
 .column p {
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    margin-bottom: 30px; /* Increased space between paragraphs */
+    font-size: 1rem; /* Increased from 0.9rem */
+    line-height: 1.6;
     color: #c0c0c0;
-    font-weight: 600;
+    font-weight: 400; /* Lighter weight to match image */
+}
+
+/* Last paragraph in each column should not have bottom margin */
+.column p:last-child {
+    margin-bottom: 0;
+}
+
+/* Ensure text wrapping works properly */
+.column p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .cookie-policy-content {
         flex-direction: column;
-        margin-top: 100px; /* Adjusted for mobile header */
+        margin-top: 100px;
     }
-    
-    .coins-container {
-        width: 100%;
-        height: 300px;
-        margin-bottom: 40px;
-    }
-    
+
     .coin {
-        width: 250px; /* Slightly smaller on mobile */
+        width: 300px; /* Larger on mobile too */
+        max-width: 100%;
         top: 0;
+        margin-left: 0;
+        transform: scale(1.2);
+        transform-origin: center;
     }
-    
+
     .content-container h1 {
         position: relative;
         text-align: center;
@@ -136,19 +147,25 @@ body {
         margin-bottom: 30px;
         font-size: 19.9px;
     }
-    
+
     .text-columns {
         flex-direction: column;
     }
-    
+
     .text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
         top: 50%;
+        transform: none;
     }
-    
+
     .left-column, .right-column {
         text-align: left;
+        padding: 0 15px; /* Reduced padding on mobile */
+    }
+
+    .left-column {
+        margin-bottom: 30px; /* Space between columns on mobile */
     }
 }
