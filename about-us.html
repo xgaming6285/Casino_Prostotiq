@@ -35,7 +35,10 @@
             padding: 0 40px;
             flex: 1;
             box-sizing: border-box;
-            align-items: flex-start;
+            align-items: stretch;
+            /* Changed from flex-start to stretch */
+            min-height: calc(100vh - var(--header-height));
+            /* Set minimum height to fill viewport */
         }
 
         .about-content {
@@ -44,21 +47,33 @@
             max-width: 60%;
             box-sizing: border-box;
             margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Distribute content vertically */
         }
 
         .about-title {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Mont', sans-serif;
             font-size: 2.5em;
             margin-bottom: 40px;
             margin-top: 10px;
-            font-weight: 400;
+            font-weight: 700;
+            color: rgb(167, 167, 167);
         }
 
         .about-text {
             font-size: 1.1em;
-            line-height: 1.8;
+            line-height: 1.6;
+            /* Increased line height for better readability */
             margin-bottom: 15px;
             opacity: 0.9;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            /* Make text container take full height */
+            justify-content: space-between;
+            /* Spread paragraphs evenly */
         }
 
         .about-text p {
@@ -69,16 +84,21 @@
 
         .about-text p:last-child {
             border-bottom: none;
+            margin-bottom: 50px;
+            /* Add more space at the bottom */
         }
 
         .device-showcase {
             flex: 1;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
+            /* Changed from flex-start to center */
             max-width: 40%;
             box-sizing: border-box;
             margin-top: 150px;
+            align-self: stretch;
+            /* Make it take full height of parent */
         }
 
         .device-showcase img {
@@ -137,6 +157,8 @@
                 flex-direction: column;
                 margin-top: 30px;
                 padding: 0 20px;
+                min-height: auto;
+                /* Reset min-height for mobile */
             }
 
             .about-content,
@@ -152,6 +174,8 @@
 
             .device-showcase {
                 margin-top: 20px;
+                margin-bottom: 60px;
+                /* Extra space at bottom on mobile */
             }
 
             .about-title {
@@ -200,6 +224,11 @@
         <div class="about-content">
             <h1 class="about-title">About Us</h1>
             <div class="about-text">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged.</p>
+
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
