@@ -1,5 +1,3 @@
-
-
 body {
     background-image: url('image/backgroundMainPage.jpg');
     
@@ -27,7 +25,6 @@ body {
 .footer-links {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .footer-column {
@@ -49,22 +46,19 @@ body {
     color: #ffffff;
 }
 
-.language-social {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.language-and-social-group {
+    align-items: flex-end; /* Aligns content (lang selector & icon container) to the right */
+    /* It also inherits .footer-column styles like flex-direction: column, min-width */
 }
 
 .language-selector {
     margin-bottom: 15px;
 }
 
-.language-link {
-    display: flex;
-    align-items: center;
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 0.9rem;
+.social-icons-inline-container {
+    display: flex; /* Makes icons go inline */
+    gap: 0px;     /* Space between icons */
+    /* margin-top: 15px; /* Optional: space above icons if language selector is present and above */
 }
 
 .flag-icon {
@@ -73,18 +67,14 @@ body {
     margin-right: 8px;
 }
 
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.social-icon img {
-    width: 24px;
-    height: 24px;
+.footer-social-img {
+    width: 74px;
+    height: 54px;
     transition: opacity 0.3s ease;
+    /* Add display: inline-block or block if needed for positioning, and margins/paddings as you see fit */
 }
 
-.social-icon:hover img {
+.footer-social-img:hover {
     opacity: 0.8;
 }
 
@@ -136,6 +126,8 @@ body {
     font-size: 0.8rem;
     color: #a0a0a0;
     text-align: center;
+    position: relative;
+    left: 40px;
 }
 
 
@@ -151,11 +143,12 @@ body {
         align-items: center;
     }
 
-    .language-social {
+    .language-and-social-group {
         align-items: center;
     }
 
-    .social-icons {
-        justify-content: center;
-    }
+    /* Removed .social-media-container from media query as the class is gone */
+    /* .social-media-container { */
+    /* justify-content: center; */
+    /* } */
 }
