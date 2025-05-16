@@ -37,19 +37,36 @@ body {
     padding: 0 0%;
     position: relative;
     margin-top: 10%;
+    overflow: visible;
 }
 
+/* Add a container for the coin to limit overflow */
+.cookie-policy-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
 
 .content-container h1 {
     position: absolute;
-    top: 0; 
-    right: 1%;
+    top: -50px;
+    right: 0.1%;
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-top: -25px;
-    z-index: 10;
+    font-size: 1.8rem;
+    margin-top: 0;
+    z-index: 100;
+    padding: 0 1%;
+    pointer-events: none;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(30, 37, 47, 0.7);
+    padding: 5px 15px;
+    border-radius: 3px;
 }
 
 
@@ -62,12 +79,14 @@ body {
     object-fit: contain;
     z-index: 0; 
     transition: all 0.3s ease;
+    clip-path: inset(0 0 0 580px);
 }
 
 
 .content-container {
     flex: 1;
-    padding-top: 30px; 
+    padding-top: 30px;
+    position: relative;
 }
 
 .text-columns {
@@ -76,9 +95,9 @@ body {
     margin-top: 0; 
     gap: 0; 
     left: auto;
-    right: 1%;
-    width: 67%;
+    width: 65%;
     float: right;
+    padding: 0 1%;
 }
 
 .text-columns::before {
@@ -146,14 +165,14 @@ body {
     .content-container h1 {
         position: relative;
         text-align: center;
-        top: -70px;
+        top: auto;
         right: auto;
+        margin-top: 2px;
         margin-bottom: 30px;
         font-size: 1.3rem;
         width: 100%;
         background-color: rgba(30, 37, 47, 0.8);
         padding: 10px 0;
-        margin-top: 0;
     }
 
     .text-columns {
@@ -196,14 +215,14 @@ body {
     .content-container h1 {
         position: relative;
         text-align: center;
-        top: -70px;
+        top: auto;
         right: auto;
+        margin-top: 200px;
         margin-bottom: 30px;
         font-size: 1.3rem;
         width: 100%;
         background-color: rgba(30, 37, 47, 0.8);
         padding: 10px 0;
-        margin-top: 0;
     }
 
     .text-columns {
@@ -232,27 +251,25 @@ body {
 @media (max-width: 1024px) {
     .cookie-policy-content {
         margin-top: 90px;
-        padding: 0 3%;
+        padding: 0 2%;
+        overflow: visible; /* Keep overflow visible for title */
     }
 
     .coin {
         width: 1300px;
         left: -800px;
         top: -80px;
+        clip-path: inset(0 0 0 800px);
     }
 
     .content-container h1 {
-        right: 20px;
         font-size: 1.4rem;
-        margin-top: -30px;
+        margin-top: -20px;
     }
 
     .text-columns {
         left: auto;
-        right: 20px;
-        width: 80%;
-        float: right;
-        gap: 20px;
+        width: 75%;
     }
 
     .column p {
@@ -265,6 +282,7 @@ body {
     .cookie-policy-content {
         flex-direction: column;
         margin-top: 80px;
+        overflow: visible; /* Keep overflow visible */
     }
 
     .coin {
@@ -272,22 +290,25 @@ body {
         left: 50%;
         transform: translateX(-50%);
         top: 20px;
-        margin-bottom: 30px;
         opacity: 1;
         display: block;
+        position: relative;
+        clip-path: none;
     }
 
     .content-container h1 {
         position: relative;
         text-align: center;
-        top: -70px;
+        top: auto;
         right: auto;
         margin-bottom: 30px;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         width: 100%;
         background-color: rgba(30, 37, 47, 0.8);
         padding: 10px 0;
-        margin-top: 0;
+        pointer-events: auto; /* Reset pointer events */
+        display: block; /* Ensure visibility */
+        margin-top: 20px; /* Adjust top margin */
     }
 
     .text-columns {
@@ -296,7 +317,7 @@ body {
         right: auto;
         width: 100%;
         float: none;
-        margin-top: 350px;
+        margin-top: 30px;
     }
 
     .text-columns::before {
@@ -330,6 +351,7 @@ body {
         top: -50px;
         opacity: 1;
         display: block;
+        clip-path: inset(0 0 0 400px);
     }
 }
 
@@ -344,6 +366,8 @@ body {
         top: 10px;
         display: block;
         opacity: 1;
+        position: relative;
+        clip-path: none;
     }
 
     .content-container {
@@ -351,9 +375,14 @@ body {
     }
 
     .content-container h1 {
-        top: -50px;
-        font-size: 1.2rem;
-        padding: 8px 0;
+        top: auto;
+        position: relative;
+        font-size: 1.4rem;
+        padding: 8px 15px;
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+        width: auto;
     }
 
     .column p {
