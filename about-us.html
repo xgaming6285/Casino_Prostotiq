@@ -26,6 +26,18 @@
             
             width: 100%;
         }
+        .nav-indicator {
+            position: absolute;
+            bottom: 0px;
+            height: 2px;
+            background-color: white;
+            opacity: 1;
+            box-shadow:
+                0 0 5px rgba(255, 255, 255, 0.7),
+                0 0 10px rgba(255, 255, 255, 0.5);
+            width: 220px !important;
+            left: 70px;
+        }
 
         .about-container {
             display: flex;
@@ -245,6 +257,8 @@
        </a>
       </li>
      </ul>
+     <div class="nav-indicator" id="indicator">
+    </div>
     </nav>
     <button aria-label="Toggle mobile menu" class="mobile-menu-toggle" id="mobile-menu-toggle">
      <span class="hamburger">
