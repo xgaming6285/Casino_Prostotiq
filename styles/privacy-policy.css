@@ -111,7 +111,18 @@ body.homepage-background .privacy-policy-container {
     
 }
 
-
+.nav-indicator {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    background-color: white;
+    opacity: 1;
+    box-shadow:
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 10px rgba(255, 255, 255, 0.5);
+    width: 220px !important;
+    left: 70px;
+}
 
 .privacy-policy-header h1 {
     font-family: 'Orbitron', sans-serif;
