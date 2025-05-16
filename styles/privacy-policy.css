@@ -1,24 +1,25 @@
-
 body {
-    font-family: 'Orbitron', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(30, 37, 47, 255) !important;
+    background-image: none !important;
     color: white;
-    
+
     margin: 0;
     padding: 0;
 }
 
 body.homepage-background {
-    background-color: #050608;
-    background-image: radial-gradient(ellipse at center, #181824 0%, #050608 75%);
+    /* background-color: #050608; */
+    /* background-image: radial-gradient(ellipse at center, #181824 0%, #050608 75%); */
+    /* background-color: rgba(30, 37, 47, 255) !important; */
     background-attachment: fixed;
     min-height: 100vh;
-    
+
 }
 
 
-
 header {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,42 +85,39 @@ header nav a.active::after {
     right: 0;
     height: 1px;
     background-color: white;
-    
+
 }
-
-
-
-
 
 
 body.homepage-background .privacy-policy-container {
-    
+
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
     font-size: 16px;
-    
+
 }
 
 .privacy-policy-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px 60px 20px;
-    color: #E0E0E0;
-    
-    
-    
-    
+    width: 90%;
+    /* Например, 90% от ширината на прозореца */
+    max-width: 1400px;
+    /* С максимално ограничение, за да не става прекалено широк на много големи екрани */
+    margin-left: 136px;
+    padding: 40px 25px 60px 25px;
+
+
+
+
 }
 
-
-
 .privacy-policy-header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.2rem;
-    color: #FFFFFF;
-    margin: 50;
-    font-weight: 500;
-    margin-left: -55px;
+    font-family: 'Mont', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: 700;
+    color: rgb(167, 167, 167);
+    margin-left: -127px;
 }
 
 .privacy-content {
@@ -133,10 +131,11 @@ body.homepage-background .privacy-policy-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
+    color: #FFFFFF;
 }
 
 .text-columns::before {
-    
+
     content: "";
     position: absolute;
     top: 0;
@@ -145,7 +144,7 @@ body.homepage-background .privacy-policy-container {
     transform: translateX(-0.5px);
     width: 3px;
     background-color: rgb(255, 255, 255);
-    
+
 }
 
 .text-column {
@@ -155,20 +154,20 @@ body.homepage-background .privacy-policy-container {
 
 .text-columns .text-column:first-child {
     padding-right: 22px;
-    
+
 }
 
 .text-columns .text-column:last-child {
     padding-left: 22px;
-    
+
 }
 
 .text-column p,
 .text-column ul,
 .text-column ol {
     font-size: 0.9rem;
-    color: #B5B8C8;
-    
+    color: #ffffff;
+
     margin-bottom: 1.2em;
     text-align: left;
 }
@@ -196,6 +195,7 @@ body.homepage-background .privacy-policy-container {
 .text-column h3 {
     font-size: 1.1rem;
     font-weight: 500;
+
 }
 
 .sidebar-image-container {
@@ -207,9 +207,10 @@ body.homepage-background .privacy-policy-container {
 }
 
 .sidebar-image-container img {
-    max-width: 300px;
-    height: auto;
-    opacity: 0.4;
+    max-width: 400px;
+    height: 400px;
+    /* opacity: 0.8; */
+    margin-top: 50px;
 }
 
 
@@ -229,6 +230,7 @@ body.homepage-background .privacy-policy-container {
 
     .privacy-policy-header h1 {
         font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
     }
 
     .text-columns {
@@ -237,7 +239,7 @@ body.homepage-background .privacy-policy-container {
     }
 
     .text-columns::before {
-        
+
         display: none;
     }
 
@@ -275,35 +277,3 @@ body.homepage-background .privacy-policy-container {
         font-size: 1rem;
     }
 }
-
-
-footer[role="contentinfo"] {
-    text-align: center;
-    padding: 30px 5%;
-    background-color: #030406;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    color: #aaa;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-content {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-content p {
-    margin-bottom: 10px;
-}
-
-footer[role="contentinfo"] nav a {
-    color: #ccc;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-footer[role="contentinfo"] nav a:hover {
-    color: white;
-}
-
