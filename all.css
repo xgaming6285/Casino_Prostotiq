@@ -1371,9 +1371,9 @@ section#experience .logo-pragmatic {
 }
 
 .homePage-machine {
-    right: -100px;
+    right: -300px;
     margin-top: 200px;
     position: absolute;
     width: 1400px;
-
+    overflow-x: hidden;
 }
