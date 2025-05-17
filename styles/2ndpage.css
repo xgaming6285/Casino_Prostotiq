@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -34,15 +33,20 @@ body {
   height: 100vh;
   max-width: 1600px;
   width: 100%;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow-x: hidden;
   
 }
 
 .product-container {
   position: relative;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  width: 80%;
 }
 
 
@@ -55,6 +59,13 @@ body {
   max-width: 62%;
   height: 62%;
   object-fit: contain;
+}
+
+.product-image-homepage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 
@@ -150,43 +161,49 @@ body {
 
 
 .high-res {
-  left: 285px;
-  top: 5.5em;
+  left: 8%;
+  top: 22%;
+  transform: translateY(-50%);
 }
 
 .high-res-line {
-  left: 320px;
-  top: 104px;
+  left: calc(8% + 120px);
+  top: 22%;
 }
 
 .forged-metal {
-  left: 210px;
-  top: 12em;
+  left: 3%;
+  top: 43%;
+  transform: translateY(-50%);
 }
 
 .forged-metal-line {
-  left: 320px;
-  top: 210px;
+  left: calc(3% + 120px);
+  top: 43%;
 }
 
 .providers {
-  left: 125px;
-  top: 18.5em;
+  left: 1%;
+  top: 64%;
+  transform: translateY(-50%);
 }
 
 .providers-line {
-  left: 208px;
-  top: 312px;
+  left: calc(1% + 120px);
+  top: 64%;
 }
 
 .buttons {
-  right: 165px;
-  top: 374px;
+  left: auto;
+  right: 3%;
+  top: 82%;
+  transform: translateY(-50%);
 }
 
 .buttons-line {
-  right: 260px;
-  top: 391px;
+  left: auto;
+  right: calc(3% + 120px);
+  top: 82%;
 }
 
 
@@ -274,24 +291,24 @@ body {
   .high-res,
   .forged-metal,
   .providers {
-    left: 5%;
+    /* left: 5%; May need to remove or adjust this if the base percentages are better */
   }
 
   .high-res-line,
   .forged-metal-line,
   .providers-line {
-    left: 20%;
-    width: 40%;
+    /* left: 20%; */
+    /* width: 40%; */
     
   }
 
   .buttons {
-    right: 5%;
+    /* right: 5%; */
   }
 
   .buttons-line {
-    right: 20%;
-    width: 40%;
+    /* right: 20%; */
+    /* width: 40%; */
     
   }
 }

@@ -375,12 +375,16 @@ body.homepage-background {
     box-sizing: border-box;
     max-width: 1400px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-text {
-
-    padding-right: 40px;
     padding-top: 60px;
+    position: relative;
+    z-index: 1;
+    flex-basis: 45%;
+    max-width: 600px;
 }
 
 .hero-text h1 {
@@ -1327,6 +1331,7 @@ section#experience .logo-pragmatic {
         padding-right: 0;
         padding-top: 0;
         text-align: center;
+        max-width: 100%;
     }
 
     .hero-text h1 {
@@ -1370,9 +1375,12 @@ section#experience .logo-pragmatic {
 }
 
 .homePage-machine {
-    right: -300px;
-    margin-top: 200px;
     position: absolute;
-    width: 1400px;
     overflow-x: hidden;
+    width: 70vw;
+    max-width: 1200px;
+    height: auto;
+    top: 200px;
+    right: -15vw;
+    z-index: 0;
 }
