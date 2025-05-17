@@ -1112,8 +1112,7 @@ section#experience p:empty {
     margin-bottom: -2px;
     padding-bottom: 20px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-    width: 120%;
-
+    width: auto;
 }
 
 .about-text p:last-child {
