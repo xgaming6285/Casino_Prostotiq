@@ -115,7 +115,7 @@ html {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    padding: 17px 17px 17px 17px;
+    padding: 17px 17px 17px 1px;
     margin-left: 9.5em;
     height: auto;
 }
@@ -284,7 +284,7 @@ html {
     }
 
     .nav-list {
-        margin-left: 4.5em;
+        margin-left: 1em;
     }
 
     .logo-text {
@@ -299,7 +299,7 @@ html {
     }
 
     .nav-list {
-        margin-left: 5.5em;
+        margin-left: 1em;
         margin-right: 1em;
     }
 
@@ -319,7 +319,7 @@ html {
     }
 
     .nav-list {
-        margin-left: 4.5em;
+        margin-left: 1em;
     }
 
     .nav-item {
@@ -334,7 +334,7 @@ html {
     }
 
     .nav-list {
-        margin-left: 3.5em;
+        margin-left: 1em;
     }
 
     .nav-item {
@@ -1323,7 +1323,7 @@ section#experience .logo-pragmatic {
         justify-content: flex-start;
         width: 100%;
         padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 10px;
     }
 
     .hero-text {
