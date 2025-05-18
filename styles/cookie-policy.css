@@ -248,32 +248,28 @@ body {
 }
 
 /* Tablet View */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
     .cookie-policy-content {
-        margin-top: 90px;
-        padding: 0 2%;
-        overflow: visible; /* Keep overflow visible for title */
+        padding: 0 3%;
     }
 
     .coin {
-        width: 1300px;
-        left: -800px;
-        top: -80px;
-        clip-path: inset(0 0 0 800px);
+        width: 1000px;
+        left: -420px;
+        top: -60px;
+        clip-path: inset(0 0 0 420px);
     }
 
     .content-container h1 {
-        font-size: 1.4rem;
-        margin-top: -20px;
+        font-size: 1.6rem;
     }
 
     .text-columns {
-        left: auto;
-        width: 75%;
+        width: 60%; /* Adjusted width */
     }
 
     .column p {
-        font-size: 0.85rem;
+        font-size: 0.75rem; /* Slightly smaller font for tablet */
     }
 }
 
@@ -346,12 +342,12 @@ body {
 /* Intermediate breakpoint to prevent disappearing */
 @media (max-width: 900px) and (min-width: 769px) {
     .coin {
-        width: 800px;
-        left: -400px;
-        top: -50px;
-        opacity: 1;
-        display: block;
-        clip-path: inset(0 0 0 400px);
+        width: 1000px;
+        left: -380px;
+        top: -20px; 
+        opacity: 1; 
+        display: block; 
+        clip-path: inset(0 0 0 420px);
     }
 }
 
@@ -397,5 +393,15 @@ body {
     .cookie-policy .nav-indicator {
         width: 140px !important;
         left: 40px;
+    }
+}
+
+/* Fix for coin image visibility between 901px and 1024px */
+@media (max-width: 1024px) and (min-width: 901px) {
+    .coin {
+        width: 1000px;
+        left: -420px;
+        top: -60px;
+        clip-path: inset(0 0 0 420px);
     }
 }
