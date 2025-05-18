@@ -98,10 +98,8 @@ html {
 
 .nav {
     position: relative;
-    height: 100%;
     display: flex;
-    align-items: center;
-    padding-right: 2rem;
+    align-items: right;
 }
 
 .nav-list {
@@ -231,17 +229,16 @@ html {
 
 .nav {
         position: absolute;
-        top: var(--header-height);
-        left: 0;
-        right: 0;
-        background-color: var(--black);
+        top: 81.7%;
+        right: -3%;
+        background-color: transparent;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.5s ease;
     }
 
 .nav.active {
-        max-height: 300px;
+        max-height: 500px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
@@ -258,7 +255,7 @@ html {
 
 .nav-link {
         display: block;
-        padding: 0.75rem 0;
+        padding: 0.3rem 0;
     }
 
 .nav-indicator {
