@@ -60,11 +60,11 @@ body {
     color: white;
     font-size: 1.8rem;
     margin-top: 0;
+    margin-bottom: 1;
     z-index: 100;
     padding: 0 1%;
     pointer-events: none;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    background-color: rgba(30, 37, 47, 0.7);
     padding: 5px 15px;
     border-radius: 3px;
 }
@@ -282,7 +282,7 @@ body {
     }
 
     .coin {
-        width: 500px;
+        width: 650px;
         left: 50%;
         transform: translateX(-50%);
         top: 20px;
@@ -300,11 +300,10 @@ body {
         margin-bottom: 30px;
         font-size: 1.5rem;
         width: 100%;
-        background-color: rgba(30, 37, 47, 0.8);
         padding: 10px 0;
         pointer-events: auto; /* Reset pointer events */
         display: block; /* Ensure visibility */
-        margin-top: 20px; /* Adjust top margin */
+        margin-top: -20px; /* Adjust top margin */
     }
 
     .text-columns {
@@ -347,7 +346,7 @@ body {
         top: -20px; 
         opacity: 1; 
         display: block; 
-        clip-path: inset(0 0 0 420px);
+        clip-path: inset(0 0 0 42px);
     }
 }
 
@@ -400,8 +399,8 @@ body {
 @media (max-width: 1024px) and (min-width: 901px) {
     .coin {
         width: 1000px;
-        left: -420px;
+        left: -300px;
         top: -60px;
-        clip-path: inset(0 0 0 420px);
+        clip-path: inset(0 0 0 42px);
     }
 }
