@@ -18,7 +18,6 @@ body {
   
 }
 
-
 .showcase-container {
   position: relative;
   min-height: 100vh;
@@ -49,7 +48,6 @@ body {
   width: 80%;
 }
 
-
 .product-image {
   position: absolute;
   top: 0;
@@ -67,7 +65,6 @@ body {
   object-fit: contain;
   display: block;
 }
-
 
 .feature-label {
   position: absolute;
@@ -138,7 +135,6 @@ body {
   margin-left: 8px;
 }
 
-
 .connecting-line {
   position: absolute;
   z-index: 0;
@@ -152,13 +148,11 @@ body {
   transition: opacity 0.3s ease;
 }
 
-
 .connecting-line circle {
   opacity: 0;
   transition: opacity 0.5s ease;
   transition-delay: 1s;
 }
-
 
 .high-res {
   left: 8%;
@@ -206,7 +200,6 @@ body {
   top: 82%;
 }
 
-
 .cta {
   position: absolute;
   bottom: 32px;
@@ -226,7 +219,6 @@ body {
   width: 20px;
   height: 20px;
 }
-
 
 .feature-dropdown {
   position: absolute;
@@ -263,7 +255,6 @@ body {
   top: 100%;
 }
 
-
 .feature-label {
   position: absolute;
   z-index: 111;
@@ -285,32 +276,32 @@ body {
   transform: scale(1.1);
 }
 
-
 @media (max-width: 1200px) {
 
   .high-res,
   .forged-metal,
   .providers {
-    /* left: 5%; May need to remove or adjust this if the base percentages are better */
+    
   }
 
-  .high-res-line,
+.high-res-line,
   .forged-metal-line,
   .providers-line {
-    /* left: 20%; */
-    /* width: 40%; */
+    
+    
     
   }
 
-  .buttons {
-    /* right: 5%; */
-  }
-
-  .buttons-line {
-    /* right: 20%; */
-    /* width: 40%; */
+.buttons {
     
   }
+
+.buttons-line {
+    
+    
+    
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -319,22 +310,23 @@ body {
     margin: 10px auto;
   }
 
-  .label-text {
+.label-text {
     font-size: 12px;
     padding: 6px 16px;
   }
 
-  .plus-circle {
+.plus-circle {
     width: 16px;
     height: 16px;
   }
 
-  .cta-text {
+.cta-text {
     font-size: 16px;
   }
 
-  
-  .connecting-line {
+.connecting-line {
     display: none;
   }
+
 }
+

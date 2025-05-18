@@ -1,77 +1,78 @@
 document.addEventListener('DOMContentLoaded', function() {
     const featureLabels = document.querySelectorAll('.feature-label');
     featureLabels.forEach(label => {
-      label.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.05)';
-        this.style.transition = 'transform 0.3s ease';
-      });
-      label.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)';
-      });
-      label.addEventListener('click', function(e) {
-        e.stopPropagation(); 
-        const labelText = this.querySelector('.label-text').textContent;
-        const labelIndex = Array.from(featureLabels).indexOf(this);
-        const hasOpenDropdown = this.dataset.hasDropdown === 'true';
-        document.querySelectorAll('.feature-dropdown').forEach(dropdown => {
-          dropdown.remove();
+        label.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
         });
-        featureLabels.forEach(l => {
-          l.dataset.hasDropdown = 'false';
+        label.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
         });
-        if (!hasOpenDropdown) {
-          createFeatureDropdown(this, labelText);
-        }
-      });
+        label.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const labelText = this.querySelector('.label-text').textContent;
+            const labelIndex = Array.from(featureLabels).indexOf(this);
+            const hasOpenDropdown = this.dataset.hasDropdown === 'true';
+            document.querySelectorAll('.feature-dropdown').forEach(dropdown => {
+                dropdown.remove();
+            });
+            featureLabels.forEach(l => {
+                l.dataset.hasDropdown = 'false';
+            });
+            if (!hasOpenDropdown) {
+                createFeatureDropdown(this, labelText);
+            }
+        });
     });
     document.addEventListener('click', function() {
-      document.querySelectorAll('.feature-dropdown').forEach(dropdown => {
-        dropdown.remove();
-      });
-      featureLabels.forEach(l => {
-        l.dataset.hasDropdown = 'false';
-      });
+        document.querySelectorAll('.feature-dropdown').forEach(dropdown => {
+            dropdown.remove();
+        });
+        featureLabels.forEach(l => {
+            l.dataset.hasDropdown = 'false';
+        });
     });
+
     function createFeatureDropdown(labelElement, feature) {
-      let info = '';
-      switch(feature) {
-        case 'HIGH-RES DISPLAY':
-          info = 'Ultra-high resolution display with vibrant colors and crystal-clear graphics.';
-          break;
-        case 'FORGED IN METAL':
-          info = 'Premium metal construction for durability and a luxurious feel.';
-          break;
-        case '30 DIFFERENT PROVIDERS':
-          info = 'Access to games from 30 different providers for endless entertainment options.';
-          break;
-        case 'PREMIUM BUTTONS':
-          info = 'Responsive, high-quality buttons for precise control and enhanced gameplay.';
-          break;
-        default:
-          info = 'Feature information not available.';
-      }
-      const dropdown = document.createElement('div');
-      dropdown.className = 'feature-dropdown show-dropdown';
-      dropdown.textContent = info;
-      dropdown.style.zIndex = '9999'; 
-      document.body.appendChild(dropdown);
-      const rect = labelElement.getBoundingClientRect();
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-      if (labelElement.classList.contains('right-label')) {
-        dropdown.style.position = 'absolute';
-        dropdown.style.top = (rect.bottom + scrollTop - 1) + 'px';
-        dropdown.style.right = (document.body.clientWidth - rect.right + scrollLeft - 20) + 'px';
-      } else {
-        dropdown.style.position = 'absolute';
-        dropdown.style.top = (rect.bottom + scrollTop - 1) + 'px';
-        dropdown.style.left = (rect.left + scrollLeft) + 'px';
-      }
-      labelElement.dataset.hasDropdown = 'true';
-      dropdown.dataset.forLabel = Array.from(document.querySelectorAll('.feature-label')).indexOf(labelElement);
-      setTimeout(() => {
-        dropdown.classList.add('show-dropdown');
-      }, 10);
+        let info = '';
+        switch (feature) {
+            case 'HIGH-RES DISPLAY':
+                info = 'Ultra-high resolution display with vibrant colors and crystal-clear graphics.';
+                break;
+            case 'FORGED IN METAL':
+                info = 'Premium metal construction for durability and a luxurious feel.';
+                break;
+            case '30 DIFFERENT PROVIDERS':
+                info = 'Access to games from 30 different providers for endless entertainment options.';
+                break;
+            case 'PREMIUM BUTTONS':
+                info = 'Responsive, high-quality buttons for precise control and enhanced gameplay.';
+                break;
+            default:
+                info = 'Feature information not available.';
+        }
+        const dropdown = document.createElement('div');
+        dropdown.className = 'feature-dropdown show-dropdown';
+        dropdown.textContent = info;
+        dropdown.style.zIndex = '9999';
+        document.body.appendChild(dropdown);
+        const rect = labelElement.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        if (labelElement.classList.contains('right-label')) {
+            dropdown.style.position = 'absolute';
+            dropdown.style.top = (rect.bottom + scrollTop - 1) + 'px';
+            dropdown.style.right = (document.body.clientWidth - rect.right + scrollLeft - 20) + 'px';
+        } else {
+            dropdown.style.position = 'absolute';
+            dropdown.style.top = (rect.bottom + scrollTop - 1) + 'px';
+            dropdown.style.left = (rect.left + scrollLeft) + 'px';
+        }
+        labelElement.dataset.hasDropdown = 'true';
+        dropdown.dataset.forLabel = Array.from(document.querySelectorAll('.feature-label')).indexOf(labelElement);
+        setTimeout(() => {
+            dropdown.classList.add('show-dropdown');
+        }, 10);
     }
     const style = document.createElement('style');
     style.textContent = `
@@ -113,28 +114,28 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
     const craftSection = document.getElementById('craftsmanship');
     if (craftSection) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const lines = document.querySelectorAll('.connecting-line line');
-            const circles = document.querySelectorAll('.connecting-line circle');
-            lines.forEach(line => {
-              const length = line.getTotalLength ? line.getTotalLength() : 500; 
-              line.style.strokeDasharray = length;
-              line.style.strokeDashoffset = length;
-              line.style.animation = 'drawLine 1.5s ease-out forwards';
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const lines = document.querySelectorAll('.connecting-line line');
+                    const circles = document.querySelectorAll('.connecting-line circle');
+                    lines.forEach(line => {
+                        const length = line.getTotalLength ? line.getTotalLength() : 500;
+                        line.style.strokeDasharray = length;
+                        line.style.strokeDashoffset = length;
+                        line.style.animation = 'drawLine 1.5s ease-out forwards';
+                    });
+                    setTimeout(() => {
+                        circles.forEach(circle => {
+                            circle.style.opacity = '1';
+                        });
+                    }, 300);
+                    observer.unobserve(entry.target);
+                }
             });
-            setTimeout(() => {
-              circles.forEach(circle => {
-                circle.style.opacity = '1';
-              });
-            }, 300); 
-            observer.unobserve(entry.target);
-          }
+        }, {
+            threshold: 0.2
         });
-      }, {
-        threshold: 0.2 
-      });
-      observer.observe(craftSection);
+        observer.observe(craftSection);
     }
-  });
+});

@@ -15,7 +15,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -47,8 +46,8 @@ body {
 }
 
 .language-and-social-group {
-    align-items: flex-end; /* Aligns content (lang selector & icon container) to the right */
-    /* It also inherits .footer-column styles like flex-direction: column, min-width */
+    align-items: flex-end; 
+    
 }
 
 .language-selector {
@@ -56,9 +55,9 @@ body {
 }
 
 .social-icons-inline-container {
-    display: flex; /* Makes icons go inline */
-    gap: 0px;     /* Space between icons */
-    /* margin-top: 15px; /* Optional: space above icons if language selector is present and above */
+    display: flex; 
+    gap: 0px;     
+    
 }
 
 .flag-icon {
@@ -71,7 +70,7 @@ body {
     width: 74px;
     height: 54px;
     transition: opacity 0.3s ease;
-    /* Add display: inline-block or block if needed for positioning, and margins/paddings as you see fit */
+    
 }
 
 .footer-social-img:hover {
@@ -130,7 +129,6 @@ body {
     left: 40px;
 }
 
-
 @media (max-width: 768px) {
     .footer-links {
         flex-direction: column;
@@ -138,17 +136,14 @@ body {
         text-align: center;
     }
 
-    .footer-column {
+.footer-column {
         margin-bottom: 30px;
         align-items: center;
     }
 
-    .language-and-social-group {
+.language-and-social-group {
         align-items: center;
     }
 
-    /* Removed .social-media-container from media query as the class is gone */
-    /* .social-media-container { */
-    /* justify-content: center; */
-    /* } */
 }
+

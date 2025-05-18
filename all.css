@@ -5,7 +5,6 @@ body {
     position: relative;
 }
 
-
 body {
     font-family: 'Month', sans-serif;
     color: white;
@@ -21,7 +20,6 @@ body {
     font-weight: 200;
 
 }
-
 
 :root {
     --header-height: 80px;
@@ -47,14 +45,12 @@ html {
     scroll-padding-top: var(--header-height);
 }
 
-
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
-
 
 .header {
     position: fixed;
@@ -80,7 +76,6 @@ html {
     max-width: 100%;
 }
 
-
 .logo-text {
     font-family: 'Dancing Script', cursive;
     font-size: 3rem;
@@ -91,7 +86,6 @@ html {
     padding-left: 5rem;
 }
 
-
 .header-line {
     position: absolute;
     bottom: 0;
@@ -101,7 +95,6 @@ html {
     background-color: grey;
     z-index: 1;
 }
-
 
 .nav {
     position: relative;
@@ -148,7 +141,6 @@ html {
     font-weight: 700;
 }
 
-
 .nav-indicator {
     position: absolute;
     bottom: 0;
@@ -167,7 +159,6 @@ html {
     pointer-events: none;
     z-index: 1111;
 }
-
 
 .mobile-menu-toggle {
     display: none;
@@ -219,7 +210,6 @@ html {
     bottom: 0;
 }
 
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -232,7 +222,6 @@ html {
     border-width: 0;
 }
 
-
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: block;
@@ -240,7 +229,7 @@ html {
         right: 0;
     }
 
-    .nav {
+.nav {
         position: absolute;
         top: var(--header-height);
         left: 0;
@@ -251,45 +240,46 @@ html {
         transition: max-height 0.3s ease;
     }
 
-    .nav.active {
+.nav.active {
         max-height: 300px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .nav-list {
+.nav-list {
         flex-direction: column;
         padding: 1rem 0;
     }
 
-    .nav-item {
+.nav-item {
         margin: 0;
         width: 100%;
         text-align: center;
     }
 
-    .nav-link {
+.nav-link {
         display: block;
         padding: 0.75rem 0;
     }
 
-    .nav-indicator {
+.nav-indicator {
         display: none;
     }
-}
 
+}
 
 @media (max-width: 1200px) {
     .nav-link {
         font-size: 1.1rem;
     }
 
-    .nav-list {
+.nav-list {
         margin-left: 1em;
     }
 
-    .logo-text {
+.logo-text {
         font-size: 2.5em;
     }
+
 }
 
 @media (max-width: 1000px) {
@@ -298,18 +288,19 @@ html {
         letter-spacing: 0.060em;
     }
 
-    .nav-list {
+.nav-list {
         margin-left: 1em;
         margin-right: 1em;
     }
 
-    .nav-item {
+.nav-item {
         margin: 0 1.1rem;
     }
 
-    .logo-text {
+.logo-text {
         font-size: 2em;
     }
+
 }
 
 @media (max-width: 900px) {
@@ -318,13 +309,14 @@ html {
         letter-spacing: 0.040em;
     }
 
-    .nav-list {
+.nav-list {
         margin-left: 1em;
     }
 
-    .nav-item {
+.nav-item {
         margin: 0 0.9rem;
     }
+
 }
 
 @media (max-width: 820px) {
@@ -333,15 +325,15 @@ html {
         letter-spacing: 0.030em;
     }
 
-    .nav-list {
+.nav-list {
         margin-left: 1em;
     }
 
-    .nav-item {
+.nav-item {
         margin: 0 0.8rem;
     }
-}
 
+}
 
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -349,9 +341,8 @@ html {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+
 }
-
-
 
 body.homepage-background {
 
@@ -362,9 +353,6 @@ body.homepage-background {
     background-attachment: fixed;
     min-height: 100vh;
 }
-
-
-
 
 .hero-section {
     display: flex;
@@ -441,9 +429,7 @@ body.homepage-background {
 
     height: auto;
 
-
 }
-
 
 .page-section {
     margin-top: 15%;
@@ -505,9 +491,6 @@ body.homepage-background {
 
 }
 
-
-
-
 .feature-callout {
 
     position: absolute;
@@ -566,7 +549,6 @@ body.homepage-background {
 
 }
 
-
 .feature-callout::after {
     content: '';
     position: absolute;
@@ -574,12 +556,7 @@ body.homepage-background {
     height: 1px;
     z-index: 9;
 
-
 }
-
-
-
-
 
 .premium-buttons {
     flex-direction: row-reverse;
@@ -591,8 +568,6 @@ body.homepage-background {
     margin-left: 8px;
 
 }
-
-
 
 .high-res-display {
     top: 20%;
@@ -616,7 +591,6 @@ body.homepage-background {
 
 }
 
-
 .forged-in-metal {
     top: 38%;
     left: 3%;
@@ -632,7 +606,6 @@ body.homepage-background {
     top: 14px;
     left: 120px;
 }
-
 
 .thirty-providers {
     top: 58%;
@@ -650,7 +623,6 @@ body.homepage-background {
     left: 150px;
 
 }
-
 
 .premium-buttons {
     top: 75%;
@@ -676,8 +648,6 @@ body.homepage-background {
     transform-origin: right center;
 
 }
-
-
 
 .high-res-display .callout-info-box,
 .forged-in-metal .callout-info-box,
@@ -716,9 +686,6 @@ body.homepage-background {
 
     border-color: rgba(255, 255, 255, 0.4);
 }
-
-
-
 
 .pre-order-background {
     padding: 40px 0;
@@ -765,12 +732,14 @@ body.homepage-background {
     .pre-order-product-image {
         transform: scale(1.15);
     }
+
 }
 
 @media (min-width: 1400px) {
     .pre-order-product-image {
         transform: scale(1.2);
     }
+
 }
 
 @media (max-width: 992px) {
@@ -780,32 +749,33 @@ body.homepage-background {
         padding: 0 10px;
     }
 
-    .product-display,
+.product-display,
     .pre-order-content {
         max-width: 100%;
         text-align: center;
         margin-bottom: 30px;
     }
 
-    .product-display {
+.product-display {
         max-width: 80%;
         order: 1;
     }
 
-    .pre-order-product-image {
+.pre-order-product-image {
         max-width: 100%;
         margin: 0 auto;
     }
 
-    .pre-order-content {
+.pre-order-content {
         align-items: center;
         order: 2;
     }
 
-    .view-360 {
+.view-360 {
         right: 0;
         bottom: -30px;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -813,7 +783,7 @@ body.homepage-background {
         max-width: 100%;
     }
 
-    .product-display {
+.product-display {
         max-width: 85%;
     }
 
@@ -824,7 +794,7 @@ body.homepage-background {
         max-width: 90%;
     }
 
-    .pre-order-product-image {
+.pre-order-product-image {
         max-width: 100%;
     }
 
@@ -835,14 +805,15 @@ body.homepage-background {
         max-width: 95%;
     }
 
-    .pre-order-product-image {
+.pre-order-product-image {
         max-width: 100%;
         transform: scale(1.05);
     }
 
-    .pre-order-header h2 {
+.pre-order-header h2 {
         font-size: 2rem;
     }
+
 }
 
 .product-buttons {
@@ -915,14 +886,12 @@ body.homepage-background {
     font-weight: 700;
 }
 
-
 .no-constraints span {
     margin-right: 10px;
 
     display: inline-block;
 
 }
-
 
 .no-constraints span:last-child {
     margin-right: 0;
@@ -978,25 +947,22 @@ body.homepage-background {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-
 @media (max-width: 992px) {
     .pre-order-container {
         flex-direction: column;
     }
 
-    .product-display,
+.product-display,
     .pre-order-content {
         max-width: 100%;
         text-align: center;
     }
 
-    .pre-order-content {
+.pre-order-content {
         align-items: center;
     }
+
 }
-
-
-
 
 section#experience {
     background-attachment: fixed;
@@ -1027,7 +993,6 @@ img.experience-main-product-image {
     display: block;
 }
 
-
 .provider-logo {
     position: absolute;
     height: 45px;
@@ -1036,7 +1001,6 @@ img.experience-main-product-image {
     opacity: 1;
     transition: opacity 0.3s ease;
 }
-
 
 .experience-text-and-cta {
     text-align: center;
@@ -1146,17 +1110,17 @@ section#experience p:empty {
         margin-top: 60px;
     }
 
-    .about-content {
+.about-content {
         padding-right: 0;
         margin-bottom: 40px;
         flex: 1;
     }
 
-    .device-showcase {
+.device-showcase {
         flex: 1;
     }
 
-    .device-showcase img {
+.device-showcase img {
         transform: scale(1);
     }
 
@@ -1168,8 +1132,6 @@ section#experience p:empty {
 
 }
 
-
-
 section#experience .experience-visual-hub {
     position: relative;
     width: 100%;
@@ -1180,7 +1142,6 @@ section#experience .experience-visual-hub {
     align-items: center;
     min-height: 450px;
 }
-
 
 section#experience .provider-logo {
     position: absolute;
@@ -1229,7 +1190,6 @@ section#experience .logo-unde {
     opacity: 0.5;
 }
 
-
 section#experience .logo-playtech {
     width: 600px;
     top: 100px;
@@ -1270,15 +1230,12 @@ section#experience .logo-nolimit {
     opacity: 0.5;
 }
 
-
-
 section#experience .logo-igt {
     width: 600px;
     top: -141px;
     margin-right: -350px;
     opacity: 0.5;
 }
-
 
 section#experience .logo-hacksaw {
     width: 600px;
@@ -1295,15 +1252,15 @@ section#experience .logo-pragmatic {
     transform: translate(-50%, -50%);
 }
 
-
 @media (max-width: 1200px) {
     .hero-text h1 {
         font-size: 3.5em;
     }
 
-    .hero-text {
+.hero-text {
         padding-top: 60px;
     }
+
 }
 
 @media (max-width: 992px) {
@@ -1311,9 +1268,10 @@ section#experience .logo-pragmatic {
         font-size: 3em;
     }
 
-    .hero-text {
+.hero-text {
         padding-top: 40px;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -1326,7 +1284,7 @@ section#experience .logo-pragmatic {
         padding-right: 10px;
     }
 
-    .hero-text {
+.hero-text {
         flex-basis: 100%;
         padding-right: 0;
         padding-top: 0;
@@ -1334,14 +1292,15 @@ section#experience .logo-pragmatic {
         max-width: 100%;
     }
 
-    .hero-text h1 {
+.hero-text h1 {
         font-size: 2.5em;
         line-height: 1.4;
     }
 
-    .cta-button {
+.cta-button {
         font-size: 1.2em;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -1351,11 +1310,12 @@ section#experience .logo-pragmatic {
         padding-bottom: 50px;
     }
 
-    .hero-text h1 {
+.hero-text h1 {
         font-size: 2em;
         line-height: 1.3;
         padding-top: 20px;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -1363,15 +1323,16 @@ section#experience .logo-pragmatic {
         padding-top: 120px;
     }
 
-    .hero-text h1 {
+.hero-text h1 {
         font-size: 1.8em;
         padding-top: 30px;
     }
 
-    .cta-button {
+.cta-button {
         font-size: 1em;
         padding: 5px 20px;
     }
+
 }
 
 .homePage-machine {
@@ -1384,3 +1345,4 @@ section#experience .logo-pragmatic {
     right: -15vw;
     z-index: 0;
 }
+

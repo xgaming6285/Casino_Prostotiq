@@ -10,11 +10,9 @@ body {
     overflow-x: visible; 
 }
 
-
 .header {
     background-color: transparent;
 }
-
 
 .cookie-policy .nav-indicator {
     position: absolute;
@@ -29,7 +27,6 @@ body {
     left: 70px;
 }
 
-
 .cookie-policy-content {
     display: flex;
     max-width: 1200px;
@@ -40,7 +37,6 @@ body {
     overflow: visible;
 }
 
-/* Add a container for the coin to limit overflow */
 .cookie-policy-content::before {
     content: "";
     position: absolute;
@@ -84,6 +80,7 @@ body {
         padding: 10px 15px;
         border-radius: 3px;
     }
+
 }
 
 .coin {
@@ -97,7 +94,6 @@ body {
     transition: all 0.3s ease;
     clip-path: inset(0 0 0 580px);
 }
-
 
 .content-container {
     flex: 1;
@@ -150,11 +146,9 @@ body {
     font-weight: bold; 
 }
 
-
 .column p:last-child {
     margin-bottom: 0;
 }
-
 
 .column p {
     word-wrap: break-word;
@@ -162,14 +156,13 @@ body {
     hyphens: auto;
 }
 
-
 @media (max-width: 768px) {
     .cookie-policy-content {
         flex-direction: column;
         margin-top: 100px;
     }
 
-    .coin {
+.coin {
         width: 500px; 
         max-width: 100%;
         top: 0;
@@ -178,7 +171,7 @@ body {
         transform-origin: center;
     }
 
-    .content-container h1 {
+.content-container h1 {
         position: relative;
         text-align: center;
         top: auto;
@@ -191,11 +184,11 @@ body {
         padding: 10px 0;
     }
 
-    .text-columns {
+.text-columns {
         flex-direction: column;
     }
 
-    .text-columns::before {
+.text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -203,14 +196,15 @@ body {
         transform: none;
     }
 
-    .left-column, .right-column {
+.left-column, .right-column {
         text-align: right;
         padding: 0 15px; 
     }
 
-    .left-column {
+.left-column {
         margin-bottom: 30px; 
     }
+
 }
 
 @media (max-width: 768px) {
@@ -219,7 +213,7 @@ body {
         margin-top: 100px;
     }
 
-    .coin {
+.coin {
         width: 350px; 
         max-width: 100%;
         top: 0;
@@ -228,11 +222,11 @@ body {
         transform-origin: center;
     }
 
-    .text-columns {
+.text-columns {
         flex-direction: column;
     }
 
-    .text-columns::before {
+.text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -240,51 +234,51 @@ body {
         transform: none;
     }
 
-    .left-column, .right-column {
+.left-column, .right-column {
         text-align: right;
         padding: 0 15px; 
     }
 
-    .left-column {
+.left-column {
         margin-bottom: 30px; 
     }
+
 }
 
-/* Tablet View */
 @media (max-width: 1024px) and (min-width: 769px) {
     .cookie-policy-content {
         padding: 0 1%;
     }
 
-    .coin {
+.coin {
         width: 1000px;
         left: -420px;
         top: -60px;
         clip-path: inset(0 0 0 420px);
     }
 
-    .content-container h1 {
+.content-container h1 {
         font-size: 1.6rem;
     }
 
-    .text-columns {
-        width: 60%; /* Adjusted width */
+.text-columns {
+        width: 60%; 
     }
 
-    .column p {
-        font-size: 0.75rem; /* Slightly smaller font for tablet */
+.column p {
+        font-size: 0.75rem; 
     }
+
 }
 
-/* Mobile View */
 @media (max-width: 768px) {
     .cookie-policy-content {
         flex-direction: column;
         margin-top: 80px;
-        overflow: visible; /* Keep overflow visible */
+        overflow: visible; 
     }
 
-    .coin {
+.coin {
         width: 650px;
         left: 50%;
         transform: translateX(-50%);
@@ -295,7 +289,7 @@ body {
         clip-path: none;
     }
 
-    .content-container h1 {
+.content-container h1 {
         position: relative;
         text-align: center;
         top: auto;
@@ -304,12 +298,12 @@ body {
         font-size: 1.5rem;
         width: 100%;
         padding: 10px 0;
-        pointer-events: auto; /* Reset pointer events */
-        display: block; /* Ensure visibility */
-        margin-top: -20px; /* Adjust top margin */
+        pointer-events: auto; 
+        display: block; 
+        margin-top: -20px; 
     }
 
-    .text-columns {
+.text-columns {
         flex-direction: column;
         left: auto;
         right: auto;
@@ -318,7 +312,7 @@ body {
         margin-top: 30px;
     }
 
-    .text-columns::before {
+.text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -326,22 +320,22 @@ body {
         transform: none;
     }
 
-    .left-column, .right-column {
+.left-column, .right-column {
         text-align: right;
         padding: 0 15px;
     }
 
-    .left-column {
+.left-column {
         margin-bottom: 30px;
     }
 
-    .cookie-policy .nav-indicator {
+.cookie-policy .nav-indicator {
         width: 160px !important;
         left: 50px;
     }
+
 }
 
-/* Intermediate breakpoint to prevent disappearing */
 @media (max-width: 900px) and (min-width: 769px) {
     .coin {
         width: 1000px;
@@ -351,15 +345,15 @@ body {
         display: block; 
         clip-path: inset(0 0 0 42px);
     }
+
 }
 
-/* Small Mobile View */
 @media (max-width: 480px) {
     .cookie-policy-content {
         margin-top: 60px;
     }
 
-    .coin {
+.coin {
         width: 400px;
         top: 10px;
         display: block;
@@ -368,11 +362,11 @@ body {
         clip-path: none;
     }
 
-    .content-container {
+.content-container {
         padding-top: 20px;
     }
 
-    .content-container h1 {
+.content-container h1 {
         top: auto;
         position: relative;
         font-size: 1.4rem;
@@ -383,22 +377,22 @@ body {
         width: auto;
     }
 
-    .column p {
+.column p {
         font-size: 0.8rem;
     }
 
-    .left-column, .right-column {
+.left-column, .right-column {
         padding: 0 10px;
         text-align: right;
     }
 
-    .cookie-policy .nav-indicator {
+.cookie-policy .nav-indicator {
         width: 140px !important;
         left: 40px;
     }
+
 }
 
-/* Fix for coin image visibility between 901px and 1024px */
 @media (max-width: 1024px) and (min-width: 901px) {
     .coin {
         width: 1000px;
@@ -406,4 +400,6 @@ body {
         top: -60px;
         clip-path: inset(0 0 0 42px);
     }
+
 }
+

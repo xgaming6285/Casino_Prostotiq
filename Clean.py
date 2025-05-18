@@ -36,21 +36,28 @@ def remove_js_comments(js_code):
     return cleaned_code, original_length != len(cleaned_code)
 
 def beautify_css_content(css_code):
-    """Beautifies CSS content using jsbeautifier.cssbeautify."""
+    """Beautifies CSS content using jsbeautifier."""
     try:
         opts = jsbeautifier.default_options()
-        # Configure options if needed, e.g., opts.indent_size = 2
-        return jsbeautifier.css(css_code, opts)
+        opts.indent_size = 4
+        # jsbeautifier doesn't have a direct css method, we'll implement our own simple formatter
+        # First remove excess empty lines after comment removal
+        cleaned_css = re.sub(r'\n{3,}', '\n\n', css_code)
+        
+        # Ensure one empty line between CSS rules
+        cleaned_css = re.sub(r'}\s*', '}\n\n', cleaned_css)
+        
+        return cleaned_css
     except Exception as e:
         print(f"Warning: Could not beautify CSS. Error: {e}", file=sys.stderr)
         return css_code
 
 def beautify_js_content(js_code):
-    """Beautifies JavaScript content using jsbeautifier.beautify."""
+    """Beautifies JavaScript content using jsbeautifier."""
     try:
         opts = jsbeautifier.default_options()
-        # Configure options if needed, e.g., opts.indent_size = 2
-        return jsbeautifier.js(js_code, opts)
+        opts.indent_size = 4
+        return jsbeautifier.beautify(js_code, opts)
     except Exception as e:
         print(f"Warning: Could not beautify JavaScript. Error: {e}", file=sys.stderr)
         return js_code
