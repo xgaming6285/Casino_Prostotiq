@@ -1,11 +1,11 @@
 body {
     background-image: url('image/backgroundMainPage.jpg');
-    
+
     color: #e0e0e0;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.8;
+    line-height: 1.2;
 }
 
 .site-footer {
@@ -16,28 +16,31 @@ body {
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20%;
     padding: 0 20px;
 }
 
 .footer-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10%;
 }
 
 .footer-column {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-    min-width: 150px;
+    margin-bottom: 50px;
+    min-width: 120px;
 }
 
 .footer-column a {
-    color: grey;
+    color: white;
     text-decoration: none;
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     transition: color 0.3s ease;
 }
 
@@ -46,8 +49,8 @@ body {
 }
 
 .language-and-social-group {
-    align-items: flex-end; 
-    
+    align-items: flex-start;
+    margin-left: 0;
 }
 
 .language-selector {
@@ -55,9 +58,9 @@ body {
 }
 
 .social-icons-inline-container {
-    display: flex; 
-    gap: 0px;     
-    
+    display: flex;
+    gap: 0px;
+    margin-left: -60px;
 }
 
 .flag-icon {
@@ -67,10 +70,10 @@ body {
 }
 
 .footer-social-img {
-    width: 74px;
-    height: 54px;
+    width: 100px;
+    height: 75px;
+    margin-right: -60px;
     transition: opacity 0.3s ease;
-    
 }
 
 .footer-social-img:hover {
@@ -81,7 +84,7 @@ body {
     height: 1.5px;
     background-color: rgba(255, 255, 255, 0.2);
     margin: 1px auto;
-    max-width: 1200px;
+    max-width: 85%;
 }
 
 .crypto-logos {
@@ -136,14 +139,13 @@ body {
         text-align: center;
     }
 
-.footer-column {
+    .footer-column {
         margin-bottom: 30px;
         align-items: center;
     }
 
-.language-and-social-group {
+    .language-and-social-group {
         align-items: center;
     }
 
 }
-
