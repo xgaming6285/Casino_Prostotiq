@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScrollTop = 0;
     let ticking = false;
     let sectionPositions = {};
+    let isProgrammaticScroll = false;
+    let programmaticScrollTimeout;
     const isMainPage = window.location.pathname === '/' ||
         window.location.pathname === '/index.html' ||
         window.location.pathname.endsWith('/index.html');
@@ -140,10 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleScroll() {
         if (!isMainPage) return;
-        const currentScrollY = window.scrollY;
-        lastScrollTop = currentScrollY;
         if (!ticking) {
             window.requestAnimationFrame(() => {
+                if (isProgrammaticScroll) {
+                    ticking = false;
+                    return;
+                }
                 const newActiveSection = determineActiveSection();
                 if (newActiveSection && newActiveSection !== activeSection) {
                     setActiveSection(newActiveSection);
@@ -183,7 +187,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isMainPage) return;
         const section = sections[sectionId];
         if (!section) return;
+
+        if (programmaticScrollTimeout) {
+            clearTimeout(programmaticScrollTimeout);
+        }
+        isProgrammaticScroll = true;
+
         setActiveSection(sectionId);
+
         const offsetPosition = sectionPositions[sectionId].top - header.offsetHeight;
         window.scrollTo({
             top: offsetPosition,
@@ -192,6 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isMobile && nav.classList.contains('active')) {
             toggleMobileMenu();
         }
+
+        programmaticScrollTimeout = setTimeout(() => {
+            isProgrammaticScroll = false;
+        }, 800);
     }
     window.addEventListener('scroll', handleScroll, {
         passive: true
