@@ -1,0 +1,127 @@
+body {
+    background-color: rgba(30, 37, 47, 255) !important;
+    background-image: none !important;
+    background-attachment: fixed;
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    overflow-x: visible; 
+}
+
+/* Ensure the main header from all.css adapts well if needed */
+/* For example, if the background needs to be specifically transparent or a certain color on this page */
+.responsible-gambling-body .header {
+    background-color: transparent; /* Or match the page background */
+}
+
+.gambling-container {
+    display: flex;
+    max-width: 1000px; /* Adjust based on desired content width */
+    margin-left: 40px;
+    margin-top: 70px;
+    margin-right: 20px;
+    padding: 40px 20px;
+    align-items: center; /* Vertically aligns text and image if they have different heights */
+    gap: 40px; /* Space between text and image columns */
+}
+.responsible-gambling-body .nav-indicator {
+    position: absolute;
+    bottom: -6%;
+
+    height: 2px;
+    background-color: white;
+    opacity: 1;
+    box-shadow:
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 10px rgba(255, 255, 255, 0.5);
+    width: 220px !important;
+    left: 70px;
+}
+
+.gambling-content {
+    max-width: 60%; /* Prevents text from becoming too wide */
+}
+
+.gambling-title {
+    font-size: 28px; /* Adjust as needed */
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.gambling-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 630px; /* Length of the line under the title */
+    height: 2px;
+    background-color: #FFFFFF;
+}
+
+.gambling-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #E0E0E0; /* Slightly off-white for better readability */
+    margin-bottom: 0; /* Remove default paragraph bottom margin if only one paragraph */
+}
+
+.device-showcase {
+    flex: 0 0 35%; /* Defines the width of the image column, adjust as needed */
+    display: flex;
+    justify-content: center; /* Centers image if it's smaller than column */
+    align-items: center;
+}
+
+.device-showcase img {
+    max-width: 600%; /* Adjusted from user's 600% to be more conventional */
+    height: auto;    /* Adjusted from user's 500px to maintain aspect ratio */
+    width: auto;     /* Adjusted from user's 900px */
+    margin-left: 0; /* Reset from user's 100px, as centering is handled by flex */
+    margin-top: 80px; /* Add margin-top here, adjust value as needed */
+    display: block; /* Removes any extra space below the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gambling-container {
+        flex-direction: column;
+        margin-top: 40px;
+        padding-top: 20px;
+        gap: 30px;
+    }
+
+    .gambling-content {
+        max-width: 100%;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .gambling-title::after {
+        left: 50%;
+        transform: translateX(-50%); /* Center the line under the title */
+    }
+
+    .device-showcase {
+        flex-basis: auto; /* Allow image column to size based on content */
+        width: 60%; /* Adjust image width on smaller screens */
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gambling-title {
+        font-size: 24px;
+    }
+
+    .gambling-text p {
+        font-size: 15px;
+    }
+    
+    .device-showcase {
+        width: 70%; 
+    }
+} 
