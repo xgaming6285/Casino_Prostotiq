@@ -55,6 +55,19 @@ body {
 
 .language-selector {
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.bg-flag {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.flag-label {
+    color: white;
+    font-size: 1.2rem;
 }
 
 .social-icons-inline-container {
