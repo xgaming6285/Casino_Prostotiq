@@ -383,12 +383,10 @@ body.homepage-background {
 
 .hero-section {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 100px 5% 80px;
     min-height: calc(100vh - 120px);
     box-sizing: border-box;
-    max-width: 1400px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -396,13 +394,10 @@ body.homepage-background {
 }
 
 .hero-text {
-    padding-top: 60px;
-    position: relative;
+position: relative;
     z-index: 1;
     flex-basis: 45%;
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
 }
 
 .hero-text h1 {
@@ -410,21 +405,20 @@ body.homepage-background {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     text-transform: uppercase;
     color: white;
     letter-spacing: 0.1em;
     margin-top: 0;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
 }
 
 .cta-button {
     display: inline-block;
     background-color: rgba(30, 37, 47, 255);
     color: white;
-    padding: 5px 25px;
+    padding: 15px 25px;
     text-decoration: none;
     font-weight: 200;
     border-radius: 30px;
@@ -432,6 +426,7 @@ body.homepage-background {
     font-size: 1.5em;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.075em;
+    text-wrap-mode: nowrap;
 }
 
 .cta-button:hover {
@@ -803,7 +798,18 @@ body.homepage-background {
         right: 0;
         bottom: -30px;
     }
-
+    .hero-text h1 {
+        margin-left: 2%
+    }
+    .cta-button {
+        margin-left: 2%
+    }
+    .homePage-machine {
+        margin: 5% -11%!important;
+    }
+    .hero-section {
+        margin-top: -15%!important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1283,12 +1289,15 @@ section#experience .logo-pragmatic {
 @media (max-width: 1200px) {
     .hero-text h1 {
         font-size: 3.5em;
+        margin-top: 15%;
     }
 
     .hero-text {
         padding-top: 60px;
     }
-
+    .homePage-machine {
+        max-width: 555px!important;
+    }
 }
 
 @media (max-width: 992px) {
@@ -1299,7 +1308,9 @@ section#experience .logo-pragmatic {
     .hero-text {
         padding-top: 40px;
     }
-
+    .homePage-machine {
+        max-width: 475px!important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1313,6 +1324,7 @@ section#experience .logo-pragmatic {
         padding-left: 20px;
         padding-right: 20px;
         overflow: visible;
+        
     }
 
     .hero-text {
@@ -1323,12 +1335,14 @@ section#experience .logo-pragmatic {
         max-width: 100%;
         margin-bottom: 0;
         order: 2;
+        
     }
 
     .hero-text h1 {
         font-size: 2.5em;
         line-height: 1.4;
         max-width: 100%;
+        text-align: center;
     }
 
     .cta-button {
@@ -1337,7 +1351,9 @@ section#experience .logo-pragmatic {
         margin-top: 60px;
         display: inline-block;
     }
-
+    .homePage-machine {
+        margin: 5% -3%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1352,6 +1368,7 @@ section#experience .logo-pragmatic {
         line-height: 1.3;
         padding-top: 20px;
         max-width: 100%;
+        text-align: center;
     }
 
 }
