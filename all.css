@@ -374,19 +374,15 @@ body.homepage-background {
 
 .hero-text h1 {
     font-size: 4em;
-
-    font-family: 'Figtree Light', sans-serif;
-
-    font-weight: 300;
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     line-height: 1.6;
-
     margin-bottom: 35px;
     text-transform: uppercase;
     color: white;
     letter-spacing: 0.1em;
     margin-top: 0;
-
+    width: 800px;
 }
 
 .cta-button {
@@ -399,7 +395,7 @@ body.homepage-background {
     border-radius: 30px;
     transition: all 0.3s ease;
     font-size: 1.5em;
-    font-family: 'Figtree Light';
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.075em;
 }
 
@@ -1006,7 +1002,7 @@ img.experience-main-product-image {
 }
 
 section#experience h5 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     color: #e0e0e0;
@@ -1025,7 +1021,7 @@ section#experience .experience-cta-button {
     transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
     font-size: 1em;
     text-transform: none;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -1339,11 +1335,11 @@ section#experience .logo-pragmatic {
 .homePage-machine {
     position: absolute;
     overflow-x: hidden;
-    width: 70vw;
-    max-width: 1200px;
+    width: 80%;
+    max-width: 700px;
     height: auto;
     top: 200px;
-    right: -12%;
+    right: 5px;
     z-index: 0;
 }
 
