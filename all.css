@@ -227,7 +227,7 @@ html {
         right: 0;
     }
 
-.nav {
+    .nav {
         position: absolute;
         top: 81.7%;
         right: -3%;
@@ -237,28 +237,28 @@ html {
         transition: max-height 0.5s ease;
     }
 
-.nav.active {
+    .nav.active {
         max-height: 500px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-.nav-list {
+    .nav-list {
         flex-direction: column;
         padding: 1rem 0;
     }
 
-.nav-item {
+    .nav-item {
         margin: 0;
         width: 100%;
         text-align: center;
     }
 
-.nav-link {
+    .nav-link {
         display: block;
         padding: 0.3rem 0;
     }
 
-.nav-indicator {
+    .nav-indicator {
         display: none;
     }
 
@@ -269,13 +269,14 @@ html {
         font-size: 1.1rem;
     }
 
-.nav-list {
+    .nav-list {
         margin-left: 1em;
     }
 
-.logo-text {
+    .logo-text {
         font-size: 2.5em;
     }
+
     .nav-indicator {
         bottom: -23%;
     }
@@ -287,16 +288,16 @@ html {
         letter-spacing: 0.060em;
     }
 
-.nav-list {
+    .nav-list {
         margin-left: 1em;
         margin-right: 1em;
     }
 
-.nav-item {
+    .nav-item {
         margin: 0 1.1rem;
     }
 
-.logo-text {
+    .logo-text {
         font-size: 2em;
     }
 
@@ -308,13 +309,14 @@ html {
         letter-spacing: 0.040em;
     }
 
-.nav-list {
+    .nav-list {
         margin-left: 1em;
     }
 
-.nav-item {
+    .nav-item {
         margin: 0 0.9rem;
     }
+
     .nav-indicator {
         bottom: -25%;
     }
@@ -326,13 +328,14 @@ html {
         letter-spacing: 0.030em;
     }
 
-.nav-list {
+    .nav-list {
         margin-left: 1em;
     }
 
-.nav-item {
+    .nav-item {
         margin: 0 0.8rem;
     }
+
     .nav-indicator {
         bottom: -26%;
     }
@@ -749,29 +752,29 @@ body.homepage-background {
         padding: 0 10px;
     }
 
-.product-display,
+    .product-display,
     .pre-order-content {
         max-width: 100%;
         text-align: center;
         margin-bottom: 30px;
     }
 
-.product-display {
+    .product-display {
         max-width: 80%;
         order: 1;
     }
 
-.pre-order-product-image {
+    .pre-order-product-image {
         max-width: 100%;
         margin: 0 auto;
     }
 
-.pre-order-content {
+    .pre-order-content {
         align-items: center;
         order: 2;
     }
 
-.view-360 {
+    .view-360 {
         right: 0;
         bottom: -30px;
     }
@@ -783,7 +786,7 @@ body.homepage-background {
         max-width: 100%;
     }
 
-.product-display {
+    .product-display {
         max-width: 85%;
     }
 
@@ -794,7 +797,7 @@ body.homepage-background {
         max-width: 90%;
     }
 
-.pre-order-product-image {
+    .pre-order-product-image {
         max-width: 100%;
     }
 
@@ -805,12 +808,12 @@ body.homepage-background {
         max-width: 95%;
     }
 
-.pre-order-product-image {
+    .pre-order-product-image {
         max-width: 100%;
         transform: scale(1.05);
     }
 
-.pre-order-header h2 {
+    .pre-order-header h2 {
         font-size: 2rem;
     }
 
@@ -952,13 +955,13 @@ body.homepage-background {
         flex-direction: column;
     }
 
-.product-display,
+    .product-display,
     .pre-order-content {
         max-width: 100%;
         text-align: center;
     }
 
-.pre-order-content {
+    .pre-order-content {
         align-items: center;
     }
 
@@ -1110,17 +1113,17 @@ section#experience p:empty {
         margin-top: 60px;
     }
 
-.about-content {
+    .about-content {
         padding-right: 0;
         margin-bottom: 40px;
         flex: 1;
     }
 
-.device-showcase {
+    .device-showcase {
         flex: 1;
     }
 
-.device-showcase img {
+    .device-showcase img {
         transform: scale(1);
     }
 
@@ -1257,7 +1260,7 @@ section#experience .logo-pragmatic {
         font-size: 3.5em;
     }
 
-.hero-text {
+    .hero-text {
         padding-top: 60px;
     }
 
@@ -1268,7 +1271,7 @@ section#experience .logo-pragmatic {
         font-size: 3em;
     }
 
-.hero-text {
+    .hero-text {
         padding-top: 40px;
     }
 
@@ -1285,7 +1288,7 @@ section#experience .logo-pragmatic {
         overflow: visible;
     }
 
-.hero-text {
+    .hero-text {
         flex-basis: 100%;
         padding-right: 0;
         padding-top: 0;
@@ -1294,12 +1297,12 @@ section#experience .logo-pragmatic {
         margin-bottom: 20px;
     }
 
-.hero-text h1 {
+    .hero-text h1 {
         font-size: 2.5em;
         line-height: 1.4;
     }
 
-.cta-button {
+    .cta-button {
         font-size: 1.2em;
         margin-bottom: 30px;
         display: inline-block;
@@ -1314,7 +1317,7 @@ section#experience .logo-pragmatic {
         padding-bottom: 50px;
     }
 
-.hero-text h1 {
+    .hero-text h1 {
         font-size: 2em;
         line-height: 1.3;
         padding-top: 20px;
@@ -1327,12 +1330,12 @@ section#experience .logo-pragmatic {
         padding-top: 120px;
     }
 
-.hero-text h1 {
+    .hero-text h1 {
         font-size: 1.8em;
         padding-top: 30px;
     }
 
-.cta-button {
+    .cta-button {
         font-size: 1em;
         padding: 5px 20px;
     }
@@ -1361,4 +1364,3 @@ section#experience .logo-pragmatic {
         display: block;
     }
 }
-

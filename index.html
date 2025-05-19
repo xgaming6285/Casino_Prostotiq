@@ -73,91 +73,106 @@
     </main>
     <section class="page-section craftsmanship-background" id="craftsmanship">
         <div class="showcase-container">
-         <div class="main-container">
-          <div class="product-container">
-           <svg class="product-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block;">
-             <image href="image/machine.png.png" x="0" y="0" width="1000" height="1000"/>
-             <!-- High-Res Display Line and Point -->
-             <line class="animated-line" x1="60" y1="275" x2="470" y2="275" stroke="white" stroke-width="2"/>
-             <circle cx="470" cy="275" r="7" fill="white"/>
-             <!-- Forged in Metal Line and Point -->
-             <line class="animated-line" x1="-20" y1="420" x2="340" y2="420" stroke="white" stroke-width="2"/>
-             <circle cx="340" cy="420" r="7" fill="white"/>
-             <!-- Providers Line and Point -->
-             <line class="animated-line" x1="-90" y1="550" x2="280" y2="550" stroke="white" stroke-width="2"/>
-             <circle cx="280" cy="550" r="7" fill="white"/>
-             <!-- Premium Buttons Line and Point -->
-             <line class="animated-line" x1="1000" y1="630" x2="710" y2="630" stroke="white" stroke-width="2"/>
-             <circle cx="710" cy="630" r="7" fill="white"/>
-             <!-- You can adjust the coordinates above to match your design -->
-           </svg>
-           <div class="feature-label left-label high-res">
-            <div class="plus-circle">
-             <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-              <line x1="12" x2="12" y1="5" y2="19">
-              </line>
-              <line x1="5" x2="19" y1="12" y2="12">
-              </line>
-             </svg>
+            <div class="main-container">
+                <div class="product-container">
+                    <svg class="product-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet"
+                        style="width:100%;height:auto;display:block;">
+                        <image href="image/machine.png.png" x="0" y="0" width="1000" height="1000" />
+                        <!-- High-Res Display Line and Point -->
+                        <line id="line-high-res" class="animated-line" x1="60" y1="275" x2="470" y2="275" stroke="white"
+                            stroke-width="2" />
+                        <circle cx="470" cy="275" r="7" fill="white" />
+                        <!-- Forged in Metal Line and Point -->
+                        <line id="line-forged-metal" class="animated-line" x1="-20" y1="420" x2="340" y2="420"
+                            stroke="white" stroke-width="2" />
+                        <circle cx="340" cy="420" r="7" fill="white" />
+                        <!-- Providers Line and Point -->
+                        <line id="line-providers" class="animated-line" x1="-90" y1="550" x2="280" y2="550"
+                            stroke="white" stroke-width="2" />
+                        <circle cx="280" cy="550" r="7" fill="white" />
+                        <!-- Premium Buttons Line and Point -->
+                        <line id="line-buttons" class="animated-line" x1="1000" y1="630" x2="710" y2="630"
+                            stroke="white" stroke-width="2" />
+                        <circle cx="710" cy="630" r="7" fill="white" />
+                        <!-- You can adjust the coordinates above to match your design -->
+                    </svg>
+                    <div class="feature-label left-label high-res">
+                        <div class="plus-circle">
+                            <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="12" x2="12" y1="5" y2="19">
+                                </line>
+                                <line x1="5" x2="19" y1="12" y2="12">
+                                </line>
+                            </svg>
+                        </div>
+                        <div class="label-text">
+                            HIGH-RES DISPLAY
+                        </div>
+                    </div>
+                    <div class="feature-label left-label forged-metal">
+                        <div class="plus-circle">
+                            <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="12" x2="12" y1="5" y2="19">
+                                </line>
+                                <line x1="5" x2="19" y1="12" y2="12">
+                                </line>
+                            </svg>
+                        </div>
+                        <div class="label-text">
+                            FORGED IN METAL
+                        </div>
+                    </div>
+                    <div class="feature-label left-label providers">
+                        <div class="plus-circle">
+                            <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="12" x2="12" y1="5" y2="19">
+                                </line>
+                                <line x1="5" x2="19" y1="12" y2="12">
+                                </line>
+                            </svg>
+                        </div>
+                        <div class="label-text">
+                            30 DIFFERENT PROVIDERS
+                        </div>
+                    </div>
+                    <div class="feature-label right-label buttons">
+                        <div class="label-text">
+                            PREMIUM BUTTONS
+                        </div>
+                        <div class="plus-circle-right">
+                            <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="12" x2="12" y1="5" y2="19">
+                                </line>
+                                <line x1="5" x2="19" y1="12" y2="12">
+                                </line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="cta">
+                        <span class="cta-text">
+                            Feel the experience
+                        </span>
+                        <svg class="arrow-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="5" x2="19" y1="12" y2="12">
+                            </line>
+                            <polyline points="12 5 19 12 12 19">
+                            </polyline>
+                        </svg>
+                    </div>
+                </div>
             </div>
-            <div class="label-text">
-             HIGH-RES DISPLAY
-            </div>
-           </div>
-           <div class="feature-label left-label forged-metal">
-            <div class="plus-circle">
-             <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-              <line x1="12" x2="12" y1="5" y2="19">
-              </line>
-              <line x1="5" x2="19" y1="12" y2="12">
-              </line>
-             </svg>
-            </div>
-            <div class="label-text">
-             FORGED IN METAL
-            </div>
-           </div>
-           <div class="feature-label left-label providers">
-            <div class="plus-circle">
-             <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-              <line x1="12" x2="12" y1="5" y2="19">
-              </line>
-              <line x1="5" x2="19" y1="12" y2="12">
-              </line>
-             </svg>
-            </div>
-            <div class="label-text">
-             30 DIFFERENT PROVIDERS
-            </div>
-           </div>
-           <div class="feature-label right-label buttons">
-            <div class="label-text">
-             PREMIUM BUTTONS
-            </div>
-            <div class="plus-circle-right">
-             <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-              <line x1="12" x2="12" y1="5" y2="19">
-              </line>
-              <line x1="5" x2="19" y1="12" y2="12">
-              </line>
-             </svg>
-            </div>
-           </div>
-           <div class="cta">
-            <span class="cta-text">
-             Feel the experience
-            </span>
-            <svg class="arrow-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
-             <line x1="5" x2="19" y1="12" y2="12">
-             </line>
-             <polyline points="12 5 19 12 12 19">
-             </polyline>
-            </svg>
-           </div>
-          </div>
-         </div>
         </div>
-       </section>
+    </section>
     <section class="page-section" id="experience">
         <div class="experience-visual-hub">
             <img alt="ExperienceImage" class="experience-main-product-image" src="image/ExperienceImage.png">
@@ -393,6 +408,7 @@
     </script>
     <script src="js/header.js">
     </script>
+    <script src="js/craftsmanship-connector.js"></script>
 </body>
 
 </html>
