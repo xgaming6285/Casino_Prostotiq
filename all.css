@@ -1335,11 +1335,11 @@ section#experience .logo-pragmatic {
 .homePage-machine {
     position: absolute;
     overflow-x: hidden;
-    width: 70vw;
-    max-width: 1200px;
+    width: 80%;
+    max-width: 700px;
     height: auto;
     top: 200px;
-    right: -15vw;
+    right: 5px;
     z-index: 0;
 }
 
