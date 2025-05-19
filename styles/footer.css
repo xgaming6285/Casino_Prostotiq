@@ -54,20 +54,21 @@ body {
 }
 
 .language-selector {
-    margin-bottom: 15px;
+    margin-bottom: -15px;
     display: flex;
     align-items: center;
 }
 
 .bg-flag {
-    width: 60px;
+    width: 30px;
     height: auto;
-    margin-right: 10px;
+    margin-right: 7px;
 }
 
 .flag-label {
     color: white;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .social-icons-inline-container {
