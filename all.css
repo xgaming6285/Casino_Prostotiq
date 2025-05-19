@@ -805,11 +805,13 @@ position: relative;
     .cta-button {
         margin-left: 2%
     }
-    .homePage-machine {
-        margin: 5% -11%!important;
-    }
+    
     .hero-section {
         margin-top: -15%!important;
+    }
+
+    .hero-text {
+       font-size: 0.7em;
     }
 }
 
@@ -1289,16 +1291,17 @@ section#experience .logo-pragmatic {
 
 @media (max-width: 1200px) {
     .hero-text h1 {
-        font-size: 3.5em;
-        margin-top: 15%;
+        font-size: 3.7em;
+        margin-top: -15%;
     }
 
     .hero-text {
         padding-top: 60px;
     }
     .homePage-machine {
-        max-width: 555px!important;
+        height: 100%;
     }
+    
 }
 
 @media (max-width: 992px) {
@@ -1308,10 +1311,6 @@ section#experience .logo-pragmatic {
 
     .hero-text {
         padding-top: 40px;
-    }
-    .homePage-machine {
-        max-width: 475px!important;
-        margin-left: -2%!important;
     }
 }
 
@@ -1398,6 +1397,39 @@ section#experience .logo-pragmatic {
     margin: 50px -18% 0;
     display: block;
     z-index: 0;
+}
+
+@media(max-width: 1600px){
+ .hero-text h1 {
+ font-size: 4.5em;
+}
+}
+@media(max-width: 1500px){
+ .hero-text h1 {
+ font-size: 4.25em;
+ }
+ .homePage-machine {
+  height: 35.5em;
+}
+}
+@media(max-width: 1400px){
+ .hero-text h1 {
+ font-size: 3.5em;
+ }
+ .homePage-machine {
+  height: 35em;
+}
+}
+@media(max-width: 1300px){
+    .homePage-machine {
+        height: 30em;
+    }
+    .cta-button {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        margin-top: 60px;
+        display: inline-block;
+    }
 }
 
 @media (max-width: 768px) {
