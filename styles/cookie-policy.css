@@ -16,7 +16,8 @@ body {
 
 .cookie-policy .nav-indicator {
     position: absolute;
-    bottom: 0px;
+    bottom: -6%;
+
     height: 2px;
     background-color: white;
     opacity: 1;
