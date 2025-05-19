@@ -117,19 +117,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const lines = document.querySelectorAll('.connecting-line line');
-                    const circles = document.querySelectorAll('.connecting-line circle');
-                    lines.forEach(line => {
+                    const svgLines = document.querySelectorAll('.product-svg .animated-line');
+                    svgLines.forEach(line => {
                         const length = line.getTotalLength ? line.getTotalLength() : 500;
                         line.style.strokeDasharray = length;
                         line.style.strokeDashoffset = length;
                         line.style.animation = 'drawLine 1.5s ease-out forwards';
                     });
-                    setTimeout(() => {
-                        circles.forEach(circle => {
-                            circle.style.opacity = '1';
-                        });
-                    }, 300);
                     observer.unobserve(entry.target);
                 }
             });

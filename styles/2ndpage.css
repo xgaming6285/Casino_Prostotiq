@@ -29,7 +29,7 @@ body {
 .main-container {
   position: relative;
   margin: 0 auto;
-  height: 100vh;
+  height: 85vh;
   max-width: 1600px;
   width: 100%;
   display: flex;
@@ -40,12 +40,22 @@ body {
 }
 
 .product-container {
-  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
-  width: 80%;
+  aspect-ratio: 1 / 1;
+}
+
+.product-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1 / 1;
+  max-width: 1000px;
+  overflow: visible;
 }
 
 .product-image {
@@ -155,49 +165,43 @@ body {
 }
 
 .high-res {
-  left: 8%;
-  top: 22%;
-  transform: translateY(-50%);
+  left: 17.4%;
+  top: 27.3%;
 }
 
 .high-res-line {
-  left: calc(8% + 120px);
-  top: 22%;
+  left: 18%;
+  top: 34%;
 }
 
 .forged-metal {
-  left: 3%;
-  top: 43%;
-  transform: translateY(-50%);
+  left: 14%;
+  top: 40.2%;
 }
 
 .forged-metal-line {
-  left: calc(3% + 120px);
-  top: 43%;
+  left: 18%;
+  top: 48.3%;
 }
 
 .providers {
-  left: 1%;
-  top: 64%;
-  transform: translateY(-50%);
+  left: 7.2%;
+  top: 52%;
 }
 
 .providers-line {
-  left: calc(1% + 120px);
-  top: 64%;
+  left: 8%;
+  top: 61.5%;
 }
 
 .buttons {
-  left: auto;
-  right: 3%;
-  top: 82%;
-  transform: translateY(-50%);
+  right: 16%;
+  top: 58.7%;
 }
 
 .buttons-line {
-  left: auto;
-  right: calc(3% + 120px);
-  top: 82%;
+  right: 19%;
+  top: 61%;
 }
 
 .cta {
@@ -232,7 +236,6 @@ body {
   z-index: 9999;
   
   opacity: 0;
-  transform: translateY(-5px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
@@ -276,34 +279,6 @@ body {
   transform: scale(1.1);
 }
 
-@media (max-width: 1200px) {
-
-  .high-res,
-  .forged-metal,
-  .providers {
-    
-  }
-
-.high-res-line,
-  .forged-metal-line,
-  .providers-line {
-    
-    
-    
-  }
-
-.buttons {
-    
-  }
-
-.buttons-line {
-    
-    
-    
-  }
-
-}
-
 @media (max-width: 768px) {
   .feature-label {
     position: static;
@@ -328,5 +303,110 @@ body {
     display: none;
   }
 
+.high-res-line,
+  .forged-metal-line,
+  .providers-line,
+  .buttons-line {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1400px) {
+  .high-res {
+    left: 11%;
+    top: 27.3%;
+  }
+  .forged-metal {
+    left: 8%;
+    top: 40.2%;
+  }
+  .providers {
+    left: 0%;
+    top: 52%;
+  }
+  .buttons {
+    right: 10%;
+    top: 58.7%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .feature-label {
+    /* Reduce size and spacing for feature labels */
+    font-size: 0.9em;
+  }
+  .label-text {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+  .plus-circle,
+  .plus-circle-right {
+    width: 16px;
+    height: 16px;
+  }
+  .product-image-homepage {
+    max-width: 80%;
+    height: auto;
+  }
+  .high-res {
+    left: 11%;
+    top: 27.8%;
+  }
+  .forged-metal {
+    left: 8%;
+    top: 40.8%;
+  }
+  .providers {
+    left: 0%;
+    top: 52.4%;
+  }
+  .buttons {
+    right: 10%;
+    top: 59.3%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .feature-label {
+    font-size: 0.8em;
+  }
+  .label-text {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+  .plus-circle,
+  .plus-circle-right {
+    width: 14px;
+    height: 14px;
+  }
+  .high-res {
+    left: 7%;
+    top: 28%;
+  }
+  .forged-metal {
+    left: -1%;
+    top: 41%;
+  }
+  .providers {
+    left: -3%;
+    top: 52.8%;
+  }
+  .buttons {
+    right: 0%;
+    top: 59.7%;
+  }
+}
+
+.animated-line {
+  stroke-dasharray: 600; /* Adjust to match line length */
+  stroke-dashoffset: 600;
+  animation: drawLine 1.2s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
