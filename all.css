@@ -141,7 +141,7 @@ html {
 
 .nav-indicator {
     position: absolute;
-    bottom: -6%;
+    bottom: -18%;
     left: 0;
     height: 1.8px;
     background-color: var(--white);
