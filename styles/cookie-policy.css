@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
-    overflow-x: visible; 
+    overflow-x: visible;
 }
 
 .header {
@@ -31,7 +31,7 @@ body {
 .cookie-policy-content {
     display: flex;
     max-width: 1200px;
-    margin: 80px auto 0px; 
+    margin: 80px auto 0px;
     padding: 0 1%;
     position: relative;
     margin-top: 10%;
@@ -86,12 +86,12 @@ body {
 
 .coin {
     position: absolute;
-    top: -100px; 
-    left: -580px; 
-    width: 1400px; 
+    top: -100px;
+    left: -580px;
+    width: 1400px;
     height: auto;
     object-fit: contain;
-    z-index: 0; 
+    z-index: 0;
     transition: all 0.3s ease;
 }
 
@@ -104,8 +104,8 @@ body {
 .text-columns {
     display: flex;
     position: relative;
-    margin-top: 0; 
-    gap: 0; 
+    margin-top: 0;
+    gap: 0;
     left: auto;
     width: 65%;
     float: right;
@@ -118,9 +118,9 @@ body {
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 2px; 
+    width: 2px;
     background-color: white;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 
 .column {
@@ -130,20 +130,20 @@ body {
 
 .left-column {
     text-align: right;
-    padding-right: 30px; 
+    padding-right: 30px;
 }
 
 .right-column {
     text-align: right;
-    padding-left: 30px; 
+    padding-left: 30px;
 }
 
 .column p {
-    margin-bottom: 30px; 
-    font-size: 0.8rem; 
+    margin-bottom: 30px;
+    font-size: 0.8rem;
     line-height: 1.6;
     color: #c0c0c0;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .column p:last-child {
@@ -162,8 +162,8 @@ body {
         margin-top: 100px;
     }
 
-.coin {
-        width: 500px; 
+    .coin {
+        width: 500px;
         max-width: 100%;
         top: 0;
         margin-left: 0;
@@ -171,7 +171,7 @@ body {
         transform-origin: center;
     }
 
-.content-container h1 {
+    .content-container h1 {
         position: relative;
         text-align: center;
         top: auto;
@@ -184,11 +184,11 @@ body {
         padding: 10px 0;
     }
 
-.text-columns {
+    .text-columns {
         flex-direction: column;
     }
 
-.text-columns::before {
+    .text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -196,13 +196,14 @@ body {
         transform: none;
     }
 
-.left-column, .right-column {
+    .left-column,
+    .right-column {
         text-align: right;
-        padding: 0 15px; 
+        padding: 0 15px;
     }
 
-.left-column {
-        margin-bottom: 30px; 
+    .left-column {
+        margin-bottom: 30px;
     }
 
 }
@@ -213,8 +214,8 @@ body {
         margin-top: 100px;
     }
 
-.coin {
-        width: 350px; 
+    .coin {
+        width: 350px;
         max-width: 100%;
         top: 0;
         margin-left: 0;
@@ -222,11 +223,11 @@ body {
         transform-origin: center;
     }
 
-.text-columns {
+    .text-columns {
         flex-direction: column;
     }
 
-.text-columns::before {
+    .text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -234,13 +235,14 @@ body {
         transform: none;
     }
 
-.left-column, .right-column {
+    .left-column,
+    .right-column {
         text-align: right;
-        padding: 0 15px; 
+        padding: 0 15px;
     }
 
-.left-column {
-        margin-bottom: 30px; 
+    .left-column {
+        margin-bottom: 30px;
     }
 
 }
@@ -250,23 +252,23 @@ body {
         padding: 0 1%;
     }
 
-.coin {
+    .coin {
         width: 1000px;
         left: -420px;
         top: -60px;
         clip-path: inset(0 0 0 420px);
     }
 
-.content-container h1 {
+    .content-container h1 {
         font-size: 1.6rem;
     }
 
-.text-columns {
-        width: 60%; 
+    .text-columns {
+        width: 60%;
     }
 
-.column p {
-        font-size: 0.75rem; 
+    .column p {
+        font-size: 0.75rem;
     }
 
 }
@@ -275,10 +277,10 @@ body {
     .cookie-policy-content {
         flex-direction: column;
         margin-top: 80px;
-        overflow: visible; 
+        overflow: visible;
     }
 
-.coin {
+    .coin {
         width: 650px;
         left: 50%;
         transform: translateX(-50%);
@@ -289,7 +291,7 @@ body {
         clip-path: none;
     }
 
-.content-container h1 {
+    .content-container h1 {
         position: relative;
         text-align: center;
         top: auto;
@@ -298,12 +300,12 @@ body {
         font-size: 1.5rem;
         width: 100%;
         padding: 10px 0;
-        pointer-events: auto; 
-        display: block; 
-        margin-top: -20px; 
+        pointer-events: auto;
+        display: block;
+        margin-top: -20px;
     }
 
-.text-columns {
+    .text-columns {
         flex-direction: column;
         left: auto;
         right: auto;
@@ -312,7 +314,7 @@ body {
         margin-top: 30px;
     }
 
-.text-columns::before {
+    .text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -320,16 +322,17 @@ body {
         transform: none;
     }
 
-.left-column, .right-column {
+    .left-column,
+    .right-column {
         text-align: right;
         padding: 0 15px;
     }
 
-.left-column {
+    .left-column {
         margin-bottom: 30px;
     }
 
-.cookie-policy .nav-indicator {
+    .cookie-policy .nav-indicator {
         width: 160px !important;
         left: 50px;
     }
@@ -340,9 +343,9 @@ body {
     .coin {
         width: 1000px;
         left: -380px;
-        top: -20px; 
-        opacity: 1; 
-        display: block; 
+        top: -20px;
+        opacity: 1;
+        display: block;
         clip-path: inset(0 0 0 42px);
     }
 
@@ -353,7 +356,7 @@ body {
         margin-top: 60px;
     }
 
-.coin {
+    .coin {
         width: 400px;
         top: 10px;
         display: block;
@@ -362,11 +365,11 @@ body {
         clip-path: none;
     }
 
-.content-container {
+    .content-container {
         padding-top: 20px;
     }
 
-.content-container h1 {
+    .content-container h1 {
         top: auto;
         position: relative;
         font-size: 1.4rem;
@@ -377,16 +380,17 @@ body {
         width: auto;
     }
 
-.column p {
+    .column p {
         font-size: 0.8rem;
     }
 
-.left-column, .right-column {
+    .left-column,
+    .right-column {
         padding: 0 10px;
         text-align: right;
     }
 
-.cookie-policy .nav-indicator {
+    .cookie-policy .nav-indicator {
         width: 140px !important;
         left: 40px;
     }
@@ -402,4 +406,3 @@ body {
     }
 
 }
-

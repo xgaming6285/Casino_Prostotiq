@@ -19,20 +19,21 @@ body {
     max-width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 15%;
+    margin-left: 20%;
     padding: 0 20px;
 }
 
 .footer-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10%;
 }
 
 .footer-column {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
-    min-width: 150px;
+    min-width: 120px;
 }
 
 .footer-column a {
@@ -48,8 +49,8 @@ body {
 }
 
 .language-and-social-group {
-    align-items: flex-end;
-
+    align-items: flex-start;
+    margin-left: 0;
 }
 
 .language-selector {
@@ -59,7 +60,7 @@ body {
 .social-icons-inline-container {
     display: flex;
     gap: 0px;
-
+    margin-left: -60px;
 }
 
 .flag-icon {
@@ -69,10 +70,10 @@ body {
 }
 
 .footer-social-img {
-    width: 74px;
-    height: 54px;
+    width: 100px;
+    height: 75px;
+    margin-right: -60px;
     transition: opacity 0.3s ease;
-
 }
 
 .footer-social-img:hover {
