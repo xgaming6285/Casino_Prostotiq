@@ -141,9 +141,9 @@ html {
 
 .nav-indicator {
     position: absolute;
-    bottom: 0;
+    bottom: -6%;
     left: 0;
-    height: 1.7px;
+    height: 1.8px;
     background-color: var(--white);
     opacity: 0;
     box-shadow:
