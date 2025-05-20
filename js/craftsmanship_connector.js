@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const svgRect = svg.getBoundingClientRect();
-
+        
         if (!svg.viewBox || !svg.viewBox.baseVal || svgRect.width === 0 || svgRect.height === 0) {
             // console.warn('SVG viewBox not available or SVG not rendered properly. Retrying...');
             requestAnimationFrame(updateLines); // Retry on the next frame
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const svgPoint = svg.createSVGPoint();
             svgPoint.x = cx;
             svgPoint.y = cy;
-
+            
             const ctm = svg.getScreenCTM();
             if (!ctm) {
                 // console.warn('SVG CTM not available. Retrying...');
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             const inverseCtm = ctm.inverse();
-            if (!inverseCtm) {
+             if (!inverseCtm) {
                 // console.warn('SVG inverse CTM not available. Retrying...');
                 requestAnimationFrame(updateLines); // Retry if inverse CTM is not ready
                 return;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sectionObserver.observe(craftsmanshipSection);
     }
-
+    
 
     // If there's a mutation observer API available and you expect dynamic content changes
     // that might affect label positions, you could also use that.

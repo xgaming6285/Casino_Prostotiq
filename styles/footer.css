@@ -163,4 +163,8 @@ body {
         align-items: center;
     }
 
+    .footer-content {
+        margin-left: 0;
+        text-align: center;
+    }
 }
