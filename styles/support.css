@@ -1,5 +1,7 @@
 body.support-page {
-    background-color: #202731; /* Dark background from image */
+    background-color: rgba(30, 37, 47, 255) !important;
+    background-image: none !important;
+
     color: #E0E0E0; /* Light text color for contrast */
     font-family: 'Montserrat', sans-serif;
     margin: 0;

@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-image: url('image/backgroundMainPage.jpg')!important;
+    background-image: url('image/backgroundMainPage.jpg') !important;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -373,7 +373,7 @@ html {
 
 .hero-text h1 {
     font-size: 4em;
-    font-family: 'Figtree Light', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     line-height: 1.6;
     margin-bottom: 35px;
@@ -393,7 +393,7 @@ html {
     border-radius: 30px;
     transition: all 0.3s ease;
     font-size: 1.5em;
-    font-family: 'Figtree Light';
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.075em;
     text-wrap: nowrap;
 }
@@ -413,7 +413,7 @@ html {
 }
 
 .page-section {
-    margin-top: 15%;
+    margin-top: 25%;
     min-height: 100vh;
     box-sizing: border-box;
     display: flex;
@@ -1046,7 +1046,7 @@ section#experience .logo-pragmatic {
     .hero-text {
         top: -50px;
     }
-    
+
     .hero-text {
         padding-top: 60px;
     }
@@ -1217,5 +1217,167 @@ section#experience .logo-pragmatic {
     .homePage-machine-desktop {
         max-width: 1600px !important;
         top: 7% !important;
+    }
+}
+
+
+/* css Experience */
+/* css Experience */
+@media (max-width: 576px) {
+    section#experience {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    section#experience h5 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        color: #f0f0f0;
+        margin-bottom: 25px;
+    }
+
+    section#experience .experience-visual-hub {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 30px;
+        gap: 0;
+    }
+
+    /* ✅ GRID ЛОГО ПОДРЕДБА ЗА МОБИЛНИ */
+    section#experience .mobile-logo-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /* 5 лога на ред */
+        gap: 16px 10px;
+        /* вертикален и хоризонтален gap */
+        justify-items: center;
+        align-items: center;
+        max-width: 390px;
+        margin: 5% auto 20px auto;
+        /* включен margin-bottom */
+
+    }
+
+    section#experience .provider-logo {
+        width: 100%;
+        /* запълва grid колоната */
+        max-width: 100px;
+        /* ограничава да не стане прекалено голямо */
+        height: auto;
+        opacity: 0.95;
+        margin: 0;
+        position: static !important;
+        transform: none !important;
+    }
+
+    section#experience .experience-main-product-image {
+        max-width: 110px;
+        width: 100%;
+        justify-self: center;
+        grid-column: 3;
+        /* средната от 5 колони */
+        grid-row: 3;
+        /* реда след втория */
+        margin-top: -20%;
+    }
+
+
+    /* ✅ Центриране на логата на последния ред */
+    section#experience .provider-logo:nth-child(11) {
+        grid-column: 1;
+    }
+
+    section#experience .provider-logo:nth-child(12) {
+        grid-column: 5;
+    }
+
+    section#experience img.experience-main-product-image {
+        max-width: 500px;
+    }
+
+    section#experience .experience-cta-button {
+        background-color: rgba(75, 79, 97, 0.8);
+        border: 1px solid rgba(124, 128, 150, 0.6);
+        color: #dfe0e6;
+        font-weight: 500;
+        font-size: 0.9rem;
+        padding: 10px 25px;
+        border-radius: 20px;
+        width: auto;
+        display: inline-block;
+        margin-top: 15px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    section#experience .experience-cta-button:hover {
+        background-color: rgba(90, 95, 115, 0.9);
+        border-color: rgba(140, 145, 170, 0.8);
+    }
+
+    section#experience .experience-text-and-cta:empty,
+    section#experience>div:empty {
+        display: none;
+    }
+}
+
+/* --- Край: Адаптивни стилове за Секция Experience (Мобилни) --- */
+
+
+/* --- Край: Адаптивни стилове за Секция Experience (Мобилни) --- */
+
+/* slider-a */
+
+
+@media (max-width: 576px) {
+    .logo-slider-container {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+        background: transparent;
+        /* махаме черния фон */
+    }
+
+    .logo-slider-track {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 32px;
+        padding: 0 24px;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .logo-slider-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .logo-slide {
+        flex: 0 0 auto;
+        width: 130px;
+        /* ✅ ключова стойност */
+        height: auto;
+        scroll-snap-align: center;
+        opacity: 1;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .logo-slide.focused {
+        border: 2px solid white;
+        border-radius: 12px;
+        padding: 6px;
+        opacity: 1;
+        transform: scale(1.1);
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+@media (min-width: 577px) {
+    .logo-slider-container {
+        display: none;
     }
 }
