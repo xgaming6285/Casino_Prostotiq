@@ -11,14 +11,13 @@ body {
     margin: 0;
     padding: 0;
 
-    background-image: url('image/backgroundMainPage.jpg');
+    background-image: url('image/backgroundMainPage.jpg')!important;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
     font-weight: 200;
-
 }
 
 :root {
@@ -70,7 +69,6 @@ html {
     align-items: center;
     height: 100%;
     position: relative;
-
     padding: 0;
     width: 100%;
     max-width: 100%;
@@ -223,8 +221,9 @@ html {
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: block;
-        position: relative;
+        position: absolute;
         right: 0;
+        left: 0;
     }
 
     .nav {
@@ -261,11 +260,6 @@ html {
     .nav-indicator {
         display: none;
     }
-
-    .homePage-machine-desktop {
-        display: none !important;
-    }
-
 }
 
 @media (max-width: 1200px) {
@@ -284,7 +278,6 @@ html {
     .logo-text {
         font-size: 2.5em;
     }
-
 }
 
 @media (max-width: 1000px) {
@@ -309,7 +302,6 @@ html {
     .logo-text {
         font-size: 2em;
     }
-
 }
 
 @media (max-width: 900px) {
@@ -329,7 +321,6 @@ html {
     .nav-item {
         margin: 0 0.9rem;
     }
-
 }
 
 @media (max-width: 820px) {
@@ -349,7 +340,6 @@ html {
     .nav-item {
         margin: 0 0.8rem;
     }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -358,17 +348,6 @@ html {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-
-}
-
-body.homepage-background {
-
-    background-image: url('image/backgroundMainPage.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
 }
 
 .hero-section {
@@ -394,19 +373,14 @@ body.homepage-background {
 
 .hero-text h1 {
     font-size: 4em;
-
-    font-family: 'Montserrat', sans-serif;
-
+    font-family: 'Figtree Light', sans-serif;
     font-weight: 300;
-
     line-height: 1.6;
-
     margin-bottom: 35px;
     text-transform: uppercase;
     color: white;
     letter-spacing: 0.1em;
     margin-top: 0;
-
 }
 
 .cta-button {
@@ -419,7 +393,7 @@ body.homepage-background {
     border-radius: 30px;
     transition: all 0.3s ease;
     font-size: 1.5em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Figtree Light';
     letter-spacing: 0.075em;
     text-wrap: nowrap;
 }
@@ -432,30 +406,17 @@ body.homepage-background {
 
 .hero-image {
     flex-basis: 35%;
-
     text-align: right;
-
     display: flex;
-
     justify-content: flex-end;
-
     align-items: center;
-}
-
-.hero-image img {
-    max-width: 80%;
-
-    height: auto;
-
 }
 
 .page-section {
     margin-top: 15%;
     min-height: 100vh;
-
     box-sizing: border-box;
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -468,59 +429,44 @@ body.homepage-background {
     text-transform: uppercase;
 }
 
+/* Craftsmanship Section */
 .craftsmanship-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     justify-content: center;
-
     padding-top: 50px;
-
     padding-bottom: 100px;
-
     min-height: 100vh;
     box-sizing: border-box;
 }
 
 .product-display-area {
     position: relative;
-
     margin-bottom: 40px;
-
     width: 70%;
-
     max-width: 800px;
-
     margin-left: auto;
-
     margin-right: auto;
-
     display: block;
-
 }
 
 .craftsmanship-product-image {
     max-width: 100%;
-
     height: auto;
     display: block;
     margin: 0 auto;
-
 }
 
 .feature-callout {
-
     position: absolute;
     z-index: 10;
     display: flex;
     align-items: center;
-
 }
 
 .callout-text-bubble,
 .callout-plus-bubble {
-
     border: 1px solid rgba(255, 255, 255, 0.7);
     color: white;
     display: flex;
@@ -531,153 +477,15 @@ body.homepage-background {
 
 .callout-text-bubble {
     font-size: 0.85em;
-
     padding: 6px 12px;
     border-radius: 15px;
-
     margin-right: 8px;
-
-}
-
-.callout-plus-bubble {
-    width: 28px;
-
-    height: 28px;
-    border-radius: 50%;
-
-}
-
-.plus-symbol {
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-
-    line-height: 1;
-}
-
-.callout-pointer-dot {
-
-    width: 8px;
-    height: 8px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-
-    z-index: 12;
-
-}
-
-.feature-callout::after {
-    content: '';
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.7);
-    height: 1px;
-    z-index: 9;
-
 }
 
 .premium-buttons {
     flex-direction: row-reverse;
-
 }
 
-.premium-buttons .callout-text-bubble {
-    margin-right: 0;
-    margin-left: 8px;
-
-}
-
-.high-res-display {
-    top: 20%;
-    left: 5%;
-}
-
-.high-res-display .callout-pointer-dot {
-    top: 25px;
-
-    left: 230px;
-
-}
-
-.high-res-display::after {
-
-    width: 120px;
-
-    top: 14px;
-
-    left: 135px;
-
-}
-
-.forged-in-metal {
-    top: 38%;
-    left: 3%;
-}
-
-.forged-in-metal .callout-pointer-dot {
-    top: 25px;
-    left: 210px;
-}
-
-.forged-in-metal::after {
-    width: 100px;
-    top: 14px;
-    left: 120px;
-}
-
-.thirty-providers {
-    top: 58%;
-    left: 1%;
-}
-
-.thirty-providers .callout-pointer-dot {
-    top: 25px;
-    left: 200px;
-}
-
-.thirty-providers::after {
-    width: 80px;
-    top: 14px;
-    left: 150px;
-
-}
-
-.premium-buttons {
-    top: 75%;
-    left: 60%;
-
-}
-
-.premium-buttons .callout-pointer-dot {
-    top: 25px;
-
-    left: -120px;
-
-}
-
-.premium-buttons::after {
-
-    width: 110px;
-    top: 14px;
-    right: 135px;
-
-    left: auto;
-
-    transform-origin: right center;
-
-}
-
-.high-res-display .callout-info-box,
-.forged-in-metal .callout-info-box,
-.thirty-providers .callout-info-box,
-.premium-buttons .callout-info-box {
-    position: static;
-
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-}
 
 .experience-cta-button {
     display: inline-block;
@@ -685,42 +493,31 @@ body.homepage-background {
     padding: 12px 25px;
     text-decoration: none;
     font-weight: normal;
-
     border-radius: 20px;
-
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: background-color 0.3s ease, border-color 0.3s ease;
     font-size: 0.9em;
     text-transform: none;
-
-    position: relative;
-
-    bottom: 40px;
-    right: 5%;
-    margin-left: 165px;
 }
 
 .experience-cta-button:hover {
-
     border-color: rgba(255, 255, 255, 0.4);
 }
 
+
+/* Pre-Order Section */
 .pre-order-background {
     padding: 40px 0;
     overflow-x: hidden;
-
 }
 
 .pre-order-container {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-
     padding: 0 20px;
-
     display: flex;
     flex-wrap: wrap;
-
     justify-content: space-between;
     align-items: center;
 }
@@ -750,7 +547,6 @@ body.homepage-background {
     .pre-order-product-image {
         transform: scale(1.15);
     }
-
 }
 
 @media (min-width: 1400px) {
@@ -758,18 +554,12 @@ body.homepage-background {
         font-size: 4.5em;
     }
 
-    .homePage-machine-desktop {
-        max-width: 1400px;
-        right: -22%;
-        top: 5%;
-    }
 }
 
 @media (min-width: 1600px) {
     .pre-order-product-image {
         transform: scale(1.2);
     }
-
 }
 
 @media (max-width: 992px) {
@@ -805,7 +595,6 @@ body.homepage-background {
         right: 0;
         bottom: -30px;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -815,10 +604,6 @@ body.homepage-background {
 
     .product-display {
         max-width: 85%;
-    }
-
-    .homePage-machine-desktop {
-        display: none !important;
     }
 
     .homePage-machine-mobile {
@@ -850,7 +635,6 @@ body.homepage-background {
     .pre-order-product-image {
         max-width: 100%;
     }
-
 }
 
 @media (max-width: 480px) {
@@ -866,7 +650,6 @@ body.homepage-background {
     .pre-order-header h2 {
         font-size: 2rem;
     }
-
 }
 
 .product-buttons {
@@ -879,7 +662,6 @@ body.homepage-background {
 }
 
 .slot-btn {
-
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -919,7 +701,6 @@ body.homepage-background {
     font-weight: 600;
     margin-left: 10px;
     margin-right: 10px;
-
 }
 
 .product-features {
@@ -941,9 +722,7 @@ body.homepage-background {
 
 .no-constraints span {
     margin-right: 10px;
-
     display: inline-block;
-
 }
 
 .no-constraints span:last-child {
@@ -1000,43 +779,20 @@ body.homepage-background {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 992px) {
-    .pre-order-container {
-        flex-direction: column;
-    }
-
-    .product-display,
-    .pre-order-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .pre-order-content {
-        align-items: center;
-    }
-
-}
-
 section#experience {
     background-attachment: fixed;
     color: white;
-
 }
 
 .experience-visual-hub {
     position: relative;
-
     width: 85%;
-
     max-width: 750px;
-
     margin: 20px auto 40px auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 450px;
-
 }
 
 img.experience-main-product-image {
@@ -1049,7 +805,6 @@ img.experience-main-product-image {
 .provider-logo {
     position: absolute;
     height: 45px;
-
     width: auto;
     opacity: 1;
     transition: opacity 0.3s ease;
@@ -1058,11 +813,10 @@ img.experience-main-product-image {
 .experience-text-and-cta {
     text-align: center;
     margin-top: 20px;
-
 }
 
 section#experience h5 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     color: #e0e0e0;
@@ -1081,8 +835,7 @@ section#experience .experience-cta-button {
     transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
     font-size: 1em;
     text-transform: none;
-    font-family: 'Montserrat', sans-serif;
-
+    font-family: 'Orbitron', sans-serif;
 }
 
 section#experience .experience-cta-button:hover {
@@ -1099,7 +852,6 @@ section#experience p:empty {
     display: flex;
     justify-content: space-between;
     max-width: 1400px;
-
     margin: 80px auto 0;
     padding: 0 20px;
     flex: 1;
@@ -1107,9 +859,7 @@ section#experience p:empty {
 
 .about-content {
     flex: 0.65;
-
     padding-right: 70px;
-
 }
 
 .about-title {
@@ -1126,7 +876,6 @@ section#experience p:empty {
     opacity: 0.9;
     font-family: 'Montserrat', sans-serif;
     max-width: 800px;
-
 }
 
 .about-text p {
@@ -1144,7 +893,6 @@ section#experience p:empty {
 
 .device-showcase {
     flex: 0.35;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1154,7 +902,6 @@ section#experience p:empty {
     max-width: 100%;
     height: auto;
     transform: scale(1.2) translateX(20%);
-
 }
 
 @media (max-width: 768px) {
@@ -1176,13 +923,6 @@ section#experience p:empty {
     .device-showcase img {
         transform: scale(1);
     }
-
-}
-
-#productt-image-homepage {
-    margin-left: 500px;
-    margin-top: 220px;
-
 }
 
 section#experience .experience-visual-hub {
@@ -1207,14 +947,6 @@ section#experience .logo-lightingBox {
     width: 600px;
     top: 120px;
     left: -80px;
-    transform: translate(-50%, -50%);
-    opacity: 0.5;
-}
-
-section#experience .logo-hacksaw {
-    width: 110px;
-    top: 250px;
-    left: 10%;
     transform: translate(-50%, -50%);
     opacity: 0.5;
 }
@@ -1312,6 +1044,10 @@ section#experience .logo-pragmatic {
     }
 
     .hero-text {
+        top: -50px;
+    }
+    
+    .hero-text {
         padding-top: 60px;
     }
 }
@@ -1323,13 +1059,12 @@ section#experience .logo-pragmatic {
     }
 
     .hero-text {
-        padding-top: 40px;
+        padding-top: 4px;
     }
 
     .cta-button {
         font-size: 1.2em !important;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -1362,7 +1097,6 @@ section#experience .logo-pragmatic {
         margin-bottom: 30px;
         display: inline-block;
     }
-
 }
 
 @media (max-width: 576px) {
@@ -1377,7 +1111,6 @@ section#experience .logo-pragmatic {
         line-height: 1.3;
         padding-top: 20px;
     }
-
 }
 
 @media (max-width: 480px) {
@@ -1394,9 +1127,9 @@ section#experience .logo-pragmatic {
         font-size: 1em;
         padding: 5px 20px;
     }
-
 }
 
+/* HomePage Machine Desktop & Mobile */
 .homePage-machine-desktop {
     position: absolute !important;
     overflow-x: hidden !important;
@@ -1430,18 +1163,6 @@ section#experience .logo-pragmatic {
         transform: translateX(-50%);
     }
 
-    .hero-text h1 {
-        font-size: 2em;
-        line-height: 1.4;
-        margin-bottom: 20px;
-    }
-
-    .hero-text .cta-button {
-        font-size: 1.2em;
-        margin-bottom: 30px;
-        display: inline-block;
-        margin-top: 20px;
-    }
 }
 
 @media (min-width: 1201px) {
@@ -1459,14 +1180,10 @@ section#experience .logo-pragmatic {
 }
 
 @media (min-width: 1400px) {
-    .hero-text h1 {
-        font-size: 4.5em;
-    }
 
     .homePage-machine-desktop {
-        max-width: 1400px;
-        right: 0;
-        top: 5%;
+        max-width: 1400px !important;
+        top: 10% !important;
     }
 }
 
@@ -1476,9 +1193,14 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
+    .hero-text {
+        left: -5%;
+        top: -50px;
+    }
+
     .homePage-machine-desktop {
-        max-width: 1500px;
-        right: -2%;
+        max-width: 1500px !important;
+        right: -20% !important;
     }
 }
 
@@ -1494,6 +1216,6 @@ section#experience .logo-pragmatic {
 
     .homePage-machine-desktop {
         max-width: 1600px !important;
-        top: 12% !important;
+        top: 7% !important;
     }
 }
