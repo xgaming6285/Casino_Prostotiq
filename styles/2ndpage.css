@@ -161,8 +161,8 @@ body {
 }
 
 .buttons {
-  right: 16%;
-  top: 58.7%;
+  right: -15%;
+  top: 60.7%;
 }
 
 .cta {
@@ -252,18 +252,23 @@ body {
   }
 
   .high-res {
-    left: 0%!important;
-    top: -12%!important;
+    right: -40%!important;
+    top: -5%!important;
+  }
+
+  .providers {
+    left: 1%!important;
+    bottom: 30%!important;
   }
 
   .buttons {
     right: 5%!important;
-    top: 59.7%!important;
+    top: 50%!important;
   }
 
   .forged-metal {
-    left: 2%!important;
-    bottom: -12%!important;
+    left: 10%!important;
+    top: -15%!important;
   }
 
   .product-container {
@@ -330,7 +335,7 @@ body {
   }
 
   .cta-text {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .product-svg #line-high-res,
@@ -343,7 +348,7 @@ body {
 
   .cta {
     position: static;
-    margin: 20px auto;
+    margin: 35% auto;
     justify-content: center;
   }
 }
@@ -351,22 +356,22 @@ body {
 @media (max-width: 1400px) {
   .high-res {
     left: 11%;
-    top: 27.3%;
+    top: 17.3%;
   }
 
   .forged-metal {
-    left: 8%;
-    top: 40.2%;
+    left: -6%;
+    top: 30.2%;
   }
 
   .providers {
-    left: 0%;
-    top: 52%;
+    left: -10%;
+    top: 48%;
   }
 
   .buttons {
-    right: 10%;
-    top: 58.7%;
+    right: -8%;
+    top: 62.7%;
   }
 }
 
@@ -388,21 +393,21 @@ body {
 
   .high-res {
     left: 11%;
-    top: 27.8%;
+    top: 10.8%;
   }
 
   .forged-metal {
-    left: 8%;
-    top: 40.8%;
+    left: 3%;
+    top: 30.8%;
   }
 
   .providers {
     left: 0%;
-    top: 52.4%;
+    top: 47.4%;
   }
 
   .buttons {
-    right: 10%;
+    right: 0%;
     top: 59.3%;
   }
 }
