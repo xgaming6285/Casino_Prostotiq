@@ -186,10 +186,12 @@ html {
 
 .hamburger::before {
     top: -6px;
+    right: 0px;
 }
 
 .hamburger::after {
     bottom: -6px;
+    right: 0px;
 }
 
 .mobile-menu-toggle.active .hamburger {
@@ -223,7 +225,12 @@ html {
         display: block;
         position: absolute;
         right: 0;
-        left: 0;
+        left: 25px;
+    }
+
+    .header .container {
+        justify-content: center;
+        align-items: center;
     }
 
     .nav {
@@ -1069,7 +1076,7 @@ section#experience .logo-pragmatic {
 
 @media (max-width: 768px) {
     .hero-section {
-        padding-top: 120px;
+        padding-top: 140px;
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
