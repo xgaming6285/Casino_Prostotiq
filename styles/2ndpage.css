@@ -15,7 +15,7 @@ body {
   color: white;
   min-height: 100vh;
   overflow-x: hidden;
-  
+
 }
 
 .showcase-container {
@@ -23,38 +23,39 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  
 }
 
 .main-container {
   position: relative;
   margin: 0 auto;
-  height: 85vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   max-width: 1600px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  
+  box-sizing: border-box;
 }
 
 .product-container {
-  width: 100%;
-  max-width: 700px;
+  width: 95%;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1 / 1;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .product-svg {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  aspect-ratio: 1 / 1;
-  max-width: 1000px;
+  max-width: 100%;
   overflow: visible;
 }
 
@@ -70,8 +71,6 @@ body {
 }
 
 .product-image-homepage {
-  max-width: 100%;
-  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -81,6 +80,7 @@ body {
   z-index: 2;
   display: flex;
   align-items: flex-end;
+  /* Default for desktop */
 }
 
 .left-label {
@@ -142,23 +142,19 @@ body {
 }
 
 .right-label .plus-circle {
+  /* This was for .right-label .plus-circle, but HTML uses .plus-circle-right */
   margin-left: 8px;
 }
 
-.connecting-line {
-  position: absolute;
-  z-index: 0;
-  overflow: visible;
-  max-width: 100%;
-  
-}
 
 .connecting-line line {
+  /* This class .connecting-line is not used on the SVG lines in index.html */
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
 .connecting-line circle {
+  /* This class .connecting-line is not used on the SVG circles in index.html */
   opacity: 0;
   transition: opacity 0.5s ease;
   transition-delay: 1s;
@@ -169,19 +165,9 @@ body {
   top: 27.3%;
 }
 
-.high-res-line {
-  left: 18%;
-  top: 34%;
-}
-
 .forged-metal {
   left: 14%;
   top: 40.2%;
-}
-
-.forged-metal-line {
-  left: 18%;
-  top: 48.3%;
 }
 
 .providers {
@@ -189,19 +175,9 @@ body {
   top: 52%;
 }
 
-.providers-line {
-  left: 8%;
-  top: 61.5%;
-}
-
 .buttons {
   right: 16%;
   top: 58.7%;
-}
-
-.buttons-line {
-  right: 19%;
-  top: 61%;
 }
 
 .cta {
@@ -212,6 +188,8 @@ body {
   align-items: center;
   gap: 8px;
   color: white;
+  z-index: 3;
+  /* Ensure CTA is above SVG if it overlaps */
 }
 
 .cta-text {
@@ -234,7 +212,6 @@ body {
   font-size: 14px;
   max-width: 250px;
   z-index: 9999;
-  
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: auto;
@@ -259,6 +236,7 @@ body {
 }
 
 .feature-label {
+  /* This is the existing desktop rule */
   position: absolute;
   z-index: 111;
   display: flex;
@@ -271,7 +249,6 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease;
   z-index: 120;
-  
 }
 
 .feature-label:hover .plus-circle,
@@ -280,36 +257,121 @@ body {
 }
 
 @media (max-width: 768px) {
-  .feature-label {
-    position: static;
-    margin: 10px auto;
+  .main-container {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 10px;
+    /* Horizontal padding for overall section content */
+    padding-right: 10px;
   }
 
-.label-text {
+  .product-container {
+    width: 100%;
+    /* Take full width of padded parent */
+    flex-direction: column;
+    /* Stack SVG and labels vertically */
+    align-items: center;
+    /* Center items horizontally */
+    aspect-ratio: auto;
+    /* Let content define height */
+  }
+
+  .product-svg {
+    max-width: 90%;
+    /* Make SVG image slightly smaller than its container */
+    height: auto;
+    /* Maintain aspect ratio based on width */
+    margin-bottom: 20px;
+    /* Space between image and labels */
+  }
+
+  .feature-label {
+    position: static;
+    /* Become part of normal flow */
+    margin: 8px auto;
+    /* Reduced margin for tighter packing */
+    width: auto;
+    /* Fit content */
+    max-width: 95%;
+    /* Prevent very long labels from overflowing container */
+    align-items: center;
+    /* Vertically center plus icon and text */
+    justify-content: center;
+    /* Horizontally center content within the label block */
+  }
+
+  .label-text {
     font-size: 12px;
     padding: 6px 16px;
   }
 
-.plus-circle {
+  .plus-circle {
+    /* General style for plus icons on mobile */
+    position: static;
+    /* Remove absolute/relative positioning */
     width: 16px;
     height: 16px;
+    top: auto;
+    left: auto;
+    /* Reset offsets */
+    /* display: inline-flex; /* Ensure it's visible and aligns with text */
+    /* align-items: center; */
+    /* justify-content: center; */
   }
 
-.cta-text {
+  .left-label .plus-circle {
+    margin-right: 8px;
+    /* Space between icon and text */
+  }
+
+  .right-label .label-text {
+    order: 1;
+    /* Text first */
+  }
+
+  .right-label .plus-circle-right {
+    order: 2;
+    /* Icon second */
+    margin-left: 8px;
+    /* Space between text and icon */
+    position: static;
+    /* Crucial override */
+    top: auto;
+    right: auto;
+    /* Reset offsets */
+    /* display: inline-flex; is inherited or set by .plus-circle if we merge */
+  }
+
+  .cta-text {
     font-size: 16px;
   }
 
-.connecting-line {
-    display: none;
+  /* Hide SVG lines and circles on mobile */
+  .product-svg #line-high-res,
+  .product-svg #line-forged-metal,
+  .product-svg #line-providers,
+  .product-svg #line-buttons,
+  .product-svg circle {
+    display: none !important;
   }
 
-.high-res-line,
+  /* Deprecated/Unused line classes, keep for cleanup or if they were intended elsewhere */
+  .connecting-line,
+  .high-res-line,
   .forged-metal-line,
   .providers-line,
   .buttons-line {
     display: none;
   }
 
+  .cta {
+    position: static;
+    /* Make CTA static */
+    margin: 20px auto;
+    /* Center it below labels */
+    justify-content: center;
+    /* Center its children (text and arrow) */
+  }
 }
 
 @media (max-width: 1400px) {
@@ -317,14 +379,17 @@ body {
     left: 11%;
     top: 27.3%;
   }
+
   .forged-metal {
     left: 8%;
     top: 40.2%;
   }
+
   .providers {
     left: 0%;
     top: 52%;
   }
+
   .buttons {
     right: 10%;
     top: 58.7%;
@@ -333,34 +398,38 @@ body {
 
 @media (max-width: 1200px) {
   .feature-label {
-    /* Reduce size and spacing for feature labels */
+    /* Desktop adjustment */
     font-size: 0.9em;
   }
+
   .label-text {
+    /* Desktop adjustment */
     font-size: 12px;
     padding: 6px 16px;
   }
+
   .plus-circle,
   .plus-circle-right {
+    /* Desktop adjustment */
     width: 16px;
     height: 16px;
   }
-  .product-image-homepage {
-    max-width: 80%;
-    height: auto;
-  }
+
   .high-res {
     left: 11%;
     top: 27.8%;
   }
+
   .forged-metal {
     left: 8%;
     top: 40.8%;
   }
+
   .providers {
     left: 0%;
     top: 52.4%;
   }
+
   .buttons {
     right: 10%;
     top: 59.3%;
@@ -369,29 +438,38 @@ body {
 
 @media (max-width: 1000px) {
   .feature-label {
+    /* Desktop adjustment */
     font-size: 0.8em;
   }
+
   .label-text {
+    /* Desktop adjustment */
     font-size: 11px;
     padding: 5px 12px;
   }
+
   .plus-circle,
   .plus-circle-right {
+    /* Desktop adjustment */
     width: 14px;
     height: 14px;
   }
+
   .high-res {
     left: 7%;
     top: 28%;
   }
+
   .forged-metal {
     left: -1%;
     top: 41%;
   }
+
   .providers {
     left: -3%;
     top: 52.8%;
   }
+
   .buttons {
     right: 0%;
     top: 59.7%;
@@ -399,7 +477,7 @@ body {
 }
 
 .animated-line {
-  stroke-dasharray: 600; /* Adjust to match line length */
+  stroke-dasharray: 600;
   stroke-dashoffset: 600;
   animation: drawLine 1.2s ease forwards;
 }
@@ -409,4 +487,3 @@ body {
     stroke-dashoffset: 0;
   }
 }
-
