@@ -58,6 +58,7 @@ body {
     margin-bottom: -15px;
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .bg-flag {
@@ -163,6 +164,22 @@ body {
     filter: grayscale(0.2) brightness(0.95);
 }
 
+.footer-language-dropdown {
+    background: #232a36;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.95rem;
+    margin-left: 10px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.2s;
+}
+.footer-language-dropdown:focus {
+    border-color: #888;
+}
+
 @media (max-width: 1200px) {
     .footer-content {
         margin-left: 10%;
@@ -255,5 +272,10 @@ body {
 
     .social-icons-inline-container {
         margin-left: -90px;
+    }
+
+    .footer-language-dropdown {
+        font-size: 0.85rem;
+        padding: 3px 7px;
     }
 }
