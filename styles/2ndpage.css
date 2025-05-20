@@ -23,39 +23,57 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-
 }
 
 .main-container {
   position: relative;
   margin: 0 auto;
-  height: 85vh;
+  /* height: 85vh; */
+  /* Removed fixed height */
+  padding-top: 5vh;
+  /* Added some vertical padding */
+  padding-bottom: 5vh;
+  /* Added some vertical padding */
   max-width: 1600px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  overflow-y: hidden!important;
+  /* Keep to prevent minor horizontal scroll */
+  /* overflow-y: hidden!important; */
+  /* Removed */
+  box-sizing: border-box;
+  /* Added for consistent box model */
 }
 
 .product-container {
-  width: 100%;
+  width: 95%;
+  /* Adjust to ensure it fits within viewport, leaving some space */
   max-width: 1000px;
+  /* Max size of the interactive product area */
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1 / 1;
+  position: relative;
+  /* Good for child absolute positioning & containment context */
+  box-sizing: border-box;
+  /* Ensure padding doesn't add to width for percentage calcs */
 }
 
 .product-svg {
   width: 100%;
-  height: auto;
+  /* Fill the .product-container */
+  height: 100%;
+  /* Fill the .product-container (due to parent's aspect-ratio) */
   display: block;
-  aspect-ratio: 1 / 1;
-  max-width: 1000px;
+  /* aspect-ratio: 1 / 1; Redundant if parent has it and SVG is 100% width/height */
+  max-width: 100%;
+  /* Ensure it doesn't overflow .product-container */
   overflow: visible;
+  /* Important for lines that might extend slightly */
 }
 
 .product-image {
@@ -70,8 +88,11 @@ body {
 }
 
 .product-image-homepage {
-  max-width: 100%;
+  /* This is the <image> tag inside the SVG */
+  /* width and height attributes in HTML (1000) map to viewBox, so it scales with SVG element */
+  /* No need for max-width here as SVG scaling handles it */
   object-fit: contain;
+  /* Browser default for <image> is essentially 'contain' within its x,y,width,height */
   display: block;
 }
 
@@ -279,6 +300,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .main-container {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  .product-container {
+    /* width: 90%; /* Adjusted for smaller screens if 95% is still too wide, or rely on parent padding */
+  }
+
   .feature-label {
     position: static;
     margin: 10px auto;
@@ -347,11 +377,6 @@ body {
   .plus-circle-right {
     width: 16px;
     height: 16px;
-  }
-
-  .product-image-homepage {
-    max-width: 80%;
-    height: auto;
   }
 
   .high-res {
