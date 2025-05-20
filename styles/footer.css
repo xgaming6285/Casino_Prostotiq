@@ -64,7 +64,7 @@ body {
 .bg-flag {
     width: 30px;
     height: auto;
-    margin-right: 7px;
+    margin-right: -12px;
 }
 
 .flag-label {
