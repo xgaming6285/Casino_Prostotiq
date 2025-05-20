@@ -253,7 +253,6 @@ html {
         background-color: transparent;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.5s ease;
     }
 
     .nav.active {
@@ -279,6 +278,19 @@ html {
 
     .nav-indicator {
         display: none;
+    }
+
+    .header.mobile-menu-open .header-line {
+        position: absolute;
+        top: 195px;
+        left: 25px;
+        right: 0;
+        width: 90%;
+        margin: 0;
+        z-index: 2;
+    }
+    .header.mobile-menu-open .nav-list {
+        order: 1;
     }
 }
 
@@ -1400,4 +1412,19 @@ section#experience .logo-pragmatic {
     .logo-slider-container {
         display: none;
     }
+}
+
+.menu-blur-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 21%;
+    z-index: 400;
+    backdrop-filter: blur(18px);
+    pointer-events: none;
+}
+.menu-blur-overlay.active {
+    display: block;
 }

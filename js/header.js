@@ -181,6 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleMobileMenu() {
         nav.classList.toggle('active');
         mobileMenuToggle.classList.toggle('active');
+        header.classList.toggle('mobile-menu-open');
+        const blurOverlay = document.querySelector('.menu-blur-overlay');
+        if (header.classList.contains('mobile-menu-open')) {
+            blurOverlay.classList.add('active');
+        } else {
+            blurOverlay.classList.remove('active');
+        }
     }
 
     function scrollToSection(sectionId) {
