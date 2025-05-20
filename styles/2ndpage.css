@@ -28,52 +28,35 @@ body {
 .main-container {
   position: relative;
   margin: 0 auto;
-  /* height: 85vh; */
-  /* Removed fixed height */
   padding-top: 5vh;
-  /* Added some vertical padding */
   padding-bottom: 5vh;
-  /* Added some vertical padding */
   max-width: 1600px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  /* Keep to prevent minor horizontal scroll */
-  /* overflow-y: hidden!important; */
-  /* Removed */
   box-sizing: border-box;
-  /* Added for consistent box model */
 }
 
 .product-container {
   width: 95%;
-  /* Adjust to ensure it fits within viewport, leaving some space */
   max-width: 1000px;
-  /* Max size of the interactive product area */
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1 / 1;
   position: relative;
-  /* Good for child absolute positioning & containment context */
   box-sizing: border-box;
-  /* Ensure padding doesn't add to width for percentage calcs */
 }
 
 .product-svg {
   width: 100%;
-  /* Fill the .product-container */
   height: 100%;
-  /* Fill the .product-container (due to parent's aspect-ratio) */
   display: block;
-  /* aspect-ratio: 1 / 1; Redundant if parent has it and SVG is 100% width/height */
   max-width: 100%;
-  /* Ensure it doesn't overflow .product-container */
   overflow: visible;
-  /* Important for lines that might extend slightly */
 }
 
 .product-image {
@@ -88,11 +71,7 @@ body {
 }
 
 .product-image-homepage {
-  /* This is the <image> tag inside the SVG */
-  /* width and height attributes in HTML (1000) map to viewBox, so it scales with SVG element */
-  /* No need for max-width here as SVG scaling handles it */
   object-fit: contain;
-  /* Browser default for <image> is essentially 'contain' within its x,y,width,height */
   display: block;
 }
 
@@ -101,6 +80,7 @@ body {
   z-index: 2;
   display: flex;
   align-items: flex-end;
+  /* Default for desktop */
 }
 
 .left-label {
@@ -162,23 +142,19 @@ body {
 }
 
 .right-label .plus-circle {
+  /* This was for .right-label .plus-circle, but HTML uses .plus-circle-right */
   margin-left: 8px;
 }
 
-.connecting-line {
-  position: absolute;
-  z-index: 0;
-  overflow: visible;
-  max-width: 100%;
-
-}
 
 .connecting-line line {
+  /* This class .connecting-line is not used on the SVG lines in index.html */
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
 .connecting-line circle {
+  /* This class .connecting-line is not used on the SVG circles in index.html */
   opacity: 0;
   transition: opacity 0.5s ease;
   transition-delay: 1s;
@@ -189,19 +165,9 @@ body {
   top: 27.3%;
 }
 
-.high-res-line {
-  left: 18%;
-  top: 34%;
-}
-
 .forged-metal {
   left: 14%;
   top: 40.2%;
-}
-
-.forged-metal-line {
-  left: 18%;
-  top: 48.3%;
 }
 
 .providers {
@@ -209,19 +175,9 @@ body {
   top: 52%;
 }
 
-.providers-line {
-  left: 8%;
-  top: 61.5%;
-}
-
 .buttons {
   right: 16%;
   top: 58.7%;
-}
-
-.buttons-line {
-  right: 19%;
-  top: 61%;
 }
 
 .cta {
@@ -232,6 +188,8 @@ body {
   align-items: center;
   gap: 8px;
   color: white;
+  z-index: 3;
+  /* Ensure CTA is above SVG if it overlaps */
 }
 
 .cta-text {
@@ -254,7 +212,6 @@ body {
   font-size: 14px;
   max-width: 250px;
   z-index: 9999;
-
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: auto;
@@ -279,6 +236,7 @@ body {
 }
 
 .feature-label {
+  /* This is the existing desktop rule */
   position: absolute;
   z-index: 111;
   display: flex;
@@ -291,7 +249,6 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease;
   z-index: 120;
-
 }
 
 .feature-label:hover .plus-circle,
@@ -303,15 +260,44 @@ body {
   .main-container {
     padding-top: 2vh;
     padding-bottom: 2vh;
+    padding-left: 10px;
+    /* Horizontal padding for overall section content */
+    padding-right: 10px;
   }
 
   .product-container {
-    /* width: 90%; /* Adjusted for smaller screens if 95% is still too wide, or rely on parent padding */
+    width: 100%;
+    /* Take full width of padded parent */
+    flex-direction: column;
+    /* Stack SVG and labels vertically */
+    align-items: center;
+    /* Center items horizontally */
+    aspect-ratio: auto;
+    /* Let content define height */
+  }
+
+  .product-svg {
+    max-width: 90%;
+    /* Make SVG image slightly smaller than its container */
+    height: auto;
+    /* Maintain aspect ratio based on width */
+    margin-bottom: 20px;
+    /* Space between image and labels */
   }
 
   .feature-label {
     position: static;
-    margin: 10px auto;
+    /* Become part of normal flow */
+    margin: 8px auto;
+    /* Reduced margin for tighter packing */
+    width: auto;
+    /* Fit content */
+    max-width: 95%;
+    /* Prevent very long labels from overflowing container */
+    align-items: center;
+    /* Vertically center plus icon and text */
+    justify-content: center;
+    /* Horizontally center content within the label block */
   }
 
   .label-text {
@@ -320,18 +306,57 @@ body {
   }
 
   .plus-circle {
+    /* General style for plus icons on mobile */
+    position: static;
+    /* Remove absolute/relative positioning */
     width: 16px;
     height: 16px;
+    top: auto;
+    left: auto;
+    /* Reset offsets */
+    /* display: inline-flex; /* Ensure it's visible and aligns with text */
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+
+  .left-label .plus-circle {
+    margin-right: 8px;
+    /* Space between icon and text */
+  }
+
+  .right-label .label-text {
+    order: 1;
+    /* Text first */
+  }
+
+  .right-label .plus-circle-right {
+    order: 2;
+    /* Icon second */
+    margin-left: 8px;
+    /* Space between text and icon */
+    position: static;
+    /* Crucial override */
+    top: auto;
+    right: auto;
+    /* Reset offsets */
+    /* display: inline-flex; is inherited or set by .plus-circle if we merge */
   }
 
   .cta-text {
     font-size: 16px;
   }
 
-  .connecting-line {
-    display: none;
+  /* Hide SVG lines and circles on mobile */
+  .product-svg #line-high-res,
+  .product-svg #line-forged-metal,
+  .product-svg #line-providers,
+  .product-svg #line-buttons,
+  .product-svg circle {
+    display: none !important;
   }
 
+  /* Deprecated/Unused line classes, keep for cleanup or if they were intended elsewhere */
+  .connecting-line,
   .high-res-line,
   .forged-metal-line,
   .providers-line,
@@ -339,6 +364,14 @@ body {
     display: none;
   }
 
+  .cta {
+    position: static;
+    /* Make CTA static */
+    margin: 20px auto;
+    /* Center it below labels */
+    justify-content: center;
+    /* Center its children (text and arrow) */
+  }
 }
 
 @media (max-width: 1400px) {
@@ -365,16 +398,19 @@ body {
 
 @media (max-width: 1200px) {
   .feature-label {
+    /* Desktop adjustment */
     font-size: 0.9em;
   }
 
   .label-text {
+    /* Desktop adjustment */
     font-size: 12px;
     padding: 6px 16px;
   }
 
   .plus-circle,
   .plus-circle-right {
+    /* Desktop adjustment */
     width: 16px;
     height: 16px;
   }
@@ -402,16 +438,19 @@ body {
 
 @media (max-width: 1000px) {
   .feature-label {
+    /* Desktop adjustment */
     font-size: 0.8em;
   }
 
   .label-text {
+    /* Desktop adjustment */
     font-size: 11px;
     padding: 5px 12px;
   }
 
   .plus-circle,
   .plus-circle-right {
+    /* Desktop adjustment */
     width: 14px;
     height: 14px;
   }
