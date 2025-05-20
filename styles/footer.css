@@ -161,7 +161,18 @@ body {
     height: auto;
     margin: 0 auto;
     display: block;
-    filter: grayscale(0.2) brightness(0.95);
+    position: relative;
+    z-index: 1;
+}
+
+.site-footer-mobile .mobile-footer-img::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30, 37, 47, 0);
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    z-index: 2;
 }
 
 .footer-language-dropdown {
