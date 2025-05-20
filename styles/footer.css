@@ -87,9 +87,9 @@ body {
 
 .footer-social-img {
     width: 150px;
-    height: 100px;
     margin-right: -100px;
     transition: opacity 0.3s ease;
+    padding-top: 1em;
 }
 
 .footer-social-img:hover {
@@ -259,6 +259,7 @@ body {
     .language-selector {
         display: flex;
         align-items: center;
+        margin-left: 0.5em;
     }
 
     .footer-content {
@@ -283,6 +284,7 @@ body {
 
     .social-icons-inline-container {
         margin-left: -90px;
+        margin-top: 1.5em;
     }
 
     .footer-language-dropdown {
