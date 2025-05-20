@@ -33,7 +33,7 @@ body {
 .footer-column {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    gap: 10px;
     min-width: 120px;
 }
 
@@ -41,7 +41,7 @@ body {
     color: white;
     text-decoration: none;
     margin-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -144,7 +144,6 @@ body {
     color: #a0a0a0;
     text-align: center;
     position: relative;
-    left: 40px;
 }
 
 .site-footer-mobile {
@@ -162,6 +161,13 @@ body {
     margin: 0 auto;
     display: block;
     filter: grayscale(0.2) brightness(0.95);
+}
+
+@media (max-width: 1200px) {
+    .footer-content {
+        margin-left: 10%;
+        padding: 0;
+    }
 }
 
 @media (min-width: 768px) {

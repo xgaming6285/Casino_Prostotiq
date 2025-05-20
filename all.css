@@ -84,6 +84,19 @@ html {
     padding-left: 5rem;
 }
 
+.logo-text-footer {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #e0e0e0;
+    font-weight: 600;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    display: block !important;
+    flex-shrink: 0;
+    width: 100%;
+}
+
 .header-line {
     position: absolute;
     bottom: 0;
@@ -236,7 +249,7 @@ html {
     .nav {
         position: absolute;
         top: 81.7%;
-        right: -3%;
+        right: 53%;
         background-color: transparent;
         max-height: 0;
         overflow: hidden;
