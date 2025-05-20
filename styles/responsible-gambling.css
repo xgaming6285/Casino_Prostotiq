@@ -1,4 +1,4 @@
-body {
+body.responsible-gambling-body {
     background-color: rgba(30, 37, 47, 255) !important;
     background-image: none !important;
     background-attachment: fixed;
@@ -7,7 +7,11 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
-    overflow-x: visible; 
+    overflow-x: hidden; /* Changed from visible to hidden for better mobile behavior */
+    display: flex; /* Added for full page layout */
+    flex-direction: column; /* Added for full page layout */
+    min-height: 100vh; /* Added for full page layout */
+    padding-top: var(--header-height); /* Ensure content starts below fixed header */
 }
 
 /* Ensure the main header from all.css adapts well if needed */
@@ -20,11 +24,12 @@ body {
     display: flex;
     max-width: 1000px; /* Adjust based on desired content width */
     margin-left: 40px;
-    margin-top: 70px;
+    margin-top: 20px;
     margin-right: 20px;
     padding: 40px 20px;
     align-items: center; /* Vertically aligns text and image if they have different heights */
     gap: 40px; /* Space between text and image columns */
+    flex-grow: 1; /* Allow main content to fill vertical space */
 }
 .responsible-gambling-body .nav-indicator {
     position: absolute;
@@ -90,8 +95,14 @@ body {
 @media (max-width: 768px) {
     .gambling-container {
         flex-direction: column;
-        margin-top: 40px;
+        margin-top: 30px; /* Mobile-specific margin */
+        margin-left: auto; /* Center on mobile */
+        margin-right: auto; /* Center on mobile */
         padding-top: 20px;
+        padding-left: 20px; /* Mobile-specific padding */
+        padding-right: 20px; /* Mobile-specific padding */
+        width: 90%; /* Ensure it doesn't touch screen edges on mobile */
+        max-width: 500px; /* Optional: constrain width on mobile for very wide phones */
         gap: 30px;
     }
 
@@ -106,9 +117,15 @@ body {
     }
 
     .device-showcase {
-        flex-basis: auto; /* Allow image column to size based on content */
-        width: 60%; /* Adjust image width on smaller screens */
+        max-width: 100%; /* Allow container to be full width */
+        width: 100%; /* Occupy available width */
         margin-top: 20px;
+        display: flex; /* Ensure centering of image */
+        justify-content: center; /* Ensure centering of image */
+    }
+    .device-showcase img {
+        max-width: 80%; /* Control image size within its container */
+        height: auto;
     }
 }
 
@@ -121,7 +138,7 @@ body {
         font-size: 15px;
     }
     
-    .device-showcase {
-        width: 70%; 
+    .device-showcase img {
+        max-width: 90%; /* Slightly larger for very small screens if desired */
     }
 } 
