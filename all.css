@@ -84,6 +84,19 @@ html {
     padding-left: 5rem;
 }
 
+.logo-text-footer {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #e0e0e0;
+    font-weight: 600;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    display: block !important;
+    flex-shrink: 0;
+    width: 100%;
+}
+
 .header-line {
     position: absolute;
     bottom: 0;
@@ -186,10 +199,12 @@ html {
 
 .hamburger::before {
     top: -6px;
+    right: 0px;
 }
 
 .hamburger::after {
     bottom: -6px;
+    right: 0px;
 }
 
 .mobile-menu-toggle.active .hamburger {
@@ -223,17 +238,21 @@ html {
         display: block;
         position: absolute;
         right: 0;
-        left: 0;
+        left: 25px;
+    }
+
+    .header .container {
+        justify-content: center;
+        align-items: center;
     }
 
     .nav {
         position: absolute;
         top: 81.7%;
-        right: -3%;
+        right: 53%;
         background-color: transparent;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.5s ease;
     }
 
     .nav.active {
@@ -259,6 +278,19 @@ html {
 
     .nav-indicator {
         display: none;
+    }
+
+    .header.mobile-menu-open .header-line {
+        position: absolute;
+        top: 195px;
+        left: 25px;
+        right: 0;
+        width: 90%;
+        margin: 0;
+        z-index: 2;
+    }
+    .header.mobile-menu-open .nav-list {
+        order: 1;
     }
 }
 
@@ -1069,7 +1101,7 @@ section#experience .logo-pragmatic {
 
 @media (max-width: 768px) {
     .hero-section {
-        padding-top: 120px;
+        padding-top: 140px;
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
@@ -1381,4 +1413,19 @@ section#experience .logo-pragmatic {
     .logo-slider-container {
         display: none;
     }
+}
+
+.menu-blur-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 21%;
+    z-index: 400;
+    backdrop-filter: blur(18px);
+    pointer-events: none;
+}
+.menu-blur-overlay.active {
+    display: block;
 }

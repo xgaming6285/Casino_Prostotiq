@@ -17,6 +17,7 @@
 </head>
 
 <body class="homepage-background">
+    <div class="menu-blur-overlay"></div>
     <header class="header" id="main-header">
         <div class="container">
             <div class="logo-text">
@@ -315,8 +316,19 @@
                 </div>
                 <div class="footer-column language-and-social-group">
                     <div class="language-selector">
-                        <img src="image/Flag_of_Bulgaria.svg" alt="Bulgarian Flag" class="bg-flag">
-                        <span class="flag-label">Български</span>
+                        <img src="image/Flag_of_Bulgaria.svg" alt="Bulgarian Flag" class="bg-flag" id="footer-flag">
+                        <span class="flag-label" id="footer-flag-label">English</span>
+                        <select id="footer-language-dropdown" class="footer-language-dropdown">
+                            <option value="en" data-flag="image/Flag_of_UK.svg">English</option>
+                            <option value="bg" data-flag="image/Flag_of_Bulgaria.svg">Български</option>
+                            <option value="de" data-flag="image/Flag_of_Germany.svg">Deutsch</option>
+                            <option value="fr" data-flag="image/Flag_of_France.svg">Français</option>
+                            <option value="es" data-flag="image/Flag_of_Spain.svg">Español</option>
+                            <option value="it" data-flag="image/Flag_of_Italy.svg">Italiano</option>
+                            <option value="ru" data-flag="image/Flag_of_Russia.svg">Русский</option>
+                            <option value="tr" data-flag="image/Flag_of_Turkey.svg">Türkçe</option>
+                            <option value="in" data-flag="image/Flag_of_India.svg">भारतीय</option>
+                        </select>
                     </div>
                     <div class="social-icons-inline-container">
                         <a href="#">
@@ -340,11 +352,14 @@
         <div class="crypto-logos">
             <img alt="Accepted Cryptocurrencies" class="crypto-image" src="image/footer-credits-removebg-preview.png">
         </div>
+        <footer class="site-footer-mobile">
+            <img src="image/mobile-footer.png" alt="Accepted Cryptocurrencies and Responsible Gambling" class="mobile-footer-img">
+        </footer>
         <div class="footer-divider">
         </div>
         <div class="footer-bottom">
             <div class="footer-logo">
-                <div class="logo-text">
+                <div class="logo-text-footer">
                     MyMiniSlot
                 </div>
             </div>
@@ -434,6 +449,35 @@
     <script src="js/2ndpage.js">
     </script>
     <script src="js/header.js">
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const langDropdown = document.getElementById('footer-language-dropdown');
+            const flagImg = document.getElementById('footer-flag');
+            const flagLabel = document.getElementById('footer-flag-label');
+            const langOptions = {
+                en: {  flag: 'image/Flag_of_UK.svg' },
+                bg: {  flag: 'image/Flag_of_Bulgaria.svg' },
+                de: {  flag: 'image/Flag_of_Germany.svg' },
+                fr: {  flag: 'image/Flag_of_France.svg' },
+                es: {  flag: 'image/Flag_of_Spain.svg' },
+                it: {  flag: 'image/Flag_of_Italy.svg' },
+                ru: {  flag: 'image/Flag_of_Russia.svg' },
+                tr: {  flag: 'image/Flag_of_Turkey.svg' },
+                in: {  flag: 'image/Flag_of_India.svg' }
+            };
+            // Set initial to English
+            flagImg.src = langOptions['en'].flag;
+            flagLabel.textContent = langOptions['en'].label;
+            langDropdown.value = 'en';
+            langDropdown.addEventListener('change', function () {
+                const selected = langDropdown.value;
+                if (langOptions[selected]) {
+                    flagImg.src = langOptions[selected].flag;
+                    flagLabel.textContent = langOptions[selected].label;
+                }
+            });
+        });
     </script>
 </body>
 
