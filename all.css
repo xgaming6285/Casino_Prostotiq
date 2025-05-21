@@ -889,7 +889,7 @@ img.experience-main-product-image {
 }
 
 section#experience h5 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     color: #e0e0e0;
@@ -909,6 +909,8 @@ section#experience .experience-cta-button {
     font-size: 1em;
     text-transform: none;
     font-family: 'Orbitron', sans-serif;
+
+
 }
 
 section#experience .experience-cta-button:hover {
@@ -1345,6 +1347,7 @@ section#experience .logo-pragmatic {
     }
 
     .mobile-logo-largeе {
+        /* Обърни внимание, ако това 'е' накрая е печатна грешка и трябва да е .mobile-logo-large */
         width: 90% !important;
         max-width: 110% !important;
     }
@@ -1421,6 +1424,7 @@ section#experience .logo-pragmatic {
     }
 
     section#experience img.experience-main-product-image {
+        /* Дублиращо се правило, но го оставям, както си го дал */
         max-width: 500px;
     }
 
@@ -1434,7 +1438,7 @@ section#experience .logo-pragmatic {
         border-radius: 20px;
         width: auto;
         display: inline-block;
-        margin-top: 15px;
+        margin-top: -100px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
         transition: background-color 0.3s ease, border-color 0.3s ease;
     }
@@ -1447,6 +1451,37 @@ section#experience .logo-pragmatic {
     section#experience .experience-text-and-cta:empty,
     section#experience>div:empty {
         display: none;
+    }
+
+    /* Вътре в @media (max-width: 576px) { ... } */
+
+    section#experience .experience-main-product-image {
+        /* Твоите съществуващи стилове за снимката, например: */
+        max-width: 110px;
+        /* Предполагам, че това е активната максимална ширина за тази снимка */
+        width: 90%;
+        margin-top: -30%;
+        /* От твоя код, това издърпва снимката нагоре */
+        /* justify-self, grid-column, grid-row няма да имат ефект, ако родителят .experience-visual-hub е display:flex */
+
+        /* НОВИ СТИЛОВЕ ЗА ЛИНИЯТА ПОД СНИМКАТА: */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        /* Дефинира линията: дебелина, стил, цвят */
+        padding-bottom: 10px;
+        /* Разстояние МЕЖДУ долния край на снимката и линията. Регулирай по вкус. */
+        /* Линията ще се появи под този padding. */
+    }
+
+    /* по подразбиране – без линия под машинката */
+    section#experience .experience-main-product-image {
+        border-bottom: none;
+    }
+
+    /* когато дропдаунът е отворен (body има клас logos-open) – показваме линията */
+    body.logos-open section#experience .experience-main-product-image {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 10px;
+        /* както си го имаше */
     }
 }
 
@@ -1466,11 +1501,21 @@ section#experience .logo-pragmatic {
     .logo-slider-container {
         position: relative;
         width: 80%;
-        /* От твоя код - може да се нуждае от корекция спрямо родителя */
         margin: -100px auto 0;
-        /* От твоя код */
         min-height: 120px;
+        display: none;
+        /* Скрито по подразбиране */
+        align-items: center;
+    }
+
+    /* Показване на слайдера и скриване на бутона, когато body има клас .logos-open */
+    body.logos-open .experience-cta-button {
+        display: none !important;
+    }
+
+    body.logos-open .logo-slider-container {
         display: flex;
+        /* Показва слайдера */
         align-items: center;
     }
 
@@ -1480,19 +1525,12 @@ section#experience .logo-pragmatic {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
-        /* Използваме CSS променливи за динамичен размер. 
-       Стойностите след запетаята (160px, 100px) са резервни, ако променливите не са зададени. */
         width: var(--frame-width, 150px);
         height: var(--frame-height, 100px);
-
         border: 1px solid rgba(255, 255, 255, 0.9);
         border-radius: 12px;
         pointer-events: none;
         z-index: 2;
-        /* Рамката да е над логата */
-
-        /* Добавяме transition за плавна промяна на размера на рамката */
         transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
     }
 
@@ -1501,9 +1539,10 @@ section#experience .logo-pragmatic {
         align-items: center;
         overflow-x: auto;
         overflow-y: visible;
-        gap: 25px;
-        padding: 0 24px;
-        /* Важно за правилното снапване на крайните елементи */
+        gap: 0 25%;
+        /* Обърни внимание на тази стойност за gap, може да е много голяма */
+        padding: 1px 0px;
+        /* Коригирах '1' на '1px', ако искаш 0px вертикален, сложи '0 0px' */
         scroll-snap-type: x mandatory;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -1513,31 +1552,23 @@ section#experience .logo-pragmatic {
         display: none;
     }
 
-    /* СТИЛОВЕ ПО ПОДРАЗБИРАНЕ (за страничните лога, извън рамката): */
     .logo-slider-track img.provider-logo {
         flex: 0 0 auto;
         scroll-snap-align: center;
-        max-height: 60px;
+        max-height: 50px;
         height: auto;
         object-fit: contain;
         z-index: 1;
         transition: transform .3s ease, filter .3s ease, opacity .3s ease;
-
         transform: scale(1.0);
         opacity: 0.50;
-        /* Страничните лога са леко по-бледи */
         filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.35));
-        /* "Бял замазан фон" */
     }
 
-    /* СТИЛОВЕ ЗА "СЕЛЕКТИРАНОТО" ЛОГО (това в центъра на рамката) - чрез JS клас */
     .logo-slider-track img.provider-logo.is-centered-logo {
         transform: scale(1.1);
-        /* Уголемява се леко */
         opacity: 1.0;
-        /* Пълна непрозрачност */
         filter: none;
-        /* Без "замазан фон", за да е "чисто" в рамката */
     }
 }
 
@@ -1546,6 +1577,62 @@ section#experience .logo-pragmatic {
     .logo-slider-container {
         display: none;
     }
+}
+
+
+/* css-button-experience */
+.logo-toggle-btn {
+    display: block;
+    margin: 16px auto 0;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 3rem;
+    line-height: 1;
+    padding: 4px;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.3s ease;
+    margin-right: 20px;
+    /* Тези два margin-a може да са в конфликт с margin: 16px auto 0; */
+    margin-top: 90px;
+    /* Прецени кое е вярното позициониране */
+}
+
+.logo-toggle-btn:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.logo-toggle-btn:focus {
+    outline: none;
+    color: #fff;
+}
+
+@media (min-width: 577px) {
+    .logo-toggle-btn {
+        display: none;
+    }
+}
+
+body.logos-open .logo-toggle-btn {
+    transform: rotate(180deg);
+}
+
+/* Анимация за показване/скриване на слайдера */
+section#experience .logo-slider-container {
+    /* Дублиращо се правило, но с !important */
+    max-height: 0 !important;
+    /* Беше 10, но 0 е по-логично за скрито състояние */
+    overflow: hidden !important;
+    transition: max-height 0.4s ease !important;
+}
+
+body.logos-open section#experience .logo-slider-container {
+    /* Дублиращо се правило, но с !important */
+    max-height: 300px !important;
+    /* Увери се, че тази височина е достатъчна */
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    /* Добре е y да е hidden, ако x е auto */
 }
 
 /* css-button-experience */
@@ -1563,7 +1650,7 @@ section#experience .logo-pragmatic {
     cursor: pointer;
     transition: color 0.2s ease, transform 0.3s ease;
     margin-right: 20px;
-    margin-top: 90px;
+    margin-top: 7px;
 
 }
 
@@ -1576,6 +1663,14 @@ section#experience .logo-pragmatic {
     color: #fff;
 }
 
+/* Скриваме стрелката (toggle button) за десктоп */
+@media (min-width: 577px) {
+    .logo-toggle-btn {
+        display: none;
+    }
+}
+
+
 /* При отворено състояние – стрелката се обръща нагоре */
 body.logos-open .logo-toggle-btn {
     transform: rotate(180deg);
@@ -1587,6 +1682,7 @@ section#experience .logo-slider-container {
     max-height: 10 !important;
     overflow: hidden !important;
     transition: max-height 0.4s ease !important;
+    margin-bottom: 30px;
 }
 
 /* 2) Показваме при клас .logos-open върху <body> */
