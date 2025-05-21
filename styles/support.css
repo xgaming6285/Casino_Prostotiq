@@ -166,36 +166,30 @@ body.support-page {
         align-items: center; 
     }
 
-.support-image-column {
-        order: 1; 
-        margin-bottom: 20px; 
+    .support-image-column {
+        display: none; /* Hide the image column on mobile */
     }
 
-.support-image-column img {
-        max-width: 300px;
-    }
-
-.support-form-column {
+    .support-form-column {
         order: 2; 
         width: 100%;
         max-width: 500px; 
     }
 
-.support-title {
+    .support-title {
         align-self: center; 
         margin-left: 0;
         margin-right: 0;
     }
 
-.form-actions {
+    .form-actions {
         flex-direction: column-reverse; 
         gap: 15px;
     }
 
-.send-request-btn {
+    .send-request-btn {
         width: 100%;
     }
-
 }
 
 @media (max-width: 480px) {
