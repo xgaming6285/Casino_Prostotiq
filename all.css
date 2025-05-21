@@ -1531,7 +1531,7 @@ section#experience .logo-pragmatic {
         transform: translate(-50%, -50%);
         width: var(--frame-width, 150px);
         height: var(--frame-height, 100px);
-        border: 1px solid rgba(255, 255, 255, 0.9);
+        border: 2px solid rgba(255, 255, 255, 0.9);
         border-radius: 12px;
         pointer-events: none;
         z-index: 2;
@@ -1591,15 +1591,16 @@ section#experience .logo-pragmatic {
     background: none;
     border: none;
     color: rgba(255, 255, 255, 0.6);
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
+    font-weight: 100 !important;
     line-height: 1;
     padding: 4px;
     cursor: pointer;
     transition: color 0.2s ease, transform 0.3s ease;
     margin-right: 20px;
-    /* Тези два margin-a може да са в конфликт с margin: 16px auto 0; */
     margin-top: 90px;
-    /* Прецени кое е вярното позициониране */
+    transform-origin: center;
 }
 
 .logo-toggle-btn:hover {
@@ -1648,7 +1649,6 @@ body.logos-open section#experience .logo-slider-container {
     border: none;
     color: rgba(255, 255, 255, 0.6);
     font-size: 3rem;
-    /* стрелката е по-голяма */
     line-height: 1;
     padding: 4px;
     cursor: pointer;

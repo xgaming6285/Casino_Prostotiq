@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sliderContainer = document.querySelector('.logo-slider-container'); // Взимаме контейнера на плъзгача
     const track = document.querySelector('.logo-slider-track');
     const logos = Array.from(track.querySelectorAll('img.provider-logo'));
+    // const toggleBtn = document.getElementById('toggle-logos'); // No longer need to listen to click here
 
     if (!sliderContainer || !track || logos.length === 0) {
         console.warn('Logo slider container, track, or logos not found.');
@@ -16,66 +17,75 @@ document.addEventListener('DOMContentLoaded', () => {
         let minDistanceToCenter = Infinity;
 
         logos.forEach(logo => {
-            const logoCenter = logo.offsetLeft + (logo.offsetWidth / 2);
-            const distance = Math.abs(logoCenter - trackScrollportCenter);
+            // Ensure logo has a valid offsetParent, meaning it's part of the layout and visible
+            if (logo.offsetParent !== null && logo.offsetWidth > 0 && logo.offsetHeight > 0) {
+                const logoCenter = logo.offsetLeft + (logo.offsetWidth / 2);
+                const distance = Math.abs(logoCenter - trackScrollportCenter);
 
-            if (distance < minDistanceToCenter) {
-                minDistanceToCenter = distance;
-                centeredLogoElement = logo;
+                if (distance < minDistanceToCenter) {
+                    minDistanceToCenter = distance;
+                    centeredLogoElement = logo;
+                }
             }
         });
 
-        // Премахваме .is-centered-logo от всички лога
         logos.forEach(logo => {
             logo.classList.remove('is-centered-logo');
         });
 
         if (centeredLogoElement) {
-            // Добавяме класа към новото централно лого
             centeredLogoElement.classList.add('is-centered-logo');
 
-            // Взимаме размерите на централното лого
             const logoWidth = centeredLogoElement.offsetWidth;
             const logoHeight = centeredLogoElement.offsetHeight;
 
-            // Задаваме малко отстояние (padding) за рамката около логото
-            const framePaddingHorizontal = 24; // Например 12px от всяка страна (общо 24px)
-            const framePaddingVertical = 16;   // Например 8px отгоре и отдолу (общо 16px)
+            const framePadding = 16; // New: 8px padding on all sides (total 16px added to dimensions)
 
-            // Изчисляваме новите размери на рамката
-            const newFrameWidth = logoWidth + framePaddingHorizontal;
-            const newFrameHeight = logoHeight + framePaddingVertical;
+            const newFrameWidth = logoWidth + framePadding;
+            const newFrameHeight = logoHeight + framePadding;
 
-            // Задаваме CSS променливите на .logo-slider-container
             sliderContainer.style.setProperty('--frame-width', newFrameWidth + 'px');
             sliderContainer.style.setProperty('--frame-height', newFrameHeight + 'px');
-
         } else {
-            // По желание: Връщаме към стандартни размери, ако няма центрирано лого 
-            // (малко вероятно при scroll-snap-type: mandatory)
-            sliderContainer.style.setProperty('--frame-width', '160px'); // Резервна ширина
-            sliderContainer.style.setProperty('--frame-height', '100px'); // Резервна височина
+            // Fallback if no centered logo is found (e.g., if all logos are hidden or have no dimensions)
+            // Or, if sliderContainer itself is not visible, perhaps reset to CSS defaults by removing the properties
+            if (sliderContainer.offsetHeight > 0) { // Only set defaults if container is somewhat visible
+                 sliderContainer.style.setProperty('--frame-width', '150px'); // Default from CSS
+                 sliderContainer.style.setProperty('--frame-height', '100px'); // Default from CSS
+            }
         }
     }
 
-    // Първоначално извикване
     function initialSetup() {
-        // Изчакваме изображенията да се заредят, за да имаме точни размери
         const imageLoadPromises = logos.map(img => {
             return new Promise(resolve => {
                 if (img.complete) {
                     resolve();
                 } else {
                     img.onload = resolve;
-                    img.onerror = resolve; // Разрешаваме promise-а дори при грешка, за да не блокираме
+                    img.onerror = resolve; 
                 }
             });
         });
 
         Promise.all(imageLoadPromises).then(() => {
-            updateCenteredLogoAndFrame(); // Извикваме след като всички изображения са поне опитали да се заредят
+            // DO NOT call updateCenteredLogoAndFrame() here.
+            // Frame will be set when slider is opened, using CSS defaults initially.
+            // We can, however, determine the first logo to be marked as centered if needed,
+            // but styling should only apply when visible.
+            // For now, relying on the open action to correctly style the first visible logo.
         });
     }
+
+    // Expose a function to be called when the slider is opened to prime the first logo
+    window.updateSliderFrameForFirstLogo = () => {
+        if (document.body.classList.contains('logos-open') && logos.length > 0 && track.offsetParent !== null) {
+            // Ensure the first logo is scrolled into view immediately
+            logos[0].scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+            // Then update the frame. A micro-delay can help ensure scroll has settled.
+            setTimeout(updateCenteredLogoAndFrame, 20); 
+        }
+    };
 
     if (document.readyState === 'complete') {
         initialSetup();
@@ -92,4 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollEndTimeout = setTimeout(updateCenteredLogoAndFrame, 66);
         }, { passive: true });
     }
+    
+    // The toggleBtn click listener that was here has been removed.
+    // Its functionality for initializing the first logo is now handled by 
+    // the exposed window.updateSliderFrameForFirstLogo function,
+    // which will be called by dropdownExperience.js
 });
