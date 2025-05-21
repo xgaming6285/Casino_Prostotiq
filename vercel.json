@@ -12,6 +12,22 @@
             "dest": "/about-us.html"
         },
         {
+            "src": "/support",
+            "dest": "/support.html"
+        },
+        {
+            "src": "/responsible-gambling",
+            "dest": "/responsible-gambling.html"
+        },
+        {
+            "src": "/privacy-policy",
+            "dest": "/privacy-policy.html"
+        },
+        {
+            "src": "/cookie-policy",
+            "dest": "/cookie-policy.html"
+        },
+        {
             "src": "/(.*)\\.html",
             "dest": "/$1.html"
         },
