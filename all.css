@@ -1,23 +1,22 @@
-html,
-body {
+body,
+html {
     overflow-x: hidden;
     width: 100%;
-    position: relative;
+    position: relative
 }
 
 body {
-    font-family: 'Month', sans-serif;
-    color: white;
+    font-family: Month, sans-serif;
+    color: #fff;
     margin: 0;
     padding: 0;
-
-    background-image: url('image/backgroundMainPage.jpg') !important;
+    background-image: url(https://casino-prostotiq.vercel.app/image/backgroundMainPage.jpg) !important;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
-    font-weight: 200;
+    font-weight: 200
 }
 
 :root {
@@ -30,25 +29,25 @@ body {
     --gray-400: #a3a3a3;
     --gray-500: #737373;
     --gray-800: #262626;
-    --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1)
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height);
+    scroll-padding-top: var(--header-height)
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1rem
 }
 
 .header {
@@ -60,7 +59,7 @@ html {
     background-color: transparent;
     color: var(--white);
     z-index: 500;
-    box-shadow: none;
+    box-shadow: none
 }
 
 .header .container {
@@ -71,7 +70,7 @@ html {
     position: relative;
     padding: 0;
     width: 100%;
-    max-width: 100%;
+    max-width: 100%
 }
 
 .logo-text {
@@ -81,7 +80,7 @@ html {
     font-weight: 600;
     flex-shrink: 0;
     margin-right: 5%;
-    padding-left: 5rem;
+    padding-left: 5rem
 }
 
 .logo-text-footer {
@@ -94,7 +93,7 @@ html {
     text-align: center !important;
     display: block !important;
     flex-shrink: 0;
-    width: 100%;
+    width: 100%
 }
 
 .header-line {
@@ -104,13 +103,13 @@ html {
     right: 3rem;
     height: 1.7px;
     background-color: grey;
-    z-index: 1;
+    z-index: 1
 }
 
 .nav {
     position: relative;
     display: flex;
-    align-items: right;
+    align-items: right
 }
 
 .nav-list {
@@ -119,35 +118,35 @@ html {
     list-style: none;
     padding: 17px 17px 17px 1px;
     margin-left: 9.5em;
-    height: auto;
+    height: auto
 }
 
 .nav-item {
     margin: 0 1.3rem;
     white-space: nowrap;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .nav-link {
     display: inline-block;
-    padding: 0rem 0;
-    color: white;
+    padding: 0 0;
+    color: #fff;
     text-decoration: none;
     font-size: 1.3rem;
-    letter-spacing: 0.080em;
-    transition: color 0.3s ease;
+    letter-spacing: .080em;
+    transition: color .3s ease;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 100
 }
 
 .nav-link:hover {
-    color: var(--gray-300);
+    color: var(--gray-300)
 }
 
 .nav-link.active {
     color: var(--white);
-    font-weight: 700;
+    font-weight: 700
 }
 
 .nav-indicator {
@@ -157,26 +156,21 @@ html {
     height: 1.7px;
     background-color: var(--white);
     opacity: 0;
-    box-shadow:
-        0 0 5px rgba(255, 255, 255, 0.7),
-        0 0 10px rgba(255, 255, 255, 1.5);
-    transition:
-        transform 0.4s var(--transition-timing),
-        width 0.4s var(--transition-timing),
-        opacity 0.4s var(--transition-timing);
+    box-shadow: 0 0 5px rgba(255, 255, 255, .7), 0 0 10px rgba(255, 255, 255, 1.5);
+    transition: transform .4s var(--transition-timing), width .4s var(--transition-timing), opacity .4s var(--transition-timing);
     will-change: transform, width, opacity;
     pointer-events: none;
-    z-index: 1111;
+    z-index: 1111
 }
 
 .mobile-menu-toggle {
     display: none;
-    background: none;
+    background: 0 0;
     border: none;
     color: var(--white);
     cursor: pointer;
-    padding: 0.5rem;
-    margin-left: auto;
+    padding: .5rem;
+    margin-left: auto
 }
 
 .hamburger {
@@ -184,66 +178,54 @@ html {
     position: relative;
     width: 24px;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--white)
 }
 
-.hamburger::before,
-.hamburger::after {
+.hamburger::after,
+.hamburger::before {
     content: '';
     position: absolute;
     width: 24px;
     height: 2px;
     background-color: var(--white);
-    transition: transform 0.3s ease;
+    transition: transform .3s ease
 }
 
 .hamburger::before {
     top: -6px;
-    right: 0px;
+    right: 0
 }
 
 .hamburger::after {
     bottom: -6px;
-    right: 0px;
+    right: 0
 }
 
 .mobile-menu-toggle.active .hamburger {
-    background-color: transparent;
+    background-color: transparent
 }
 
 .mobile-menu-toggle.active .hamburger::before {
     transform: rotate(45deg);
-    top: 0;
+    top: 0
 }
 
 .mobile-menu-toggle.active .hamburger::after {
     transform: rotate(-45deg);
-    bottom: 0;
+    bottom: 0
 }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .mobile-menu-toggle {
         display: block;
         position: absolute;
         right: 0;
-        left: 25px;
+        left: 25px
     }
 
     .header .container {
         justify-content: center;
-        align-items: center;
+        align-items: center
     }
 
     .nav {
@@ -254,143 +236,123 @@ html {
         background-color: transparent;
         max-height: 0;
         overflow: hidden;
-        width: 100%;
+        width: 100%
     }
 
     .nav.active {
         max-height: 500px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, .1)
     }
 
     .nav-list {
         flex-direction: column;
         padding: 1rem 0;
         margin-left: 25px;
-        align-items: flex-start;
+        align-items: flex-start
     }
 
     .nav-item {
         margin: 0;
         width: 100%;
-        text-align: left;
+        text-align: left
     }
 
     .nav-link {
         display: block;
-        padding: 0.3rem 0;
+        padding: .3rem 0
     }
 
     .nav-indicator {
-        display: none;
+        display: none
     }
-
-    .header.mobile-menu-open .header-line {
-        position: absolute;
-        top: 280%;
-        left: 25px;
-        right: 0;
-        width: 90%;
-        margin: 0;
-        z-index: 2;
-    }
-
-    .header.mobile-menu-open .nav-list {
-        order: 1;
-    }
-
 }
 
-@media (max-width: 1200px) {
+@media (max-width:1200px) {
     .nav-link {
-        font-size: 1.1rem;
+        font-size: 1.1rem
     }
 
     .nav-indicator {
-        bottom: -22%;
+        bottom: -22%
     }
 
     .nav-list {
-        margin-left: 1em;
+        margin-left: 1em
     }
 
     .logo-text {
-        font-size: 2.5em;
+        font-size: 2.5em
     }
-
 }
 
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
     .nav-link {
         font-size: 1.05rem;
-        letter-spacing: 0.060em;
+        letter-spacing: .060em
     }
 
     .nav-indicator {
-        bottom: -23%;
+        bottom: -23%
     }
 
     .nav-list {
         margin-left: 1em;
-        margin-right: 1em;
+        margin-right: 1em
     }
 
     .nav-item {
-        margin: 0 1.1rem;
+        margin: 0 1.1rem
     }
 
     .logo-text {
-        font-size: 2em;
+        font-size: 2em
     }
-
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .nav-link {
         font-size: 1rem;
-        letter-spacing: 0.040em;
+        letter-spacing: .040em
     }
 
     .nav-indicator {
-        bottom: -24%;
+        bottom: -24%
     }
 
     .nav-list {
-        margin-left: 1em;
+        margin-left: 1em
     }
 
     .nav-item {
-        margin: 0 0.9rem;
+        margin: 0 .9rem
     }
-
 }
 
-@media (max-width: 820px) {
+@media (max-width:820px) {
     .nav-link {
         font-size: 1.2rem;
-        letter-spacing: 0.030em;
+        letter-spacing: .030em
     }
 
     .nav-indicator {
-        bottom: -26%;
+        bottom: -26%
     }
 
     .nav-list {
-        margin-left: 1em;
+        margin-left: 1em
     }
 
     .nav-item {
-        margin: 0 0.8rem;
+        margin: 0 .8rem
     }
-
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
     * {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+        scroll-behavior: auto !important
     }
-
 }
 
 .hero-section {
@@ -403,7 +365,7 @@ html {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .hero-text {
@@ -411,40 +373,40 @@ html {
     position: relative;
     z-index: 1;
     flex-basis: 45%;
-    max-width: 600px;
+    max-width: 600px
 }
 
 .hero-text h1 {
     font-size: 4em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 300;
     line-height: 1.6;
     margin-bottom: 35px;
     text-transform: uppercase;
-    color: white;
-    letter-spacing: 0.1em;
-    margin-top: 0;
+    color: #fff;
+    letter-spacing: .1em;
+    margin-top: 0
 }
 
 .cta-button {
     display: inline-block;
     background-color: rgba(30, 37, 47, 255);
-    color: white;
+    color: #fff;
     padding: 5px 25px;
     text-decoration: none;
     font-weight: 200;
     border-radius: 30px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     font-size: 1.5em;
-    font-family: 'Montserrat';
-    letter-spacing: 0.075em;
-    text-wrap: nowrap;
+    font-family: Montserrat;
+    letter-spacing: .075em;
+    text-wrap: nowrap
 }
 
 .cta-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .3);
+    transform: translateY(-2px)
 }
 
 .hero-image {
@@ -452,7 +414,7 @@ html {
     text-align: right;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center
 }
 
 .page-section {
@@ -463,13 +425,13 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center
 }
 
 .page-section h2 {
     font-size: 3em;
     margin-bottom: 30px;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .craftsmanship-content {
@@ -480,74 +442,40 @@ html {
     padding-top: 50px;
     padding-bottom: 100px;
     min-height: 100vh;
-    box-sizing: border-box;
-}
-
-.product-display-area {
-    position: relative;
-    margin-bottom: 40px;
-    width: 70%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    box-sizing: border-box
 }
 
 .craftsmanship-product-image {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
-}
-
-.feature-callout {
-    position: absolute;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-}
-
-.callout-text-bubble,
-.callout-plus-bubble {
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.callout-text-bubble {
-    font-size: 0.85em;
-    padding: 6px 12px;
-    border-radius: 15px;
-    margin-right: 8px;
+    margin: 0 auto
 }
 
 .premium-buttons {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse
 }
 
 .experience-cta-button {
     display: inline-block;
-    color: white;
+    color: #fff;
     padding: 12px 25px;
     text-decoration: none;
-    font-weight: normal;
+    font-weight: 400;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    font-size: 0.9em;
-    text-transform: none;
+    border: 1px solid rgba(255, 255, 255, .2);
+    transition: background-color .3s ease, border-color .3s ease;
+    font-size: .9em;
+    text-transform: none
 }
 
 .experience-cta-button:hover {
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, .4)
 }
 
 .pre-order-background {
     padding: 40px 0;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 .pre-order-container {
@@ -558,7 +486,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
 .product-display {
@@ -569,7 +497,7 @@ html {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    overflow: visible;
+    overflow: visible
 }
 
 .pre-order-product-image {
@@ -579,95 +507,91 @@ html {
     object-fit: contain;
     display: block;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1200px) {
     .pre-order-product-image {
-        transform: scale(1.15);
+        transform: scale(1.15)
     }
-
 }
 
-@media (min-width: 1400px) {
+@media (min-width:1400px) {
     .hero-text h1 {
-        font-size: 4.5em;
+        font-size: 4.5em
     }
-
 }
 
-@media (min-width: 1600px) {
+@media (min-width:1600px) {
     .pre-order-product-image {
-        transform: scale(1.2);
+        transform: scale(1.2)
     }
-
 }
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
     .pre-order-container {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 0 10px;
+        padding: 0 10px
     }
 
-    .product-display,
-    .pre-order-content {
+    .pre-order-content,
+    .product-display {
         max-width: 100%;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 30px
     }
 
     .product-display {
         max-width: 80%;
-        order: 1;
+        order: 1
     }
 
     .pre-order-product-image {
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0 auto
     }
 
     .pre-order-content {
         align-items: center;
-        order: 2;
+        order: 2
     }
 
     .view-360 {
         right: 0;
         bottom: -30px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%)
     }
-
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .pre-order-product-image {
-        max-width: 100%;
+        max-width: 100%
     }
 
     .product-display {
-        max-width: 85%;
+        max-width: 85%
     }
 
     .pre-order-content {
         text-align: center;
-        align-items: center;
+        align-items: center
     }
 
     .pre-order-header h2 {
-        text-align: center;
+        text-align: center
     }
 
     .product-features p {
-        text-align: center;
+        text-align: center
     }
 
     .order-action {
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: center
     }
 
     .order-now-btn {
@@ -676,56 +600,53 @@ html {
         border-radius: 30px;
         border: none;
         font-size: 1.2rem;
-        letter-spacing: 0.075em;
+        letter-spacing: .075em
     }
 
     .homePage-machine-mobile {
         display: block;
         position: relative;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%)
     }
 
     .hero-text h1 {
         font-size: 2em;
         line-height: 1.4;
-        margin-bottom: 20px;
+        margin-bottom: 20px
     }
 
     .hero-text .cta-button {
         font-size: 1.2em;
         margin-bottom: 30px;
         display: inline-block;
-        margin-top: 20px;
+        margin-top: 20px
     }
-
 }
 
-@media (max-width: 576px) {
+@media (max-width:576px) {
     .product-display {
-        max-width: 90%;
+        max-width: 90%
+    }
+
+    .pre-order-product-image {
+        max-width: 100%
+    }
+}
+
+@media (max-width:480px) {
+    .product-display {
+        max-width: 95%
     }
 
     .pre-order-product-image {
         max-width: 100%;
-    }
-
-}
-
-@media (max-width: 480px) {
-    .product-display {
-        max-width: 95%;
-    }
-
-    .pre-order-product-image {
-        max-width: 100%;
-        transform: scale(1.05);
+        transform: scale(1.05)
     }
 
     .pre-order-header h2 {
-        font-size: 2rem;
+        font-size: 2rem
     }
-
 }
 
 .product-buttons {
@@ -734,7 +655,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 10px
 }
 
 .slot-btn {
@@ -742,10 +663,10 @@ html {
     width: 60px;
     height: 60px;
     border: none;
-    color: white;
-    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-family: Orbitron, sans-serif;
     font-size: 12px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .pre-order-content {
@@ -754,7 +675,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 20px;
+    gap: 20px
 }
 
 .pre-order-header h2 {
@@ -762,13 +683,13 @@ html {
     margin-bottom: 10px;
     font-weight: 700;
     text-transform: none;
-    line-height: 1.1;
+    line-height: 1.1
 }
 
 .pre-order-header h3 {
     font-size: 2rem;
     margin-top: 0;
-    font-weight: normal;
+    font-weight: 400
 }
 
 .script-logo {
@@ -776,37 +697,33 @@ html {
     font-size: 3.5rem;
     font-weight: 600;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 10px
 }
 
 .product-features {
-    margin: 20px 0;
+    margin: 20px 0
 }
 
 .feature-tagline {
     font-size: 1.5rem;
     margin: 2px 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     line-height: 1.1;
-    font-weight: 200;
+    font-weight: 200
 }
 
 .no-constraints {
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .no-constraints span {
     margin-right: 10px;
-    display: inline-block;
+    display: inline-block
 }
 
 .no-constraints span:last-child {
-    margin-right: 0;
-}
-
-.view-options {
-    margin: 20px 0;
+    margin-right: 0
 }
 
 .view-360 {
@@ -817,48 +734,48 @@ html {
     z-index: 100;
     padding: 8px;
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     cursor: pointer;
     background-color: transparent;
-    box-shadow: none;
+    box-shadow: none
 }
 
 .view-360:hover {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
 .view-icon {
     width: 45px;
     height: 35px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .order-action {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .order-now-btn {
     display: inline-block;
     padding: 10px 30px;
     background-color: rgba(30, 37, 47, 1);
-    color: white;
+    color: #fff;
     text-decoration: none;
     border: none;
     border-radius: 30px;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 300
 }
 
 .order-now-btn:hover {
-    background-color: rgba(45, 55, 70, 1);
+    background-color: rgba(45, 55, 70, 1)
 }
 
 section#experience {
     background-attachment: fixed;
-    color: white;
+    color: #fff
 }
 
 .experience-visual-hub {
@@ -869,14 +786,14 @@ section#experience {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 450px;
+    min-height: 450px
 }
 
 img.experience-main-product-image {
     max-width: 800px;
     width: 100%;
     height: auto;
-    display: block;
+    display: block
 }
 
 .provider-logo {
@@ -884,47 +801,45 @@ img.experience-main-product-image {
     height: 45px;
     width: auto;
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: opacity .3s ease
 }
 
 .experience-text-and-cta {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 section#experience h5 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     color: #e0e0e0;
     line-height: 1.4;
-    margin-top: 25px;
+    margin-top: 25px
 }
 
 section#experience .experience-cta-button {
     display: inline-block;
-    color: white;
+    color: #fff;
     padding: 14px 28px;
     text-decoration: none;
-    font-weight: normal;
+    font-weight: 400;
     border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, .25);
+    transition: background-color .3s ease, border-color .3s ease, transform .2s ease;
     font-size: 1em;
     text-transform: none;
-    font-family: 'Montserrat', sans-serif;
-
-
+    font-family: Montserrat, sans-serif
 }
 
 section#experience .experience-cta-button:hover {
-    background-color: rgba(50, 50, 55, 0.85);
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-2px);
+    background-color: rgba(50, 50, 55, .85);
+    border-color: rgba(255, 255, 255, .4);
+    transform: translateY(-2px)
 }
 
 section#experience p:empty {
-    display: none;
+    display: none
 }
 
 .about-container {
@@ -933,76 +848,75 @@ section#experience p:empty {
     max-width: 1400px;
     margin: 80px auto 0;
     padding: 0 20px;
-    flex: 1;
+    flex: 1
 }
 
 .about-content {
-    flex: 0.65;
-    padding-right: 70px;
+    flex: .65;
+    padding-right: 70px
 }
 
 .about-title {
-    font-family: 'Orbitron', sans-serif;
+    font-family: Orbitron, sans-serif;
     font-size: 1.8em;
     margin-bottom: 30px;
-    color: #fff;
+    color: #fff
 }
 
 .about-text {
-    font-size: 0.95em;
+    font-size: .95em;
     line-height: 1.6;
     margin-bottom: 15px;
-    opacity: 0.9;
-    font-family: 'Montserrat', sans-serif;
-    max-width: 800px;
+    opacity: .9;
+    font-family: Montserrat, sans-serif;
+    max-width: 800px
 }
 
 .about-text p {
     margin-bottom: -2px;
     padding-bottom: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-    width: auto;
+    border-bottom: 2px solid rgba(255, 255, 255, .15);
+    width: auto
 }
 
 .about-text p:last-child {
     border-bottom: none;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 .device-showcase {
-    flex: 0.35;
+    flex: .35;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .device-showcase img {
     max-width: 100%;
     height: auto;
-    transform: scale(1.2) translateX(20%);
+    transform: scale(1.2) translateX(20%)
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .about-container {
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 60px
     }
 
     .about-content {
         padding-right: 0;
         margin-bottom: 40px;
-        flex: 1;
+        flex: 1
     }
 
     .device-showcase {
-        flex: 1;
+        flex: 1
     }
 
     .device-showcase img {
-        transform: scale(1);
+        transform: scale(1)
     }
-
 }
 
 section#experience .experience-visual-hub {
@@ -1013,154 +927,141 @@ section#experience .experience-visual-hub {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 450px;
+    min-height: 450px
 }
 
 section#experience .provider-logo {
     position: absolute;
     height: auto;
     opacity: 1;
-    z-index: 5;
+    z-index: 5
 }
 
 section#experience .logo-lightingBox {
     width: 150px;
-
     top: 120px;
     left: -10px;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-helio {
     width: 200px;
-
     top: 210px;
     left: 8%;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-amusnet {
     width: 300px;
-
     top: 30px;
     left: 180px;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-unde {
     width: 70px;
-
     top: 340px;
     left: 68px;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-playtech {
     width: 200px;
-
     top: 100px;
     left: 700px;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-netent {
     width: 160px;
-
     top: 220px;
     left: 90%;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-everyMatrix {
     width: 200px;
-
     top: 350px;
     left: 92%;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-evolution {
     width: 110px;
-
     top: 200px;
     left: 900px;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-nolimit {
     width: 180px;
-
     top: 340px;
     left: 930px;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-igt {
     width: 150px;
-
     top: -10px;
     margin-left: 470px;
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-hacksaw {
     width: 200px;
-
     bottom: 240px;
     margin-left: -300px;
-    opacity: 0.5;
+    opacity: .5
 }
 
 section#experience .logo-pragmatic {
     width: 200px;
-    opacity: 0.5;
+    opacity: .5;
     top: 350px;
     left: -210px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
 }
 
-@media (max-width: 1200px) {
+@media (max-width:1200px) {
     .hero-text h1 {
         font-size: 3.5em;
-        text-wrap: nowrap;
+        text-wrap: nowrap
     }
 
     .hero-text {
-        top: -50px;
+        top: -50px
     }
 
     .hero-text {
-        padding-top: 60px;
+        padding-top: 60px
     }
-
 }
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
     .hero-text h1 {
         font-size: 2.6em;
-        text-wrap: nowrap;
+        text-wrap: nowrap
     }
 
     .hero-text {
-        padding-top: 4px;
+        padding-top: 4px
     }
 
     .cta-button {
-        font-size: 1.2em !important;
+        font-size: 1.2em !important
     }
-
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .hero-section {
         padding-top: 140px;
         flex-direction: column;
@@ -1168,7 +1069,7 @@ section#experience .logo-pragmatic {
         width: 100%;
         padding-left: 20px;
         padding-right: 20px;
-        overflow: visible;
+        overflow: visible
     }
 
     .hero-text {
@@ -1177,53 +1078,50 @@ section#experience .logo-pragmatic {
         padding-top: 0;
         text-align: center;
         max-width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 20px
     }
 
     .hero-text h1 {
         font-size: 2.5em;
         line-height: 1.4;
-        margin-top: 10%;
+        margin-top: 10%
     }
 
     .cta-button {
         font-size: 1.2em;
         margin-bottom: 30px;
-        display: inline-block;
+        display: inline-block
     }
-
 }
 
-@media (max-width: 576px) {
+@media (max-width:576px) {
     .hero-section {
         padding-top: 150px;
         min-height: auto;
-        padding-bottom: 50px;
+        padding-bottom: 50px
     }
 
     .hero-text h1 {
         font-size: 2em;
         line-height: 1.3;
-        padding-top: 20px;
+        padding-top: 20px
     }
-
 }
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .hero-section {
-        padding-top: 120px;
+        padding-top: 120px
     }
 
     .hero-text h1 {
         font-size: 1.8em;
-        padding-top: 30px;
+        padding-top: 30px
     }
 
     .cta-button {
         font-size: 1em;
-        padding: 5px 20px;
+        padding: 5px 20px
     }
-
 }
 
 .homePage-machine-desktop {
@@ -1235,7 +1133,7 @@ section#experience .logo-pragmatic {
     top: 20% !important;
     right: -25% !important;
     z-index: 0 !important;
-    display: block !important;
+    display: block !important
 }
 
 .homePage-machine-mobile {
@@ -1244,101 +1142,87 @@ section#experience .logo-pragmatic {
     max-width: 750px;
     height: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .homePage-machine-desktop {
-        display: none !important;
+        display: none !important
     }
 
     .homePage-machine-mobile {
         display: block;
         position: relative;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%)
     }
-
 }
 
-@media (min-width: 1201px) {
+@media (min-width:1201px) {
     .hero-text h1 {
         font-size: 3.7em;
-        text-wrap: nowrap;
+        text-wrap: nowrap
     }
 
     .homePage-machine-desktop {
         max-width: 1200px !important;
         right: -19% !important;
         margin-top: auto !important;
-        top: 21% !important;
+        top: 21% !important
     }
-
 }
 
-@media (min-width: 1400px) {
-
+@media (min-width:1400px) {
     .homePage-machine-desktop {
         max-width: 1400px !important;
-        top: 10% !important;
+        top: 10% !important
     }
-
 }
 
-@media (min-width: 1600px) {
+@media (min-width:1600px) {
     .hero-text h1 {
         font-size: 4.5em;
-        text-wrap: nowrap;
+        text-wrap: nowrap
     }
 
     .hero-text {
         left: -5%;
-        top: -50px;
+        top: -50px
     }
 
     .homePage-machine-desktop {
         max-width: 1500px !important;
-        right: -20% !important;
+        right: -20% !important
     }
-
 }
 
-@media (min-width: 1800px) {
+@media (min-width:1800px) {
     .hero-section {
-        max-width: 1700px;
+        max-width: 1700px
     }
 
     .hero-text h1 {
         font-size: 5.5em;
-        text-wrap: nowrap;
+        text-wrap: nowrap
     }
 
     .homePage-machine-desktop {
         max-width: 1600px !important;
-        top: 7% !important;
+        top: 7% !important
     }
-
 }
 
-/* css Experience */
-/* css Experience */
-@media (max-width: 576px) {
+@media (max-width:576px) {
     section#experience {
         padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    section#experience .logo-slider-track>.newId {
-        width: 50%;
-        margin-left: 10% !important;
-        margin-bottom: 0;
+        padding-bottom: 40px
     }
 
     section#experience h5 {
         font-size: 1.6rem;
         line-height: 1.3;
         color: #f0f0f0;
-        margin-bottom: 25px;
+        margin-bottom: 25px
     }
 
     section#experience .experience-visual-hub {
@@ -1347,65 +1231,45 @@ section#experience .logo-pragmatic {
         align-items: center;
         margin-top: -2%;
         margin-bottom: 20%;
-        gap: 0;
+        gap: 0
     }
 
     .mobile-logo-large {
         width: 95% !important;
-        max-width: 150% !important;
+        max-width: 150% !important
     }
 
     .mobile-logo-largeе {
-        /* Обърни внимание, ако това 'е' накрая е печатна грешка и трябва да е .mobile-logo-large */
         width: 90% !important;
-        max-width: 110% !important;
+        max-width: 110% !important
     }
 
     .mobile-logo-small {
         width: 25% !important;
-        max-width: 150% !important;
+        max-width: 150% !important
     }
 
-    /* ✅ GRID ЛОГО ПОДРЕДБА ЗА МОБИЛНИ */
     section#experience .mobile-logo-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        /* 5 равни колонки */
         column-gap: 5px;
-        /* Разстояние между колонките с лога */
         row-gap: 8px;
-        /* Разстояние между редовете с лога */
-
         max-width: 600px;
-        /* Increased from 500px */
-
         width: 100%;
         margin: 70px auto;
-        /* Примерно отстояние и центриране на грида */
         justify-items: center;
-        /* Центрира съдържанието във всяка клетка хоризонтално */
-        align-items: center;
-        /* Центрира съдържанието във всяка клетка вертикално */
+        align-items: center
     }
 
     section#experience .provider-logo {
         display: block;
-        /* За да се държи като блок елемент в клетката */
         width: 80%;
-        /* КЛЮЧОВО: Логото да заеме 100% от ширината на своята grid клетка */
         max-width: 180%;
-        /* Допълнителна гаранция, че няма да надхвърли 100% от клетката */
         height: auto;
-        /* КЛЮЧОВО: Запазва пропорциите на изображението */
         object-fit: contain;
-        /* Гарантира, че цялото изображение се вижда и се мащабира правилно,
-                           ако оригиналният файл е по-голям от размерите на клетката. */
-
         margin: 0;
-
-        /* Тези position/transform стилове от твоя код са ОК и не би трябвало да пречат тук: */
         position: static !important;
-        transform: none !important;
+        transform: none !important
     }
 
     section#experience .experience-main-product-image {
@@ -1413,116 +1277,68 @@ section#experience .logo-pragmatic {
         width: 100%;
         justify-self: center;
         grid-column: 3;
-        /* средната от 5 колони */
         grid-row: 3;
-        /* реда след втория */
-        margin-top: -30%;
+        margin-top: -30%
     }
 
-
-    /* ✅ Центриране на логата на последния ред */
     section#experience .provider-logo:nth-child(11) {
-        grid-column: 1;
+        grid-column: 1
     }
 
     section#experience .provider-logo:nth-child(12) {
-        grid-column: 5;
+        grid-column: 5
     }
 
     section#experience img.experience-main-product-image {
-        /* Дублиращо се правило, но го оставям, както си го дал */
-        max-width: 500px;
+        max-width: 500px
     }
 
     section#experience .experience-cta-button {
-        background-color: rgba(75, 79, 97, 0.8);
-        border: 1px solid rgba(124, 128, 150, 0.6);
+        background-color: rgba(75, 79, 97, .8);
+        border: 1px solid rgba(124, 128, 150, .6);
         color: #dfe0e6;
         font-weight: 500;
-        font-size: 0.9rem;
+        font-size: .9rem;
         padding: 10px 25px;
         border-radius: 20px;
         width: auto;
         display: inline-block;
         margin-top: -100px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s ease, border-color 0.3s ease;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+        transition: background-color .3s ease, border-color .3s ease
     }
 
     section#experience .experience-cta-button:hover {
-        background-color: rgba(90, 95, 115, 0.9);
-        border-color: rgba(140, 145, 170, 0.8);
+        background-color: rgba(90, 95, 115, .9);
+        border-color: rgba(140, 145, 170, .8)
     }
 
     section#experience .experience-text-and-cta:empty,
     section#experience>div:empty {
-        display: none;
+        display: none
     }
 
-    /* Вътре в @media (max-width: 576px) { ... } */
-
     section#experience .experience-main-product-image {
-        /* Твоите съществуващи стилове за снимката, например: */
         max-width: 110px;
-        /* Предполагам, че това е активната максимална ширина за тази снимка */
         width: 90%;
         margin-top: -30%;
-        /* От твоя код, това издърпва снимката нагоре */
-        /* justify-self, grid-column, grid-row няма да имат ефект, ако родителят .experience-visual-hub е display:flex */
-
-        /* НОВИ СТИЛОВЕ ЗА ЛИНИЯТА ПОД СНИМКАТА: */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        /* Дефинира линията: дебелина, стил, цвят */
-        padding-bottom: 10px;
-        /* Разстояние МЕЖДУ долния край на снимката и линията. Регулирай по вкус. */
-        /* Линията ще се появи под този padding. */
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+        padding-bottom: 10px
     }
 
-    /* по подразбиране – без линия под машинката */
     section#experience .experience-main-product-image {
-        border-bottom: none;
-    }
-
-    /* когато дропдаунът е отворен (body има клас logos-open) – показваме линията */
-    body.logos-open section#experience .experience-main-product-image {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        padding-bottom: 10px;
-        /* както си го имаше */
+        border-bottom: none
     }
 }
 
-/* --- Край: Адаптивни стилове за Секция Experience (Мобилни) --- */
-
-
-
-
-
-
-
-/* --------------slider-a---------- */
-
-
-/* CSS за Плъзгача с Лога - Мобилна Версия */
-@media (max-width: 576px) {
+@media (max-width:576px) {
     .logo-slider-container {
         position: relative;
         width: 80%;
         margin: -100px auto 0;
         min-height: 120px;
         display: none;
-        /* Скрито по подразбиране */
-        align-items: center;
-    }
-
-    /* Показване на слайдера и скриване на бутона, когато body има клас .logos-open */
-    body.logos-open .experience-cta-button {
-        display: none !important;
-    }
-
-    body.logos-open .logo-slider-container {
-        display: flex;
-        /* Показва слайдера */
-        align-items: center;
+        align-items: center
     }
 
     .logo-slider-container::before {
@@ -1533,11 +1349,11 @@ section#experience .logo-pragmatic {
         transform: translate(-50%, -50%);
         width: var(--frame-width, 150px);
         height: var(--frame-height, 100px);
-        border: 2px solid rgba(255, 255, 255, 0.9);
+        border: 2px solid rgba(255, 255, 255, .9);
         border-radius: 12px;
         pointer-events: none;
         z-index: 2;
-        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+        transition: width .3s ease-in-out, height .3s ease-in-out
     }
 
     .logo-slider-track {
@@ -1546,21 +1362,19 @@ section#experience .logo-pragmatic {
         overflow-x: auto;
         overflow-y: visible;
         gap: 0 25%;
-        /* Обърни внимание на тази стойност за gap, може да е много голяма */
-        padding: 1px 0px;
-        /* Коригирах '1' на '1px', ако искаш 0px вертикален, сложи '0 0px' */
+        padding: 1px 0;
         scroll-snap-type: x mandatory;
         -ms-overflow-style: none;
-        scrollbar-width: none;
+        scrollbar-width: none
     }
 
     .logo-slider-track::-webkit-scrollbar {
-        display: none;
+        display: none
     }
 
     [data-role="1"] {
         margin-left: 120px !important;
-        opacity: 1 !important;
+        opacity: 1 !important
     }
 
     .logo-slider-track img.provider-logo {
@@ -1572,191 +1386,134 @@ section#experience .logo-pragmatic {
         width: auto;
         object-fit: contain;
         z-index: 1;
-        transform: scale(1.0);
-        filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.35));
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px rgba(255, 255, 255, .35));
         top: auto;
         left: auto;
-        opacity: 10 !important;
-    }
-
-    .logo-slider-track img.provider-logo.is-centered-logo {
-        transform: scale(1.1);
-        opacity: 1.0;
-        filter: none;
+        opacity: 10 !important
     }
 }
 
-/* Скриване на плъзгача на десктоп версии */
-@media (min-width: 577px) {
+@media (min-width:577px) {
     .logo-slider-container {
-        display: none;
+        display: none
     }
 }
 
-
-/* css-button-experience */
 .logo-toggle-btn {
     display: block;
     margin: 16px auto 0;
-    background: none;
+    background: 0 0;
     border: none;
-    color: rgba(255, 255, 255, 0.6);
-    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, .6);
+    font-family: Montserrat, sans-serif;
     font-size: 3rem;
     font-weight: 100 !important;
     line-height: 1;
     padding: 4px;
     cursor: pointer;
-    transition: color 0.2s ease, transform 0.3s ease;
+    transition: color .2s ease, transform .3s ease;
     margin-right: 20px;
     margin-top: 90px;
-    transform-origin: center;
+    transform-origin: center
 }
 
 .logo-toggle-btn:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, .9)
 }
 
 .logo-toggle-btn:focus {
-    outline: none;
-    color: #fff;
+    outline: 0;
+    color: #fff
 }
 
-@media (min-width: 577px) {
+@media (min-width:577px) {
     .logo-toggle-btn {
-        display: none;
+        display: none
     }
 }
 
-body.logos-open .logo-toggle-btn {
-    transform: rotate(180deg);
-}
-
-/* Анимация за показване/скриване на слайдера */
 section#experience .logo-slider-container {
-    /* Дублиращо се правило, но с !important */
     max-height: 0 !important;
-    /* Беше 10, но 0 е по-логично за скрито състояние */
     overflow: hidden !important;
-    transition: max-height 0.4s ease !important;
+    transition: max-height .4s ease !important
 }
 
-body.logos-open section#experience .logo-slider-container {
-    /* Дублиращо се правило, но с !important */
-    max-height: 300px !important;
-    /* Увери се, че тази височина е достатъчна */
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    /* Добре е y да е hidden, ако x е auto */
-}
-
-/* css-button-experience */
-/* Minimal arrow button */
 .logo-toggle-btn {
     display: block;
     margin: 16px auto 0;
-    background: none;
+    background: 0 0;
     border: none;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, .6);
     font-size: 3rem;
     line-height: 1;
     padding: 4px;
     cursor: pointer;
-    transition: color 0.2s ease, transform 0.3s ease;
+    transition: color .2s ease, transform .3s ease;
     margin-right: 20px;
-    margin-top: 7px;
-
+    margin-top: 7px
 }
 
 .logo-toggle-btn:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, .9)
 }
 
 .logo-toggle-btn:focus {
-    outline: none;
-    color: #fff;
+    outline: 0;
+    color: #fff
 }
 
-/* Скриваме стрелката (toggle button) за десктоп */
-@media (min-width: 577px) {
+@media (min-width:577px) {
     .logo-toggle-btn {
-        display: none;
+        display: none
     }
 }
 
-
-/* При отворено състояние – стрелката се обръща нагоре */
-body.logos-open .logo-toggle-btn {
-    transform: rotate(180deg);
-
-}
-
-/* 1) Скриване по подразбиране */
 section#experience .logo-slider-container {
     max-height: 10 !important;
     overflow: hidden !important;
-    transition: max-height 0.4s ease !important;
-    margin-bottom: 30px;
+    transition: max-height .4s ease !important;
+    margin-bottom: 30px
 }
 
-/* 2) Показваме при клас .logos-open върху <body> */
-body.logos-open section#experience .logo-slider-container {
-    max-height: 300px !important;
-    /* нагласяш докато побере всичките лога */
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-}
-
-/* Default styles for product display visibility */
 .mobile-only-product-display {
     display: none;
-    /* Hidden by default */
     position: relative;
-    /* For 360 icon positioning */
-    margin: 20px auto;
-    /* Spacing for mobile */
+    margin: 20px auto
 }
 
 .desktop-only-product-display {
-    display: flex;
-    /* Default display for desktop (as it was) */
+    display: flex
 }
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
     .pre-order-container {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 0 10px;
+        padding: 0 10px
     }
 
     .desktop-only-product-display {
-        display: none;
-        /* Hide desktop version on mobile */
+        display: none
     }
 
     .mobile-only-product-display {
         display: flex;
-        /* Show mobile version */
         flex-direction: column;
-        /* Stack image and 360 icon if needed, though they are already relative */
         align-items: center;
         max-width: 80%;
-        /* Or your preferred width for mobile */
-        margin-bottom: 25px;
-        /* Space before the order button */
+        margin-bottom: 25px
     }
 
-    /* Ensure the 360 icon in the mobile display is centered */
     .mobile-only-product-display .view-360 {
         position: relative;
-        /* Reset from absolute if needed for simpler centering */
         left: auto;
         transform: none;
         bottom: auto;
         position: absolute;
         left: 60%;
-        top: 20%;
+        top: 20%
     }
 
     .pre-order-content {
@@ -1764,29 +1521,18 @@ body.logos-open section#experience .logo-slider-container {
         text-align: center;
         margin-bottom: 30px;
         align-items: center;
-        /* This will center its children, including the order button */
-        order: 1;
-        /* Content block (now including image on mobile) comes first */
+        order: 1
     }
-
-    /* The original .product-display (now .desktop-only-product-display) was order: 1 before. */
-    /* Since .pre-order-content now contains everything on mobile, its order is 1. */
-
 }
 
-@media (max-width: 768px) {
-
-    /* .product-display adjustments might not be needed here if handled by .mobile-only-product-display rules */
-    /* However, you can fine-tune .mobile-only-product-display for smaller screens if necessary */
+@media (max-width:768px) {
     .mobile-only-product-display {
-        max-width: 85%;
-        /* As per your previous preference */
+        max-width: 85%
     }
 
     .pre-order-product-image {
-        max-width: 100%;
+        max-width: 100%
     }
-
 }
 
 .menu-blur-overlay {
@@ -1795,16 +1541,16 @@ body.logos-open section#experience .logo-slider-container {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, .5);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 400;
+    transition: opacity .3s ease, visibility .3s ease;
+    z-index: 400
 }
 
 .menu-blur-overlay.active {
     opacity: 1;
-    visibility: visible;
+    visibility: visible
 }
