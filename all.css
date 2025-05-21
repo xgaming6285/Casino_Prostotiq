@@ -241,12 +241,12 @@ html {
         left: 25px;
     }
 
-.header .container {
+    .header .container {
         justify-content: center;
         align-items: center;
     }
 
-.nav {
+    .nav {
         position: absolute;
         top: 81.7%;
         right: 53%;
@@ -255,32 +255,32 @@ html {
         overflow: hidden;
     }
 
-.nav.active {
+    .nav.active {
         max-height: 500px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-.nav-list {
+    .nav-list {
         flex-direction: column;
         padding: 1rem 0;
     }
 
-.nav-item {
+    .nav-item {
         margin: 0;
         width: 100%;
         text-align: center;
     }
 
-.nav-link {
+    .nav-link {
         display: block;
         padding: 0.3rem 0;
     }
 
-.nav-indicator {
+    .nav-indicator {
         display: none;
     }
 
-.header.mobile-menu-open .header-line {
+    .header.mobile-menu-open .header-line {
         position: absolute;
         top: 195px;
         left: 25px;
@@ -290,7 +290,7 @@ html {
         z-index: 2;
     }
 
-.header.mobile-menu-open .nav-list {
+    .header.mobile-menu-open .nav-list {
         order: 1;
     }
 
@@ -301,15 +301,15 @@ html {
         font-size: 1.1rem;
     }
 
-.nav-indicator {
+    .nav-indicator {
         bottom: -22%;
     }
 
-.nav-list {
+    .nav-list {
         margin-left: 1em;
     }
 
-.logo-text {
+    .logo-text {
         font-size: 2.5em;
     }
 
@@ -321,20 +321,20 @@ html {
         letter-spacing: 0.060em;
     }
 
-.nav-indicator {
+    .nav-indicator {
         bottom: -23%;
     }
 
-.nav-list {
+    .nav-list {
         margin-left: 1em;
         margin-right: 1em;
     }
 
-.nav-item {
+    .nav-item {
         margin: 0 1.1rem;
     }
 
-.logo-text {
+    .logo-text {
         font-size: 2em;
     }
 
@@ -346,15 +346,15 @@ html {
         letter-spacing: 0.040em;
     }
 
-.nav-indicator {
+    .nav-indicator {
         bottom: -24%;
     }
 
-.nav-list {
+    .nav-list {
         margin-left: 1em;
     }
 
-.nav-item {
+    .nav-item {
         margin: 0 0.9rem;
     }
 
@@ -366,15 +366,15 @@ html {
         letter-spacing: 0.030em;
     }
 
-.nav-indicator {
+    .nav-indicator {
         bottom: -26%;
     }
 
-.nav-list {
+    .nav-list {
         margin-left: 1em;
     }
 
-.nav-item {
+    .nav-item {
         margin: 0 0.8rem;
     }
 
@@ -607,29 +607,29 @@ html {
         padding: 0 10px;
     }
 
-.product-display,
+    .product-display,
     .pre-order-content {
         max-width: 100%;
         text-align: center;
         margin-bottom: 30px;
     }
 
-.product-display {
+    .product-display {
         max-width: 80%;
         order: 1;
     }
 
-.pre-order-product-image {
+    .pre-order-product-image {
         max-width: 100%;
         margin: 0 auto;
     }
 
-.pre-order-content {
+    .pre-order-content {
         align-items: center;
         order: 2;
     }
 
-.view-360 {
+    .view-360 {
         right: 0;
         bottom: -30px;
         left: 50%;
@@ -643,7 +643,7 @@ html {
         max-width: 100%;
     }
 
-.product-display {
+    .product-display {
         max-width: 85%;
     }
 
@@ -675,20 +675,20 @@ html {
         letter-spacing: 0.075em;
     }
 
-.homePage-machine-mobile {
+    .homePage-machine-mobile {
         display: block;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
     }
 
-.hero-text h1 {
+    .hero-text h1 {
         font-size: 2em;
         line-height: 1.4;
         margin-bottom: 20px;
     }
 
-.hero-text .cta-button {
+    .hero-text .cta-button {
         font-size: 1.2em;
         margin-bottom: 30px;
         display: inline-block;
@@ -702,7 +702,7 @@ html {
         max-width: 90%;
     }
 
-.pre-order-product-image {
+    .pre-order-product-image {
         max-width: 100%;
     }
 
@@ -713,12 +713,12 @@ html {
         max-width: 95%;
     }
 
-.pre-order-product-image {
+    .pre-order-product-image {
         max-width: 100%;
         transform: scale(1.05);
     }
 
-.pre-order-header h2 {
+    .pre-order-header h2 {
         font-size: 2rem;
     }
 
@@ -894,7 +894,7 @@ section#experience h5 {
     font-weight: 400;
     color: #e0e0e0;
     line-height: 1.4;
-    margin-bottom: 30px;
+    margin-top: 25px;
 }
 
 section#experience .experience-cta-button {
@@ -983,17 +983,17 @@ section#experience p:empty {
         margin-top: 60px;
     }
 
-.about-content {
+    .about-content {
         padding-right: 0;
         margin-bottom: 40px;
         flex: 1;
     }
 
-.device-showcase {
+    .device-showcase {
         flex: 1;
     }
 
-.device-showcase img {
+    .device-showcase img {
         transform: scale(1);
     }
 
@@ -1019,7 +1019,7 @@ section#experience .provider-logo {
 
 section#experience .logo-lightingBox {
     width: 150px;
-    
+
     top: 120px;
     left: -10px;
     transform: translate(-50%, -50%);
@@ -1028,7 +1028,7 @@ section#experience .logo-lightingBox {
 
 section#experience .logo-helio {
     width: 200px;
-    
+
     top: 210px;
     left: 8%;
     transform: translate(-50%, -50%);
@@ -1037,7 +1037,7 @@ section#experience .logo-helio {
 
 section#experience .logo-amusnet {
     width: 300px;
-    
+
     top: 30px;
     left: 180px;
     transform: translate(-50%, -50%);
@@ -1046,7 +1046,7 @@ section#experience .logo-amusnet {
 
 section#experience .logo-unde {
     width: 70px;
-    
+
     top: 340px;
     left: 68px;
     transform: translate(-50%, -50%);
@@ -1055,7 +1055,7 @@ section#experience .logo-unde {
 
 section#experience .logo-playtech {
     width: 200px;
-    
+
     top: 100px;
     left: 700px;
     transform: translate(-50%, -50%);
@@ -1064,7 +1064,7 @@ section#experience .logo-playtech {
 
 section#experience .logo-netent {
     width: 160px;
-    
+
     top: 220px;
     left: 90%;
     transform: translate(-50%, -50%);
@@ -1073,7 +1073,7 @@ section#experience .logo-netent {
 
 section#experience .logo-everyMatrix {
     width: 200px;
-    
+
     top: 350px;
     left: 92%;
     transform: translate(-50%, -50%);
@@ -1082,7 +1082,7 @@ section#experience .logo-everyMatrix {
 
 section#experience .logo-evolution {
     width: 110px;
-    
+
     top: 200px;
     left: 900px;
     transform: translate(-50%, -50%);
@@ -1091,7 +1091,7 @@ section#experience .logo-evolution {
 
 section#experience .logo-nolimit {
     width: 180px;
-    
+
     top: 340px;
     left: 930px;
     transform: translate(-50%, -50%);
@@ -1100,7 +1100,7 @@ section#experience .logo-nolimit {
 
 section#experience .logo-igt {
     width: 150px;
-    
+
     top: -10px;
     margin-left: 470px;
     opacity: 0.5;
@@ -1108,7 +1108,7 @@ section#experience .logo-igt {
 
 section#experience .logo-hacksaw {
     width: 200px;
-    
+
     bottom: 240px;
     margin-left: -300px;
     opacity: 0.5;
@@ -1116,7 +1116,7 @@ section#experience .logo-hacksaw {
 
 section#experience .logo-pragmatic {
     width: 200px;
-    
+
     top: 350px;
     left: -210px;
     opacity: 0.5;
@@ -1129,11 +1129,11 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
-.hero-text {
+    .hero-text {
         top: -50px;
     }
 
-.hero-text {
+    .hero-text {
         padding-top: 60px;
     }
 
@@ -1145,11 +1145,11 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
-.hero-text {
+    .hero-text {
         padding-top: 4px;
     }
 
-.cta-button {
+    .cta-button {
         font-size: 1.2em !important;
     }
 
@@ -1166,7 +1166,7 @@ section#experience .logo-pragmatic {
         overflow: visible;
     }
 
-.hero-text {
+    .hero-text {
         flex-basis: 100%;
         padding-right: 0;
         padding-top: 0;
@@ -1175,13 +1175,13 @@ section#experience .logo-pragmatic {
         margin-bottom: 20px;
     }
 
-.hero-text h1 {
+    .hero-text h1 {
         font-size: 2.5em;
         line-height: 1.4;
         margin-top: 10%;
     }
 
-.cta-button {
+    .cta-button {
         font-size: 1.2em;
         margin-bottom: 30px;
         display: inline-block;
@@ -1196,7 +1196,7 @@ section#experience .logo-pragmatic {
         padding-bottom: 50px;
     }
 
-.hero-text h1 {
+    .hero-text h1 {
         font-size: 2em;
         line-height: 1.3;
         padding-top: 20px;
@@ -1209,12 +1209,12 @@ section#experience .logo-pragmatic {
         padding-top: 120px;
     }
 
-.hero-text h1 {
+    .hero-text h1 {
         font-size: 1.8em;
         padding-top: 30px;
     }
 
-.cta-button {
+    .cta-button {
         font-size: 1em;
         padding: 5px 20px;
     }
@@ -1247,7 +1247,7 @@ section#experience .logo-pragmatic {
         display: none !important;
     }
 
-.homePage-machine-mobile {
+    .homePage-machine-mobile {
         display: block;
         position: relative;
         left: 50%;
@@ -1262,7 +1262,7 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
-.homePage-machine-desktop {
+    .homePage-machine-desktop {
         max-width: 1200px !important;
         right: -19% !important;
         margin-top: auto !important;
@@ -1286,12 +1286,12 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
-.hero-text {
+    .hero-text {
         left: -5%;
         top: -50px;
     }
 
-.homePage-machine-desktop {
+    .homePage-machine-desktop {
         max-width: 1500px !important;
         right: -20% !important;
     }
@@ -1303,32 +1303,34 @@ section#experience .logo-pragmatic {
         max-width: 1700px;
     }
 
-.hero-text h1 {
+    .hero-text h1 {
         font-size: 5.5em;
         text-wrap: nowrap;
     }
 
-.homePage-machine-desktop {
+    .homePage-machine-desktop {
         max-width: 1600px !important;
         top: 7% !important;
     }
 
 }
 
+/* css Experience */
+/* css Experience */
 @media (max-width: 576px) {
     section#experience {
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
-section#experience h5 {
+    section#experience h5 {
         font-size: 1.6rem;
         line-height: 1.3;
         color: #f0f0f0;
         margin-bottom: 25px;
     }
 
-section#experience .experience-visual-hub {
+    section#experience .experience-visual-hub {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1337,83 +1339,92 @@ section#experience .experience-visual-hub {
         gap: 0;
     }
 
-.mobile-logo-large {
-        width: 160% !important;
+    .mobile-logo-large {
+        width: 95% !important;
         max-width: 150% !important;
     }
 
-.mobile-logo-small {
-        width: 40% !important;
+    .mobile-logo-largeе {
+        width: 90% !important;
+        max-width: 110% !important;
+    }
+
+    .mobile-logo-small {
+        width: 25% !important;
         max-width: 150% !important;
     }
 
-section#experience .mobile-logo-grid {
+    /* ✅ GRID ЛОГО ПОДРЕДБА ЗА МОБИЛНИ */
+    section#experience .mobile-logo-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        
+        /* 5 равни колонки */
         column-gap: 5px;
-        
+        /* Разстояние между колонките с лога */
         row-gap: 8px;
-        
+        /* Разстояние между редовете с лога */
 
         max-width: 600px;
-        
+        /* Increased from 500px */
 
         width: 100%;
-        margin: 20px auto;
-        
+        margin: 50px auto;
+        /* Примерно отстояние и центриране на грида */
         justify-items: center;
-        
+        /* Центрира съдържанието във всяка клетка хоризонтално */
         align-items: center;
-        
+        /* Центрира съдържанието във всяка клетка вертикално */
     }
 
-section#experience .provider-logo {
+    section#experience .provider-logo {
         display: block;
-        
-        width: 70%;
-        
+        /* За да се държи като блок елемент в клетката */
+        width: 80%;
+        /* КЛЮЧОВО: Логото да заеме 100% от ширината на своята grid клетка */
         max-width: 180%;
-        
+        /* Допълнителна гаранция, че няма да надхвърли 100% от клетката */
         height: auto;
-        
+        /* КЛЮЧОВО: Запазва пропорциите на изображението */
         object-fit: contain;
-        
+        /* Гарантира, че цялото изображение се вижда и се мащабира правилно,
+                           ако оригиналният файл е по-голям от размерите на клетката. */
 
         margin: 0;
-        
+        /* Нулиране на марджините, за да не създават неочаквани отмествания */
         opacity: 0.95;
-        
+        /* От твоя код */
 
-        
+        /* Тези position/transform стилове от твоя код са ОК и не би трябвало да пречат тук: */
         position: static !important;
         transform: none !important;
     }
 
-section#experience .experience-main-product-image {
+    section#experience .experience-main-product-image {
         max-width: 110px;
         width: 100%;
         justify-self: center;
         grid-column: 3;
-        
+        /* средната от 5 колони */
         grid-row: 3;
-        
+        /* реда след втория */
         margin-top: -30%;
     }
 
-section#experience .provider-logo:nth-child(11) {
+
+    /* ✅ Центриране на логата на последния ред */
+    section#experience .provider-logo:nth-child(11) {
         grid-column: 1;
     }
 
-section#experience .provider-logo:nth-child(12) {
+    section#experience .provider-logo:nth-child(12) {
         grid-column: 5;
     }
 
-section#experience img.experience-main-product-image {
+    section#experience img.experience-main-product-image {
         max-width: 500px;
     }
 
-section#experience .experience-cta-button {
+    section#experience .experience-cta-button {
         background-color: rgba(75, 79, 97, 0.8);
         border: 1px solid rgba(124, 128, 150, 0.6);
         color: #dfe0e6;
@@ -1428,107 +1439,131 @@ section#experience .experience-cta-button {
         transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
-section#experience .experience-cta-button:hover {
+    section#experience .experience-cta-button:hover {
         background-color: rgba(90, 95, 115, 0.9);
         border-color: rgba(140, 145, 170, 0.8);
     }
 
-section#experience .experience-text-and-cta:empty,
+    section#experience .experience-text-and-cta:empty,
     section#experience>div:empty {
         display: none;
     }
-
 }
 
+/* --- Край: Адаптивни стилове за Секция Experience (Мобилни) --- */
+
+
+
+
+
+
+
+/* --------------slider-a---------- */
+
+
+/* CSS за Плъзгача с Лога - Мобилна Версия */
 @media (max-width: 576px) {
     .logo-slider-container {
-        width: 50%;
-        overflow: hidden;
-        margin-top: -100px;
-        background: transparent;
-        
+        position: relative;
+        width: 80%;
+        /* От твоя код - може да се нуждае от корекция спрямо родителя */
+        margin: -100px auto 0;
+        /* От твоя код */
+        min-height: 120px;
+        display: flex;
+        align-items: center;
     }
 
-.logo-slider-track {
+    .logo-slider-container::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* Използваме CSS променливи за динамичен размер. 
+       Стойностите след запетаята (160px, 100px) са резервни, ако променливите не са зададени. */
+        width: var(--frame-width, 150px);
+        height: var(--frame-height, 100px);
+
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        pointer-events: none;
+        z-index: 2;
+        /* Рамката да е над логата */
+
+        /* Добавяме transition за плавна промяна на размера на рамката */
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    }
+
+    .logo-slider-track {
         display: flex;
+        align-items: center;
         overflow-x: auto;
-        overflow-y: hidden;
-        gap: 32px;
+        overflow-y: visible;
+        gap: 25px;
         padding: 0 24px;
-        scroll-behavior: smooth;
+        /* Важно за правилното снапване на крайните елементи */
         scroll-snap-type: x mandatory;
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
 
-.logo-slider-track::-webkit-scrollbar {
+    .logo-slider-track::-webkit-scrollbar {
         display: none;
     }
 
-.logo-slide {
+    /* СТИЛОВЕ ПО ПОДРАЗБИРАНЕ (за страничните лога, извън рамката): */
+    .logo-slider-track img.provider-logo {
         flex: 0 0 auto;
-        width: 130px;
-        
-        height: auto;
         scroll-snap-align: center;
-        opacity: 1;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        max-height: 60px;
+        height: auto;
+        object-fit: contain;
+        z-index: 1;
+        transition: transform .3s ease, filter .3s ease, opacity .3s ease;
+
+        transform: scale(1.0);
+        opacity: 0.50;
+        /* Страничните лога са леко по-бледи */
+        filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.35));
+        /* "Бял замазан фон" */
     }
 
-.logo-slide.focused {
-        border: 2px solid white;
-        border-radius: 12px;
-        padding: 6px;
-        opacity: 1;
+    /* СТИЛОВЕ ЗА "СЕЛЕКТИРАНОТО" ЛОГО (това в центъра на рамката) - чрез JS клас */
+    .logo-slider-track img.provider-logo.is-centered-logo {
         transform: scale(1.1);
-        background-color: rgba(255, 255, 255, 0.05);
+        /* Уголемява се леко */
+        opacity: 1.0;
+        /* Пълна непрозрачност */
+        filter: none;
+        /* Без "замазан фон", за да е "чисто" в рамката */
     }
-
-@media (max-width: 576px) {
-        .logo-slider-track img.provider-logo.focused {
-            border: 2px solid #fff;
-            border-radius: 12px;
-            padding: 6px;
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
 }
 
-}
-
+/* Скриване на плъзгача на десктоп версии */
 @media (min-width: 577px) {
     .logo-slider-container {
         display: none;
     }
-
 }
 
-@media (max-width: 576px) {
-    .logo-slider-container img.provider-logo {
-        flex: 0 0 auto;
-        width: 200px;
-        
-        max-width: none;
-        
-        height: auto;
-        object-fit: contain;
-    }
-
-}
-
+/* css-button-experience */
+/* Minimal arrow button */
 .logo-toggle-btn {
     display: block;
     margin: 16px auto 0;
     background: none;
     border: none;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 2rem;
-    
+    font-size: 3rem;
+    /* стрелката е по-голяма */
     line-height: 1;
     padding: 4px;
     cursor: pointer;
     transition: color 0.2s ease, transform 0.3s ease;
     margin-right: 20px;
+    margin-top: 90px;
 
 }
 
@@ -1541,33 +1576,40 @@ section#experience .experience-text-and-cta:empty,
     color: #fff;
 }
 
+/* При отворено състояние – стрелката се обръща нагоре */
 body.logos-open .logo-toggle-btn {
     transform: rotate(180deg);
 
 }
 
+/* 1) Скриване по подразбиране */
 section#experience .logo-slider-container {
-    max-height: 0 !important;
+    max-height: 10 !important;
     overflow: hidden !important;
     transition: max-height 0.4s ease !important;
 }
 
+/* 2) Показваме при клас .logos-open върху <body> */
 body.logos-open section#experience .logo-slider-container {
     max-height: 300px !important;
-    
+    /* нагласяш докато побере всичките лога */
     overflow-x: auto !important;
     overflow-y: hidden !important;
 }
 
 /* Default styles for product display visibility */
 .mobile-only-product-display {
-    display: none; /* Hidden by default */
-    position: relative; /* For 360 icon positioning */
-    margin: 20px auto; /* Spacing for mobile */
+    display: none;
+    /* Hidden by default */
+    position: relative;
+    /* For 360 icon positioning */
+    margin: 20px auto;
+    /* Spacing for mobile */
 }
 
 .desktop-only-product-display {
-    display: flex; /* Default display for desktop (as it was) */
+    display: flex;
+    /* Default display for desktop (as it was) */
 }
 
 @media (max-width: 992px) {
@@ -1579,20 +1621,26 @@ body.logos-open section#experience .logo-slider-container {
     }
 
     .desktop-only-product-display {
-        display: none; /* Hide desktop version on mobile */
+        display: none;
+        /* Hide desktop version on mobile */
     }
 
     .mobile-only-product-display {
-        display: flex; /* Show mobile version */
-        flex-direction: column; /* Stack image and 360 icon if needed, though they are already relative */
+        display: flex;
+        /* Show mobile version */
+        flex-direction: column;
+        /* Stack image and 360 icon if needed, though they are already relative */
         align-items: center;
-        max-width: 80%; /* Or your preferred width for mobile */
-        margin-bottom: 25px; /* Space before the order button */
+        max-width: 80%;
+        /* Or your preferred width for mobile */
+        margin-bottom: 25px;
+        /* Space before the order button */
     }
 
     /* Ensure the 360 icon in the mobile display is centered */
     .mobile-only-product-display .view-360 {
-        position: relative; /* Reset from absolute if needed for simpler centering */
+        position: relative;
+        /* Reset from absolute if needed for simpler centering */
         left: auto;
         transform: none;
         bottom: auto;
@@ -1605,8 +1653,10 @@ body.logos-open section#experience .logo-slider-container {
         max-width: 100%;
         text-align: center;
         margin-bottom: 30px;
-        align-items: center; /* This will center its children, including the order button */
-        order: 1; /* Content block (now including image on mobile) comes first */
+        align-items: center;
+        /* This will center its children, including the order button */
+        order: 1;
+        /* Content block (now including image on mobile) comes first */
     }
 
     /* The original .product-display (now .desktop-only-product-display) was order: 1 before. */
@@ -1615,10 +1665,12 @@ body.logos-open section#experience .logo-slider-container {
 }
 
 @media (max-width: 768px) {
+
     /* .product-display adjustments might not be needed here if handled by .mobile-only-product-display rules */
     /* However, you can fine-tune .mobile-only-product-display for smaller screens if necessary */
     .mobile-only-product-display {
-        max-width: 85%; /* As per your previous preference */
+        max-width: 85%;
+        /* As per your previous preference */
     }
 
     .pre-order-product-image {
@@ -1626,4 +1678,3 @@ body.logos-open section#experience .logo-slider-container {
     }
 
 }
-
