@@ -36,7 +36,9 @@ body.privacy-policy-page .privacy-policy-container {
     width: 90%;
     max-width: 1400px;
     margin-left: 50px;
+    margin-right: auto;
     padding: 40px 25px 60px 25px;
+    box-sizing: border-box;
 }
 
 #page-title {
@@ -137,67 +139,127 @@ body.privacy-policy-page .privacy-policy-container {
 
 @media (max-width: 960px) {
     .privacy-content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         gap: 30px;
     }
 
-.sidebar-image-container {
+    .desktop-only-chip-image {
+        display: none;
+    }
+
+    .mobile-only-chip-image {
+        display: flex;
+    }
+
+    .sidebar-image-container {
         width: 50%;
         max-width: 130px;
         margin-bottom: 20px;
         padding-top: 0;
     }
 
-.privacy-policy-header h1 {
+    .privacy-policy-header h1 {
         font-size: 2rem;
         font-family: 'Montserrat', sans-serif;
     }
 
-.text-columns {
+    .text-columns {
         grid-template-columns: 1fr;
         gap: 0;
+        width: 100%;
+        flex: 1 0 auto;
+        box-sizing: border-box;
     }
 
-.text-columns::before {
+    .text-columns::before {
         display: none;
     }
 
-.text-columns .text-column:first-child {
+    .text-column {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 0;
         padding-right: 0;
     }
 
-.text-columns .text-column:last-child {
+    .text-columns .text-column:first-child {
+        padding-right: 0;
+    }
+
+    .text-columns .text-column:last-child {
         padding-left: 0;
     }
 
-.text-column p {
+    .text-column p {
         font-size: 0.85rem;
     }
 
+    .privacy-policy-container {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 30px 15px;
+    }
+
+    #page-title {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 2em;
+    }
+
+    /* Content Visibility for Mobile - WITH !important for testing */
+    .mobile-only-paragraph {
+        display: block !important;
+    }
+    .desktop-only-paragraph {
+        display: none !important;
+    }
+
+    .mobile-only-chip-image {
+        display: flex !important; /* Use flex for centering image within */
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0; 
+    }
+    .desktop-only-chip-image {
+        display: none !important;
+    }
+
+    /* Hide the second text column entirely on mobile - WITH !important */
+    .text-column.second-text-column {
+        display: none !important;
+    }
 }
 
 @media (max-width: 600px) {
     .privacy-policy-container {
-        padding: 30px 15px 40px 15px;
+        width: auto; /* Allow container to fit between the margins */
+        padding: 20px 10px;
+        margin-left: 20px;  /* Your desired left margin */
+        margin-right: 20px; /* Your desired right margin */
     }
 
-.privacy-policy-header h1 {
+    .privacy-policy-header h1 {
         font-size: 1.8rem;
     }
 
-.text-column p {
+    .text-column p {
         font-size: 0.82rem;
     }
 
-.text-column h2 {
+    .text-column h2 {
         font-size: 1.1rem;
     }
 
-.text-column h3 {
+    .text-column h3 {
         font-size: 1rem;
     }
 
+    #page-title {
+        font-size: 1.8em;
+    }
 }
 
 .privacy-policy-page .nav-indicator {
@@ -218,5 +280,35 @@ body.privacy-policy-page .privacy-policy-container {
     will-change: transform, width, opacity;
     pointer-events: none;
     z-index: 1111;
+}
+
+/* Visibility classes for chip image */
+.mobile-only-chip-image {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.mobile-only-chip-image img {
+    max-width: 150px;
+    height: auto;
+}
+
+.desktop-only-chip-image {
+    display: flex;
+}
+
+/* Default Paragraph & Element Visibility (Desktop First) */
+.mobile-only-paragraph,
+.mobile-only-chip-image {
+    display: none; 
+}
+
+.desktop-only-paragraph {
+    display: block; 
+}
+
+.text-column.second-text-column {
+    display: block; 
 }
 

@@ -62,8 +62,25 @@
     </h1>
     <div class="privacy-content">
      <div class="text-columns">
-      <div class="text-column">
-       <p>
+      <div class="text-column first-text-column">
+       <!-- Mobile-specific content -->
+       <p class="mobile-only-paragraph">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+       </p>
+       <div class="mobile-only-chip-image">
+        <img alt="Decorative casino chip (Mobile)" src="image/chip.png">
+       </div>
+       <p class="mobile-only-paragraph">
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum. <!-- Simplified second paragraph for mobile -->
+       </p>
+
+       <!-- Desktop-specific content -->
+       <p class="desktop-only-paragraph">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -72,7 +89,8 @@
                             passages, and more recently with desktop publishing software like Aldus PageMaker including
                             versions of Lorem Ipsum.
        </p>
-       <p>
+       
+       <p class="desktop-only-paragraph">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -82,8 +100,8 @@
                             versions of Lorem Ipsum.
        </p>
       </div>
-      <div class="text-column">
-       <p>
+      <div class="text-column second-text-column">
+       <p class="desktop-only-paragraph">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -92,7 +110,7 @@
                             passages, and more recently with desktop publishing software like Aldus PageMaker including
                             versions of Lorem Ipsum.
        </p>
-       <p>
+       <p class="desktop-only-paragraph">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -103,7 +121,7 @@
        </p>
       </div>
      </div>
-     <aside aria-label="Decorative Image" class="sidebar-image-container">
+     <aside aria-label="Decorative Image" class="sidebar-image-container desktop-only-chip-image">
       <img alt="&Dcy;&iecy;&kcy;&ocy;&rcy;&acy;&tcy;&icy;&vcy;&ncy;&ocy; &icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&iecy; &ncy;&acy; &kcy;&acy;&zcy;&icy;&ncy;&ocy; &chcy;&icy;&pcy;" src="image/chip.png">
      </aside>
     </div>

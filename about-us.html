@@ -27,6 +27,14 @@
             width: 100%;
         }
 
+        /* Visibility classes for device showcase */
+        .mobile-only-device-showcase {
+            display: none; /* Hidden by default */
+        }
+        .desktop-only-device-showcase {
+            display: flex; /* Visible by default (as it was) */
+        }
+
 .nav-indicator {
             position: absolute;
             bottom: -18%;
@@ -201,11 +209,27 @@
                 margin-top: 30px;
                 padding: 0 20px;
                 min-height: auto;
+            }
 
+            .desktop-only-device-showcase {
+                display: none; /* Hide desktop version on mobile */
+            }
+
+            .mobile-only-device-showcase {
+                display: flex; /* Show mobile version */
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0; /* Add some vertical spacing */
+            }
+
+            .mobile-only-device-showcase img {
+                max-width: 80%; /* Adjust as needed, image shows it smaller */
+                height: auto;
+                transform: scale(1); /* Reset any desktop scaling */
             }
 
 .about-content,
-            .device-showcase {
+            .device-showcase { /* This now mainly refers to .desktop-only-device-showcase for non-mobile */
                 padding-right: 0;
                 margin-bottom: 40px;
                 max-width: 100%;
@@ -221,7 +245,7 @@
                 justify-content: center;
             }
 
-.device-showcase img {
+.desktop-only-device-showcase img { /* Target specific instance */
                 max-width: 100%;
                 transform: scale(1) translateX(0);
                 margin-right: 0;
@@ -302,6 +326,10 @@
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
                     leap into electronic typesetting, remaining essentially unchanged.
      </p>
+     <!-- Device Showcase for Mobile -->
+     <div class="mobile-only-device-showcase">
+        <img alt="MyMiniSlot Device (Mobile)" src="image/ExperienceImage.png">
+     </div>
      <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
@@ -322,7 +350,8 @@
      </p>
     </div>
    </div>
-   <div class="device-showcase">
+   <!-- Device Showcase for Desktop -->
+   <div class="device-showcase desktop-only-device-showcase">
     <img alt="MyMiniSlot Device" src="image/ExperienceImage.png">
    </div>
   </main>
