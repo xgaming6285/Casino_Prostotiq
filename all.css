@@ -241,12 +241,12 @@ html {
         left: 25px;
     }
 
-    .header .container {
+.header .container {
         justify-content: center;
         align-items: center;
     }
 
-    .nav {
+.nav {
         position: absolute;
         top: 81.7%;
         right: 53%;
@@ -255,32 +255,32 @@ html {
         overflow: hidden;
     }
 
-    .nav.active {
+.nav.active {
         max-height: 500px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .nav-list {
+.nav-list {
         flex-direction: column;
         padding: 1rem 0;
     }
 
-    .nav-item {
+.nav-item {
         margin: 0;
         width: 100%;
         text-align: center;
     }
 
-    .nav-link {
+.nav-link {
         display: block;
         padding: 0.3rem 0;
     }
 
-    .nav-indicator {
+.nav-indicator {
         display: none;
     }
 
-    .header.mobile-menu-open .header-line {
+.header.mobile-menu-open .header-line {
         position: absolute;
         top: 195px;
         left: 25px;
@@ -290,9 +290,10 @@ html {
         z-index: 2;
     }
 
-    .header.mobile-menu-open .nav-list {
+.header.mobile-menu-open .nav-list {
         order: 1;
     }
+
 }
 
 @media (max-width: 1200px) {
@@ -300,17 +301,18 @@ html {
         font-size: 1.1rem;
     }
 
-    .nav-indicator {
+.nav-indicator {
         bottom: -22%;
     }
 
-    .nav-list {
+.nav-list {
         margin-left: 1em;
     }
 
-    .logo-text {
+.logo-text {
         font-size: 2.5em;
     }
+
 }
 
 @media (max-width: 1000px) {
@@ -319,22 +321,23 @@ html {
         letter-spacing: 0.060em;
     }
 
-    .nav-indicator {
+.nav-indicator {
         bottom: -23%;
     }
 
-    .nav-list {
+.nav-list {
         margin-left: 1em;
         margin-right: 1em;
     }
 
-    .nav-item {
+.nav-item {
         margin: 0 1.1rem;
     }
 
-    .logo-text {
+.logo-text {
         font-size: 2em;
     }
+
 }
 
 @media (max-width: 900px) {
@@ -343,17 +346,18 @@ html {
         letter-spacing: 0.040em;
     }
 
-    .nav-indicator {
+.nav-indicator {
         bottom: -24%;
     }
 
-    .nav-list {
+.nav-list {
         margin-left: 1em;
     }
 
-    .nav-item {
+.nav-item {
         margin: 0 0.9rem;
     }
+
 }
 
 @media (max-width: 820px) {
@@ -362,17 +366,18 @@ html {
         letter-spacing: 0.030em;
     }
 
-    .nav-indicator {
+.nav-indicator {
         bottom: -26%;
     }
 
-    .nav-list {
+.nav-list {
         margin-left: 1em;
     }
 
-    .nav-item {
+.nav-item {
         margin: 0 0.8rem;
     }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -381,6 +386,7 @@ html {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+
 }
 
 .hero-section {
@@ -462,7 +468,6 @@ html {
     text-transform: uppercase;
 }
 
-/* Craftsmanship Section */
 .craftsmanship-content {
     display: flex;
     flex-direction: column;
@@ -519,7 +524,6 @@ html {
     flex-direction: row-reverse;
 }
 
-
 .experience-cta-button {
     display: inline-block;
     color: white;
@@ -537,8 +541,6 @@ html {
     border-color: rgba(255, 255, 255, 0.4);
 }
 
-
-/* Pre-Order Section */
 .pre-order-background {
     padding: 40px 0;
     overflow-x: hidden;
@@ -580,6 +582,7 @@ html {
     .pre-order-product-image {
         transform: scale(1.15);
     }
+
 }
 
 @media (min-width: 1400px) {
@@ -593,6 +596,7 @@ html {
     .pre-order-product-image {
         transform: scale(1.2);
     }
+
 }
 
 @media (max-width: 992px) {
@@ -602,32 +606,33 @@ html {
         padding: 0 10px;
     }
 
-    .product-display,
+.product-display,
     .pre-order-content {
         max-width: 100%;
         text-align: center;
         margin-bottom: 30px;
     }
 
-    .product-display {
+.product-display {
         max-width: 80%;
         order: 1;
     }
 
-    .pre-order-product-image {
+.pre-order-product-image {
         max-width: 100%;
         margin: 0 auto;
     }
 
-    .pre-order-content {
+.pre-order-content {
         align-items: center;
         order: 2;
     }
 
-    .view-360 {
+.view-360 {
         right: 0;
         bottom: -30px;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -635,29 +640,30 @@ html {
         max-width: 100%;
     }
 
-    .product-display {
+.product-display {
         max-width: 85%;
     }
 
-    .homePage-machine-mobile {
+.homePage-machine-mobile {
         display: block;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .hero-text h1 {
+.hero-text h1 {
         font-size: 2em;
         line-height: 1.4;
         margin-bottom: 20px;
     }
 
-    .hero-text .cta-button {
+.hero-text .cta-button {
         font-size: 1.2em;
         margin-bottom: 30px;
         display: inline-block;
         margin-top: 20px;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -665,9 +671,10 @@ html {
         max-width: 90%;
     }
 
-    .pre-order-product-image {
+.pre-order-product-image {
         max-width: 100%;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -675,14 +682,15 @@ html {
         max-width: 95%;
     }
 
-    .pre-order-product-image {
+.pre-order-product-image {
         max-width: 100%;
         transform: scale(1.05);
     }
 
-    .pre-order-header h2 {
+.pre-order-header h2 {
         font-size: 2rem;
     }
+
 }
 
 .product-buttons {
@@ -943,19 +951,20 @@ section#experience p:empty {
         margin-top: 60px;
     }
 
-    .about-content {
+.about-content {
         padding-right: 0;
         margin-bottom: 40px;
         flex: 1;
     }
 
-    .device-showcase {
+.device-showcase {
         flex: 1;
     }
 
-    .device-showcase img {
+.device-showcase img {
         transform: scale(1);
     }
+
 }
 
 section#experience .experience-visual-hub {
@@ -978,7 +987,7 @@ section#experience .provider-logo {
 
 section#experience .logo-lightingBox {
     width: 150px;
-    /* Increased from 750px */
+    
     top: 120px;
     left: -10px;
     transform: translate(-50%, -50%);
@@ -987,7 +996,7 @@ section#experience .logo-lightingBox {
 
 section#experience .logo-helio {
     width: 200px;
-    /* Increased from 750px */
+    
     top: 210px;
     left: 8%;
     transform: translate(-50%, -50%);
@@ -996,7 +1005,7 @@ section#experience .logo-helio {
 
 section#experience .logo-amusnet {
     width: 300px;
-    /* Increased from 625px */
+    
     top: 30px;
     left: 180px;
     transform: translate(-50%, -50%);
@@ -1005,7 +1014,7 @@ section#experience .logo-amusnet {
 
 section#experience .logo-unde {
     width: 70px;
-    /* Increased from 625px */
+    
     top: 340px;
     left: 68px;
     transform: translate(-50%, -50%);
@@ -1014,7 +1023,7 @@ section#experience .logo-unde {
 
 section#experience .logo-playtech {
     width: 200px;
-    /* Increased from 750px */
+    
     top: 100px;
     left: 700px;
     transform: translate(-50%, -50%);
@@ -1023,7 +1032,7 @@ section#experience .logo-playtech {
 
 section#experience .logo-netent {
     width: 160px;
-    /* Increased from 750px */
+    
     top: 220px;
     left: 90%;
     transform: translate(-50%, -50%);
@@ -1032,7 +1041,7 @@ section#experience .logo-netent {
 
 section#experience .logo-everyMatrix {
     width: 200px;
-    /* Increased from 250px */
+    
     top: 350px;
     left: 92%;
     transform: translate(-50%, -50%);
@@ -1041,7 +1050,7 @@ section#experience .logo-everyMatrix {
 
 section#experience .logo-evolution {
     width: 110px;
-    /* Increased from 625px */
+    
     top: 200px;
     left: 900px;
     transform: translate(-50%, -50%);
@@ -1050,7 +1059,7 @@ section#experience .logo-evolution {
 
 section#experience .logo-nolimit {
     width: 180px;
-    /* Increased from 750px */
+    
     top: 340px;
     left: 930px;
     transform: translate(-50%, -50%);
@@ -1059,7 +1068,7 @@ section#experience .logo-nolimit {
 
 section#experience .logo-igt {
     width: 150px;
-    /* Increased from 750px */
+    
     top: -10px;
     margin-left: 470px;
     opacity: 0.5;
@@ -1067,7 +1076,7 @@ section#experience .logo-igt {
 
 section#experience .logo-hacksaw {
     width: 200px;
-    /* Increased from 750px */
+    
     bottom: 240px;
     margin-left: -300px;
     opacity: 0.5;
@@ -1075,7 +1084,7 @@ section#experience .logo-hacksaw {
 
 section#experience .logo-pragmatic {
     width: 200px;
-    /* Increased from 750px */
+    
     top: 350px;
     left: -210px;
     opacity: 0.5;
@@ -1088,13 +1097,14 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
-    .hero-text {
+.hero-text {
         top: -50px;
     }
 
-    .hero-text {
+.hero-text {
         padding-top: 60px;
     }
+
 }
 
 @media (max-width: 992px) {
@@ -1103,13 +1113,14 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
-    .hero-text {
+.hero-text {
         padding-top: 4px;
     }
 
-    .cta-button {
+.cta-button {
         font-size: 1.2em !important;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -1123,7 +1134,7 @@ section#experience .logo-pragmatic {
         overflow: visible;
     }
 
-    .hero-text {
+.hero-text {
         flex-basis: 100%;
         padding-right: 0;
         padding-top: 0;
@@ -1132,17 +1143,18 @@ section#experience .logo-pragmatic {
         margin-bottom: 20px;
     }
 
-    .hero-text h1 {
+.hero-text h1 {
         font-size: 2.5em;
         line-height: 1.4;
         margin-top: 10%;
     }
 
-    .cta-button {
+.cta-button {
         font-size: 1.2em;
         margin-bottom: 30px;
         display: inline-block;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -1152,11 +1164,12 @@ section#experience .logo-pragmatic {
         padding-bottom: 50px;
     }
 
-    .hero-text h1 {
+.hero-text h1 {
         font-size: 2em;
         line-height: 1.3;
         padding-top: 20px;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -1164,18 +1177,18 @@ section#experience .logo-pragmatic {
         padding-top: 120px;
     }
 
-    .hero-text h1 {
+.hero-text h1 {
         font-size: 1.8em;
         padding-top: 30px;
     }
 
-    .cta-button {
+.cta-button {
         font-size: 1em;
         padding: 5px 20px;
     }
+
 }
 
-/* HomePage Machine Desktop & Mobile */
 .homePage-machine-desktop {
     position: absolute !important;
     overflow-x: hidden !important;
@@ -1202,7 +1215,7 @@ section#experience .logo-pragmatic {
         display: none !important;
     }
 
-    .homePage-machine-mobile {
+.homePage-machine-mobile {
         display: block;
         position: relative;
         left: 50%;
@@ -1217,12 +1230,13 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
-    .homePage-machine-desktop {
+.homePage-machine-desktop {
         max-width: 1200px !important;
         right: -19% !important;
         margin-top: auto !important;
         top: 21% !important;
     }
+
 }
 
 @media (min-width: 1400px) {
@@ -1231,6 +1245,7 @@ section#experience .logo-pragmatic {
         max-width: 1400px !important;
         top: 10% !important;
     }
+
 }
 
 @media (min-width: 1600px) {
@@ -1239,15 +1254,16 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
     }
 
-    .hero-text {
+.hero-text {
         left: -5%;
         top: -50px;
     }
 
-    .homePage-machine-desktop {
+.homePage-machine-desktop {
         max-width: 1500px !important;
         right: -20% !important;
     }
+
 }
 
 @media (min-width: 1800px) {
@@ -1255,35 +1271,32 @@ section#experience .logo-pragmatic {
         max-width: 1700px;
     }
 
-    .hero-text h1 {
+.hero-text h1 {
         font-size: 5.5em;
         text-wrap: nowrap;
     }
 
-    .homePage-machine-desktop {
+.homePage-machine-desktop {
         max-width: 1600px !important;
         top: 7% !important;
     }
+
 }
 
-
-
-/* css Experience */
-/* css Experience */
 @media (max-width: 576px) {
     section#experience {
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
-    section#experience h5 {
+section#experience h5 {
         font-size: 1.6rem;
         line-height: 1.3;
         color: #f0f0f0;
         margin-bottom: 25px;
     }
 
-    section#experience .experience-visual-hub {
+section#experience .experience-visual-hub {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1292,88 +1305,83 @@ section#experience .logo-pragmatic {
         gap: 0;
     }
 
-    .mobile-logo-large {
+.mobile-logo-large {
         width: 160% !important;
         max-width: 150% !important;
     }
 
-
-    .mobile-logo-small {
+.mobile-logo-small {
         width: 40% !important;
         max-width: 150% !important;
     }
 
-    /* ✅ GRID ЛОГО ПОДРЕДБА ЗА МОБИЛНИ */
-    section#experience .mobile-logo-grid {
+section#experience .mobile-logo-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        /* 5 равни колонки */
+        
         column-gap: 5px;
-        /* Разстояние между колонките с лога */
+        
         row-gap: 8px;
-        /* Разстояние между редовете с лога */
+        
 
         max-width: 600px;
-        /* Increased from 500px */
+        
 
         width: 100%;
         margin: 20px auto;
-        /* Примерно отстояние и центриране на грида */
+        
         justify-items: center;
-        /* Центрира съдържанието във всяка клетка хоризонтално */
+        
         align-items: center;
-        /* Центрира съдържанието във всяка клетка вертикално */
+        
     }
 
-    section#experience .provider-logo {
+section#experience .provider-logo {
         display: block;
-        /* За да се държи като блок елемент в клетката */
+        
         width: 70%;
-        /* КЛЮЧОВО: Логото да заеме 100% от ширината на своята grid клетка */
+        
         max-width: 180%;
-        /* Допълнителна гаранция, че няма да надхвърли 100% от клетката */
+        
         height: auto;
-        /* КЛЮЧОВО: Запазва пропорциите на изображението */
+        
         object-fit: contain;
-        /* Гарантира, че цялото изображение се вижда и се мащабира правилно,
-                           ако оригиналният файл е по-голям от размерите на клетката. */
+        
 
         margin: 0;
-        /* Нулиране на марджините, за да не създават неочаквани отмествания */
+        
         opacity: 0.95;
-        /* От твоя код */
+        
 
-        /* Тези position/transform стилове от твоя код са ОК и не би трябвало да пречат тук: */
+        
         position: static !important;
         transform: none !important;
     }
 
-    section#experience .experience-main-product-image {
+section#experience .experience-main-product-image {
         max-width: 110px;
         width: 100%;
         justify-self: center;
         grid-column: 3;
-        /* средната от 5 колони */
+        
         grid-row: 3;
-        /* реда след втория */
+        
         margin-top: -30%;
     }
 
-
-    /* ✅ Центриране на логата на последния ред */
-    section#experience .provider-logo:nth-child(11) {
+section#experience .provider-logo:nth-child(11) {
         grid-column: 1;
     }
 
-    section#experience .provider-logo:nth-child(12) {
+section#experience .provider-logo:nth-child(12) {
         grid-column: 5;
     }
 
-    section#experience img.experience-main-product-image {
+section#experience img.experience-main-product-image {
         max-width: 500px;
     }
 
-    section#experience .experience-cta-button {
+section#experience .experience-cta-button {
         background-color: rgba(75, 79, 97, 0.8);
         border: 1px solid rgba(124, 128, 150, 0.6);
         color: #dfe0e6;
@@ -1388,28 +1396,17 @@ section#experience .logo-pragmatic {
         transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
-    section#experience .experience-cta-button:hover {
+section#experience .experience-cta-button:hover {
         background-color: rgba(90, 95, 115, 0.9);
         border-color: rgba(140, 145, 170, 0.8);
     }
 
-    section#experience .experience-text-and-cta:empty,
+section#experience .experience-text-and-cta:empty,
     section#experience>div:empty {
         display: none;
     }
+
 }
-
-/* --- Край: Адаптивни стилове за Секция Experience (Мобилни) --- */
-
-
-
-
-
-
-
-
-/* slider-a  */
-
 
 @media (max-width: 576px) {
     .logo-slider-container {
@@ -1417,10 +1414,10 @@ section#experience .logo-pragmatic {
         overflow: hidden;
         margin-top: -100px;
         background: transparent;
-        /* махаме черния фон */
+        
     }
 
-    .logo-slider-track {
+.logo-slider-track {
         display: flex;
         overflow-x: auto;
         overflow-y: hidden;
@@ -1432,21 +1429,21 @@ section#experience .logo-pragmatic {
         scrollbar-width: none;
     }
 
-    .logo-slider-track::-webkit-scrollbar {
+.logo-slider-track::-webkit-scrollbar {
         display: none;
     }
 
-    .logo-slide {
+.logo-slide {
         flex: 0 0 auto;
         width: 130px;
-        /* ✅ ключова стойност */
+        
         height: auto;
         scroll-snap-align: center;
         opacity: 1;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .logo-slide.focused {
+.logo-slide.focused {
         border: 2px solid white;
         border-radius: 12px;
         padding: 6px;
@@ -1455,16 +1452,15 @@ section#experience .logo-pragmatic {
         background-color: rgba(255, 255, 255, 0.05);
     }
 
-    /* само в мобилен slider */
-    @media (max-width: 576px) {
+@media (max-width: 576px) {
         .logo-slider-track img.provider-logo.focused {
             border: 2px solid #fff;
             border-radius: 12px;
             padding: 6px;
             background-color: rgba(255, 255, 255, 0.05);
         }
-    }
 
+}
 
 }
 
@@ -1479,18 +1475,15 @@ section#experience .logo-pragmatic {
     .logo-slider-container img.provider-logo {
         flex: 0 0 auto;
         width: 200px;
-        /* Increased from 250px */
+        
         max-width: none;
-        /* махаме предишното ограничение */
+        
         height: auto;
         object-fit: contain;
     }
 
 }
 
-
-/* css-button-experience */
-/* Minimal arrow button */
 .logo-toggle-btn {
     display: block;
     margin: 16px auto 0;
@@ -1498,7 +1491,7 @@ section#experience .logo-pragmatic {
     border: none;
     color: rgba(255, 255, 255, 0.6);
     font-size: 2rem;
-    /* стрелката е по-голяма */
+    
     line-height: 1;
     padding: 4px;
     cursor: pointer;
@@ -1516,23 +1509,21 @@ section#experience .logo-pragmatic {
     color: #fff;
 }
 
-/* При отворено състояние – стрелката се обръща нагоре */
 body.logos-open .logo-toggle-btn {
     transform: rotate(180deg);
 
 }
 
-/* 1) Скриване по подразбиране */
 section#experience .logo-slider-container {
     max-height: 0 !important;
     overflow: hidden !important;
     transition: max-height 0.4s ease !important;
 }
 
-/* 2) Показваме при клас .logos-open върху <body> */
 body.logos-open section#experience .logo-slider-container {
     max-height: 300px !important;
-    /* нагласяш докато побере всичките лога */
+    
     overflow-x: auto !important;
     overflow-y: hidden !important;
 }
+

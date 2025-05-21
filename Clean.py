@@ -181,13 +181,18 @@ def process_js_file(filepath):
     except Exception as e:
         print(f"Error writing (overwriting) file '{filepath}': {e}", file=sys.stderr)
 
+def should_ignore_path(filepath):
+    """Check if the file path should be ignored."""
+    return 'node_modules' in filepath.replace('\\', '/')
+
 def main():
     parser = argparse.ArgumentParser(
         description=(
-            'Beautifies and removes comments from HTML, CSS, and JS files by overwriting them. \\n'
-            'For HTML files, inline CSS and JavaScript are also processed. \\n'
-            'The script always searches recursively. If no path is provided, it processes files in the current directory and its subdirectories.\\n'
-            'WARNING: This script directly modifies the input files. Make sure to backup your files before running.'
+            'Beautifies and removes comments from HTML, CSS, and JS files by overwriting them. \n'
+            'For HTML files, inline CSS and JavaScript are also processed. \n'
+            'The script always searches recursively. If no path is provided, it processes files in the current directory and its subdirectories.\n'
+            'WARNING: This script directly modifies the input files. Make sure to backup your files before running.\n'
+            'Note: Files in node_modules directory are automatically ignored.'
         ),
         formatter_class=argparse.RawTextHelpFormatter
     )
@@ -236,9 +241,8 @@ def main():
         all_files_to_process = []
         for pattern in patterns:
             # For recursive globbing, the recursive=True flag must be passed to glob.glob
-            # if the pattern contains '**'.
             # Since we are always recursive now, this is always true.
-            found_files = glob.glob(pattern, recursive=True)
+            found_files = [f for f in glob.glob(pattern, recursive=True) if not should_ignore_path(f)]
             all_files_to_process.extend(found_files)
         
         all_files_to_process = sorted(list(set(all_files_to_process))) # Remove duplicates

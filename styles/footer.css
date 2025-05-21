@@ -187,6 +187,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     transition: border-color 0.2s;
 }
+
 .footer-language-dropdown:focus {
     border-color: #888;
 }
@@ -196,12 +197,14 @@ body {
         margin-left: 10%;
         padding: 0;
     }
+
 }
 
 @media (min-width: 768px) {
     .site-footer-mobile {
         display: none;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -212,7 +215,7 @@ body {
         padding: 0 10px;
     }
 
-    .footer-links {
+.footer-links {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         text-align: left;
@@ -221,74 +224,81 @@ body {
         justify-items: center;
     }
 
-    .footer-column {
+.footer-column {
         margin-bottom: 20px;
         align-items: flex-start;
     }
 
-    .footer-column::before {
+.footer-column::before {
         display: block;
         font-weight: bold;
         color: white;
         margin-bottom: 12px;
         font-size: 0.8rem;
     }
-    .footer-column:nth-child(1)::before {
+
+.footer-column:nth-child(1)::before {
         content: 'Quick links';
     }
-    .footer-column:nth-child(2)::before {
+
+.footer-column:nth-child(2)::before {
         content: 'Information';
     }
-    .footer-column:nth-child(3)::before {
+
+.footer-column:nth-child(3)::before {
         content: 'Presentation';
     }
 
-    .footer-column a {
+.footer-column a {
         font-size: 0.8rem;
         color: #B0B0B0;
         margin-bottom: 8px;
     }
 
-    .language-and-social-group {
+.language-and-social-group {
         align-items: center;
     }
-    .language-and-social-group::before {
+
+.language-and-social-group::before {
         display: none;
     }
 
-    .language-selector {
+.language-selector {
         display: flex;
         align-items: center;
         margin-left: 0.5em;
     }
 
-    .footer-content {
+.footer-content {
         margin-left: 0;
         text-align: center;
     }
 
-    .crypto-logos {
+.crypto-logos {
         display: none;
     }
 
-    .site-footer-mobile {
+.site-footer-mobile {
         display: block;
     }
 
-    .logo-text {
+.logo-text {
         padding-left: 0px;
     }
-    .copyright {
+
+.copyright {
         left: 0px;
     }
 
-    .social-icons-inline-container {
+.social-icons-inline-container {
         margin-left: -90px;
         margin-top: 1.5em;
     }
 
-    .footer-language-dropdown {
+.footer-language-dropdown {
         font-size: 0.85rem;
         padding: 3px 7px;
     }
+
 }
+

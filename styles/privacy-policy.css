@@ -17,8 +17,6 @@ body {
     padding: 0;
 }
 
-
-
 .logo-text {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
@@ -144,38 +142,39 @@ body.privacy-policy-page .privacy-policy-container {
         gap: 30px;
     }
 
-    .sidebar-image-container {
+.sidebar-image-container {
         width: 50%;
         max-width: 130px;
         margin-bottom: 20px;
         padding-top: 0;
     }
 
-    .privacy-policy-header h1 {
+.privacy-policy-header h1 {
         font-size: 2rem;
         font-family: 'Montserrat', sans-serif;
     }
 
-    .text-columns {
+.text-columns {
         grid-template-columns: 1fr;
         gap: 0;
     }
 
-    .text-columns::before {
+.text-columns::before {
         display: none;
     }
 
-    .text-columns .text-column:first-child {
+.text-columns .text-column:first-child {
         padding-right: 0;
     }
 
-    .text-columns .text-column:last-child {
+.text-columns .text-column:last-child {
         padding-left: 0;
     }
 
-    .text-column p {
+.text-column p {
         font-size: 0.85rem;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -183,21 +182,22 @@ body.privacy-policy-page .privacy-policy-container {
         padding: 30px 15px 40px 15px;
     }
 
-    .privacy-policy-header h1 {
+.privacy-policy-header h1 {
         font-size: 1.8rem;
     }
 
-    .text-column p {
+.text-column p {
         font-size: 0.82rem;
     }
 
-    .text-column h2 {
+.text-column h2 {
         font-size: 1.1rem;
     }
 
-    .text-column h3 {
+.text-column h3 {
         font-size: 1rem;
     }
+
 }
 
 .privacy-policy-page .nav-indicator {

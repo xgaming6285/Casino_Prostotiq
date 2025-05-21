@@ -80,7 +80,7 @@ body {
   z-index: 2;
   display: flex;
   align-items: flex-end;
-  /* Default for desktop */
+  
 }
 
 .left-label {
@@ -247,44 +247,44 @@ body {
     padding-right: 10px;
   }
 
-  .product-image-homepage {
+.product-image-homepage {
     max-width: 60%;
   }
 
-  .high-res {
+.high-res {
     right: -40%!important;
     top: -5%!important;
   }
 
-  .providers {
+.providers {
     left: 1%!important;
     bottom: 30%!important;
   }
 
-  .buttons {
+.buttons {
     right: 5%!important;
     top: 50%!important;
   }
 
-  .forged-metal {
+.forged-metal {
     left: 10%!important;
     top: -15%!important;
   }
 
-  .product-container {
+.product-container {
     width: 100%;
     flex-direction: column;
     align-items: center;
     aspect-ratio: auto;
   }
 
-  .product-svg {
+.product-svg {
     max-width: 90%;
     height: auto;
     margin-bottom: 20px;
   }
 
-  .feature-label {
+.feature-label {
     position: absolute;
     margin: 10px auto;
     width: auto;
@@ -293,12 +293,12 @@ body {
     justify-content: center;
   }
 
-  .label-text {
+.label-text {
     font-size: 12px;
     padding: 6px 16px;
   }
 
-  .plus-circle {
+.plus-circle {
     position: static;
     width: 16px;
     height: 16px;
@@ -306,39 +306,38 @@ body {
     left: auto;
   }
 
-  .left-label .plus-circle {
-    /* Handles high-res, forged-metal, providers */
+.left-label .plus-circle {
+    
     margin-right: 8px;
   }
 
-  .right-label .plus-circle {
-    /* Specific for buttons if it were to use .plus-circle */
+.right-label .plus-circle {
+    
     margin-left: 8px;
   }
 
-
-  .right-label .label-text {
-    /* For "PREMIUM BUTTONS" label */
+.right-label .label-text {
+    
     order: 1;
   }
 
-  .right-label .plus-circle-right {
-    /* For its specific plus icon */
+.right-label .plus-circle-right {
+    
     order: 2;
     margin-left: 8px;
     position: static;
     top: auto;
     right: auto;
     width: 16px;
-    /* Match other plus icons on mobile */
+    
     height: 16px;
   }
 
-  .cta-text {
+.cta-text {
     font-size: 20px;
   }
 
-  .product-svg #line-high-res,
+.product-svg #line-high-res,
   .product-svg #line-forged-metal,
   .product-svg #line-providers,
   .product-svg #line-buttons,
@@ -346,11 +345,12 @@ body {
     display: block !important; 
   }
 
-  .cta {
+.cta {
     position: static;
     margin: 35% auto;
     justify-content: center;
   }
+
 }
 
 @media (max-width: 1400px) {
@@ -359,20 +359,21 @@ body {
     top: 17.3%;
   }
 
-  .forged-metal {
+.forged-metal {
     left: -6%;
     top: 30.2%;
   }
 
-  .providers {
+.providers {
     left: -10%;
     top: 48%;
   }
 
-  .buttons {
+.buttons {
     right: -8%;
     top: 62.7%;
   }
+
 }
 
 @media (max-width: 1200px) {
@@ -380,36 +381,37 @@ body {
     font-size: 0.9em;
   }
 
-  .label-text {
+.label-text {
     font-size: 12px;
     padding: 6px 16px;
   }
 
-  .plus-circle,
+.plus-circle,
   .plus-circle-right {
     width: 16px;
     height: 16px;
   }
 
-  .high-res {
+.high-res {
     left: 11%;
     top: 10.8%;
   }
 
-  .forged-metal {
+.forged-metal {
     left: 3%;
     top: 30.8%;
   }
 
-  .providers {
+.providers {
     left: 0%;
     top: 47.4%;
   }
 
-  .buttons {
+.buttons {
     right: 0%;
     top: 59.3%;
   }
+
 }
 
 @media (max-width: 1000px) {
@@ -417,37 +419,38 @@ body {
     font-size: 0.8em;
   }
 
-  .label-text {
+.label-text {
     font-size: 11px;
     padding: 7px 17px;
     text-wrap-mode: nowrap;
   }
 
-  .plus-circle,
+.plus-circle,
   .plus-circle-right {
     width: 14px;
     height: 14px;
   }
 
-  .high-res {
+.high-res {
     left: 7%;
     top: 28%;
   }
 
-  .forged-metal {
+.forged-metal {
     left: -1%;
     top: 41%;
   }
 
-  .providers {
+.providers {
     left: -3%;
     top: 52.8%;
   }
 
-  .buttons {
+.buttons {
     right: 0%;
     top: 59.7%;
   }
+
 }
 
 .animated-line {
@@ -460,4 +463,6 @@ body {
   to {
     stroke-dashoffset: 0;
   }
+
 }
+

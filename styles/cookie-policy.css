@@ -163,7 +163,7 @@ body {
         margin-top: 100px;
     }
 
-    .coin {
+.coin {
         width: 500px;
         max-width: 100%;
         top: 0;
@@ -172,7 +172,7 @@ body {
         transform-origin: center;
     }
 
-    .content-container h1 {
+.content-container h1 {
         position: relative;
         text-align: center;
         top: auto;
@@ -185,11 +185,11 @@ body {
         padding: 10px 0;
     }
 
-    .text-columns {
+.text-columns {
         flex-direction: column;
     }
 
-    .text-columns::before {
+.text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -197,13 +197,13 @@ body {
         transform: none;
     }
 
-    .left-column,
+.left-column,
     .right-column {
         text-align: right;
         padding: 0 15px;
     }
 
-    .left-column {
+.left-column {
         margin-bottom: 30px;
     }
 
@@ -215,7 +215,7 @@ body {
         margin-top: 100px;
     }
 
-    .coin {
+.coin {
         width: 350px;
         max-width: 100%;
         top: 0;
@@ -224,11 +224,11 @@ body {
         transform-origin: center;
     }
 
-    .text-columns {
+.text-columns {
         flex-direction: column;
     }
 
-    .text-columns::before {
+.text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -236,13 +236,13 @@ body {
         transform: none;
     }
 
-    .left-column,
+.left-column,
     .right-column {
         text-align: right;
         padding: 0 15px;
     }
 
-    .left-column {
+.left-column {
         margin-bottom: 30px;
     }
 
@@ -253,22 +253,22 @@ body {
         padding: 0 1%;
     }
 
-    .coin {
+.coin {
         width: 1000px;
         left: -420px;
         top: -60px;
         clip-path: inset(0 0 0 420px);
     }
 
-    .content-container h1 {
+.content-container h1 {
         font-size: 1.6rem;
     }
 
-    .text-columns {
+.text-columns {
         width: 60%;
     }
 
-    .column p {
+.column p {
         font-size: 0.75rem;
     }
 
@@ -281,7 +281,7 @@ body {
         overflow: visible;
     }
 
-    .coin {
+.coin {
         width: 650px;
         left: 50%;
         transform: translateX(-50%);
@@ -292,7 +292,7 @@ body {
         clip-path: none;
     }
 
-    .content-container h1 {
+.content-container h1 {
         position: relative;
         text-align: center;
         top: auto;
@@ -306,7 +306,7 @@ body {
         margin-top: -20px;
     }
 
-    .text-columns {
+.text-columns {
         flex-direction: column;
         left: auto;
         right: auto;
@@ -315,7 +315,7 @@ body {
         margin-top: 30px;
     }
 
-    .text-columns::before {
+.text-columns::before {
         width: 100%;
         height: 1px;
         left: 0;
@@ -323,17 +323,17 @@ body {
         transform: none;
     }
 
-    .left-column,
+.left-column,
     .right-column {
         text-align: right;
         padding: 0 15px;
     }
 
-    .left-column {
+.left-column {
         margin-bottom: 30px;
     }
 
-    .cookie-policy .nav-indicator {
+.cookie-policy .nav-indicator {
         width: 160px !important;
         left: 50px;
     }
@@ -357,7 +357,7 @@ body {
         margin-top: 60px;
     }
 
-    .coin {
+.coin {
         width: 400px;
         top: 10px;
         display: block;
@@ -366,11 +366,11 @@ body {
         clip-path: none;
     }
 
-    .content-container {
+.content-container {
         padding-top: 20px;
     }
 
-    .content-container h1 {
+.content-container h1 {
         top: auto;
         position: relative;
         font-size: 1.4rem;
@@ -381,17 +381,17 @@ body {
         width: auto;
     }
 
-    .column p {
+.column p {
         font-size: 0.8rem;
     }
 
-    .left-column,
+.left-column,
     .right-column {
         padding: 0 10px;
         text-align: right;
     }
 
-    .cookie-policy .nav-indicator {
+.cookie-policy .nav-indicator {
         width: 140px !important;
         left: 40px;
     }
@@ -407,3 +407,4 @@ body {
     }
 
 }
+

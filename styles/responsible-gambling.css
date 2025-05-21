@@ -7,30 +7,29 @@ body.responsible-gambling-body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
-    overflow-x: hidden; /* Changed from visible to hidden for better mobile behavior */
-    display: flex; /* Added for full page layout */
-    flex-direction: column; /* Added for full page layout */
-    min-height: 100vh; /* Added for full page layout */
-    padding-top: var(--header-height); /* Ensure content starts below fixed header */
+    overflow-x: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    padding-top: var(--header-height); 
 }
 
-/* Ensure the main header from all.css adapts well if needed */
-/* For example, if the background needs to be specifically transparent or a certain color on this page */
 .responsible-gambling-body .header {
-    background-color: transparent; /* Or match the page background */
+    background-color: transparent; 
 }
 
 .gambling-container {
     display: flex;
-    max-width: 1000px; /* Adjust based on desired content width */
+    max-width: 1000px; 
     margin-left: 40px;
     margin-top: 20px;
     margin-right: 20px;
     padding: 40px 20px;
-    align-items: center; /* Vertically aligns text and image if they have different heights */
-    gap: 40px; /* Space between text and image columns */
-    flex-grow: 1; /* Allow main content to fill vertical space */
+    align-items: center; 
+    gap: 40px; 
+    flex-grow: 1; 
 }
+
 .responsible-gambling-body .nav-indicator {
     position: absolute;
     bottom: -6%;
@@ -46,11 +45,11 @@ body.responsible-gambling-body {
 }
 
 .gambling-content {
-    max-width: 60%; /* Prevents text from becoming too wide */
+    max-width: 60%; 
 }
 
 .gambling-title {
-    font-size: 28px; /* Adjust as needed */
+    font-size: 28px; 
     font-weight: 700;
     margin-bottom: 25px;
     position: relative;
@@ -63,7 +62,7 @@ body.responsible-gambling-body {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 630px; /* Length of the line under the title */
+    width: 630px; 
     height: 2px;
     background-color: #FFFFFF;
 }
@@ -71,62 +70,63 @@ body.responsible-gambling-body {
 .gambling-text p {
     font-size: 20px;
     line-height: 1.8;
-    color: #E0E0E0; /* Slightly off-white for better readability */
-    margin-bottom: 0; /* Remove default paragraph bottom margin if only one paragraph */
+    color: #E0E0E0; 
+    margin-bottom: 0; 
 }
 
 .device-showcase {
-    flex: 0 0 35%; /* Defines the width of the image column, adjust as needed */
+    flex: 0 0 35%; 
     display: flex;
-    justify-content: center; /* Centers image if it's smaller than column */
+    justify-content: center; 
     align-items: center;
 }
 
 .device-showcase img {
-    max-width: 600%; /* Adjusted from user's 600% to be more conventional */
-    height: auto;    /* Adjusted from user's 500px to maintain aspect ratio */
-    width: auto;     /* Adjusted from user's 900px */
-    margin-left: 0; /* Reset from user's 100px, as centering is handled by flex */
-    margin-top: 80px; /* Add margin-top here, adjust value as needed */
-    display: block; /* Removes any extra space below the image */
+    max-width: 600%; 
+    height: auto;    
+    width: auto;     
+    margin-left: 0; 
+    margin-top: 80px; 
+    display: block; 
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .gambling-container {
         flex-direction: column;
-        margin-top: 30px; /* Mobile-specific margin */
-        margin-left: auto; /* Center on mobile */
-        margin-right: auto; /* Center on mobile */
+        margin-top: 30px; 
+        margin-left: auto; 
+        margin-right: auto; 
         padding-top: 20px;
-        padding-left: 20px; /* Mobile-specific padding */
-        padding-right: 20px; /* Mobile-specific padding */
-        width: 90%; /* Ensure it doesn't touch screen edges on mobile */
-        max-width: 500px; /* Optional: constrain width on mobile for very wide phones */
+        padding-left: 20px; 
+        padding-right: 20px; 
+        width: 90%; 
+        max-width: 500px; 
         gap: 30px;
     }
 
-    .gambling-content {
+.gambling-content {
         max-width: 100%;
-        text-align: center; /* Center text on smaller screens */
+        text-align: center; 
     }
 
-    .gambling-title::after {
+.gambling-title::after {
         left: 50%;
-        transform: translateX(-50%); /* Center the line under the title */
+        transform: translateX(-50%); 
     }
 
-    .device-showcase {
-        max-width: 100%; /* Allow container to be full width */
-        width: 100%; /* Occupy available width */
+.device-showcase {
+        max-width: 100%; 
+        width: 100%; 
         margin-top: 20px;
-        display: flex; /* Ensure centering of image */
-        justify-content: center; /* Ensure centering of image */
+        display: flex; 
+        justify-content: center; 
     }
-    .device-showcase img {
-        max-width: 80%; /* Control image size within its container */
+
+.device-showcase img {
+        max-width: 80%; 
         height: auto;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -134,11 +134,13 @@ body.responsible-gambling-body {
         font-size: 24px;
     }
 
-    .gambling-text p {
+.gambling-text p {
         font-size: 15px;
     }
-    
-    .device-showcase img {
-        max-width: 90%; /* Slightly larger for very small screens if desired */
+
+.device-showcase img {
+        max-width: 90%; 
     }
-} 
+
+}
+

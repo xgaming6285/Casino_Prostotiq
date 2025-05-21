@@ -194,14 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isMainPage) return;
         const section = sections[sectionId];
         if (!section) return;
-
         if (programmaticScrollTimeout) {
             clearTimeout(programmaticScrollTimeout);
         }
         isProgrammaticScroll = true;
-
         setActiveSection(sectionId);
-
         const offsetPosition = sectionPositions[sectionId].top - header.offsetHeight;
         window.scrollTo({
             top: offsetPosition,
@@ -210,7 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isMobile && nav.classList.contains('active')) {
             toggleMobileMenu();
         }
-
         programmaticScrollTimeout = setTimeout(() => {
             isProgrammaticScroll = false;
         }, 800);
