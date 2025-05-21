@@ -57,7 +57,8 @@ html {
     left: 0;
     right: 0;
     height: var(--header-height);
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
     color: var(--white);
     z-index: 500;
     box-shadow: none;
