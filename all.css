@@ -412,7 +412,7 @@ html {
 
 .hero-text h1 {
     font-size: 4em;
-    font-family: 'Figtree Light', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     line-height: 1.6;
     margin-bottom: 35px;
@@ -432,7 +432,7 @@ html {
     border-radius: 30px;
     transition: all 0.3s ease;
     font-size: 1.5em;
-    font-family: 'Figtree Light';
+    font-family: 'Montserrat';
     letter-spacing: 0.075em;
     text-wrap: nowrap;
 }
@@ -1557,5 +1557,73 @@ body.logos-open section#experience .logo-slider-container {
     
     overflow-x: auto !important;
     overflow-y: hidden !important;
+}
+
+/* Default styles for product display visibility */
+.mobile-only-product-display {
+    display: none; /* Hidden by default */
+    position: relative; /* For 360 icon positioning */
+    margin: 20px auto; /* Spacing for mobile */
+}
+
+.desktop-only-product-display {
+    display: flex; /* Default display for desktop (as it was) */
+}
+
+@media (max-width: 992px) {
+    .pre-order-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .desktop-only-product-display {
+        display: none; /* Hide desktop version on mobile */
+    }
+
+    .mobile-only-product-display {
+        display: flex; /* Show mobile version */
+        flex-direction: column; /* Stack image and 360 icon if needed, though they are already relative */
+        align-items: center;
+        max-width: 80%; /* Or your preferred width for mobile */
+        margin-bottom: 25px; /* Space before the order button */
+    }
+
+    /* Ensure the 360 icon in the mobile display is centered */
+    .mobile-only-product-display .view-360 {
+        position: relative; /* Reset from absolute if needed for simpler centering */
+        left: auto;
+        transform: none;
+        bottom: auto;
+        position: absolute;
+        left: 60%;
+        top: 20%;
+    }
+
+    .pre-order-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        align-items: center; /* This will center its children, including the order button */
+        order: 1; /* Content block (now including image on mobile) comes first */
+    }
+
+    /* The original .product-display (now .desktop-only-product-display) was order: 1 before. */
+    /* Since .pre-order-content now contains everything on mobile, its order is 1. */
+
+}
+
+@media (max-width: 768px) {
+    /* .product-display adjustments might not be needed here if handled by .mobile-only-product-display rules */
+    /* However, you can fine-tune .mobile-only-product-display for smaller screens if necessary */
+    .mobile-only-product-display {
+        max-width: 85%; /* As per your previous preference */
+    }
+
+    .pre-order-product-image {
+        max-width: 100%;
+    }
+
 }
 
