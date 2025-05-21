@@ -574,8 +574,8 @@ html {
 }
 
 .pre-order-product-image {
-    width: 100%;
-    max-width: 100%;
+    width: 1000%;
+    max-width: 1000%;
     height: auto;
     object-fit: contain;
     display: block;
@@ -612,35 +612,43 @@ html {
         padding: 0 10px;
     }
 
-    .product-display,
+    .desktop-only-product-display {
+        display: none;
+        /* Hide desktop version on mobile */
+    }
+
+    .mobile-only-product-display {
+        display: flex;
+        /* Show mobile version */
+        flex-direction: column;
+        /* Stack image and 360 icon if needed, though they are already relative */
+        align-items: center;
+        max-width: 80%;
+        /* Or your preferred width for mobile */
+        margin-bottom: 25px;
+        /* Space before the order button */
+        right: 10%;
+    }
+
+    /* Update the 360 icon positioning for mobile */
+    .mobile-only-product-display .view-360 {
+        position: relative;
+        left: auto;
+        transform: none;
+        bottom: auto;
+        margin-top: 20px;
+        /* Add space between image and icon */
+    }
+
     .pre-order-content {
         max-width: 100%;
         text-align: center;
         margin-bottom: 30px;
-    }
-
-    .product-display {
-        max-width: 80%;
-        order: 1;
-    }
-
-    .pre-order-product-image {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .pre-order-content {
         align-items: center;
-        order: 2;
+        /* This will center its children, including the order button */
+        order: 1;
+        /* Content block (now including image on mobile) comes first */
     }
-
-    .view-360 {
-        right: 0;
-        bottom: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
 }
 
 @media (max-width: 768px) {
@@ -812,7 +820,7 @@ html {
 
 .view-360 {
     position: absolute;
-    bottom: 20px;
+    bottom: 2px;
     left: 80%;
     transform: translateX(-50%);
     z-index: 100;
@@ -832,6 +840,7 @@ html {
     width: 45px;
     height: 35px;
     cursor: pointer;
+    margin-right: 120px;
 }
 
 .order-action {
@@ -1746,18 +1755,17 @@ body.logos-open section#experience .logo-slider-container {
         /* Or your preferred width for mobile */
         margin-bottom: 25px;
         /* Space before the order button */
+        right: -10%;
     }
 
-    /* Ensure the 360 icon in the mobile display is centered */
+    /* Update the 360 icon positioning for mobile */
     .mobile-only-product-display .view-360 {
         position: relative;
-        /* Reset from absolute if needed for simpler centering */
         left: auto;
         transform: none;
         bottom: auto;
-        position: absolute;
-        left: 60%;
-        top: 20%;
+        margin-top: 20px;
+        /* Add space between image and icon */
     }
 
     .pre-order-content {
@@ -1769,10 +1777,6 @@ body.logos-open section#experience .logo-slider-container {
         order: 1;
         /* Content block (now including image on mobile) comes first */
     }
-
-    /* The original .product-display (now .desktop-only-product-display) was order: 1 before. */
-    /* Since .pre-order-content now contains everything on mobile, its order is 1. */
-
 }
 
 @media (max-width: 768px) {
@@ -1780,12 +1784,12 @@ body.logos-open section#experience .logo-slider-container {
     /* .product-display adjustments might not be needed here if handled by .mobile-only-product-display rules */
     /* However, you can fine-tune .mobile-only-product-display for smaller screens if necessary */
     .mobile-only-product-display {
-        max-width: 85%;
+        max-width: 185%;
         /* As per your previous preference */
     }
 
     .pre-order-product-image {
-        max-width: 100%;
+        max-width: 160%;
     }
 
 }
