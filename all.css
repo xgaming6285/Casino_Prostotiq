@@ -373,7 +373,7 @@ html {
 
 .hero-text h1 {
     font-size: 4em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Figtree Light', sans-serif;
     font-weight: 300;
     line-height: 1.6;
     margin-bottom: 35px;
@@ -393,7 +393,7 @@ html {
     border-radius: 30px;
     transition: all 0.3s ease;
     font-size: 1.5em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Figtree Light';
     letter-spacing: 0.075em;
     text-wrap: nowrap;
 }
@@ -944,31 +944,35 @@ section#experience .provider-logo {
 }
 
 section#experience .logo-lightingBox {
-    width: 600px;
+    width: 150px;
+    /* Increased from 750px */
     top: 120px;
-    left: -80px;
+    left: -10px;
     transform: translate(-50%, -50%);
     opacity: 0.5;
 }
 
 section#experience .logo-helio {
-    width: 600px;
-    top: 185px;
-    left: 13%;
+    width: 200px;
+    /* Increased from 750px */
+    top: 210px;
+    left: 8%;
     transform: translate(-50%, -50%);
     opacity: 0.5;
 }
 
 section#experience .logo-amusnet {
-    width: 500px;
+    width: 300px;
+    /* Increased from 625px */
     top: 30px;
-    left: 100px;
+    left: 180px;
     transform: translate(-50%, -50%);
     opacity: 0.5;
 }
 
 section#experience .logo-unde {
-    width: 500px;
+    width: 70px;
+    /* Increased from 625px */
     top: 340px;
     left: 68px;
     transform: translate(-50%, -50%);
@@ -976,7 +980,8 @@ section#experience .logo-unde {
 }
 
 section#experience .logo-playtech {
-    width: 600px;
+    width: 200px;
+    /* Increased from 750px */
     top: 100px;
     left: 700px;
     transform: translate(-50%, -50%);
@@ -984,7 +989,8 @@ section#experience .logo-playtech {
 }
 
 section#experience .logo-netent {
-    width: 600px;
+    width: 160px;
+    /* Increased from 750px */
     top: 220px;
     left: 90%;
     transform: translate(-50%, -50%);
@@ -992,7 +998,8 @@ section#experience .logo-netent {
 }
 
 section#experience .logo-everyMatrix {
-    width: 400px;
+    width: 200px;
+    /* Increased from 250px */
     top: 350px;
     left: 92%;
     transform: translate(-50%, -50%);
@@ -1000,7 +1007,8 @@ section#experience .logo-everyMatrix {
 }
 
 section#experience .logo-evolution {
-    width: 500px;
+    width: 110px;
+    /* Increased from 625px */
     top: 200px;
     left: 900px;
     transform: translate(-50%, -50%);
@@ -1008,7 +1016,8 @@ section#experience .logo-evolution {
 }
 
 section#experience .logo-nolimit {
-    width: 600px;
+    width: 180px;
+    /* Increased from 750px */
     top: 340px;
     left: 930px;
     transform: translate(-50%, -50%);
@@ -1016,21 +1025,24 @@ section#experience .logo-nolimit {
 }
 
 section#experience .logo-igt {
-    width: 600px;
-    top: -141px;
-    margin-right: -350px;
+    width: 150px;
+    /* Increased from 750px */
+    top: -10px;
+    margin-left: 470px;
     opacity: 0.5;
 }
 
 section#experience .logo-hacksaw {
-    width: 600px;
-    bottom: 100px;
-    margin-left: -210px;
+    width: 200px;
+    /* Increased from 750px */
+    bottom: 240px;
+    margin-left: -300px;
     opacity: 0.5;
 }
 
 section#experience .logo-pragmatic {
-    width: 600px;
+    width: 200px;
+    /* Increased from 750px */
     top: 350px;
     left: -210px;
     opacity: 0.5;
@@ -1221,6 +1233,7 @@ section#experience .logo-pragmatic {
 }
 
 
+
 /* css Experience */
 /* css Experience */
 @media (max-width: 576px) {
@@ -1245,29 +1258,58 @@ section#experience .logo-pragmatic {
         gap: 0;
     }
 
+    .mobile-logo-large {
+        width: 160% !important;
+        max-width: 150% !important;
+    }
+
+
+    .mobile-logo-small {
+        width: 40% !important;
+        max-width: 150% !important;
+    }
+
     /* ✅ GRID ЛОГО ПОДРЕДБА ЗА МОБИЛНИ */
     section#experience .mobile-logo-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        /* 5 лога на ред */
-        gap: 16px 10px;
-        /* вертикален и хоризонтален gap */
-        justify-items: center;
-        align-items: center;
-        max-width: 390px;
-        margin: 5% auto 20px auto;
-        /* включен margin-bottom */
+        /* 5 равни колонки */
+        column-gap: 5px;
+        /* Разстояние между колонките с лога */
+        row-gap: 8px;
+        /* Разстояние между редовете с лога */
 
+        max-width: 600px;
+        /* Increased from 500px */
+
+        width: 100%;
+        margin: 20px auto;
+        /* Примерно отстояние и центриране на грида */
+        justify-items: center;
+        /* Центрира съдържанието във всяка клетка хоризонтално */
+        align-items: center;
+        /* Центрира съдържанието във всяка клетка вертикално */
     }
 
     section#experience .provider-logo {
-        width: 100%;
-        /* запълва grid колоната */
-        max-width: 100px;
-        /* ограничава да не стане прекалено голямо */
+        display: block;
+        /* За да се държи като блок елемент в клетката */
+        width: 70%;
+        /* КЛЮЧОВО: Логото да заеме 100% от ширината на своята grid клетка */
+        max-width: 180%;
+        /* Допълнителна гаранция, че няма да надхвърли 100% от клетката */
         height: auto;
-        opacity: 0.95;
+        /* КЛЮЧОВО: Запазва пропорциите на изображението */
+        object-fit: contain;
+        /* Гарантира, че цялото изображение се вижда и се мащабира правилно,
+                           ако оригиналният файл е по-голям от размерите на клетката. */
+
         margin: 0;
+        /* Нулиране на марджините, за да не създават неочаквани отмествания */
+        opacity: 0.95;
+        /* От твоя код */
+
+        /* Тези position/transform стилове от твоя код са ОК и не би трябвало да пречат тук: */
         position: static !important;
         transform: none !important;
     }
@@ -1280,7 +1322,7 @@ section#experience .logo-pragmatic {
         /* средната от 5 колони */
         grid-row: 3;
         /* реда след втория */
-        margin-top: -20%;
+        margin-top: -30%;
     }
 
 
@@ -1326,16 +1368,20 @@ section#experience .logo-pragmatic {
 /* --- Край: Адаптивни стилове за Секция Experience (Мобилни) --- */
 
 
-/* --- Край: Адаптивни стилове за Секция Experience (Мобилни) --- */
 
-/* slider-a */
+
+
+
+
+
+/* slider-a  */
 
 
 @media (max-width: 576px) {
     .logo-slider-container {
-        width: 100%;
+        width: 50%;
         overflow: hidden;
-        margin-top: 20px;
+        margin-top: -100px;
         background: transparent;
         /* махаме черния фон */
     }
@@ -1374,10 +1420,85 @@ section#experience .logo-pragmatic {
         transform: scale(1.1);
         background-color: rgba(255, 255, 255, 0.05);
     }
+
+    /* само в мобилен slider */
+    @media (max-width: 576px) {
+        .logo-slider-track img.provider-logo.focused {
+            border: 2px solid #fff;
+            border-radius: 12px;
+            padding: 6px;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    }
+
+
 }
 
 @media (min-width: 577px) {
     .logo-slider-container {
         display: none;
     }
+
+}
+
+@media (max-width: 576px) {
+    .logo-slider-container img.provider-logo {
+        flex: 0 0 auto;
+        width: 200px;
+        /* Increased from 250px */
+        max-width: none;
+        /* махаме предишното ограничение */
+        height: auto;
+        object-fit: contain;
+    }
+
+}
+
+
+/* css-button-experience */
+/* Minimal arrow button */
+.logo-toggle-btn {
+    display: block;
+    margin: 16px auto 0;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 2rem;
+    /* стрелката е по-голяма */
+    line-height: 1;
+    padding: 4px;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.3s ease;
+    margin-right: 20px;
+
+}
+
+.logo-toggle-btn:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.logo-toggle-btn:focus {
+    outline: none;
+    color: #fff;
+}
+
+/* При отворено състояние – стрелката се обръща нагоре */
+body.logos-open .logo-toggle-btn {
+    transform: rotate(180deg);
+
+}
+
+/* 1) Скриване по подразбиране */
+section#experience .logo-slider-container {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.4s ease !important;
+}
+
+/* 2) Показваме при клас .logos-open върху <body> */
+body.logos-open section#experience .logo-slider-container {
+    max-height: 300px !important;
+    /* нагласяш докато побере всичките лога */
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
 }
