@@ -602,6 +602,7 @@ html {
 @media (max-width: 992px) {
     .pre-order-container {
         flex-direction: column;
+        align-items: center;
         width: 100%;
         padding: 0 10px;
     }
@@ -631,6 +632,8 @@ html {
 .view-360 {
         right: 0;
         bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
 }
@@ -642,6 +645,34 @@ html {
 
 .product-display {
         max-width: 85%;
+    }
+
+    .pre-order-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    .pre-order-header h2 {
+        text-align: center;
+    }
+
+    .product-features p {
+        text-align: center;
+    }
+
+    .order-action {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .order-now-btn {
+        padding: 10px 30px;
+        background-color: rgba(30, 37, 47, 1);
+        border-radius: 30px;
+        border: none;
+        font-size: 1.2rem;
+        letter-spacing: 0.075em;
     }
 
 .homePage-machine-mobile {
@@ -777,7 +808,8 @@ html {
 .view-360 {
     position: absolute;
     bottom: 20px;
-    right: -60px;
+    left: 80%;
+    transform: translateX(-50%);
     z-index: 100;
     padding: 8px;
     border-radius: 50%;
@@ -803,13 +835,13 @@ html {
 
 .order-now-btn {
     display: inline-block;
-    padding: 5px 15px;
-    background-color: transparent;
+    padding: 10px 30px;
+    background-color: rgba(30, 37, 47, 1);
     color: white;
     text-decoration: none;
-    border: 1px solid white;
-    border-radius: 10px;
-    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -817,7 +849,7 @@ html {
 }
 
 .order-now-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(45, 55, 70, 1);
 }
 
 section#experience {
