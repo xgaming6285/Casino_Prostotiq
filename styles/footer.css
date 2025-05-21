@@ -61,10 +61,10 @@ body {
     gap: 8px;
 }
 
-.bg-flag {
+.uk-flag {
     width: 30px;
     height: auto;
-    margin-right: -12px;
+    margin-right: 0px;
 }
 
 .flag-label {

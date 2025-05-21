@@ -79,7 +79,7 @@
       </div>
     </div>
   </main>
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-links">
             <div class="footer-column">
@@ -117,8 +117,39 @@
             </div>
             <div class="footer-column language-and-social-group">
                 <div class="language-selector">
-                    <img src="image/Flag_of_Bulgaria.svg" alt="Bulgarian Flag" class="bg-flag">
-                    <span class="flag-label">Български</span>
+                    <img alt="Bulgarian Flag" class="uk-flag" id="footer-flag" src="image/Flag_of_UK.svg">
+                    <span class="flag-label" id="footer-flag-label">
+                        English
+                    </span>
+                    <select class="footer-language-dropdown" id="footer-language-dropdown">
+                        <option data-flag="image/Flag_of_UK.svg" value="en">
+                            English
+                        </option>
+                        <option data-flag="image/Flag_of_Bulgaria.svg" value="bg">
+                            &Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;
+                        </option>
+                        <option data-flag="image/Flag_of_Germany.svg" value="de">
+                            Deutsch
+                        </option>
+                        <option data-flag="image/Flag_of_France.svg" value="fr">
+                            Fran&ccedil;ais
+                        </option>
+                        <option data-flag="image/Flag_of_Spain.svg" value="es">
+                            Espa&ntilde;ol
+                        </option>
+                        <option data-flag="image/Flag_of_Italy.svg" value="it">
+                            Italiano
+                        </option>
+                        <option data-flag="image/Flag_of_Russia.svg" value="ru">
+                            &Rcy;&ucy;&scy;&scy;&kcy;&icy;&jcy;
+                        </option>
+                        <option data-flag="image/Flag_of_Turkey.svg" value="tr">
+                            T&uuml;rk&ccedil;e
+                        </option>
+                        <option data-flag="image/Flag_of_India.svg" value="in">
+                            भारतीय
+                        </option>
+                    </select>
                 </div>
                 <div class="social-icons-inline-container">
                     <a href="#">
@@ -142,11 +173,15 @@
     <div class="crypto-logos">
         <img alt="Accepted Cryptocurrencies" class="crypto-image" src="image/footer-credits-removebg-preview.png">
     </div>
+    <footer class="site-footer-mobile">
+        <img alt="Accepted Cryptocurrencies and Responsible Gambling" class="mobile-footer-img"
+            src="image/mobile-footer.png">
+    </footer>
     <div class="footer-divider">
     </div>
     <div class="footer-bottom">
         <div class="footer-logo">
-            <div class="logo-text">
+            <div class="logo-text-footer">
                 MyMiniSlot
             </div>
         </div>
@@ -154,7 +189,7 @@
             MyMiniSlot &copy; 2025
         </div>
     </div>
-    </footer>
+</footer>
   <script src="js/header.js">
   </script>
  </body>
