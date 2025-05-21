@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>
-   About Us - MyMiniSlot
-  </title>
-  <link href="all.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&amp;display=swap" rel="stylesheet">
-  <link href="styles/footer.css" rel="stylesheet">
-  <style>
-   body {
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+        About Us - MyMiniSlot
+    </title>
+    <link href="all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap"
+        rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="styles/footer.css" rel="stylesheet">
+    <style>
+        body {
             background-color: rgba(30, 37, 47, 255) !important;
             background-image: none !important;
             margin: 0;
@@ -29,13 +38,16 @@
 
         /* Visibility classes for device showcase */
         .mobile-only-device-showcase {
-            display: none; /* Hidden by default */
-        }
-        .desktop-only-device-showcase {
-            display: flex; /* Visible by default (as it was) */
+            display: none;
+            /* Hidden by default */
         }
 
-.nav-indicator {
+        .desktop-only-device-showcase {
+            display: flex;
+            /* Visible by default (as it was) */
+        }
+
+        .nav-indicator {
             position: absolute;
             bottom: -18%;
             height: 2px;
@@ -48,7 +60,7 @@
             left: 70px;
         }
 
-.about-container {
+        .about-container {
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -63,7 +75,7 @@
 
         }
 
-.about-content {
+        .about-content {
             flex: 1;
             padding-right: 60px;
             max-width: 55%;
@@ -75,7 +87,7 @@
 
         }
 
-.about-title {
+        .about-title {
             font-family: 'Mont', sans-serif;
             font-size: 2.5em;
             margin-bottom: 40px;
@@ -84,7 +96,7 @@
             color: rgb(167, 167, 167);
         }
 
-.about-text {
+        .about-text {
             font-size: 1.1em;
             line-height: 1.6;
 
@@ -98,19 +110,19 @@
 
         }
 
-.about-text p {
+        .about-text p {
             margin-bottom: 25px;
             padding-bottom: 25px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
-.about-text p:last-child {
+        .about-text p:last-child {
             border-bottom: none;
             margin-bottom: 50px;
 
         }
 
-.device-showcase {
+        .device-showcase {
             flex: 1;
             display: flex;
             justify-content: center;
@@ -128,7 +140,7 @@
 
         }
 
-.device-showcase img {
+        .device-showcase img {
             max-width: 180%;
             height: auto;
             object-fit: contain;
@@ -137,73 +149,73 @@
             margin-right: -3%;
         }
 
-.bg-flag {
+        .bg-flag {
             width: 30px;
             height: auto;
             margin-right: 7px;
         }
 
-.flag-label {
+        .flag-label {
             color: white;
             font-size: 0.9rem;
             font-weight: 600;
         }
 
-@media (min-width: 1600px) {
+        @media (min-width: 1600px) {
             .about-container {
                 max-width: 1600px;
             }
 
-.about-title {
+            .about-title {
                 font-size: 3em;
             }
 
-.about-text {
+            .about-text {
                 font-size: 1.2em;
             }
 
-}
+        }
 
-@media (max-width: 1200px) {
+        @media (max-width: 1200px) {
             .about-container {
                 padding: 0 30px;
             }
 
-.about-content {
+            .about-content {
                 padding-right: 40px;
             }
 
-.about-title {
+            .about-title {
                 font-size: 2.2em;
             }
 
-}
+        }
 
-@media (max-width: 992px) {
+        @media (max-width: 992px) {
             .about-content {
                 max-width: 35%;
             }
 
-.device-showcase {
+            .device-showcase {
                 max-width: 65%;
             }
 
-.device-showcase img {
+            .device-showcase img {
                 max-width: 185%;
                 transform: scale(1.4) translateX(15px);
             }
 
-.about-title {
+            .about-title {
                 font-size: 2em;
             }
 
-.about-text {
+            .about-text {
                 font-size: 1em;
             }
 
-}
+        }
 
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
             .about-container {
                 flex-direction: column;
                 margin-top: 30px;
@@ -212,228 +224,237 @@
             }
 
             .desktop-only-device-showcase {
-                display: none; /* Hide desktop version on mobile */
+                display: none;
+                /* Hide desktop version on mobile */
             }
 
             .mobile-only-device-showcase {
-                display: flex; /* Show mobile version */
+                display: flex;
+                /* Show mobile version */
                 justify-content: center;
                 align-items: center;
-                margin: 20px 0; /* Add some vertical spacing */
+                margin: 20px 0;
+                /* Add some vertical spacing */
             }
 
             .mobile-only-device-showcase img {
-                max-width: 80%; /* Adjust as needed, image shows it smaller */
+                max-width: 80%;
+                /* Adjust as needed, image shows it smaller */
                 height: auto;
-                transform: scale(1); /* Reset any desktop scaling */
+                transform: scale(1);
+                /* Reset any desktop scaling */
             }
 
-.about-content,
-            .device-showcase { /* This now mainly refers to .desktop-only-device-showcase for non-mobile */
+            .about-content,
+            .device-showcase {
+                /* This now mainly refers to .desktop-only-device-showcase for non-mobile */
                 padding-right: 0;
                 margin-bottom: 40px;
                 max-width: 100%;
             }
 
-.about-content {
+            .about-content {
                 margin-top: 80px;
             }
 
-.device-showcase {
+            .device-showcase {
                 margin-top: 20px;
                 margin-bottom: 60px;
                 justify-content: center;
             }
 
-.desktop-only-device-showcase img { /* Target specific instance */
+            .desktop-only-device-showcase img {
+                /* Target specific instance */
                 max-width: 100%;
                 transform: scale(1) translateX(0);
                 margin-right: 0;
                 margin-left: 0;
             }
 
-.about-title {
+            .about-title {
                 font-size: 1.8em;
                 margin-bottom: 30px;
             }
 
-}
+        }
 
-.header {
+        .header {
             background-color: rgba(30, 37, 47, 255) !important;
             width: 100%;
             box-sizing: border-box;
         }
 
-.container {
+        .container {
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 40px;
             box-sizing: border-box;
         }
-  </style>
- </head>
- <body>
-  <header class="header" id="main-header">
-   <div class="container">
-    <div class="logo-text">
-     MyMiniSlot
-    </div>
-    <nav class="nav" id="main-nav">
-     <ul class="nav-list">
-      <li class="nav-item">
-       <a class="nav-link" href="index.html">
-        HOME
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="index.html#craftsmanship">
-        CRAFTSMANSHIP
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="index.html#experience">
-        EXPERIENCE
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="index.html#pre-order">
-        PRE-ORDER
-       </a>
-      </li>
-     </ul>
-     <div class="nav-indicator" id="indicator">
-     </div>
-    </nav>
-    <button aria-label="Toggle mobile menu" class="mobile-menu-toggle" id="mobile-menu-toggle">
-     <span class="hamburger">
-     </span>
-    </button>
-    <div class="header-line">
-    </div>
-   </div>
-  </header>
-  <main class="about-container">
-   <div class="about-content">
-    <h1 class="about-title">
-     About Us
-    </h1>
-    <div class="about-text">
-     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+    </style>
+</head>
+
+<body>
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="logo-text">
+                MyMiniSlot
+            </div>
+            <nav class="nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            HOME
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#craftsmanship">
+                            CRAFTSMANSHIP
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#experience">
+                            EXPERIENCE
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pre-order">
+                            PRE-ORDER
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-indicator" id="indicator">
+                </div>
+            </nav>
+            <button aria-label="Toggle mobile menu" class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span class="hamburger">
+                </span>
+            </button>
+            <div class="header-line">
+            </div>
+        </div>
+    </header>
+    <main class="about-container">
+        <div class="about-content">
+            <h1 class="about-title">
+                About Us
+            </h1>
+            <div class="about-text">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
                     leap into electronic typesetting, remaining essentially unchanged.
-     </p>
-     <!-- Device Showcase for Mobile -->
-     <div class="mobile-only-device-showcase">
-        <img alt="MyMiniSlot Device (Mobile)" src="image/ExperienceImage.png">
-     </div>
-     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                </p>
+                <!-- Device Showcase for Mobile -->
+                <div class="mobile-only-device-showcase">
+                    <img alt="MyMiniSlot Device (Mobile)" src="image/ExperienceImage.png">
+                </div>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
                     leap into electronic typesetting, remaining essentially unchanged.
-     </p>
-     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                </p>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
                     leap into electronic typesetting, remaining essentially unchanged.
-     </p>
-     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                </p>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
                     leap into electronic typesetting, remaining essentially unchanged.
-     </p>
-    </div>
-   </div>
-   <!-- Device Showcase for Desktop -->
-   <div class="device-showcase desktop-only-device-showcase">
-    <img alt="MyMiniSlot Device" src="image/ExperienceImage.png">
-   </div>
-  </main>
-  <footer class="site-footer">
-   <div class="footer-content">
-    <div class="footer-links">
-     <div class="footer-column">
-      <a href="/about-us">
-       About us
-      </a>
-      <a href="/blog">
-       Blog
-      </a>
-      <a href="/support">
-       Support
-      </a>
-     </div>
-     <div class="footer-column">
-      <a href="/cookie-policy">
-       Cookie Policy
-      </a>
-      <a href="/privacy-policy">
-       Privacy Policy
-      </a>
-      <a href="/responsible-gambling">
-       Responsible Gambling
-      </a>
-     </div>
-     <div class="footer-column">
-      <a href="/tech-specs">
-       Tech Specs
-      </a>
-      <a href="/commissions">
-       Commissions
-      </a>
-      <a href="/game-providers">
-       Game Providers
-      </a>
-     </div>
-     <div class="footer-column language-and-social-group">
-      <div class="language-selector">
-       <img alt="Bulgarian Flag" class="bg-flag" src="image/Flag_of_Bulgaria.svg">
-       <span class="flag-label">
-        &Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;
-       </span>
-      </div>
-      <div class="social-icons-inline-container">
-       <a href="#">
-        <img alt="Twitter/X" class="footer-social-img" src="image/Home (15).png">
-       </a>
-       <a href="#">
-        <img alt="Instagram" class="footer-social-img" src="image/Home (16).png">
-       </a>
-       <a href="#">
-        <img alt="Facebook" class="footer-social-img" src="image/Home (17).png">
-       </a>
-       <a href="index.html">
-        <img alt="TikTok" class="footer-social-img" src="image/Home (18).png">
-       </a>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="footer-divider">
-   </div>
-   <div class="crypto-logos">
-    <img alt="Accepted Cryptocurrencies" class="crypto-image" src="image/footer-credits-removebg-preview.png">
-   </div>
-   <div class="footer-divider">
-   </div>
-   <div class="footer-bottom">
-    <div class="footer-logo">
-     <div class="logo-text">
-      MyMiniSlot
-     </div>
-    </div>
-    <div class="copyright">
-     MyMiniSlot &copy; 2025
-    </div>
-   </div>
-  </footer>
-  <script src="js/header.js">
-  </script>
- </body>
+                </p>
+            </div>
+        </div>
+        <!-- Device Showcase for Desktop -->
+        <div class="device-showcase desktop-only-device-showcase">
+            <img alt="MyMiniSlot Device" src="image/ExperienceImage.png">
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="/about-us">
+                        About us
+                    </a>
+                    <a href="/blog">
+                        Blog
+                    </a>
+                    <a href="/support">
+                        Support
+                    </a>
+                </div>
+                <div class="footer-column">
+                    <a href="/cookie-policy">
+                        Cookie Policy
+                    </a>
+                    <a href="/privacy-policy">
+                        Privacy Policy
+                    </a>
+                    <a href="/responsible-gambling">
+                        Responsible Gambling
+                    </a>
+                </div>
+                <div class="footer-column">
+                    <a href="/tech-specs">
+                        Tech Specs
+                    </a>
+                    <a href="/commissions">
+                        Commissions
+                    </a>
+                    <a href="/game-providers">
+                        Game Providers
+                    </a>
+                </div>
+                <div class="footer-column language-and-social-group">
+                    <div class="language-selector">
+                        <img alt="Bulgarian Flag" class="bg-flag" src="image/Flag_of_Bulgaria.svg">
+                        <span class="flag-label">
+                            &Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;
+                        </span>
+                    </div>
+                    <div class="social-icons-inline-container">
+                        <a href="#">
+                            <img alt="Twitter/X" class="footer-social-img" src="image/Home (15).png">
+                        </a>
+                        <a href="#">
+                            <img alt="Instagram" class="footer-social-img" src="image/Home (16).png">
+                        </a>
+                        <a href="#">
+                            <img alt="Facebook" class="footer-social-img" src="image/Home (17).png">
+                        </a>
+                        <a href="index.html">
+                            <img alt="TikTok" class="footer-social-img" src="image/Home (18).png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider">
+        </div>
+        <div class="crypto-logos">
+            <img alt="Accepted Cryptocurrencies" class="crypto-image" src="image/footer-credits-removebg-preview.png">
+        </div>
+        <div class="footer-divider">
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <div class="logo-text">
+                    MyMiniSlot
+                </div>
+            </div>
+            <div class="copyright">
+                MyMiniSlot &copy; 2025
+            </div>
+        </div>
+    </footer>
+    <script src="js/header.js">
+    </script>
+</body>
+
 </html>

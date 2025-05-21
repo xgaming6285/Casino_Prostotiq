@@ -9,11 +9,20 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="all.css" rel="stylesheet">
     <link href="styles/2ndpage.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap"
+        rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="styles/footer.css" rel="stylesheet">
+    <link rel="preload" href="image/homePageImage.png" as="image" media="(max-width: 768px)">
 </head>
 
 <body class="homepage-background">
@@ -67,7 +76,8 @@
                 <br>
                 METAL
             </h1>
-            <img alt="MyMiniSlot device mobile" class="homePage-machine-mobile" src="image/homePageImage.png">
+            <img rel="preload" alt="MyMiniSlot device mobile" class="homePage-machine-mobile"
+                src="image/homePageImage.png" fetchpriority="high">
             <a class="cta-button" href="#craftsmanship">
                 Explore the craftsmanship &rarr;
             </a>
