@@ -166,6 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isMobile && nav.classList.contains('active')) {
                 nav.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
+                header.classList.remove('mobile-menu-open');
+                const blurOverlay = document.querySelector('.menu-blur-overlay');
+                blurOverlay.classList.remove('active');
             }
         }
         calculateSectionPositions();

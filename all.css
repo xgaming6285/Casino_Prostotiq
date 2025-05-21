@@ -249,10 +249,12 @@ html {
     .nav {
         position: absolute;
         top: 81.7%;
-        right: 53%;
+        left: 0;
+        right: auto;
         background-color: transparent;
         max-height: 0;
         overflow: hidden;
+        width: 100%;
     }
 
     .nav.active {
@@ -263,12 +265,14 @@ html {
     .nav-list {
         flex-direction: column;
         padding: 1rem 0;
+        margin-left: 25px;
+        align-items: flex-start;
     }
 
     .nav-item {
         margin: 0;
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .nav-link {
@@ -1677,4 +1681,24 @@ body.logos-open section#experience .logo-slider-container {
         max-width: 100%;
     }
 
+}
+
+.menu-blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 400;
+}
+
+.menu-blur-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
