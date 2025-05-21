@@ -299,6 +299,43 @@ html {
         order: 1;
     }
 
+    .page-section {
+        margin-top: 15% !important;
+        min-height: auto !important;
+        padding: 20px 0 !important;
+    }
+
+    #craftsmanship.page-section {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+        min-height: auto !important;
+    }
+
+    #experience.page-section {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        min-height: auto !important;
+    }
+
+    .craftsmanship-content {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        min-height: auto !important;
+    }
+
+    /* .product-display adjustments might not be needed here if handled by .mobile-only-product-display rules */
+    /* However, you can fine-tune .mobile-only-product-display for smaller screens if necessary */
+    .mobile-only-product-display {
+        max-width: 85%;
+        /* As per your previous preference */
+    }
+
+    .pre-order-product-image {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -649,65 +686,6 @@ html {
         order: 1;
         /* Content block (now including image on mobile) comes first */
     }
-}
-
-@media (max-width: 768px) {
-    .pre-order-product-image {
-        max-width: 100%;
-    }
-
-    .product-display {
-        max-width: 85%;
-    }
-
-    .pre-order-content {
-        text-align: center;
-        align-items: center;
-    }
-
-    .pre-order-header h2 {
-        text-align: center;
-    }
-
-    .product-features p {
-        text-align: center;
-    }
-
-    .order-action {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .order-now-btn {
-        padding: 10px 30px;
-        background-color: rgba(30, 37, 47, 1);
-        border-radius: 30px;
-        border: none;
-        font-size: 1.2rem;
-        letter-spacing: 0.075em;
-    }
-
-    .homePage-machine-mobile {
-        display: block;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .hero-text h1 {
-        font-size: 2em;
-        line-height: 1.4;
-        margin-bottom: 20px;
-    }
-
-    .hero-text .cta-button {
-        font-size: 1.2em;
-        margin-bottom: 30px;
-        display: inline-block;
-        margin-top: 20px;
-    }
-
 }
 
 @media (max-width: 576px) {
@@ -1219,6 +1197,35 @@ section#experience .logo-pragmatic {
         padding-top: 20px;
     }
 
+    section#experience {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    section#experience .experience-visual-hub {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 10%;
+        gap: 0;
+    }
+
+    section#experience h5 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        color: #f0f0f0;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    section#experience .mobile-logo-grid {
+        margin: 30px auto;
+    }
+
+    section#experience .experience-main-product-image {
+        margin-top: -15%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1235,7 +1242,6 @@ section#experience .logo-pragmatic {
         font-size: 1em;
         padding: 5px 20px;
     }
-
 }
 
 .homePage-machine-desktop {
