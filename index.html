@@ -17,6 +17,7 @@
 </head>
 
 <body class="homepage-background">
+    <div class="menu-blur-overlay"></div>
     <header class="header" id="main-header">
         <div class="container">
             <div class="logo-text">
@@ -82,41 +83,33 @@
                         <image alt="Gaming device" class="product-image-homepage" href="image/machine.png.png" x="0"
                             y="0" width="1000" height="1000" />
 
-                        <!-- High-Res Display Line and Point -->
-
+                        {/* <!-- High-Res Display Line and Point --> */}
                         <line id="line-high-res" class="animated-line" x1="60" y1="275" x2="470" y2="275" stroke="white"
                             stroke-width="2" />
+                        <circle id="circle-high-res" cx="470" cy="275" r="7" fill="white" /> {/* <!-- Added ID --> */}
 
-                        <circle cx="470" cy="275" r="7" fill="white" />
-
-                        <!-- Forged in Metal Line and Point -->
-
+                        {/* <!-- Forged in Metal Line and Point --> */}
                         <line id="line-forged-metal" class="animated-line" x1="-20" y1="420" x2="340" y2="420"
                             stroke="white" stroke-width="2" />
+                        <circle id="circle-forged-metal" cx="340" cy="420" r="7" fill="white" /> {/* <!-- Added ID -->
+                        */}
 
-                        <circle cx="340" cy="420" r="7" fill="white" />
-
-                        <!-- Providers Line and Point -->
-
+                        {/* <!-- Providers Line and Point --> */}
                         <line id="line-providers" class="animated-line" x1="-90" y1="550" x2="280" y2="550"
                             stroke="white" stroke-width="2" />
+                        <circle id="circle-providers" cx="280" cy="550" r="7" fill="white" /> {/* <!-- Added ID --> */}
 
-                        <circle cx="280" cy="550" r="7" fill="white" />
-
-                        <!-- Premium Buttons Line and Point -->
-
+                        {/* <!-- Premium Buttons Line and Point --> */}
                         <line id="line-buttons" class="animated-line" x1="1000" y1="630" x2="710" y2="630"
                             stroke="white" stroke-width="2" />
+                        <circle id="circle-buttons" cx="710" cy="630" r="7" fill="white" /> {/* <!-- Added ID --> */}
 
-                        <circle cx="710" cy="630" r="7" fill="white" />
-
-                        <!-- You can adjust the coordinates above to match your design -->
-
+                        {/* <!-- You can adjust the coordinates above to match your design --> */}
                     </svg>
                     <div class="feature-label left-label high-res">
                         <div class="plus-circle">
                             <svg class="plus-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="50"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <line x1="12" x2="12" y1="5" y2="19">
                                 </line>
@@ -328,8 +321,19 @@
                 </div>
                 <div class="footer-column language-and-social-group">
                     <div class="language-selector">
-                        <img src="image/Flag_of_Bulgaria.svg" alt="Bulgarian Flag" class="bg-flag">
-                        <span class="flag-label">Български</span>
+                        <img src="image/Flag_of_Bulgaria.svg" alt="Bulgarian Flag" class="bg-flag" id="footer-flag">
+                        <span class="flag-label" id="footer-flag-label">English</span>
+                        <select id="footer-language-dropdown" class="footer-language-dropdown">
+                            <option value="en" data-flag="image/Flag_of_UK.svg">English</option>
+                            <option value="bg" data-flag="image/Flag_of_Bulgaria.svg">Български</option>
+                            <option value="de" data-flag="image/Flag_of_Germany.svg">Deutsch</option>
+                            <option value="fr" data-flag="image/Flag_of_France.svg">Français</option>
+                            <option value="es" data-flag="image/Flag_of_Spain.svg">Español</option>
+                            <option value="it" data-flag="image/Flag_of_Italy.svg">Italiano</option>
+                            <option value="ru" data-flag="image/Flag_of_Russia.svg">Русский</option>
+                            <option value="tr" data-flag="image/Flag_of_Turkey.svg">Türkçe</option>
+                            <option value="in" data-flag="image/Flag_of_India.svg">भारतीय</option>
+                        </select>
                     </div>
                     <div class="social-icons-inline-container">
                         <a href="#">
@@ -353,11 +357,15 @@
         <div class="crypto-logos">
             <img alt="Accepted Cryptocurrencies" class="crypto-image" src="image/footer-credits-removebg-preview.png">
         </div>
+        <footer class="site-footer-mobile">
+            <img src="image/mobile-footer.png" alt="Accepted Cryptocurrencies and Responsible Gambling"
+                class="mobile-footer-img">
+        </footer>
         <div class="footer-divider">
         </div>
         <div class="footer-bottom">
             <div class="footer-logo">
-                <div class="logo-text">
+                <div class="logo-text-footer">
                     MyMiniSlot
                 </div>
             </div>
@@ -448,8 +456,40 @@
     </script>
     <script src="js/header.js">
     </script>
-    <script src="js/dropdownExperience.js"></script>
+    <<<<<<< HEAD <script src="js/dropdownExperience.js">
+        </script>
 
+        =======
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const langDropdown = document.getElementById('footer-language-dropdown');
+                const flagImg = document.getElementById('footer-flag');
+                const flagLabel = document.getElementById('footer-flag-label');
+                const langOptions = {
+                    en: { flag: 'image/Flag_of_UK.svg' },
+                    bg: { flag: 'image/Flag_of_Bulgaria.svg' },
+                    de: { flag: 'image/Flag_of_Germany.svg' },
+                    fr: { flag: 'image/Flag_of_France.svg' },
+                    es: { flag: 'image/Flag_of_Spain.svg' },
+                    it: { flag: 'image/Flag_of_Italy.svg' },
+                    ru: { flag: 'image/Flag_of_Russia.svg' },
+                    tr: { flag: 'image/Flag_of_Turkey.svg' },
+                    in: { flag: 'image/Flag_of_India.svg' }
+                };
+                // Set initial to English
+                flagImg.src = langOptions['en'].flag;
+                flagLabel.textContent = langOptions['en'].label;
+                langDropdown.value = 'en';
+                langDropdown.addEventListener('change', function () {
+                    const selected = langDropdown.value;
+                    if (langOptions[selected]) {
+                        flagImg.src = langOptions[selected].flag;
+                        flagLabel.textContent = langOptions[selected].label;
+                    }
+                });
+            });
+        </script>
+        >>>>>>> 1e4ee05b0732baf13240015ab72c89195480f5c7
 </body>
 
 </html>
