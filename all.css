@@ -830,6 +830,7 @@ html {
     cursor: pointer;
     background-color: transparent;
     box-shadow: none;
+    top: -100px;
 }
 
 .view-360:hover {
@@ -840,7 +841,8 @@ html {
     width: 45px;
     height: 35px;
     cursor: pointer;
-    margin-right: 120px;
+    margin-right: 435px;
+    margin-top: -60px;
 }
 
 .order-action {
@@ -1753,7 +1755,7 @@ body.logos-open section#experience .logo-slider-container {
         align-items: center;
         max-width: 80%;
         /* Or your preferred width for mobile */
-        margin-bottom: 25px;
+        margin-bottom: -35px;
         /* Space before the order button */
         right: -10%;
     }
