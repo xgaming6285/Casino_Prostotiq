@@ -261,10 +261,23 @@ body {
     padding-bottom: 20vh;
     padding-left: 10px;
     padding-right: 10px;
+    overflow: visible;
   }
 
-  .product-image-homepage {
-    max-width: 60%;
+  .product-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: auto;
+    position: relative;
+    overflow: visible;
+  }
+
+  .product-svg {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    overflow: visible;
   }
 
   .high-res {
@@ -274,7 +287,7 @@ body {
 
   .providers {
     left: -10% !important;
-    bottom: -45% !important;
+    top: 65% !important;
   }
 
   .buttons {
@@ -287,17 +300,25 @@ body {
     top: -15% !important;
   }
 
-  .product-container {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    aspect-ratio: auto;
+  .product-svg #line-high-res,
+  .product-svg #line-forged-metal,
+  .product-svg #line-providers,
+  .product-svg #line-buttons,
+  .product-svg circle {
+    display: block !important;
+    overflow: visible !important;
   }
 
-  .product-svg {
-    max-width: 90%;
-    height: auto;
-    margin-bottom: 20px;
+  .animated-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 1.5s ease forwards;
+  }
+
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+    }
   }
 
   .feature-label {
@@ -323,42 +344,25 @@ body {
   }
 
   .left-label .plus-circle {
-
     margin-right: 8px;
   }
 
   .right-label .plus-circle {
-
     margin-left: 8px;
   }
 
   .right-label .label-text {
-
     order: 1;
   }
 
   .right-label .plus-circle-right {
-
     order: 2;
     margin-left: 8px;
     position: static;
     top: auto;
     right: auto;
     width: 16px;
-
     height: 16px;
-  }
-
-  .cta-text {
-    font-size: 17px;
-  }
-
-  .product-svg #line-high-res,
-  .product-svg #line-forged-metal,
-  .product-svg #line-providers,
-  .product-svg #line-buttons,
-  .product-svg circle {
-    display: block !important;
   }
 
   .cta {
@@ -369,7 +373,6 @@ body {
     padding: 4px 15px !important;
     font-size: 14px;
   }
-
 }
 
 @media (max-width: 1400px) {
@@ -477,7 +480,7 @@ body {
 
   .forged-metal {
     left: -7%;
-    top: 40% ;
+    top: 40%;
   }
 
 
