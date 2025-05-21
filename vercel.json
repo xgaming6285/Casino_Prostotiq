@@ -8,20 +8,24 @@
     ],
     "routes": [
         {
+            "src": "/about-us",
+            "dest": "/about-us.html"
+        },
+        {
             "src": "/(.*)\\.html",
             "dest": "/$1.html"
         },
         {
-            "src": "/(.*)\\.js",
-            "dest": "/js/$1.js"
+            "src": "/js/(.*)",
+            "dest": "/js/$1"
         },
         {
-            "src": "/(.*)\\.css",
-            "dest": "/styles/$1.css"
+            "src": "/styles/(.*)",
+            "dest": "/styles/$1"
         },
         {
-            "src": "/(.*)\\.(jpg|png|gif|ico|svg|webp)",
-            "dest": "/image/$1.$2"
+            "src": "/image/(.*)",
+            "dest": "/image/$1"
         },
         {
             "src": "/(.*)",
