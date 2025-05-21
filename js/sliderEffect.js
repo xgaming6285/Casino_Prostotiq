@@ -107,4 +107,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // Its functionality for initializing the first logo is now handled by 
     // the exposed window.updateSliderFrameForFirstLogo function,
     // which will be called by dropdownExperience.js
+
+    // Add snap scroll from Craftsmanship to Experience
+    const craftsmanshipTrigger = document.getElementById('trigger-snap-to-experience');
+    const experienceSection = document.getElementById('experience');
+    let lastScrollY = window.scrollY;
+    let isSnappingToExperience = false;
+    let canSnapToExperience = true;
+
+    if (!craftsmanshipTrigger || !experienceSection) {
+        console.warn('Snap scrolling to Experience: Trigger or section not found.');
+        return;
+    }
+
+    const triggerObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const currentScrollY = window.scrollY;
+            const scrollingDown = currentScrollY > lastScrollY;
+
+            if (scrollingDown && entry.isIntersecting && canSnapToExperience && !isSnappingToExperience) {
+                const experienceRect = experienceSection.getBoundingClientRect();
+                if (experienceRect.top > (window.innerHeight * 0.1)) {
+                    isSnappingToExperience = true;
+                    canSnapToExperience = false;
+                    experienceSection.scrollIntoView({ behavior: 'smooth' });
+
+                    setTimeout(() => {
+                        isSnappingToExperience = false;
+                        setTimeout(() => canSnapToExperience = true, 500);
+                    }, 1200);
+                }
+            } else if (!scrollingDown && !entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                canSnapToExperience = true;
+            }
+            lastScrollY = currentScrollY;
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    triggerObserver.observe(craftsmanshipTrigger);
 });
