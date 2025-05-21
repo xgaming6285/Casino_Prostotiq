@@ -228,6 +228,7 @@
     Order now &rarr;
    </a>
   </section>
+  <div id="experience-scroll-trigger" style="height: 1px; position: relative; top: 50px;"></div>
   <section class="page-section pre-order-background" id="pre-order">
    <div class="pre-order-container">
     <div class="product-display">
@@ -472,10 +473,6 @@
   </script>
   <script src="js/header.js">
   </script>
-  &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-  <script src="js/dropdownExperience.js">
-  </script>
-  =======
   <script>
    document.addEventListener('DOMContentLoaded', function() {
                 const langDropdown = document.getElementById('footer-language-dropdown');
@@ -522,5 +519,53 @@
                 });
             });
         </script>
-</body>
+  <!-- New script for snap scroll from experience to pre-order -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollTrigger = document.getElementById('experience-scroll-trigger');
+        const preOrderSection = document.getElementById('pre-order');
+        let lastScrollY = window.scrollY;
+        let isSnapping = false;
+        let canSnap = true; // General flag to allow snapping
+
+        if (!scrollTrigger || !preOrderSection) {
+            console.warn('Snap scrolling: Scroll trigger or Pre-order section not found.');
+            return;
+        }
+
+        const triggerObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const currentScrollY = window.scrollY;
+                const scrollingDown = currentScrollY > lastScrollY;
+
+                if (scrollingDown && entry.isIntersecting && canSnap && !isSnapping) {
+                    const preOrderRect = preOrderSection.getBoundingClientRect();
+                    // Only snap if pre-order is not already significantly in view
+                    if (preOrderRect.top > (window.innerHeight * 0.1)) { 
+                        isSnapping = true;
+                        canSnap = false; // Prevent immediate re-snap
+                        preOrderSection.scrollIntoView({ behavior: 'smooth' });
+
+                        setTimeout(() => {
+                            isSnapping = false;
+                            // Re-enable snap after a delay, but only if user has scrolled away from pre-order
+                            // This part can be tricky and might need refinement based on desired behavior
+                            // For now, let's re-enable after a timeout
+                            setTimeout(() => canSnap = true, 500); 
+                        }, 1200); // Duration of smooth scroll + buffer
+                    }
+                } else if (!scrollingDown && !entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                    // If scrolling up and the trigger is above the viewport, re-enable snapping.
+                    canSnap = true;
+                }
+                lastScrollY = currentScrollY;
+            });
+        }, { 
+            threshold: 0.1 // Trigger when 10% of the trigger element is visible
+        });
+
+        triggerObserver.observe(scrollTrigger);
+    });
+  </script>
+ </body>
 </html>
