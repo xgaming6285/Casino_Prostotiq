@@ -434,14 +434,15 @@ html {
 .hero-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 100px 5% 80px;
+    align-items: start;
+    padding: 100px 1% 80px;
     min-height: calc(100vh - 120px);
     box-sizing: border-box;
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    text-align: left;
 }
 
 .hero-text {
@@ -450,6 +451,7 @@ html {
     z-index: 1;
     flex-basis: 45%;
     max-width: 600px;
+    text-align: left;
 }
 
 .hero-text h1 {
@@ -477,6 +479,7 @@ html {
     font-family: 'Montserrat';
     letter-spacing: 0.075em;
     text-wrap: nowrap;
+
 }
 
 .cta-button:hover {
