@@ -435,7 +435,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding: 100px 5% 80px;
+    padding: 100px 14% 80px;
     min-height: calc(100vh - 120px);
     box-sizing: border-box;
     max-width: 1400px;
@@ -452,6 +452,7 @@ html {
     flex-basis: 45%;
     max-width: 600px;
     text-align: left;
+    left: -15%;
 }
 
 .hero-text h1 {
@@ -479,7 +480,7 @@ html {
     font-family: 'Montserrat';
     letter-spacing: 0.075em;
     text-wrap: nowrap;
-
+    margin-left: -73%;
 }
 
 .cta-button:hover {
@@ -1307,6 +1308,7 @@ section#experience .logo-pragmatic {
     .hero-text h1 {
         font-size: 3.7em;
         text-wrap: nowrap;
+        margin-left: 7%;
     }
 
     .homePage-machine-desktop {
@@ -1314,6 +1316,22 @@ section#experience .logo-pragmatic {
         right: -19% !important;
         margin-top: auto !important;
         top: 21% !important;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: rgba(30, 37, 47, 255);
+        color: white;
+        padding: 5px 25px;
+        text-decoration: none;
+        font-weight: 200;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        font-size: 1.5em;
+        font-family: 'Montserrat';
+        letter-spacing: 0.075em;
+        text-wrap: nowrap;
+        margin-left: -17%;
     }
 
 }
@@ -1331,11 +1349,16 @@ section#experience .logo-pragmatic {
     .hero-text h1 {
         font-size: 4.5em;
         text-wrap: nowrap;
+        margin-left: -25%;
     }
 
     .hero-text {
         left: -5%;
         top: -50px;
+    }
+
+    .cta-button {
+        margin-left: -70%;
     }
 
     .homePage-machine-desktop {
@@ -1353,6 +1376,7 @@ section#experience .logo-pragmatic {
     .hero-text h1 {
         font-size: 5.5em;
         text-wrap: nowrap;
+        margin-left: 2%;
     }
 
     .homePage-machine-desktop {
