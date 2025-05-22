@@ -1,54 +1,65 @@
+.showcase-container,
+body {
+  min-height: 100vh
+}
+
+.main-container,
+.showcase-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative
+}
+
+.main-container,
+.product-container {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto
+}
+
+*,
+.main-container,
+.product-container {
+  box-sizing: border-box
+}
+
+.plus-circle,
+.plus-circle-right {
+  background-color: rgba(0, 0, 0, .8)
+}
+
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 0
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   background-color: #0a0a0a;
   background-image: url('../image/backgroundMainPage.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: white;
-  min-height: 100vh;
-  overflow-x: hidden;
-
-}
-
-.showcase-container {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  overflow: hidden;
+  color: #fff;
+  overflow-x: hidden
 }
 
 .main-container {
-  position: relative;
-  margin: 0 auto;
   padding-top: 5vh;
   padding-bottom: 5vh;
   max-width: 1600px;
-  width: 100%;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-sizing: border-box;
+  justify-content: center
 }
 
 .product-container {
   width: 95%;
   max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1 / 1;
-  position: relative;
-  box-sizing: border-box;
+  aspect-ratio: 1/1
 }
 
 .product-svg {
@@ -56,7 +67,7 @@ body {
   height: 100%;
   display: block;
   max-width: 100%;
-  overflow: visible;
+  overflow: visible
 }
 
 .product-image {
@@ -67,172 +78,168 @@ body {
   margin: 0 auto;
   max-width: 62%;
   height: 62%;
-  object-fit: contain;
+  object-fit: contain
+}
+
+.arrow-icon,
+.plus-circle,
+.plus-circle-right,
+.plus-icon {
+  width: 20px;
+  height: 20px
 }
 
 .product-image-homepage {
   object-fit: contain;
-  display: block;
+  display: block
 }
 
 .feature-label {
-  position: absolute;
-  z-index: 2;
   display: flex;
-  align-items: flex-end;
-
+  align-items: flex-end
 }
 
 .left-label {
-  flex-direction: row;
+  flex-direction: row
 }
 
 .right-label {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse
 }
 
 .plus-circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
   border-radius: 50%;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #fff;
   top: 1.25em;
   position: relative;
-  left: 2.3em;
+  left: 2.3em
+}
+
+.cta,
+.plus-circle-right {
+  align-items: center;
+  display: flex
 }
 
 .plus-circle-right {
   position: absolute;
   top: 2.1em;
-  right: 0.5em;
-  display: flex;
-  align-items: center;
+  right: .5em;
   justify-content: center;
-  width: 20px;
-  height: 20px;
   border-radius: 50%;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #fff
+}
+
+.cta,
+.label-text {
+  border-radius: 9999px;
+  color: #fff
 }
 
 .plus-icon {
-  width: 20px;
-  height: 20px;
-  color: white;
+  color: #fff
 }
 
 .label-text {
-  background-color: rgba(0, 0, 0, 1);
-  border-color: white;
-  border-radius: 9999px;
+  background-color: #000;
+  border-color: #fff;
   border-style: solid;
   border-width: thin;
   padding: 16px 30px;
   font-size: 18px;
-  font-weight: 700;
-  color: white;
+  font-weight: 700
 }
 
 .left-label .plus-circle {
-  margin-right: 8px;
+  margin-right: 8px
 }
 
 .right-label .plus-circle {
-  margin-left: 8px;
+  margin-left: 8px
 }
 
 .high-res {
   left: 5.4%;
-  top: 24.7%;
+  top: 24.7%
 }
 
 .forged-metal {
   left: -7%;
-  top: 39.2%;
+  top: 39.2%
 }
 
 .providers {
   left: -20%;
-  top: 52.5%;
+  top: 52.5%
 }
 
 .buttons {
   right: -20%;
-  top: 59.7%;
+  top: 59.7%
 }
 
 .cta {
   position: absolute;
   bottom: 15%;
   right: -17%;
-  display: flex;
-  align-items: center;
   gap: 8px;
-  color: white;
   z-index: 3;
-  background-color: rgba(41, 44, 56, 0.8);
-  padding: 8px 50px;
-  border-radius: 9999px;
+  background-color: rgba(41, 44, 56, .8);
+  padding: 8px 50px
 }
 
 .cta-link {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: transform .3s
 }
 
 .cta-link:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px)
 }
 
 .cta-text {
   font-size: 27px;
-  font-weight: 500;
-}
-
-.arrow-icon {
-  width: 20px;
-  height: 20px;
+  font-weight: 500
 }
 
 .feature-dropdown {
   position: absolute;
-  background-color: rgba(0, 0, 0, 1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, .2);
   border-radius: 8px;
   padding: 12px;
-  color: white;
+  color: #fff;
   font-size: 14px;
   max-width: 250px;
   z-index: 9999;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity .3s, transform .3s;
   pointer-events: auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+  box-shadow: 0 4px 12px #000;
   line-height: 1.4;
-  text-align: center;
+  text-align: center
 }
 
 .feature-dropdown.show-dropdown {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0)
 }
 
 .left-label .feature-dropdown {
   left: 25px;
-  top: 100%;
+  top: 100%
 }
 
 .right-label .feature-dropdown {
   right: 0;
-  top: 100%;
+  top: 100%
 }
 
 .feature-label {
@@ -240,28 +247,25 @@ body {
   z-index: 111;
   display: flex;
   align-items: flex-end;
-  cursor: pointer;
+  cursor: pointer
 }
 
 .plus-circle,
 .plus-circle-right {
   cursor: pointer;
-  transition: transform 0.2s ease;
-  z-index: 120;
+  transition: transform .2s;
+  z-index: 120
 }
 
 .feature-label:hover .plus-circle,
 .feature-label:hover .plus-circle-right {
-  transform: scale(1.1);
+  transform: scale(1.1)
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .main-container {
-    padding-top: 17vh;
-    padding-bottom: 20vh;
-    padding-left: 10px;
-    padding-right: 10px;
-    overflow: visible;
+    padding: 17vh 10px 20vh;
+    overflow: visible
   }
 
   .product-container {
@@ -270,54 +274,54 @@ body {
     align-items: center;
     aspect-ratio: auto;
     position: relative;
-    overflow: visible;
+    overflow: visible
   }
 
   .product-svg {
     max-width: 90%;
     height: auto;
     margin-bottom: 20px;
-    overflow: visible;
+    overflow: visible
   }
 
   .high-res {
     right: -48% !important;
-    top: 2% !important;
+    top: 2% !important
   }
 
   .providers {
     left: -10% !important;
-    top: 85% !important;
+    top: 85% !important
   }
 
   .buttons {
     right: 1% !important;
-    top: 105% !important;
+    top: 105% !important
   }
 
   .forged-metal {
     left: 5% !important;
-    top: -10% !important;
+    top: -10% !important
   }
 
-  .product-svg #line-high-res,
-  .product-svg #line-forged-metal,
-  .product-svg #line-providers,
   .product-svg #line-buttons,
+  .product-svg #line-forged-metal,
+  .product-svg #line-high-res,
+  .product-svg #line-providers,
   .product-svg circle {
     display: block !important;
-    overflow: visible !important;
+    overflow: visible !important
   }
 
   .animated-line {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: drawLine 1.5s ease forwards;
+    animation: 1.5s forwards drawLine
   }
 
   @keyframes drawLine {
     to {
-      stroke-dashoffset: 0;
+      stroke-dashoffset: 0
     }
   }
 
@@ -327,42 +331,42 @@ body {
     width: auto;
     max-width: 95%;
     align-items: center;
-    justify-content: center;
+    justify-content: center
+  }
+
+  .plus-circle,
+  .right-label .plus-circle-right {
+    position: static;
+    top: auto;
+    width: 16px;
+    height: 16px
   }
 
   .label-text {
     font-size: 12px;
-    padding: 6px 16px;
+    padding: 6px 16px
   }
 
   .plus-circle {
-    position: static;
-    width: 16px;
-    height: 16px;
-    top: auto;
-    left: auto;
+    left: auto
   }
 
   .left-label .plus-circle {
-    margin-right: 8px;
+    margin-right: 8px
   }
 
   .right-label .plus-circle {
-    margin-left: 8px;
+    margin-left: 8px
   }
 
   .right-label .label-text {
-    order: 1;
+    order: 1
   }
 
   .right-label .plus-circle-right {
     order: 2;
     margin-left: 8px;
-    position: static;
-    top: auto;
-    right: auto;
-    width: 16px;
-    height: 16px;
+    right: auto
   }
 
   .cta {
@@ -371,24 +375,24 @@ body {
     bottom: -37% !important;
     right: -20% !important;
     padding: 4px 15px !important;
-    font-size: 14px;
+    font-size: 14px
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width:1400px) {
   .high-res {
     left: 11%;
-    top: 17.3%;
+    top: 17.3%
   }
 
   .forged-metal {
     left: -6%;
-    top: 30.2%;
+    top: 30.2%
   }
 
   .buttons {
     right: -8%;
-    top: 62.7%;
+    top: 62.7%
   }
 
   .product-container {
@@ -398,9 +402,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     position: relative;
-    box-sizing: border-box;
+    box-sizing: border-box
   }
 
   .cta {
@@ -410,77 +414,75 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: white;
+    color: #fff;
     z-index: 3;
-    background-color: rgba(41, 44, 56, 0.8);
+    background-color: rgba(41, 44, 56, .8);
     padding: 8px 50px;
-    border-radius: 9999px;
+    border-radius: 9999px
   }
 
   .cta-text {
-    font-size: 18px !important;
+    font-size: 18px !important
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width:1200px) {
   .feature-label {
-    font-size: 0.9em;
+    font-size: .9em
   }
 
   .label-text {
     font-size: 12px;
-    padding: 6px 16px;
+    padding: 6px 16px
   }
 
   .plus-circle,
   .plus-circle-right {
     width: 16px;
-    height: 16px;
+    height: 16px
   }
 
   .high-res {
     left: 11%;
-    top: 10.8%;
+    top: 10.8%
   }
 
   .forged-metal {
     left: 3%;
-    top: 30.8%;
+    top: 30.8%
   }
-
 
   .buttons {
-    right: 0%;
-    top: 59.3%;
+    right: 0;
+    top: 59.3%
   }
-
 }
 
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
   .feature-label {
-    font-size: 0.8em;
+    font-size: .8em
   }
 
   .label-text {
     font-size: 11px;
     padding: 7px 17px;
-    text-wrap-mode: nowrap;
+    text-wrap-mode: nowrap
   }
 
   .plus-circle,
   .plus-circle-right {
     width: 14px;
-    height: 14px;
+    height: 14px
   }
 
   .high-res {
     left: 2%;
-    top: 25%;
+    top: 25%
   }
 
   .forged-metal {
     left: -7%;
-    top: 40%;
+    top: 40%
   }
 
   .cta {
@@ -490,49 +492,46 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: white;
+    color: #fff;
     z-index: 3;
-    background-color: rgba(41, 44, 56, 0.8);
+    background-color: rgba(41, 44, 56, .8);
     padding: 8px 50px;
-    border-radius: 9999px;
+    border-radius: 9999px
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width:576px) {
   .cta {
     padding: 4px 18px !important;
-    bottom: -60% !important;
+    bottom: -60% !important
   }
 
   .cta-text {
-    font-size: 14px;
+    font-size: 14px
   }
 
   .forged-metal {
     left: -7% !important;
-    top: -30% !important;
+    top: -30% !important
   }
 
   .high-res {
     left: 5%;
-    top: -1% !important;
+    top: -1% !important
   }
 
   .buttons {
     right: -5% !important;
-    top: 110%!important;
+    top: 110% !important
   }
 
   .main-container {
-    padding-top: 50%;
-    padding-bottom: 20vh;
-    padding-left: 10px;
-    padding-right: 10px;
-    overflow: visible;
+    padding: 50% 10px 20vh;
+    overflow: visible
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width:1400px) {
   .product-container {
     width: 95%;
     max-width: 1000px;
@@ -540,9 +539,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     position: relative;
-    box-sizing: border-box;
+    box-sizing: border-box
   }
 
   .cta {
@@ -552,23 +551,22 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: white;
+    color: #fff;
     z-index: 3;
-    background-color: rgba(41, 44, 56, 0.8);
+    background-color: rgba(41, 44, 56, .8);
     padding: 8px 50px;
-    border-radius: 9999px;
+    border-radius: 9999px
   }
 }
 
 .animated-line {
   stroke-dasharray: 6000;
   stroke-dashoffset: 600;
-  animation: drawLine 1.2s ease forwards;
+  animation: 1.2s forwards drawLine
 }
 
 @keyframes drawLine {
   to {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 0
   }
-
 }
