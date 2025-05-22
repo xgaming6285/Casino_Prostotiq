@@ -435,7 +435,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding: 100px 1% 80px;
+    padding: 100px 5% 80px;
     min-height: calc(100vh - 120px);
     box-sizing: border-box;
     max-width: 1400px;
