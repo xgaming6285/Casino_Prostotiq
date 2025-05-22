@@ -6,6 +6,8 @@
     <title>
         Cookie Policy - MyMiniSlot
     </title>
+    <meta name="description"
+        content="Understand how MyMiniSlot uses cookies to enhance your browsing experience and provide personalized services.">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="all.css" rel="stylesheet">
     <link href="styles/cookie-policy.css" rel="stylesheet">
@@ -34,22 +36,22 @@
             <nav class="nav" id="main-nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a class="nav-link" data-section="home" href="#home">
+                        <a class="nav-link" data-section="home" href="index.html#home">
                             HOME
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-section="craftsmanship" href="#craftsmanship">
+                        <a class="nav-link" data-section="craftsmanship" href="index.html#craftsmanship">
                             CRAFTSMANSHIP
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-section="experience" href="#experience">
+                        <a class="nav-link" data-section="experience" href="index.html#experience">
                             EXPERIENCE
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-section="pre-order" href="#pre-order">
+                        <a class="nav-link" data-section="pre-order" href="index.html#pre-order">
                             PRE-ORDER
                         </a>
                     </li>
@@ -66,7 +68,8 @@
         </div>
     </header>
     <main class="cookie-policy-content">
-        <img alt="Coins" class="coin" src="image/coinsWithShadows.png">
+        <img alt="Stack of illustrative coins for MyMiniSlot cookie policy page" class="coin"
+            src="image/coinsWithShadows.png">
         <div class="content-container">
             <h1>
                 Cookie Policy
@@ -119,24 +122,24 @@
         <div class="footer-content">
             <div class="footer-links">
                 <div class="footer-column">
-                    <a href="/about-us">
+                    <a href="about-us.html">
                         About us
                     </a>
                     <a href="/blog">
                         Blog
                     </a>
-                    <a href="/support">
+                    <a href="support.html">
                         Support
                     </a>
                 </div>
                 <div class="footer-column">
-                    <a href="/cookie-policy">
+                    <a href="cookie-policy.html">
                         Cookie Policy
                     </a>
-                    <a href="/privacy-policy">
+                    <a href="privacy-policy.html">
                         Privacy Policy
                     </a>
-                    <a href="/responsible-gambling">
+                    <a href="responsible-gambling.html">
                         Responsible Gambling
                     </a>
                 </div>
@@ -153,11 +156,12 @@
                 </div>
                 <div class="footer-column language-and-social-group">
                     <div class="language-selector">
-                        <img alt="Bulgarian Flag" class="uk-flag" id="footer-flag" src="image/Flag_of_UK.svg">
+                        <img alt="UK Flag" class="uk-flag" id="footer-flag" src="image/Flag_of_UK.svg">
                         <span class="flag-label" id="footer-flag-label">
                             English
                         </span>
-                        <select class="footer-language-dropdown" id="footer-language-dropdown">
+                        <select class="footer-language-dropdown" id="footer-language-dropdown"
+                            aria-label="Select language">
                             <option data-flag="image/Flag_of_UK.svg" value="en">
                                 English
                             </option>
@@ -188,17 +192,17 @@
                         </select>
                     </div>
                     <div class="social-icons-inline-container">
-                        <a href="#">
-                            <img alt="Twitter/X" class="footer-social-img" src="image/Home (15).png">
+                        <a href="#" aria-label="MyMiniSlot on Twitter X">
+                            <img alt="Twitter X social media icon" class="footer-social-img" src="image/Home (15).png">
                         </a>
-                        <a href="#">
-                            <img alt="Instagram" class="footer-social-img" src="image/Home (16).png">
+                        <a href="#" aria-label="MyMiniSlot on Instagram">
+                            <img alt="Instagram social media icon" class="footer-social-img" src="image/Home (16).png">
                         </a>
-                        <a href="#">
-                            <img alt="Facebook" class="footer-social-img" src="image/Home (17).png">
+                        <a href="#" aria-label="MyMiniSlot on Facebook">
+                            <img alt="Facebook social media icon" class="footer-social-img" src="image/Home (17).png">
                         </a>
-                        <a href="index.html">
-                            <img alt="TikTok" class="footer-social-img" src="image/Home (18).png">
+                        <a href="index.html" aria-label="MyMiniSlot on TikTok">
+                            <img alt="TikTok social media icon" class="footer-social-img" src="image/Home (18).png">
                         </a>
                     </div>
                 </div>
@@ -207,11 +211,12 @@
         <div class="footer-divider">
         </div>
         <div class="crypto-logos">
-            <img alt="Accepted Cryptocurrencies" class="crypto-image" src="image/footer-credits-removebg-preview.png">
+            <img alt="Accepted Cryptocurrencies for MyMiniSlot" class="crypto-image"
+                src="image/footer-credits-removebg-preview.png">
         </div>
         <footer class="site-footer-mobile">
-            <img alt="Accepted Cryptocurrencies and Responsible Gambling" class="mobile-footer-img"
-                src="image/mobile-footer.png">
+            <img alt="Accepted Cryptocurrencies and Responsible Gambling information for mobile"
+                class="mobile-footer-img" src="image/mobile-footer.png">
         </footer>
         <div class="footer-divider">
         </div>
@@ -222,11 +227,57 @@
                 </div>
             </div>
             <div class="copyright">
-                MyMiniSlot &copy; 2025
+                MyMiniSlot &copy; <span id="current-year">2025</span>
             </div>
         </div>
     </footer>
     <script src="js/header.js">
+    </script>
+    <script>
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const langDropdown = document.getElementById('footer-language-dropdown');
+            const flagImg = document.getElementById('footer-flag');
+            const flagLabel = document.getElementById('footer-flag-label');
+
+            // Initialize with English
+            if (flagImg && flagLabel) {
+                const initialOption = langDropdown ? langDropdown.options[langDropdown.selectedIndex] : null;
+                if (initialOption) {
+                    const initialFlagPath = initialOption.getAttribute('data-flag');
+                    const initialLangName = initialOption.textContent.trim();
+                    flagImg.src = initialFlagPath || 'image/Flag_of_UK.svg';
+                    flagImg.alt = (initialLangName || 'English') + " Flag";
+                    flagLabel.textContent = initialLangName || 'English';
+                } else { // Fallback if dropdown not found or no option selected
+                    flagImg.src = 'image/Flag_of_UK.svg';
+                    flagImg.alt = "UK Flag";
+                    flagLabel.textContent = 'English';
+                }
+            }
+
+            if (langDropdown) {
+                langDropdown.value = 'en'; // Ensure English is selected by default
+                langDropdown.addEventListener('change', function () {
+                    const selectedOption = langDropdown.options[langDropdown.selectedIndex];
+                    const flagPath = selectedOption.getAttribute('data-flag');
+                    const langName = selectedOption.textContent.trim();
+
+                    if (flagImg && flagPath) {
+                        flagImg.src = flagPath;
+                        flagImg.alt = langName + " Flag";
+                    }
+                    if (flagLabel) {
+                        flagLabel.textContent = langName;
+                    }
+                });
+            }
+        });
     </script>
 </body>
 
