@@ -834,13 +834,7 @@ html {
         margin-top: -60px;
     }
 
-
-    /* Често срещан breakpoint за мобилни устройства */
-
 }
-
-
-
 
 .order-action {
     margin-top: 20px;
@@ -904,10 +898,12 @@ img.experience-main-product-image {
 section#experience h5 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 700;
     color: #e0e0e0;
     line-height: 1.4;
     margin-top: 25px;
+    /* font-weight: 700; */
+
 }
 
 section#experience .experience-cta-button {
@@ -1236,6 +1232,8 @@ section#experience .logo-pragmatic {
         color: #f0f0f0;
         margin-bottom: 15px;
         margin-top: 0;
+        font-weight: 700;
+
     }
 
     section#experience .mobile-logo-grid {
@@ -1363,7 +1361,6 @@ section#experience .logo-pragmatic {
 }
 
 /* css Experience */
-/* css Experience */
 @media (max-width: 576px) {
     section#experience {
         padding-top: 40px;
@@ -1377,7 +1374,7 @@ section#experience .logo-pragmatic {
     }
 
     section#experience h5 {
-        font-size: 1.6rem;
+        font-size: 2rem;
         line-height: 1.3;
         color: #f0f0f0;
         margin-bottom: 25px;
@@ -1398,7 +1395,6 @@ section#experience .logo-pragmatic {
     }
 
     .mobile-logo-largeе {
-        /* Обърни внимание, ако това 'е' накрая е печатна грешка и трябва да е .mobile-logo-large */
         width: 90% !important;
         max-width: 110% !important;
     }
@@ -1408,44 +1404,28 @@ section#experience .logo-pragmatic {
         max-width: 150% !important;
     }
 
-    /* ✅ GRID ЛОГО ПОДРЕДБА ЗА МОБИЛНИ */
+    /*GRID ЛОГО ПОДРЕДБА ЗА МОБИЛНИ */
     section#experience .mobile-logo-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        /* 5 равни колонки */
         column-gap: 5px;
-        /* Разстояние между колонките с лога */
         row-gap: 8px;
-        /* Разстояние между редовете с лога */
-
         max-width: 600px;
-        /* Increased from 500px */
-
         width: 100%;
         margin: 70px auto;
-        /* Примерно отстояние и центриране на грида */
         justify-items: center;
-        /* Центрира съдържанието във всяка клетка хоризонтално */
         align-items: center;
-        /* Центрира съдържанието във всяка клетка вертикално */
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     section#experience .provider-logo {
         display: block;
-        /* За да се държи като блок елемент в клетката */
         width: 80%;
-        /* КЛЮЧОВО: Логото да заеме 100% от ширината на своята grid клетка */
         max-width: 180%;
-        /* Допълнителна гаранция, че няма да надхвърли 100% от клетката */
         height: auto;
-        /* КЛЮЧОВО: Запазва пропорциите на изображението */
         object-fit: contain;
-        /* Гарантира, че цялото изображение се вижда и се мащабира правилно,
-                           ако оригиналният файл е по-голям от размерите на клетката. */
-
         margin: 0;
-
-        /* Тези position/transform стилове от твоя код са ОК и не би трябвало да пречат тук: */
         position: static !important;
         transform: none !important;
     }
@@ -1455,14 +1435,12 @@ section#experience .logo-pragmatic {
         width: 100%;
         justify-self: center;
         grid-column: 3;
-        /* средната от 5 колони */
         grid-row: 3;
-        /* реда след втория */
         margin-top: -30%;
     }
 
 
-    /* ✅ Центриране на логата на последния ред */
+    /* Центриране на логата на последния ред */
     section#experience .provider-logo:nth-child(11) {
         grid-column: 1;
     }
@@ -1472,7 +1450,6 @@ section#experience .logo-pragmatic {
     }
 
     section#experience img.experience-main-product-image {
-        /* Дублиращо се правило, но го оставям, както си го дал */
         max-width: 500px;
     }
 
@@ -1501,27 +1478,24 @@ section#experience .logo-pragmatic {
         display: none;
     }
 
-    /* Вътре в @media (max-width: 576px) { ... } */
-
-    section#experience .experience-main-product-image {
-        /* Твоите съществуващи стилове за снимката, например: */
-        max-width: 110px;
-        /* Предполагам, че това е активната максимална ширина за тази снимка */
-        width: 90%;
-        margin-top: -30%;
-        /* От твоя код, това издърпва снимката нагоре */
-        /* justify-self, grid-column, grid-row няма да имат ефект, ако родителят .experience-visual-hub е display:flex */
-
-        /* НОВИ СТИЛОВЕ ЗА ЛИНИЯТА ПОД СНИМКАТА: */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        /* Дефинира линията: дебелина, стил, цвят */
-        padding-bottom: 10px;
-        /* Разстояние МЕЖДУ долния край на снимката и линията. Регулирай по вкус. */
-        /* Линията ще се появи под този padding. */
+    .experience-cta-button .button-text-desktop {
+        display: none;
+        /* Скриваме десктоп текста на мобилни */
     }
 
-    /* по подразбиране – без линия под машинката */
+    .experience-cta-button .button-text-mobile {
+        display: inline;
+        /* Показваме мобилния текст. Може да е 'inline-block'. */
+    }
+
+
+
     section#experience .experience-main-product-image {
+        max-width: 110px;
+        width: 90%;
+        margin-top: -30%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 10px;
         border-bottom: none;
     }
 
@@ -1529,21 +1503,12 @@ section#experience .logo-pragmatic {
     body.logos-open section#experience .experience-main-product-image {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         padding-bottom: 10px;
-        /* както си го имаше */
+
     }
 }
 
-/* --- Край: Адаптивни стилове за Секция Experience (Мобилни) --- */
-
-
-
-
-
-
 
 /* --------------slider-a---------- */
-
-
 /* CSS за Плъзгача с Лога - Мобилна Версия */
 @media (max-width: 576px) {
     .logo-slider-container {
@@ -1588,9 +1553,7 @@ section#experience .logo-pragmatic {
         overflow-x: auto;
         overflow-y: visible;
         gap: 0 25%;
-        /* Обърни внимание на тази стойност за gap, може да е много голяма */
         padding: 1px 0px;
-        /* Коригирах '1' на '1px', ако искаш 0px вертикален, сложи '0 0px' */
         scroll-snap-type: x mandatory;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -1628,13 +1591,11 @@ section#experience .logo-pragmatic {
     }
 }
 
-/* Скриване на плъзгача на десктоп версии */
 @media (min-width: 577px) {
     .logo-slider-container {
         display: none;
     }
 }
-
 
 /* css-button-experience */
 .logo-toggle-btn {
@@ -1674,22 +1635,17 @@ body.logos-open .logo-toggle-btn {
     transform: rotate(180deg);
 }
 
-/* Анимация за показване/скриване на слайдера */
+
 section#experience .logo-slider-container {
-    /* Дублиращо се правило, но с !important */
     max-height: 0 !important;
-    /* Беше 10, но 0 е по-логично за скрито състояние */
     overflow: hidden !important;
     transition: max-height 0.4s ease !important;
 }
 
 body.logos-open section#experience .logo-slider-container {
-    /* Дублиращо се правило, но с !important */
     max-height: 300px !important;
-    /* Увери се, че тази височина е достатъчна */
     overflow-x: auto !important;
     overflow-y: hidden !important;
-    /* Добре е y да е hidden, ако x е auto */
 }
 
 /* css-button-experience */
@@ -1719,7 +1675,6 @@ body.logos-open section#experience .logo-slider-container {
     color: #fff;
 }
 
-/* Скриваме стрелката (toggle button) за десктоп */
 @media (min-width: 577px) {
     .logo-toggle-btn {
         display: none;
@@ -1727,13 +1682,11 @@ body.logos-open section#experience .logo-slider-container {
 }
 
 
-/* При отворено състояние – стрелката се обръща нагоре */
 body.logos-open .logo-toggle-btn {
     transform: rotate(180deg);
 
 }
 
-/* 1) Скриване по подразбиране */
 section#experience .logo-slider-container {
     max-height: 10 !important;
     overflow: hidden !important;
