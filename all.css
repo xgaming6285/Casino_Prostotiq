@@ -34,6 +34,16 @@ body {
     --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
+/* Key text elements using web fonts - preventing artificial bolding/italicizing */
+.hero-text h1,
+.cta-button,
+.logo-text,
+.pre-order-header h2,
+.feature-tagline,
+.script-logo {
+    font-synthesis: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -630,8 +640,8 @@ html {
 }
 
 .pre-order-product-image {
-    width: 1000%;
-    max-width: 1000%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
@@ -1289,6 +1299,21 @@ section#experience .logo-pragmatic {
     section#experience .experience-main-product-image {
         margin-top: -15%;
     }
+
+    .cta-button {
+        display: inline-block;
+        background-color: rgba(30, 37, 47, 255);
+        color: white;
+        padding: 5px 25px;
+        text-decoration: none;
+        font-weight: 200;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        font-size: 0.5em;
+        font-family: 'Montserrat';
+        letter-spacing: 0.075em;
+        text-wrap: nowrap;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1308,8 +1333,18 @@ section#experience .logo-pragmatic {
     }
 
     .cta-button {
-        font-size: 1em;
-        padding: 5px 20px;
+        display: inline-block;
+        background-color: rgba(30, 37, 47, 255);
+        color: white;
+        padding: 5px 25px;
+        text-decoration: none;
+        font-weight: 200;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        font-size: 0.8em !important;
+        font-family: 'Montserrat';
+        letter-spacing: 0.075em;
+        text-wrap: nowrap;
     }
 }
 
