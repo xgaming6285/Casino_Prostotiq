@@ -1012,6 +1012,10 @@ section#experience p:empty {
         transform: scale(1);
     }
 
+    .cta-button {
+        margin-left: 5%;
+    }
+
 }
 
 section#experience .experience-visual-hub {
@@ -1175,7 +1179,7 @@ section#experience .logo-pragmatic {
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
-        padding-left: 20px;
+        padding-left: 20%;
         padding-right: 20px;
         overflow: visible;
     }
