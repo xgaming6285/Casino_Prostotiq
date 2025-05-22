@@ -6,7 +6,7 @@ body {
 }
 
 body {
-    font-family: 'Month', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     margin: 0;
     padding: 0;
@@ -326,8 +326,6 @@ html {
         min-height: auto !important;
     }
 
-    /* .product-display adjustments might not be needed here if handled by .mobile-only-product-display rules */
-    /* However, you can fine-tune .mobile-only-product-display for smaller screens if necessary */
     .mobile-only-product-display {
         max-width: 85%;
         /* As per your previous preference */
@@ -1277,7 +1275,6 @@ section#experience .logo-pragmatic {
 .homePage-machine-mobile {
     display: none;
     width: 600px;
-    max-width: 120%;
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px;

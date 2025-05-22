@@ -189,5 +189,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial update and resize handler
     updateLines();
-    window.addEventListener('resize', updateLines);
 });
