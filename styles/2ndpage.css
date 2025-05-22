@@ -281,23 +281,23 @@ body {
   }
 
   .high-res {
-    right: -40% !important;
-    top: -5% !important;
+    right: -48% !important;
+    top: 2% !important;
   }
 
   .providers {
     left: -10% !important;
-    top: 65% !important;
+    top: 85% !important;
   }
 
   .buttons {
     right: 1% !important;
-    top: 84% !important;
+    top: 105% !important;
   }
 
   .forged-metal {
-    left: 10% !important;
-    top: -15% !important;
+    left: 5% !important;
+    top: -10% !important;
   }
 
   .product-svg #line-high-res,
@@ -368,7 +368,7 @@ body {
   .cta {
     margin: 3% auto;
     justify-content: center;
-    bottom: -22% !important;
+    bottom: -37% !important;
     right: -20% !important;
     padding: 4px 15px !important;
     font-size: 14px;
@@ -406,7 +406,7 @@ body {
   .cta {
     position: absolute;
     bottom: 15%;
-    right: -17%;
+    right: -20%;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -483,13 +483,25 @@ body {
     top: 40%;
   }
 
-
+  .cta {
+    position: absolute;
+    bottom: 10%;
+    right: -20%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    z-index: 3;
+    background-color: rgba(41, 44, 56, 0.8);
+    padding: 8px 50px;
+    border-radius: 9999px;
+  }
 }
 
 @media (max-width: 576px) {
   .cta {
     padding: 4px 18px !important;
-    bottom: -30% !important;
+    bottom: -60% !important;
   }
 
   .cta-text {
@@ -498,7 +510,20 @@ body {
 
   .forged-metal {
     left: -7% !important;
-    top: -25% !important;
+    top: -30% !important;
+  }
+
+  .buttons {
+    right: -5% !important;
+    top: 110%!important;
+  }
+
+  .main-container {
+    padding-top: 50%;
+    padding-bottom: 20vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: visible;
   }
 }
 
