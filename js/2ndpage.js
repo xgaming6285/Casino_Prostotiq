@@ -1,81 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const featureLabels = document.querySelectorAll('.feature-label');
-    featureLabels.forEach(label => {
-        label.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-            this.style.transition = 'transform 0.3s ease';
-        });
-        label.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-        label.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const labelText = this.querySelector('.label-text').textContent;
-            const labelIndex = Array.from(featureLabels).indexOf(this);
-            const hasOpenDropdown = this.dataset.hasDropdown === 'true';
-            document.querySelectorAll('.feature-dropdown').forEach(dropdown => {
-                dropdown.remove();
-            });
-            featureLabels.forEach(l => {
-                l.dataset.hasDropdown = 'false';
-            });
-            if (!hasOpenDropdown) {
-                createFeatureDropdown(this, labelText);
-            }
-        });
-    });
-    document.addEventListener('click', function() {
-        document.querySelectorAll('.feature-dropdown').forEach(dropdown => {
-            dropdown.remove();
-        });
-        featureLabels.forEach(l => {
-            l.dataset.hasDropdown = 'false';
-        });
-    });
-
-    function createFeatureDropdown(labelElement, feature) {
-        let info = '';
-        switch (feature) {
-            case 'HIGH-RES DISPLAY':
-                info = 'Ultra-high resolution display with vibrant colors and crystal-clear graphics.';
-                break;
-            case 'FORGED IN METAL':
-                info = 'Premium metal construction for durability and a luxurious feel.';
-                break;
-            case '30 DIFFERENT PROVIDERS':
-                info = 'Access to games from 30 different providers for endless entertainment options.';
-                break;
-            case 'PREMIUM BUTTONS':
-                info = 'Responsive, high-quality buttons for precise control and enhanced gameplay.';
-                break;
-            default:
-                info = 'Feature information not available.';
-        }
-        const dropdown = document.createElement('div');
-        dropdown.className = 'feature-dropdown show-dropdown';
-        dropdown.textContent = info;
-        dropdown.style.zIndex = '9999';
-        document.body.appendChild(dropdown);
-        const rect = labelElement.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-        if (labelElement.classList.contains('right-label')) {
-            dropdown.style.position = 'absolute';
-            dropdown.style.top = (rect.bottom + scrollTop - 1) + 'px';
-            dropdown.style.right = (document.body.clientWidth - rect.right + scrollLeft - 20) + 'px';
-        } else {
-            dropdown.style.position = 'absolute';
-            dropdown.style.top = (rect.bottom + scrollTop - 1) + 'px';
-            dropdown.style.left = (rect.left + scrollLeft) + 'px';
-        }
-        labelElement.dataset.hasDropdown = 'true';
-        dropdown.dataset.forLabel = Array.from(document.querySelectorAll('.feature-label')).indexOf(labelElement);
-        setTimeout(() => {
-            dropdown.classList.add('show-dropdown');
-        }, 10);
-    }
-    const style = document.createElement('style');
-    style.textContent = `
+document.addEventListener("DOMContentLoaded", function () {
+    let e = document.querySelectorAll(".feature-label"); e.forEach(t => { t.addEventListener("mouseenter", function () { this.style.transform = "scale(1.05)", this.style.transition = "transform 0.3s ease" }), t.addEventListener("mouseleave", function () { this.style.transform = "scale(1)" }), t.addEventListener("click", function (t) { t.stopPropagation(); let o = this.querySelector(".label-text").textContent; Array.from(e).indexOf(this); let a = "true" === this.dataset.hasDropdown; document.querySelectorAll(".feature-dropdown").forEach(e => { e.remove() }), e.forEach(e => { e.dataset.hasDropdown = "false" }), a || function e(t, o) { let a = ""; switch (o) { case "HIGH-RES DISPLAY": a = "Ultra-high resolution display with vibrant colors and crystal-clear graphics."; break; case "FORGED IN METAL": a = "Premium metal construction for durability and a luxurious feel."; break; case "30 DIFFERENT PROVIDERS": a = "Access to games from 30 different providers for endless entertainment options."; break; case "PREMIUM BUTTONS": a = "Responsive, high-quality buttons for precise control and enhanced gameplay."; break; default: a = "Feature information not available." }let r = document.createElement("div"); r.className = "feature-dropdown show-dropdown", r.textContent = a, r.style.zIndex = "9999", document.body.appendChild(r); let s = t.getBoundingClientRect(), n = window.pageYOffset || document.documentElement.scrollTop, l = window.pageXOffset || document.documentElement.scrollLeft; t.classList.contains("right-label") ? (r.style.position = "absolute", r.style.top = s.bottom + n - 1 + "px", r.style.right = document.body.clientWidth - s.right + l - 20 + "px") : (r.style.position = "absolute", r.style.top = s.bottom + n - 1 + "px", r.style.left = s.left + l + "px"), t.dataset.hasDropdown = "true", r.dataset.forLabel = Array.from(document.querySelectorAll(".feature-label")).indexOf(t), setTimeout(() => { r.classList.add("show-dropdown") }, 10) }(this, o) }) }), document.addEventListener("click", function () { document.querySelectorAll(".feature-dropdown").forEach(e => { e.remove() }), e.forEach(e => { e.dataset.hasDropdown = "false" }) }); let t = document.createElement("style"); t.textContent = `
       @keyframes drawLine {
         to {
           stroke-dashoffset: 0;
@@ -110,26 +34,5 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 0;
         top: 100%;
       }
-    `;
-    document.head.appendChild(style);
-    const craftSection = document.getElementById('craftsmanship');
-    if (craftSection) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const svgLines = document.querySelectorAll('.product-svg .animated-line');
-                    svgLines.forEach(line => {
-                        const length = line.getTotalLength ? line.getTotalLength() : 500;
-                        line.style.strokeDasharray = length;
-                        line.style.strokeDashoffset = length;
-                        line.style.animation = 'drawLine 1.5s ease-out forwards';
-                    });
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.2
-        });
-        observer.observe(craftSection);
-    }
+    `, document.head.appendChild(t); let o = document.getElementById("craftsmanship"); if (o) { let a = new IntersectionObserver(e => { e.forEach(e => { if (e.isIntersecting) { let t = document.querySelectorAll(".product-svg .animated-line"); t.forEach(e => { let t = e.getTotalLength ? e.getTotalLength() : 500; e.style.strokeDasharray = t, e.style.strokeDashoffset = t, e.style.animation = "drawLine 1.5s ease-out forwards" }), a.unobserve(e.target) } }) }, { threshold: .2 }); a.observe(o) }
 });
