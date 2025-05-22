@@ -513,6 +513,11 @@ body {
     top: -30% !important;
   }
 
+  .high-res {
+    left: 5%;
+    top: -1% !important;
+  }
+
   .buttons {
     right: -5% !important;
     top: 110%!important;

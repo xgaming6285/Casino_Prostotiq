@@ -404,12 +404,12 @@ html {
 
 @media (max-width: 820px) {
     .nav-link {
-        font-size: 1.2rem;
+        font-size: 1rem;
         letter-spacing: 0.030em;
     }
 
     .nav-indicator {
-        bottom: -26%;
+        bottom: -20%;
     }
 
     .nav-list {
