@@ -1277,8 +1277,8 @@ section#experience .logo-pragmatic {
 
 .homePage-machine-mobile {
     display: none;
-    width: 170%;
-    max-width: 750px;
+    width: 600px;
+    max-width: 120%;
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px;

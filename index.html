@@ -9,6 +9,7 @@
     <meta name="description"
         content="Discover MyMiniSlot, the personal slot machine forged in metal. Explore its craftsmanship, experience thousands of games, and pre-order yours today.">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="preload" as="image" href="image/homePageImage.png" media="(max-width: 768px)" fetchpriority="high">
     <link href="all.css" rel="stylesheet">
     <link href="styles/2ndpage.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +79,7 @@
                 <br>
                 METAL
             </h1>
-            <img rel="preload" alt="MyMiniSlot device mobile view" class="homePage-machine-mobile"
+            <img alt="MyMiniSlot device mobile view" class="homePage-machine-mobile"
                 src="image/homePageImage.png" fetchpriority="high" width="320" height="240" decoding="async" loading="eager">
             <a class="cta-button" href="#craftsmanship">
                 Explore the craftsmanship &rarr;
@@ -522,13 +523,13 @@
             }
         });
     </script>
-    <script src="js/craftsmanship_connector.js">
+    <script src="js/craftsmanship_connector.js" defer>
     </script>
-    <script src="js/2ndpage.js">
+    <script src="js/2ndpage.js" defer>
     </script>
-    <script src="js/header.js">
+    <script src="js/header.js" defer>
     </script>
-    <script src="js/sliderEffect.js"></script>
+    <script src="js/sliderEffect.js" defer></script>
     <script src="js/dropdownExperience.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
