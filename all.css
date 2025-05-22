@@ -404,12 +404,12 @@ html {
 
 @media (max-width: 820px) {
     .nav-link {
-        font-size: 1.2rem;
+        font-size: 1rem;
         letter-spacing: 0.030em;
     }
 
     .nav-indicator {
-        bottom: -26%;
+        bottom: -20%;
     }
 
     .nav-list {
@@ -1275,8 +1275,8 @@ section#experience .logo-pragmatic {
 
 .homePage-machine-mobile {
     display: none;
-    width: 170%;
-    max-width: 750px;
+    width: 600px;
+    max-width: 120%;
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
