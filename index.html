@@ -18,7 +18,7 @@
         rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@400;700&display=swap"
             rel="stylesheet">
     </noscript>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
@@ -262,7 +262,12 @@
 
         </div>
 
-        <a class="experience-cta-button" href="#pre-order">Order now →</a>
+        <!-- <a class="experience-cta-button  experience-desktop" href="#pre-order">Order now →</a> -->
+
+        <a class="experience-cta-button experience-desktop" href="#pre-order">
+            <span class="button-text-desktop">Start your journey</span>
+            <span class="button-text-mobile">Order now →</span>
+        </a>
     </section>
     <section class="page-section pre-order-background" id="pre-order">
         <div class="pre-order-container">
@@ -312,11 +317,7 @@
                 </div>
 
                 <!-- Order action moved here for mobile -->
-                <div class="order-action">
-                    <a class="order-now-btn" href="#">
-                        ORDER NOW
-                    </a>
-                </div>
+
 
                 <!-- Product display for mobile -->
                 <div class="product-display mobile-only-product-display">
@@ -327,6 +328,11 @@
                     <div class="view-360">
                         <img alt="360 View Icon Mobile" class="view-icon" src="image/360_icon.png">
                     </div>
+                </div>
+                <div class="order-action">
+                    <a class="order-now-btn" href="#">
+                        ORDER NOW
+                    </a>
                 </div>
 
             </div>
