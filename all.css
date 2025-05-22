@@ -1269,6 +1269,7 @@ section#experience .logo-pragmatic {
     width: 100% !important;
     max-width: 1600px !important;
     height: auto !important;
+    aspect-ratio: 1200 / 674;
     top: 20% !important;
     right: -25% !important;
     z-index: 0 !important;
@@ -1294,6 +1295,10 @@ section#experience .logo-pragmatic {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+        aspect-ratio: 320 / 240;
+        /* Keep aspect-ratio */
+        /* width: 320px; REMOVED */
+        /* height: auto; REMOVED */
     }
 
 }
