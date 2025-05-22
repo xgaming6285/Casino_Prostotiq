@@ -8,12 +8,176 @@
     </title>
     <meta name="description"
         content="Discover MyMiniSlot, the personal slot machine forged in metal. Explore its craftsmanship, experience thousands of games, and pre-order yours today.">
+    <style>
+        html, body { overflow-x: hidden; width: 100%; position: relative; }
+body {
+    font-family: 'Montserrat', sans-serif; /* Fallback font will be used initially */
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url('image/backgroundMainPage.jpg'); /* Consider preloading this if it's very large and vital for ATF */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This can be costly on mobile, test performance */
+    min-height: 100vh;
+    font-weight: 200;
+}
+:root {
+    --header-height: 80px;
+    --black: #000;
+    --white: #fff;
+    --gray-100: #f7f7f7;
+    --gray-200: #e9e9e9;
+    --gray-300: #d4d4d4;
+    --gray-400: #a3a3a3;
+    --gray-500: #737373;
+    --gray-800: #262626;
+    --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-padding-top: var(--header-height); /* Smooth scroll is JS/user preference, not critical for paint */ }
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background-color: rgba(0, 0, 0, 0.5); /* backdrop-filter: blur(10px); -- Defer: can be performance intensive */
+    color: var(--white);
+    z-index: 500;
+    contain: layout style; /* Good for performance */
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    padding: 0; /* Overridden by mobile */
+    width: 100%;
+    max-width: 100%;
+    /* justify-content: space-between; -- Overridden by mobile */
+}
+.logo-text {
+    font-family: 'Dancing Script', cursive; /* Fallback font */
+    font-size: 2.5rem; /* Adjusted for mobile view - check all.css for actual mobile size if different */
+    color: #e0e0e0;
+    font-weight: 600;
+    flex-shrink: 0;
+    /* margin/padding will be set in mobile specific */
+}
+.mobile-menu-toggle {
+    display: none; /* Default, shown in mobile @media */
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 501; /* Ensure it's above other header content if necessary */
+}
+.hamburger { display: block; position: relative; width: 24px; height: 2px; background-color: var(--white); }
+.hamburger::before, .hamburger::after { content: ''; position: absolute; width: 24px; height: 2px; background-color: var(--white); }
+.hamburger::before { top: -6px; right: 0px; }
+.hamburger::after { bottom: -6px; right: 0px; }
+
+/* Hero Section (LCP Container) */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Or specific height if not full viewport */
+    padding-top: var(--header-height); /* To account for fixed header */
+    position: relative; /* For z-index stacking if needed */
+    overflow: hidden; /* If content might overflow */
+}
+.hero-text {
+    z-index: 10; /* If it needs to be above other hero elements */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-text h1 {
+    font-family: 'Orbitron', sans-serif; /* Fallback font */
+    font-size: 2.2rem; /* Adjust based on your mobile design from all.css */
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 1rem; /* Adjust from all.css */
+    font-weight: 700;
+    /* text-shadow: 2px 2px 4px rgba(0,0,0,0.7); -- Defer: can be performance intensive */
+}
+
+/* LCP Image Styles */
+.homePage-machine-desktop { display: none; } /* Hidden on mobile by default in critical CSS */
+.homePage-machine-mobile {
+    display: block; /* This is the LCP element, ensure it's visible */
+    max-width: 90%; /* Or specific width from all.css for mobile */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Centering and spacing */
+    /* filter: drop-shadow(...); -- Defer: can be performance intensive */
+}
+
+/* CTA Button (if visible above the fold) */
+.cta-button {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif; /* Fallback font */
+    text-transform: uppercase;
+    background-color: transparent; /* From all.css */
+    border: 2px solid var(--white); /* From all.css */
+    color: var(--white);
+    padding: 0.75rem 1.5rem; /* From all.css */
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.05em; /* From all.css */
+    margin-top: 1rem; /* Spacing from image */
+    /* box-shadow: ...; -- Defer: can be performance intensive */
+}
+
+/* Mobile-specific Overrides (should match your @media (max-width: 768px) block for these elements) */
+/* This block refines or overrides styles specifically for mobile, ensuring they take precedence */
+@media (max-width: 768px) {
+    .header .container {
+        justify-content: center; /* As per all.css for mobile */
+        padding: 0 1rem; /* Example, adjust from your all.css */
+    }
+    .logo-text {
+        font-size: 2rem; /* Example, check all.css for mobile values */
+        margin: 0; /* Reset desktop margins if any */
+        padding-left: 0; /* Reset desktop padding */
+        text-align: center; /* If logo is centered on mobile */
+    }
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute; /* If positioned relative to header/container */
+        left: 25px; /* As seen in all.css */
+        top: 50%; /* For vertical centering */
+        transform: translateY(-50%); /* For vertical centering */
+    }
+
+    /* Nav is hidden by default via transform/opacity in all.css for mobile, so no critical styles for .nav itself unless a basic display:none is preferred here for simplicity */
+    /* .nav { display: none; } */ /* Simpler than transform if full nav style deferred */
+
+    .hero-text h1 {
+        font-size: 2rem; /* Check all.css: (max-width: 768px) -> .hero-text h1 */
+        margin-bottom: 1.5rem; /* Check all.css */
+    }
+
+    /* .homePage-machine-mobile styles are already defined above for mobile, ensure they are correct */
+    /* .homePage-machine-desktop should remain display: none; */
+}
+    </style>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="preload" as="image" href="image/homePageImage_4.webp" media="(max-width: 768px)" fetchpriority="high"
         imagesizes="400px" imagesrcset="image/homePageImage_4.webp 1200w">
     <link rel="preload" as="image" href="image/homePageImage_4.webp" media="(min-width: 769px)" fetchpriority="high"
         imagesizes="1200px" imagesrcset="image/homePageImage_4.webp 1200w">
-    <link href="all.css" rel="stylesheet">
+    <link href="all.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="styles/2ndpage.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
