@@ -9,10 +9,12 @@
     <meta name="description"
         content="Discover MyMiniSlot, the personal slot machine forged in metal. Explore its craftsmanship, experience thousands of games, and pre-order yours today.">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="preload" as="image" href="image/homePageImage_4.webp" media="(max-width: 768px)" fetchpriority="high">
-    <link rel="preload" as="image" href="image/homePageImage_4.webp" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="preload" as="image" href="image/homePageImage_4.webp" media="(max-width: 768px)" fetchpriority="high"
+        imagesizes="400px" imagesrcset="image/homePageImage_4.webp 1200w">
+    <link rel="preload" as="image" href="image/homePageImage_4.webp" media="(min-width: 769px)" fetchpriority="high"
+        imagesizes="1200px" imagesrcset="image/homePageImage_4.webp 1200w">
     <link href="all.css" rel="stylesheet">
-    <link href="styles/2ndpage.css" rel="stylesheet">
+    <link href="styles/2ndpage.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -33,7 +35,7 @@
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     </noscript>
-    <link href="styles/footer.css" rel="stylesheet">
+    <link href="styles/footer.css" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 
 <body class="homepage-background">
@@ -88,7 +90,7 @@
                 METAL
             </h1>
             <img alt="MyMiniSlot device mobile view" class="homePage-machine-mobile" src="image/homePageImage_4.webp"
-                fetchpriority="high" decoding="async" loading="eager">
+                width="400" height="240" fetchpriority="high" decoding="async" loading="eager">
             <a class="cta-button" href="#craftsmanship">
                 Explore the craftsmanship →
             </a>
@@ -210,36 +212,40 @@
     </section>
     <div id="trigger-snap-to-experience" style="height: 1px; position: relative; top: 50px;"></div>
     <section id="experience" class="page-section">
-
         <h5>Thousands of games at your fingertips</h5>
 
         <div class="experience-visual-hub">
             <div class="mobile-logo-grid">
-                <img src="image/pragmatic.png" alt="Pragmatic Play game provider logo"
-                    class="provider-logo logo-pragmatic">
-                <img src="image/hacksaw.png" alt="Hacksaw Gaming game provider logo" class="provider-logo logo-hacksaw">
-                <img src="image/unde.png" alt="Unde game provider logo"
-                    class="provider-logo logo-unde mobile-logo-small">
-                <img src="image/helio.png" alt="Helio Gaming game provider logo" class="provider-logo logo-helio">
-                <img src="image/lightingBox (2).png" alt="Lighting Box game provider logo"
-                    class="provider-logo logo-lightingBox">
-                <img src="image/amusnet.png" alt="Amusnet game provider logo"
-                    class="provider-logo logo-amusnet mobile-logo-large">
-                <img src="image/igt.png" alt="IGT game provider logo" class="provider-logo logo-igt">
-                <img src="image/playTech.png" alt="Playtech game provider logo" class="provider-logo logo-playtech">
-                <img src="image/netEnt.png" alt="NetEnt game provider logo" class="provider-logo logo-netent">
-                <img src="image/evolution.png" alt="Evolution Gaming game provider logo"
-                    class="provider-logo logo-evolution">
-                <img src="image/nolimit.png" alt="Nolimit City game provider logo" class="provider-logo logo-nolimit">
-                <img src="image/everyMatrix.png" alt="EveryMatrix game provider logo"
-                    class="provider-logo logo-everyMatrix">
+                <img src="image/pragmatic.png" alt="Pragmatic Play game provider logo" width="200" height="60"
+                    class="provider-logo logo-pragmatic" loading="lazy">
+                <img src="image/hacksaw.png" alt="Hacksaw Gaming game provider logo" width="200" height="60"
+                    class="provider-logo logo-hacksaw" loading="lazy">
+                <img src="image/unde.png" alt="Unde game provider logo" width="70" height="40"
+                    class="provider-logo logo-unde mobile-logo-small" loading="lazy">
+                <img src="image/helio.png" alt="Helio Gaming game provider logo" width="200" height="60"
+                    class="provider-logo logo-helio" loading="lazy">
+                <img src="image/lightingBox (2).png" alt="Lighting Box game provider logo" width="200" height="60"
+                    class="provider-logo logo-lightingBox" loading="lazy">
+                <img src="image/amusnet.png" alt="Amusnet game provider logo" width="300" height="100"
+                    class="provider-logo logo-amusnet mobile-logo-large" loading="lazy">
+                <img src="image/igt.png" alt="IGT game provider logo" width="150" height="60"
+                    class="provider-logo logo-igt" loading="lazy">
+                <img src="image/playTech.png" alt="Playtech game provider logo" width="200" height="60"
+                    class="provider-logo logo-playtech" loading="lazy">
+                <img src="image/netEnt.png" alt="NetEnt game provider logo" width="160" height="60"
+                    class="provider-logo logo-netent" loading="lazy">
+                <img src="image/evolution.png" alt="Evolution Gaming game provider logo" width="120" height="60"
+                    class="provider-logo logo-evolution" loading="lazy">
+                <img src="image/nolimit.png" alt="Nolimit City game provider logo" width="180" height="60"
+                    class="provider-logo logo-nolimit" loading="lazy">
+                <img src="image/everyMatrix.png" alt="EveryMatrix game provider logo" width="200" height="60"
+                    class="provider-logo logo-everyMatrix" loading="lazy">
             </div>
 
-            <img src="image/ExperienceImage.png" alt="MyMiniSlot Device surrounded by game provider logos"
-                class="experience-main-product-image">
+            <img src="image/ExperienceImage.png" alt="MyMiniSlot Device surrounded by game provider logos" width="500"
+                height="400" class="experience-main-product-image" loading="lazy">
 
-            <!-- Toggle button за dropdown slider-а -->
-
+            <!-- Toggle button for dropdown slider -->
             <button id="toggle-logos" class="logo-toggle-btn" aria-expanded="false" aria-label="Show more games">
                 ^
             </button>
@@ -247,28 +253,30 @@
 
         <div class="logo-slider-container">
             <div class="logo-slider-track">
-                <img src="image/pragmatic.png" alt="Pragmatic Play game provider logo"
-                    class="provider-logo logo-pragmatic" data-role="1">
-                <img src="image/hacksaw.png" alt="Hacksaw Gaming game provider logo" class="provider-logo logo-hacksaw">
-
-                <img src="image/helio.png" alt="Helio Gaming game provider logo" class="provider-logo logo-helio">
+                <img src="image/pragmatic.png" alt="Pragmatic Play game provider logo" width="200" height="60"
+                    class="provider-logo logo-pragmatic" data-role="1" loading="lazy">
+                <img src="image/hacksaw.png" alt="Hacksaw Gaming game provider logo" width="200" height="60"
+                    class="provider-logo logo-hacksaw" loading="lazy">
+                <img src="image/helio.png" alt="Helio Gaming game provider logo" width="200" height="60"
+                    class="provider-logo logo-helio" loading="lazy">
                 <img src="image/lightingBox (2).png" alt="Lighting Box game provider logo"
-                    class="provider-logo logo-lightingBox">
-                <img src="image/amusnet.png" alt="Amusnet game provider logo" class="provider-logo mobile-logo-large">
-                <img src="image/igt.png" alt="IGT game provider logo" class="provider-logo logo-igt">
-                <img src="image/playTech.png" alt="Playtech game provider logo" class="provider-logo logo-playtech">
-                <img src="image/netEnt.png" alt="NetEnt game provider logo" class="provider-logo logo-netent">
+                    class="provider-logo logo-lightingBox" loading="lazy">
+                <img src="image/amusnet.png" alt="Amusnet game provider logo" class="provider-logo mobile-logo-large"
+                    loading="lazy">
+                <img src="image/igt.png" alt="IGT game provider logo" class="provider-logo logo-igt" loading="lazy">
+                <img src="image/playTech.png" alt="Playtech game provider logo" class="provider-logo logo-playtech"
+                    loading="lazy">
+                <img src="image/netEnt.png" alt="NetEnt game provider logo" class="provider-logo logo-netent"
+                    loading="lazy">
                 <img src="image/unde.png" alt="Unde game provider logo"
-                    class="provider-logo logo-unde mobile-logo-small">
+                    class="provider-logo logo-unde mobile-logo-small" loading="lazy">
                 <img src="image/evolution.png" alt="Evolution Gaming game provider logo"
-                    class="provider-logo logo-evolution-slider">
+                    class="provider-logo logo-evolution-slider" loading="lazy">
                 <img src="image/everyMatrix.png" alt="EveryMatrix game provider logo"
-                    class="provider-logo logo-everyMatrix">
-                <img src="image/nolimit.png" alt="Nolimit City game provider logo" class="provider-logo logo-nolimit">
-
-
+                    class="provider-logo logo-everyMatrix" loading="lazy">
+                <img src="image/nolimit.png" alt="Nolimit City game provider logo" class="provider-logo logo-nolimit"
+                    loading="lazy">
             </div>
-
         </div>
 
         <!-- <a class="experience-cta-button  experience-desktop" href="#pre-order">Order now →</a> -->
@@ -537,12 +545,9 @@
             }
         });
     </script>
-    <script src="js/craftsmanship_connector.js" defer>
-    </script>
-    <script src="js/2ndpage.js" defer>
-    </script>
-    <script src="js/header.js" defer>
-    </script>
+    <script src="js/craftsmanship_connector.js" defer></script>
+    <script src="js/2ndpage.js" defer></script>
+    <script src="js/header.js" defer></script>
     <script src="js/sliderEffect.js" defer></script>
     <script src="js/dropdownExperience.js" defer></script>
     <script>

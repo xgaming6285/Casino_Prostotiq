@@ -21,7 +21,7 @@
             rel="stylesheet">
     </noscript>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link href="styles/footer.css" rel="stylesheet">
+    <link href="styles/footer.css" rel="stylesheet" media="print" onload="this.media='all'">
     <style>
         body {
             background-color: rgba(30, 37, 47, 255) !important;
@@ -34,7 +34,6 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-
             width: 100%;
         }
 
@@ -72,9 +71,7 @@
             flex: 1;
             box-sizing: border-box;
             align-items: stretch;
-
             min-height: calc(100vh - var(--header-height));
-
         }
 
         .about-content {
@@ -86,7 +83,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
         }
 
         .about-title {
@@ -101,15 +97,12 @@
         .about-text {
             font-size: 1.1em;
             line-height: 1.6;
-
             margin-bottom: 15px;
             opacity: 0.9;
             display: flex;
             flex-direction: column;
             height: 100%;
-
             justify-content: space-between;
-
         }
 
         .about-text p {
@@ -121,7 +114,6 @@
         .about-text p:last-child {
             border-bottom: none;
             margin-bottom: 50px;
-
         }
 
         .device-showcase {
@@ -129,17 +121,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
             max-width: 45%;
-
             box-sizing: border-box;
             margin-top: 150px;
             align-self: stretch;
-
             margin-left: 20px;
-
             justify-content: flex-end;
-
         }
 
         .device-showcase img {
@@ -175,7 +162,6 @@
             .about-text {
                 font-size: 1.2em;
             }
-
         }
 
         @media (max-width: 1200px) {
@@ -190,7 +176,6 @@
             .about-title {
                 font-size: 2.2em;
             }
-
         }
 
         @media (max-width: 992px) {
@@ -214,7 +199,6 @@
             .about-text {
                 font-size: 1em;
             }
-
         }
 
         @media (max-width: 768px) {
@@ -277,7 +261,6 @@
                 font-size: 1.8em;
                 margin-bottom: 30px;
             }
-
         }
 
         .header {
@@ -352,7 +335,8 @@
                 </p>
                 <!-- Device Showcase for Mobile -->
                 <div class="mobile-only-device-showcase">
-                    <img alt="MyMiniSlot Device (Mobile view for About Us page)" src="image/ExperienceImage.png">
+                    <img alt="MyMiniSlot Device (Mobile view for About Us page)" width="300" height="240" loading="lazy"
+                        src="image/ExperienceImage.png">
                 </div>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -376,7 +360,8 @@
         </div>
         <!-- Device Showcase for Desktop -->
         <div class="device-showcase desktop-only-device-showcase">
-            <img alt="MyMiniSlot Device (Desktop view for About Us page)" src="image/ExperienceImage.png">
+            <img alt="MyMiniSlot Device (Desktop view for About Us page)" width="500" height="400" loading="lazy"
+                src="image/ExperienceImage.png">
         </div>
     </main>
     <footer class="site-footer">
@@ -492,8 +477,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/header.js">
-    </script>
+    <script src="js/header.js" defer></script>
     <script>
         const yearSpan = document.getElementById('current-year');
         if (yearSpan) {
