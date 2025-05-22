@@ -378,6 +378,14 @@ html {
     .hero-text {
         padding-top: 60px;
     }
+
+    .hero-text {
+        transform: translateX(-15%);
+    }
+
+    .cta-button {
+        transform: translateX(35%);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -475,7 +483,7 @@ html {
     flex-basis: 45%;
     max-width: 600px;
     text-align: left;
-    left: -15%;
+    transform: translateX(-15%);
 }
 
 .hero-text h1 {
@@ -1314,6 +1322,7 @@ section#experience .logo-pragmatic {
         letter-spacing: 0.075em;
         text-wrap: nowrap;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -1345,6 +1354,9 @@ section#experience .logo-pragmatic {
         font-family: 'Montserrat';
         letter-spacing: 0.075em;
         text-wrap: nowrap;
+    }
+    .cta-button {
+        transform: translateX(2%);
     }
 }
 
@@ -1441,6 +1453,10 @@ section#experience .logo-pragmatic {
         top: 10% !important;
     }
 
+    .cta-button {
+        transform: translateX(-12%);
+    }
+
 }
 
 @media (min-width: 1600px) {
@@ -1449,7 +1465,7 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
         line-height: 1.2;
         min-height: 5.4em;
-        margin-left: -25%;
+        margin-left: 5%;
     }
 
     .hero-text {
@@ -1458,7 +1474,7 @@ section#experience .logo-pragmatic {
     }
 
     .cta-button {
-        margin-left: -70%;
+        margin-left: -25%;
     }
 
     .homePage-machine-desktop {
@@ -1479,7 +1495,7 @@ section#experience .logo-pragmatic {
         text-wrap: nowrap;
         min-height: 423px;
         /* 5.5 * 16 * 1.6 * 3 = 422.4px */
-        margin-left: 2%;
+        margin-left: 25%;
     }
 
     .homePage-machine-desktop {
@@ -1516,6 +1532,10 @@ section#experience .logo-pragmatic {
         margin-top: -2%;
         margin-bottom: 20%;
         gap: 0;
+    }
+
+    .cta-button {
+        transform: translateX(2%);
     }
 
     .mobile-logo-large {
@@ -1904,6 +1924,10 @@ body.logos-open section#experience .logo-slider-container {
 
     .pre-order-product-image {
         max-width: 160%;
+    }
+
+    .cta-button {
+        transform: translateX(2%);
     }
 
 }
