@@ -658,6 +658,14 @@ html {
         transform: scale(1.2);
     }
 
+    .hero-text h1 {
+        font-size: 4.5em;
+        text-wrap: nowrap;
+        line-height: 1.2;
+        min-height: 5.4em;
+        margin-left: -25%;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -1403,10 +1411,9 @@ section#experience .logo-pragmatic {
 @media (min-width: 1600px) {
     .hero-text h1 {
         font-size: 4.5em;
-        /* 72px */
         text-wrap: nowrap;
-        min-height: 346px;
-        /* 4.5 * 16 * 1.6 * 3 = 345.6px */
+        line-height: 1.2;
+        min-height: 5.4em;
         margin-left: -25%;
     }
 
