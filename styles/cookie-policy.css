@@ -162,6 +162,10 @@ body {
         transform-origin: center
     }
 
+    .mobile-hidden {
+        display: none;
+    }
+
     .content-container h1 {
         position: relative;
         text-align: center;
