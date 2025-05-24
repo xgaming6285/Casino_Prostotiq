@@ -97,19 +97,13 @@ body.privacy-policy-page .privacy-policy-container {
     margin-bottom: .5em
 }
 
-.text-column h2,
-.text-column h3 {
+.text-column h2 {
     font-family: Orbitron, sans-serif;
     color: #d0d0e0;
     font-size: 1.3rem;
     margin-top: 2em;
     margin-bottom: .8em;
     text-align: left;
-    font-weight: 500
-}
-
-.text-column h3 {
-    font-size: 1.1rem;
     font-weight: 500
 }
 
@@ -160,11 +154,6 @@ body.privacy-policy-page .privacy-policy-container {
         max-width: 130px;
         margin-bottom: 20px;
         padding-top: 0
-    }
-
-    .privacy-policy-header h1 {
-        font-size: 2rem;
-        font-family: Montserrat, sans-serif
     }
 
     .text-columns {
@@ -221,20 +210,12 @@ body.privacy-policy-page .privacy-policy-container {
         margin-right: 20px
     }
 
-    .privacy-policy-header h1 {
-        font-size: 1.8rem
-    }
-
     .text-column p {
         font-size: .82rem
     }
 
     .text-column h2 {
         font-size: 1.1rem
-    }
-
-    .text-column h3 {
-        font-size: 1rem
     }
 
     #page-title {
